@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{standard}
+
+\begin{document}
+\tableofcontents
+
+\section{Generalized geometry}
+The discussion below follow from \cite{Hitchin2010}
+General relativity is can be formulated on the tangent bundle $T$ of a (Pseduo-)Riemannian Manifold $\mathcal{M}$, where by the definition the fibers in the bundle are the tangent spaces at each spacetime point. This is one of the defining difficulties starting with GR since, amongst other, one can not naively compare, hence neither take derivatives, vectors in different fibers. 
+
+The idea of generalized geometry is to look instead at the direct sum of the tangent bundle and the co-tangent bundle $T\oplus T^*$. This leads to the notion of a generalized Lie derivative. As a reminder a Lie derivative of a vector $X$ with respect to another vector $Y$, is the change of of vector $X$ along the local flow generate by $Y$ using the pullback (tangent map) of the flow. 
+
+The algebraic structure of the generalized tangent space is then characterized by the inner product ($X\in T_x$ and $\xi\in T^*_x$):
+\begin{equation}
+    (X+\xi,X+\xi) = \iota_X \xi,
+\end{equation}
+this is to replace to the metric which is defined through the inner product. A skew-adjoint transformation on $T\oplus T^*$ can then be defined 
+\begin{equation}
+    \begin{pmatrix}
+        A & \beta \\
+        B & -A^t
+    \end{pmatrix},
+\end{equation}
+where $A$ is an endomorphism of $T$ and $B: T^*\to T$ satisfying 
+\begin{equation}
+    (B(X_1+\xi_1),X_2+\xi_2) = (BX_1,X_2) = (-B(X_2),X_1).
+\end{equation}
+
+
+
+
+\newpage
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,71 @@
+\usepackage[]{amsmath} % Math stuff such as multline etc
+\usepackage{amssymb} % mathbb for fields R,Z,Q,C
+\usepackage[]{parskip} % No indention
+\usepackage{todonotes} % Notes 
+\usepackage{geometry} % Geometry package, i.e. specify margin etc.
+\usepackage[english]{babel} 
+\usepackage{helvet}
+\usepackage{units}
+\usepackage{icomma}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cite} % Referenser
+\usepackage{subfigure} 
+\usepackage{pdfpages}
+ 
+%\newcommand{\eqref}[1]{\text{(\ref{#1})}} % Make correct equation reference
+\newcommand{\figref}{\figurename~\ref} 
+\newcommand{\tabref}{\tablename~\ref} 
+\newcommand{\apxref}{\appendixname~\ref}
+
+
+%%Det ska vara ett rakt µ i prefixet
+\usepackage{upgreek}
+\newcommand{\micro}{\ifmmode\upmu\else$\upmu$\fi}
+%%Ohm enhetskommando
+\newcommand{\ohm}{\ifmmode\Upomega\else$\Upomega$\fi}
+
+
+\usepackage{bbm}
+\newcommand{\La}{\mathcal{L}} % Lagrangian
+\newcommand{\ii}{\mathrm{i}} % Vertical i 
+\newcommand{\ee}{\mathrm{e}} % Vertical e 
+\newcommand{\R}{\ensuremath{\mathbbm{R}}}
+\newcommand{\Or}[1]{\ensuremath{\mathcal{O}}\left(#1\right)}
+
+\newcommand{\lp}{\ensuremath{\left(}}
+\newcommand{\rp}{\ensuremath{\right)}}
+\newcommand{\pd}{\ensuremath{\partial}}
+
+\newcommand{\degC}{\ifmmode \,^\circ\mathrm{C} \else $\,^\circ\mathrm{C}$ \fi}
+\newcommand{\Comm}[2]{\left[#1\,,\,\, #2\right]}
+\newcommand{\DComm}[2]{\llbracket#1\,,\,\, #2\rrbracket]}
+\newcommand{\aComm}[2]{\left\{#1\,,\,\, #2\right\}}
+
+
+\DeclareMathOperator{\Tr}{Tr}%Needs amsmath. Trace operator
+
+\newcommand{\meas}{\sqrt{\abs{g}}}
+
+
+
+
+\usepackage{xparse}% http://ctan.org/pkg/xparse
+\DeclareDocumentCommand{\Pr}{s m}{% \Pr[*]{..}
+  \operatorname{Pr}%
+  \IfBooleanTF{#1}% Condition on *
+    {#2}% Print only the argument in starred * version
+    {\left(#2\right)}% Print bracketed argument [ ] in unstarred version
+}%
+
+\newcommand{\MEAS}{\ensuremath{\mathrm{d}^{10}\mathrm{x}}}
+
+
+\newcommand{\dt}{\mathrm{dt}}
+\newcommand{\dtt}{\mathrm{d}\tau}
+\newcommand{\dx}{\mathrm{dx}}
+\newcommand{\dy}{\mathrm{dy}}
+\newcommand{\dz}{\mathrm{dz}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Ricciscalar}{\ensuremath{\mathcal{R}}}

@@ -24,9 +24,31 @@ this is to replace to the metric which is defined through the inner product. A s
 \end{equation}
 where $A$ is an endomorphism of $T$ and $B: T^*\to T$ satisfying 
 \begin{equation}
-    (B(X_1+\xi_1),X_2+\xi_2) = (BX_1,X_2) = (-B(X_2),X_1).
+    (B(X_1+\xi_1),X_2+\xi_2) = (BX_1,X_2) = (-B(X_2),X_1),
+\end{equation}
+such that $B$ is a skew-symmetric form, i.e.\ $B\in \Lambda^2T^*$ with an action $B: X+\xi\mapsto \iota_X B$. Since $B^2=0$ exponentiating of $B$ acts as:
+\begin{equation}
+    B: X+\xi \mapsto X+\xi+\iota_X B.
 \end{equation}
 
+Another important object is the Lie bracket $\Comm{\cdot}{\cdot}$, which is an anti-symmetric bilinear form satisfying the \textit{Jacobi identity}. The suitable generalization is the so called \textit{Courant bracket}. The Courant bracket is defined of two sections $X+\xi$ and $Y+\zeta$ in $T\oplus T^*$ as 
+\begin{equation}
+    \Comm{X+\xi}{Y+\zeta}_C = \Comm{X}{Y}+\Lie_X\zeta - \Lie_Y \xi-\frac{1}{2}\dd\left(\iota_X\zeta-\iota_Y\xi\right).
+\end{equation}
+We now show that exponentiating a closed $2-$form $B$ acting on each term does not change the Courant bracket 
+\begin{equation}
+    \Comm{X+\xi+\iota_XB}{Y+\zeta+\iota_YB}_C = \Comm{X+\xi}{Y+\zeta}_C+\Lie_X\iota_YB\-\Lie_Y\iota_XB-\frac{1}{2}\dd \left(\iota_X\iota_YB-\iota_Y\iota_XB\right),
+\end{equation}
+using the identity $\Lie_X\xi = \dd(\iota_X\xi)+\iota_X\dd\xi$ we get \todo{Complete this derivation}
+\begin{equation}
+D
+\end{equation}
+
+The inner product and the Courant bracket also preserve the induced action of a diffeomorphism of a manifold $\mathcal{M}$\todo{How does this work?}. Since also a global closed $2-$form also preserve these we find that \todo{Semi-direct product?}
+\begin{equation}
+    \Omega^2(M)_{\text{cl}}\rtimes Diff(M),
+\end{equation}
+which is a key property of generalized geometry -- we have to look at B-field transformations as well as differmorphisms. 
 
 
 

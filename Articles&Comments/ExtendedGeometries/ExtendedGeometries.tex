@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{standard}
+
+
+\begin{document}
+\section{Extended space, section and generalised diffeomorphisms}
+\begin{itemize}
+    \item Model based on a Kac-Moody algebra $\mathfrak{g}$, exponentiated to a group $G$
+    \item Coordinates in irreduicble \& integrable hw module $R(\lambda)$ 
+    \item Derivatives in $\bar{R}(\lambda)$
+    \item Assume symmetrizable cartan matrix $a_{ij}$
+    \subitem $\implies$ Non-degenerate symmetric bilinear form on the Cartan subalgebra \& corresponding metric on the weight space.
+\end{itemize}
+
+Symmetrizable means that, using a diagonal matrix $d$, $(da)_{ij}$ is symmetric. The diagonal elements $d_i$ expresses half the length squared of the simple roots $d_i = (\alpha_i,\alpha_i)/2$, and $da$ denotes the inner product $(da)_{ij}=(\alpha_i,\alpha_j)$. 
+
+$a_{ij}=(\alpha_i^\vee,\alpha_j)$, where $\alpha_i^\vee=2(\alpha_i,\alpha_i)^{-1}\alpha_i$ is the coroot. Fundamental weights are given by $(\Lambda_i,\alpha_i^{\vee})=\delta_{ij}$, such that any weight can be written as $\lambda = \sum_i \lambda_i\Lambda_i$. The weight space metric is then given $\hat{a}^{-1}$, where $\hat{a}_{ij} = (ad^{-1})_{ij}=(\alpha_i^{\vee},\alpha_j^{\vee})$, so that $(\lambda,\lambda)=\sum_{ij}(\hat{a}^{-1})^{ij}\lambda_i\lambda_j$.
+\begin{itemize}
+    \item Take the real split form of $\mathfrak{g}$ from now on, i.e.\ the one associated with the weight space decomposition.
+\end{itemize}
+
+Consider generalised diffeomorphisms of the form 
+\begin{equation}
+    \mathscr{L}_\xi V^M = \xi^N\pd_N V^M-\pd_N\xi^M V^N+Y^{MN}_{PQ}\pd_N\xi^PV^Q,
+\end{equation}
+where $Y$ is a $\mathfrak{g}$-invariant tensor satisfying the section constraint 
+\begin{equation}
+    Y^{MN}_{PQ}(\pd_M\otimes\pd_N)=0
+\end{equation}
+as well as one other fundamental identity
+\begin{equation}
+    Z\ldots.
+\end{equation}
+These constraints are needed for closure of the algebra. There is still one term remaining 
+\begin{equation}
+    \left([\mathscr{L}_\xi,\mathscr{L}_\eta]-\mathscr{L}_{\frac{1}{2}(\mathscr{L}_\xi\eta-\mathscr{L}_\eta \xi)}\right)V^M = \frac{1}{2}Z^{MP}_{QN}Y^{QR}_{ST}\xi^T\pd_P\pd_R\eta^SV^N-(\xi\leftrightarrow \eta).
+\end{equation}
+
+Whether this term vanish depends on the Lie algebra $\mathfrak{g}$ and the module $R(\lambda)$. The constants $k$ and $\beta$ is determined by demanding that ordinary geometry is obtained when the section condition is solved. Sections, or solutions, must be $d$-linear subspaces of $R(\lambda)$ related by a $G$ transformation with a stability group containing $GL(d)$, such that generalized differmorphism in a section reduces to ordinary diffemorphisms together with gauge transformations. 
+
+In index-free notation we have
+\begin{equation}
+    \sigma Y = k\eta_{ab}T^a\otimes T^b + \beta+\sigma.
+\end{equation}
+and the section condition 
+\begin{equation}
+    \langle \pd |\otimes \langle\pd| Y = 0
+\end{equation}
+
+\todo[inline]{Discussion about how to solve section condition}
+
+The section condition determines certain algebraic constraints. Take the quadratic Casimir operator which is well defined on a highest weight module for any Kac-Moody algebra with a symmetrisable Cartan matrix. The Casimir is given by 
+\begin{equation}
+    C_2 = \frac{1}{2}\eta_{ab}:T^{a}T^b:+(h,\rho) = \sum_{\alpha\in\Delta^+}e_{-\alpha}e_\alpha +\frac{1}{2}(h,h)+(h,\rho),
+\end{equation}
+where $\rho$ is the Weyl-vector defined so that $(\rho,\alpha_i^\vee)$ and $\rho = \frac{1}{2}\sum_{\alpha\in\Delta^+}\alpha$. The term $(\rho,h)$ is a normal ordering term. Evaluating $C_2$ on the highest weight state in $R(\lambda)$ one finds 
+\begin{equation}
+    C_2(R(\lambda)) = \frac{1}{2}(\lambda,\lambda+2\rho),
+\end{equation}
+since the step operators annihilate the highest weight state. We also find 
+\begin{align*}
+    C_2(R(2\lambda)) = 2C_2(R(\lambda)+(\lambda,\lambda)\\
+    C_2(R(2\lambda-\alpha_i)) = 2C_2(R(\lambda))+(\lambda,\lambda)-\lambda_i(\alpha_i,\alpha_i),
+\end{align*}
+where $\alpha_i$ is an simple root such that $\lambda_i = (\lambda,\alpha_i^\vee)>0$. 
+
+
+
+\end{document}

@@ -1,0 +1,88 @@
+\chapter{Lie Algebras}\label{sec:symmetries}
+Symmetries is a crucial part of the fundamental theories of physics and as such the corresponding mathematics describing symmetries needs to be understood. Therefore Lie algebras and its representation theory is introduced. Extended geometries are based on a certain lie algebra and the distinguishing properties of the algebras yield different geometrical theories. In order to constructed extended geometries we need, in particular, to understand Dynkin diagrams, weights and representation theory. Moreover, we extend the finite dimensional lie algebras to certain infinite dimensional algebras, Kac-Moody algebras as well as to certain superalgebras which seems to encode important knowledge about the theory based on the non-extended algebra.
+
+Finite dimensional simple-lie algebras has been completely classified and comes in four different (infinite) families 
+\begin{equation}
+    \mathfrak{a}_{n-1} \cong \mathfrak{sl}_{n}\quad \mathfrak{b}_{n}\cong \mathfrak{so}_{2n+1}\quad \mathfrak{c}_{n} \cong \mathfrak{sp}_{2n}\quad \mathfrak{d}_{n}\cong \mathfrak{so}_{2n} 
+\end{equation}
+together with five exceptional algebras 
+\begin{equation}
+    \mathfrak{g}_2\quad \mathfrak{f}_4 \quad \mathfrak{e_6} \quad \mathfrak{e_7} \quad \mathfrak{e_8}.
+\end{equation}
+
+
+\section{Lie groups and its connection to the lie algebra}
+A Lie group $G$ is a group which is also a differentiable manifold together with group operations that are also smooth, a typical example being $SU(2)$ or $SO(3)$ describing rotations in three dimensions. Elements in the Lie group acts as symmetry operations on physical objects such as fields. How they act is described by the representation $\rho$ and a module $\mathbb{V}$. The representation is an homomorphism acting on $g_1,g_2\in G$ as
+\begin{equation}
+    \rho : G\to \text{Aut}(\mathbb{V}) \qquad \rho(g_1\cdot g_2) = \rho(g_1)\circ\rho(g_2),
+\end{equation}
+where `$\cdot$' denotes group multiplication and `$\cdot$'composition of matrices. 
+
+In general the Lie group is a curved manifold which makes it somewhat difficult to work with. Physicists instead often look at infinitesimal symmetries obtained by examining the tangent space at the identity of the group. Lets look at the case when $G\in \text{Aut}(\mathbb{V})$ and take $t\in [-a,a]$ with $a\in\mathbb{R_+}$ and the set of curves $\gamma(t): [-a,a]\to G$ such that $\gamma(0)= \mathbb{1}\in G$. The tangent space at the identity $T_\mathrm{e}G$ then consist of elements $\tilde{g}$ in the corresponding lie algebra
+\begin{equation}
+\tilde{g} = \frac{\dd}{\dd t}\gamma(t)|_{t=0}.
+\end{equation}
+The tangent space $T_\mathrm{e}G$ is a real vector space and thus easier to deal with. The group $G$ carries an representation on the algebra called the Adjoint representation $\text{Ad}: G\to \text{Aut}(\mathbb{g})$ by $g\in G$ and $\tilde{g}\in\mathfrak{g}$
+\begin{equation}
+    \text{Ad}_g(\tilde{g}) = g\tilde{g}g^{-1},
+\end{equation}
+which is well-defined since the elements of the group acts naturally on the curve $\gamma$ used to define $\tilde{g}$. In the same spirit we could look at the action of a curve passing through the identity acting on $\mathfrak{g}$ with $h,\tilde{g}\in \mathfrak{g}$ which defines the adjoint action of the algebra 
+\begin{equation}
+    \text{ad}(h): \mathfrak{g}\to \text{End}(\mathfrak{g})\qquad h\mapsto \text{ad}(h)(\tilde{g})
+\end{equation}
+according to 
+\begin{equation}
+    \text{ad}(h)(g) = \frac{\dd}{\dd t}\gamma_h(t)\tilde{g}\gamma_h^{-1}(t)|_{t=0}.
+\end{equation}
+It is then easily seen that on matrix algebras the adjoint action acts as a commutator 
+\begin{equation}
+    \text{ad}(h)(g) = [h,g],
+\end{equation}
+which equips the tangent space with an anti-symmetric bilinear product, hence the name lie algebra. 
+
+\section{Lie algebras}
+In general a Lie algebra $\mathfrak{g}$ is a vector space with an anti-symmetric bilinear product called the lie bracket $\llbracket\cdot,\cdot\rrbracket: \mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}$ that satisfies the Jacobi identity $a,b,c\in\mathfrak{g}$
+\begin{equation}
+\llbracket a,\llbracket b,c\rrbracket\rrbracket+\llbracket b,\llbracket c,a\rrbracket\rrbracket+\llbracket c,\llbracket a,b\rrbracket\rrbracket=0, 
+\end{equation}
+which can easily be seen to be true for matrix commutators. Note that the lie bracket is non-associative, in fact the Jacobi identity can be seen as ensuring that the lie group on the other hand is associative. A representation of the algebra is given by a map $\rho: \mathfrak{g}\to \text{End}(\mathbb{V})$ and a module $\mathbb{V}$ and satisfies
+\begin{equation}
+    \rho(\llbracket a,b\rrbracket) = [\rho(a),\rho(b)],
+\end{equation}
+where $[\cdot,\cdot]$ denotes the matrix commutator.
+
+Being a vector space we can introduce a basis $T^a$, where $a=1,2,\ldots,\text{dim}\mathfrak{g}$, and write the lie brackets as 
+\begin{equation}
+    \llbracket T^a,T^b\rrbracket = f^{ab}_c T^c,
+\end{equation}
+where we sum over repeated indices and $f^{ab}_c$ is called the structure constants containing information about the lie algebra. If the structure constants vanish the algebra is called abelian.
+
+A subset $\mathfrak{h}\subset \mathfrak{g}$ is a subalgebra of $\mathfrak{g}$ if \begin{equation}
+    \llbracket\mathfrak{h},\mathfrak{h}\rrbracket\subseteq \mathfrak{h}
+\end{equation} 
+and it is called an invariant subalgebra, or ideal, if also
+\begin{equation}
+    \llbracket\mathfrak{h},\mathfrak{g}\rrbracket\subseteq \mathfrak{h}.
+\end{equation}
+This give the important notion of simple and semi-simple algebras: a semi-simple algebra is an algebra with no abelian ideals and a simple algebra on the other hand is an algebra containing no proper ideals (i.e.\ no ideals other than the ${0}$ and $\mathfrak{g}$ itself). Simple algebras can then be used as building blocks for a more general group, for example the lie algebra related to the standard model with gauge group $SU(3)\times SU(2)\times U(1)$ is given by $\mathfrak{g}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$, where each component is a simple algebra. 
+
+So far we have though about the real algebras, i.e.\ real linear combinations of elements in the vector space although matrix algebras such as $\mathfrak{su}(2)$ still contained complex entries. It is often convenient to extend the field to $\mathbb{C}$ instead which we will do from now on. One of the consequences of this is that algebras that are different over $\mathbb{R}$ could be the same when complexified, e.g.\ $\mathfrak{su}(2)_\mathbb{C}\cong \mathfrak{sl}(2,\mathbb{C})$ while $\mathfrak{su}(2)_\mathbb{R}\ncong\mathfrak{sl}(2,\mathbb{\mathbb{R}})$. 
+
+
+
+\subsection{Example $\mathfrak{a}_1$}
+As an example we will study $\mathfrak{a}_1\cong\mathfrak{sl}(2,\mathbb{C})$, which is an important algebra because as we will see later more complicated algebras can be constructed to a collection of $\mathfrak{a}_1$ subalgebras. A basis for this algebra of traceless matrices over $\mathbb{C}$ can be chosen as 
+\begin{equation}
+    h=\begin{bmatrix}1&0\\0 &-1\end{bmatrix}\qquad e_+=\begin{bmatrix}0&1\\0 &0\end{bmatrix}\qquad e_-=\begin{bmatrix}0&0\\1 &0\end{bmatrix}.
+\end{equation}
+The structure constants in this basis is easily calculated 
+\begin{equation}
+    [h,e_+] = 2e_+\qquad [h,e_-]=-2e_- \qquad [e_+,e_-]=h,
+\end{equation}
+the elements $e_{\pm}$ can thus be seen as step operators increasing(decreasing) the eigenvalue of $h$ by $\pm 2$. From a physicist point of view this resembles the $\{J_3,J_+,J_-\}$ basis of angular momentum in quantum mechanics. 
+
+Finite irreducible representations of this algebra can then be constructed by decomposing the module $\mathbb{V}$ into eigenspaces of $h$ such that 
+\begin{equation}
+    \mathbb{V} = \bigoplus_\alpha \mathbb{V}_\alpha,
+\end{equation}
+where $v\in\mathbb{V}_\alpha$ is an eigenvector of $h$ such that $hv_\alpha = \alpha v$

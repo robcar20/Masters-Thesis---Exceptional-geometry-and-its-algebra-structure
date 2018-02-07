@@ -1,0 +1,74 @@
+\chapter{Extended Geometries}
+In this chapter we will describe the general construction of extended geometries recently constructed in \cite{CederwallPalmkvist2017}. These are generalisations of double geometry and exceptional geometry to a geometry based on a Kac-Moody algebra $\mathfrak{g}$ and an irreducible highest weight module $R(\lambda)$. The construction is built around the generalised diffemorphisms and closure of their algebra. Moreover, a section condition is again crucial in order for the consistency of the algebra. 
+
+\todo[inline]{physics}
+\section{Extended spacetime and setup}
+An extended geometry is based on the split real-form of a Kac-Moody algebra $\mathfrak{g}$ exponentiated to a group $G$ and an irreducible highest weight coordinate module $R(\lambda)$. As introduced in section \ref{sec:symmetries} a Kac-Moody algebra is described in terms of its Cartan matrix $a_{ij}$ which we assume to be symmetrisable, i.e.\ that there exists a diagonal matrix $d$ with nonzero entries $d_j$ such that $da$ is a symmetric matrix. 
+\todo[inline]{Setup the Kac-Moody algebra etc depending on how much is introduced in the Symmetries section}
+
+\section{Generalised diffemorphisms}
+Generalised diffemorphisms play a central rôle in the construction of extended geometries, the general form of which is
+\begin{equation}
+    \delta_xi V^M = \mathscr{L}_\xi V^M = \xi^N\pd_N V^M+\tensor{Z}{^M^N}_{PQ}\pd_N\xi^PV^Q,
+\end{equation}
+where $Z$ is a invariant tensor of $\mathfrak{g}$. The first term can be viewed as a transport term coming from a Taylor expansion of the argument and the second term is a projector of the $^N_P$ indices on the adjoint of $\mathfrak{g}\oplus \mathbb{R}$. The invariant tensor $Z$ is hence given by 
+\begin{equation}
+    \tensor{Z}{^M^N_P_Q} = -k\eta_{\alpha\beta}\tensor{T}{^\alpha^M_Q}\tensor{T}{^\beta^N_P}+\beta\delta^M_Q\delta^N_P,
+\end{equation}
+where $\eta_{\alpha\beta}$ is the inverse of the invariant bilinear form on $\mathfrak{g}$ and $T^{\alpha}$ are the generators in the represenation $R(\lambda)$ as well was $k$ and $\beta$ constant. This can be written in an equivalent way using the tensor
+\begin{equation}\label{eq:Y}
+    \tensor{Y}{^M^P_N_Q} = \tensor{Z}{^M^P_N_Q}+\delta^M_P\delta^N_Q = -k\eta_{\alpha\beta}\tensor{T}{^\alpha^M_Q}\tensor{T}{^\beta^N_P}+\beta\delta^M_Q\delta^N_P+\delta^M_P\delta^N_Q
+\end{equation}
+as 
+\begin{equation}
+    \mathscr{L}_\xi V^M = \xi^N\pd_N V^M-\pd_N\xi^MV^N+\tensor{Y}{^M^N}_{PQ}\pd_N\xi^PV^Q
+\end{equation}
+such that the contribution from the $Y$ tensor can be interpreted as the departure of the generalised Lie derivative in the structure algebra $\mathfrak{g}\oplus\mathbb{R}$ compared to that of ordinary geometry $\mathfrak{gl}$. 
+
+A crucial consistency condition is now whether the algebra closes or not, to that and we examine 
+\begin{equation}\label{eq:closure}
+    \left(\left[\mathscr{L}_\xi,\mathscr{L}_\eta\right]-\mathscr{L}_{\frac{1}{2}\left(\mathscr{L}_\xi\eta-\mathscr{L}_\eta\xi\right)}\right)V^M\overset{?}{=}0.
+\end{equation}
+After a good deal of algebra one finds that \todo{Calculation in appendix?}
+\begin{equation}
+    \left(\left[\mathscr{L}_\xi,\mathscr{L}_\eta\right]-\mathscr{L}_{\frac{1}{2}\left(\mathscr{L}_\xi\eta-\mathscr{L}_\eta\xi\right)}\right)V^M = \frac{1}{2}\tensor{Z}{^{MP}_{QN}}\tensor{Y}{^{QR}_{ST}}\xi^T\pd_P\pd_R\eta^SV^N-\left(\xi\leftrightarrow\eta\right)
+\end{equation}
+if the $Y$-tensor satisfies certain constraints. The first is the (strong) section constraint 
+\begin{equation}
+    \tensor{Y}{^{MN}_{PQ}}\pd_M\otimes\pd_N = 0,
+\end{equation}
+where $\pd_M\otimes\pd_N$ indicates that each derivative act on an arbitrary field. To gets some intuition we look at the case for DFT with
+\begin{equation}
+    \tensor{Y}{^{MN}_{PQ}}=-2\tensor{P}{^{MN}_{PQ}}+\delta^M_P\delta^N_Q,
+\end{equation}
+where $\tensor{P}{^{MN}_{PQ}}=-\frac{1}{4}\eta^{IK}\eta^{JL}(T_{IJ})^M_Q(T_{KL})^N_P$ is the projection on the adjoint. The generators in the fundamental of $O(D,D)$ \cite{Berman2014} are $(T_{IJ})^M_P=\delta^M_I\eta_{JP}-\delta_J^M\eta_{IP}$ and a straightforward calculation shows that 
+\begin{equation}\label{eq:section}
+    \tensor{Y}{^{MN}_{PQ}}\pd_M\otimes\pd_N = \eta^{MN}\pd_M\otimes\pd_N,
+\end{equation}
+which indeed is the section condition for DFT introduced in section \ref{sec:DFT}. Moreover, the $Y$-tensor also needs to satisfy the following constraints for the algebra to close
+\begin{subequations}
+    \begin{align}
+        \begin{split}
+        \Big(\tensor{Y}{^{MN}_{TQ}}\tensor{Y}{^{TP}_{[SR]}}&+2\tensor{Y}{^{MN}_{[R|T|}}\tensor{Y}{^{TP}_{S]Q}}\\
+        -\tensor{Y}{^{MN}_{[RS]}}\delta^P_Q&-2\tensor{Y}{^{MN}_{[S|Q|}}\delta_{R]}^P\Big)\pd_{(N}\otimes\pd_{P)}=0,
+        \end{split}\label{eq:closure1}
+        \\
+        \begin{split}
+        \Big(\tensor{Y}{^{MN}_{TQ}}\tensor{Y}{^{TP}_{(SR)}}&+2\tensor{Y}{^{MN}_{(R|T|}}\tensor{Y}{^{TP}_{S)Q}}\\
+        -\tensor{Y}{^{MN}_{(RS)}}\delta^P_Q&-2\tensor{Y}{^{MN}_{(S|Q|}}\delta_{R)}^P\Big)\pd_{[N}\otimes\pd_{P]}=0.
+        \end{split}\label{eq:closure2}
+    \end{align}
+    \end{subequations}
+
+The equations \eqref{eq:closure1}-\eqref{eq:closure2} comes from the term involving $(\pd\xi)(\pd\eta)$. Whether the remaining term in \eqref{eq:closure} needed for closure vanish or not depends on the specific algebra together with the choice of coordinate module $R(\lambda)$, a simple criterion for this will be derived below using certain extensions of $\mathfrak{g}$. As of yet the particular form, nor any symmetry properties, of $Y$ has been used, however, inserting the explicit form \eqref{eq:Y} in \eqref{eq:closure1}-\eqref{eq:closure2} one finds that they are satisfied if the section condition is fulfilled. 
+
+Up to the remaining term we have thus seen that the closure of the algebra is entirely based on solving the section condition \eqref{eq:section}. Solving the section condition can be done in two step, first one imposes the weak section stating that any momenta $|p\rangle\in \overbar{R(\lambda)}$ lie in a minimal orbit of $G$. This is equivalent to $|p\rangle\otimes|p\rangle \in \overbar{R(2\lambda)}$ \cite{Berman2013,Bossard2017}. Secondly we demand that the product of two arbitrary momenta $|p\rangle,|q\rangle\in\overbar{R(\lambda)}$ contains only the dual of the highest modules in the symmetric $R^s_h$ and anti-symmetric $R^a_h$ product of $R(\lambda)$ respectively. In other words, the second step means that we set 
+\begin{equation}
+    \left(\pd\otimes\pd\right)|_{R_2} = 0 \qquad \left(\pd\otimes\pd\right)|_{\tilde{R}_2} =0,
+\end{equation}
+where $R_2$ and $\tilde{R}_2$ are
+\begin{align}
+    R_2 &= \vee^2 R(\lambda)\ominus R_h^s,\\
+    \tilde{R}_2 &= \wedge^2R(\lambda)\ominus  R_h^a
+\end{align}
+according to the discussion above. 

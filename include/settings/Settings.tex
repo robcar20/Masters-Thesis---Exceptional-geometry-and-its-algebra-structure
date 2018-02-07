@@ -1,0 +1,159 @@
+% CREATED BY DAVID FRISK, 2016
+
+% BASIC SETTINGS
+\usepackage{moreverb}								% List settings
+\usepackage{textcomp}								% Fonts, symbols etc.
+\usepackage{lmodern}								% Latin modern font
+\usepackage{helvet}									% Enables font switching
+\usepackage[T1]{fontenc}							% Output settings
+\usepackage[english]{babel}							% Language settings
+\usepackage[utf8]{inputenc}							% Input settings
+\usepackage{amsmath}								% Mathematical expressions (American mathematical society)
+\usepackage{amssymb}								% Mathematical symbols (American mathematical society)
+\usepackage{graphicx}								% Figures
+\usepackage{subfig}									% Enables subfigures
+\numberwithin{equation}{chapter}					% Numbering order for equations
+\numberwithin{figure}{chapter}						% Numbering order for figures
+\numberwithin{table}{chapter}						% Numbering order for tables
+\usepackage{listings}								% Enables source code listings
+\usepackage{chemfig}								% Chemical structures
+\usepackage[top=3cm, bottom=3cm,
+			inner=3cm, outer=3cm]{geometry}			% Page margin lengths			
+\usepackage{eso-pic}								% Create cover page background
+\newcommand{\backgroundpic}[3]{
+	\put(#1,#2){
+	\parbox[b][\paperheight]{\paperwidth}{
+	\centering
+	\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{#3}}}}
+\usepackage{float} 									% Enables object position enforcement using [H]
+\usepackage{parskip}								% Enables vertical spaces correctly 
+\usepackage{bbm}
+\usepackage{mathrsfs}
+
+
+
+%\usepackage{include/settings/standard}
+
+
+% OPTIONAL SETTINGS (DELETE OR COMMENT TO SUPRESS)
+
+% Disable automatic indentation (equal to using \noindent)
+\setlength{\parindent}{0cm}                         
+
+
+% Caption settings (aligned left with bold name)
+\usepackage[labelfont=bf, textfont=normal,
+			justification=justified,
+			singlelinecheck=false]{caption} 		
+
+		  	
+% Activate clickable links in table of contents  	
+\usepackage{hyperref}								
+\hypersetup{colorlinks, citecolor=black,
+   		 	filecolor=black, linkcolor=black,
+    		urlcolor=blue}
+
+
+% Define the number of section levels to be included in the t.o.c. and numbered	(3 is default)	
+\setcounter{tocdepth}{5}							
+\setcounter{secnumdepth}{5}	
+
+
+% Chapter title settings
+\usepackage{titlesec}		
+\titleformat{\chapter}[display]
+  {\Huge\bfseries\filcenter}
+  {{\fontsize{50pt}{1em}\vspace{-4.2ex}\selectfont \textnormal{\thechapter}}}{1ex}{}[]
+
+
+% Header and footer settings (Select TWOSIDE or ONESIDE layout below)
+\usepackage{fancyhdr}								
+\pagestyle{fancy}  
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\space#1}{}} 
+
+
+% Select one-sided (1) or two-sided (2) page numbering
+\def\layout{2}	% Choose 1 for one-sided or 2 for two-sided layout
+% Conditional expression based on the layout choice
+\ifnum\layout=2	% Two-sided
+    \fancyhf{}			 						
+	\fancyhead[LE,RO]{\nouppercase{ \leftmark}}
+	\fancyfoot[LE,RO]{\thepage}
+	\fancypagestyle{plain}{			% Redefine the plain page style
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt} 		
+	\fancyfoot[LE,RO]{\thepage}}	
+\else			% One-sided  	
+  	\fancyhf{}					
+	\fancyhead[C]{\nouppercase{ \leftmark}}
+	\fancyfoot[C]{\thepage}
+\fi
+
+
+% Enable To-do notes
+\usepackage[textsize=tiny]{todonotes}   % Include the option "disable" to hide all notes
+\setlength{\marginparwidth}{2.5cm} 
+
+
+% Supress warning from Texmaker about headheight
+\setlength{\headheight}{15pt}		
+
+
+
+
+
+%Added by me 
+%%%%%Bibliography%%%%%
+\usepackage[style=numeric]{biblatex}
+\addbibresource{include/backmatter/references.bib}
+\usepackage{csquotes}
+%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tensor}
+\usepackage{units}
+%\usepackage{cite}
+\usepackage{stmaryrd}%llandrrbrackets
+
+%\newcommand{\eqref}[1]{\text{(\ref{#1})}} % Make correct equation reference
+\newcommand{\figref}{\figurename~\ref} 
+\newcommand{\tabref}{\tablename~\ref} 
+\newcommand{\apxref}{\appendixname~\ref}
+
+
+%%Det ska vara ett rakt µ i prefixet
+\usepackage{upgreek}
+\newcommand{\micro}{\ifmmode\upmu\else$\upmu$\fi}
+%%Ohm enhetskommando
+\newcommand{\ohm}{\ifmmode\Upomega\else$\Upomega$\fi}
+
+
+\usepackage{bbm}
+\newcommand{\La}{\mathcal{L}} % Lagrangian
+\newcommand{\ii}{\mathrm{i}} % Vertical i 
+\newcommand{\ee}{\mathrm{e}} % Vertical e 
+\newcommand{\R}{\ensuremath{\mathbbm{R}}}
+\newcommand{\Or}[1]{\ensuremath{\mathcal{O}}\left(#1\right)}
+
+\newcommand{\lp}{\ensuremath{\left(}}
+\newcommand{\rp}{\ensuremath{\right)}}
+\newcommand{\pd}{\ensuremath{\partial}}
+
+\newcommand{\degC}{\ifmmode \,^\circ\mathrm{C} \else $\,^\circ\mathrm{C}$ \fi}
+\newcommand{\Comm}[2]{\left[#1\,,\,\, #2\right]}
+\newcommand{\DComm}[2]{\llbracket#1\,,\,\, #2\rrbracket]}
+\newcommand{\aComm}[2]{\left\{#1\,,\,\, #2\right\}}
+
+
+
+\newcommand{\dt}{\mathrm{dt}}
+\newcommand{\dtt}{\mathrm{d}\tau}
+\newcommand{\dx}{\mathrm{dx}}
+\newcommand{\dy}{\mathrm{dy}}
+\newcommand{\dz}{\mathrm{dz}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Ricciscalar}{\ensuremath{\mathcal{R}}}
+\newcommand{\Lie}{\ensuremath{\mathscr{L}}}
+
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}%Appropriately sized overbar
+
+

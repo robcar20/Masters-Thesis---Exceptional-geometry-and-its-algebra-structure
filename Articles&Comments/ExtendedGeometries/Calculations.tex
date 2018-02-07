@@ -1,0 +1,174 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{standard}
+\usepackage{tensor}
+
+\begin{document}
+
+\begin{align*}
+    \mathscr{L}_\xi\mathscr{L}_\eta V^M = L_\xi L_\eta V^M+Y^{MR}_{ST}(\pd_R\xi^S)(\eta^L\pd_L V^T-\pd_L\eta^T V^L)+\\
+    +\xi^L\pd_L\left(Y^{MN}_{PQ}(\pd_N\eta^P)V^Q\right)-(\pd_L\xi^M)Y^{LN}_{PQ}(\pd_N\eta^P)V^Q+Y^{MR}_{ST}(\pd_R\xi^S)Y^{TN}_{PQ}(\pd_N\eta^P)V^Q
+\end{align*}
+
+\begin{align*}
+    \mathscr{L}_\eta\mathscr{L}_\xi V^M = L_\eta L_\xi V^M+Y^{MR}_{ST}(\pd_R\eta^S)(\xi^L\pd_L V^T-\pd_L\xi^T V^L)+\\
+    +\eta^L\pd_L\left(Y^{MN}_{PQ}(\pd_N\xi^P)V^Q\right)-(\pd_L\eta^M)Y^{LN}_{PQ}(\pd_N\xi^P)V^Q+Y^{MR}_{ST}(\pd_R\eta^S)Y^{TN}_{PQ}(\pd_N\xi^P)V^Q
+\end{align*}
+
+\begin{align*}
+\frac{1}{2}\mathscr{L}_{\mathscr{L_\xi}\eta-\mathscr{L_\eta}\xi}V^M = L_{[\xi,\eta]}V^M+Y^{MN}_{PQ}\left((\pd_N\xi^L)(\pd_L\eta^P)+\xi^L(\pd_N\pd_L\eta^P)-(\pd_N\eta^L)(\pd_L\xi^P)-\eta^L(\pd_N\pd_L\xi^P)\right)V^Q+\\
++\frac{1}{2}Y^{LR}_{ST}(\pd_R\xi^S)\eta^T\pd_LV^M-\frac{1}{2}V^L\pd_L\left(Y^{MR}_{ST}(\pd_R\xi^S)\eta^T\right)-\frac{1}{2}Y^{LR}_{ST}(\pd_R\eta^S)\xi^T\pd_LV^M+\frac{1}{2}V^L\pd_L\left(Y^{MR}_{ST}(\pd_R\eta^S)\xi^T\right)+\\
++\frac{1}{2}Y^{MR}_{ST}Y^{SN}_{PQ}\left((\pd_R\pd_N\xi^P)\eta^Q+(\pd_N\xi^P)(\pd_R\eta^Q)\right)V^T-\frac{1}{2}Y^{MR}_{ST}Y^{SN}_{PQ}\left((\pd_R\pd_N\eta^P)\xi^Q+(\pd_N\eta^P)(\pd_R\xi^Q)\right)V^T
+\end{align*}
+
+Using the section condition the terms proportional to $Y^{LR}_{ST}$ and $Y^{LN}_{PQ}$ vanish. The terms proportional to $(\pd\xi)(\pd V)\eta$ and $(\pd\eta)(\pd V)\xi$ vanish without using any conditions on $Y$. Remaining term does not contain any derivative on $V$. 
+
+\begin{align*}
+    \mathscr{L}_\xi\mathscr{L}_\eta V^M = L_\xi L_\eta V^M+Y^{MR}_{ST}(\pd_R\xi^S)(\eta^L\pd_L V^T-\pd_L\eta^T V^L)+\\
+    +\xi^L\pd_L\left(Y^{MN}_{PQ}(\pd_N\eta^P)V^Q\right)+Y^{MR}_{ST}(\pd_R\xi^S)Y^{TN}_{PQ}(\pd_N\eta^P)V^Q
+\end{align*}
+\begin{align*}
+    \mathscr{L}_\eta\mathscr{L}_\xi V^M = L_\eta L_\xi V^M+Y^{MR}_{ST}(\pd_R\eta^S)(\xi^L\pd_L V^T-\pd_L\xi^T V^L)+\\
+    +\eta^L\pd_L\left(Y^{MN}_{PQ}(\pd_N\xi^P)V^Q\right)+Y^{MR}_{ST}(\pd_R\eta^S)Y^{TN}_{PQ}(\pd_N\xi^P)V^Q
+\end{align*}
+
+\begin{align*}
+\frac{1}{2}\mathscr{L}_{\mathscr{L_\xi}\eta-\mathscr{L_\eta}\xi}V^M = L_{[\xi,\eta]}V^M+Y^{MN}_{PQ}\left((\pd_N\xi^L)(\pd_L\eta^P)+\xi^L(\pd_N\pd_L\eta^P)-(\pd_N\eta^L)(\pd_L\xi^P)-\eta^L(\pd_N\pd_L\xi^P)\right)V^Q+\\
+-\frac{1}{2}V^L\pd_L\left(Y^{MR}_{ST}(\pd_R\xi^S)\eta^T\right)+\frac{1}{2}V^L\pd_L\left(Y^{MR}_{ST}(\pd_R\eta^S)\xi^T\right)+\\
++\frac{1}{2}Y^{MR}_{ST}Y^{SN}_{PQ}\left((\pd_R\pd_N\xi^P)\eta^Q+(\pd_N\xi^P)(\pd_R\eta^Q)\right)V^T-\frac{1}{2}Y^{MR}_{ST}Y^{SN}_{PQ}\left((\pd_R\pd_N\eta^P)\xi^Q+(\pd_N\eta^P)(\pd_R\xi^Q)\right)V^T
+\end{align*}
+
+\begin{align*}
+    \left([\mathscr{L}_\xi,\mathscr{L}_\eta]-\mathscr{L}_{\frac{1}{2}\left(\mathscr{L}_\xi\eta-\mathscr{L}_\eta\xi\right)}\right)V^M = -Y^{MR}_{ST}(\pd_R\xi^S)(\pd_L\eta^T) V^L+\xi^LY^{MN}_{PQ}(\pd_L\pd_N\eta^P)V^Q+Y^{MR}_{ST}Y^{TN}_{PQ}(\pd_R\xi^S)(\pd_N\eta^P)V^Q+\\
+    +Y^{MR}_{ST}(\pd_R\eta^S)(\pd_L\xi^T)V^L-\eta^LY^{MN}_{PQ}(\pd_L\pd_N\xi^P)V^Q-Y^{MR}_{ST}Y^{TN}_{PQ}(\pd_R\eta^S)(\pd_N\xi^P)V^Q+\\
+    -Y^{MN}_{PQ}\left((\pd_N\xi^L)(\pd_L\eta^P)+\xi^L(\pd_N\pd_L\eta^P)-(\pd_N\eta^L)(\pd_L\xi^P)-\eta^L(\pd_N\pd_L\xi^P)\right)V^Q+\\
++\frac{1}{2}V^L\pd_L\left(Y^{MR}_{ST}(\pd_R\xi^S)\eta^T\right)-\frac{1}{2}V^L\pd_L\left(Y^{MR}_{ST}(\pd_R\eta^S)\xi^T\right)+\\
+-\frac{1}{2}Y^{MR}_{ST}Y^{SN}_{PQ}\left((\pd_R\pd_N\xi^P)\eta^Q+(\pd_N\xi^P)(\pd_R\eta^Q)\right)V^T+\frac{1}{2}Y^{MR}_{ST}Y^{SN}_{PQ}\left((\pd_R\pd_N\eta^P)\xi^Q+(\pd_N\eta^P)(\pd_R\xi^Q)\right)V^T
+\end{align*}
+
+Terms proportional to $(\pd^2\xi)\eta$ comes out to (terms from pure commutator $[\mathscr{L}_\xi,\mathscr{L}_\eta]$ vanish)
+\begin{equation}
+    \frac{1}{2}Z_{QN}^{MP}Y^{QR}_{ST}\eta^T(\pd_P\pd_R\xi^S)V^N
+\end{equation}
+and likewise for $(\pd^2\eta)\xi$ with $\xi\leftrightarrow\eta$ and a minus sign.
+
+
+Terms proportional to $(\pd\xi)(\pd\eta)$ gives
+\begin{align*}
+    -\frac{1}{2}Y^{MR}_{ST}V^L(\pd_R\xi^S)(\pd_L\eta^T)+\frac{1}{2}Y^{MR}_{ST}(\pd_R\eta^S)(\pd_L\xi^T)V^L+\\
+    -Y^{MN}_{PQ}(\pd_N\xi^L)(\pd_L\eta^P)V^Q+Y^{MN}_{PQ}(\pd_N\eta^L)(\pd_L\xi^P)V^Q+\\
+    +Y^{MR}_{ST}Y^{TN}_{PQ}(\pd_R\xi^S)(\pd_N\eta^P)V^Q-Y^{MR}_{ST}Y^{TN}_{PQ}(\pd_R\eta^S)(\pd_N\xi^P)V^Q+\\
+    -\frac{1}{2}Y^{MR}_{ST}Y^{SN}_{PQ}(\pd_N\xi^P)(\pd_R\eta^Q)V^T+\frac{1}{2}Y^{MR}_{ST}Y^{SN}_{PQ}(\pd_N\eta^P)(\pd_R\xi^Q)V^T.
+\end{align*}
+The first row can be rewritten as (from now on relabel such that $\xi^A$ and $\eta^B$)
+\begin{equation}
+    -\frac{1}{4}V^L\left(Y^{MR}_{[AB]}\pd_{(R}\otimes\pd_{L)}+Y^{MR}_{(AB)}\pd_{[R}\otimes\pd_{L]}\right)(\xi^A\otimes \eta^B)
+\end{equation}
+and the second row
+\begin{equation}
+    -\frac{1}{2}V^Q\left(Y^{MN}_{(B|Q|}\delta^R_{A)}\pd_{[N}\otimes\pd_{R]}+Y^{MN}_{[B|Q|}\delta^R_{A]}\pd_{(N}\otimes\pd_{R)}\right)(\xi^A\otimes \eta^B),
+\end{equation}
+the third row as 
+\begin{equation}
+    \frac{1}{2}V^Q\left(Y^{MR}_{[A|T|}Y^{TN}_{B]Q}\pd_{(R}\otimes\pd_{N)}+Y^{MR}_{(A|T|}Y^{TN}_{B)Q}\pd_{[R}\otimes\pd_{N]}\right)(\xi^A\otimes \eta^B)
+\end{equation}
+and finally the forth row as 
+\begin{equation}
+    -\frac{1}{4}Y^{MR}_{SQ}V^Q\left(Y^{SN}_{[AB]}\pd_{(N}\otimes\pd_{R)}+Y^{SN}_{(AB)}\pd_{[N}\otimes\pd_{R]}\right)(\xi^A\otimes \eta^B).
+\end{equation}
+Vanishing of the terms proportional to $(\pd\xi)(\pd\eta)$ can thus be written as 
+\begin{equation}
+\left(Y^{MR}_{TQ}Y^{TR}_{[BA]}+2Y^{MR}_{[A|T|}Y^{TN}_{B]Q}-Y^{MR}_{[AB]}\delta_Q^N-2Y^{MR}_{[B|Q|}\delta^N_{A]}\right)\pd_{(R}\otimes\pd_{N)}=0
+\end{equation}
+and
+\begin{equation}
+\left(Y^{MR}_{TQ}Y^{TR}_{(BA)}+2Y^{MR}_{(A|T|}Y^{TN}_{B)Q}-Y^{MR}_{(AB)}\delta_Q^N-2Y^{MR}_{(B|Q|}\delta^N_{A)}\right)\pd_{[R}\otimes\pd_{N]}=0
+\end{equation}
+
+\newpage 
+Rewrite according to eq 2.23 in article as $\Sigma_\alpha T^\alpha|V\rangle$ with
+\begin{equation}
+    \Sigma_\alpha = \frac{k}{2}\langle\pd_\eta|\otimes \langle\pd_\eta|S^\alpha|\xi\rangle\otimes|\eta\rangle-(\xi\leftrightarrow\eta)
+\end{equation}
+and 
+\begin{equation}
+    S^\alpha = -kf\indices{^\alpha_{\beta\gamma}}T^\beta\otimes T^\gamma+T^\alpha\otimes 1-1\otimes T^\alpha. 
+\end{equation}
+To see this we start by looking at order $k^0$ and find 
+\begin{equation}
+    \beta\delta^M_N\delta^P_QY^{QR}_{ST}\xi^T\pd_R\pd_P\eta^SV^N-(\eta\leftrightarrow\xi) = 0 
+\end{equation}
+due to the section condition. The term proportional to $\frac{1}{2}k^1$ is given by 
+
+\begin{equation}
+    -\eta_{\alpha\beta}T^{\alpha P}_QT^{\beta M}_N\left(\beta\delta_T^Q\delta_S^R+\delta_S^Q\delta_T^R\right)\xi^T(\pd_P\pd_R\eta^S)V^N-k\eta_{\alpha\beta}T^{\alpha R}_S T^{\beta Q}_T\beta\delta_M^N\delta^P_Q\xi^T(\pd_P\pd_R\eta^S)V^N-(\xi\leftrightarrow\eta).
+\end{equation}
+inserting $\beta=k(\lambda,\lambda)-1$ this simplifies to 
+\begin{align}
+    \left[\langle\pd_\eta|\otimes\langle \pd_\eta|T_\alpha\otimes 1|\xi\rangle\otimes |\eta\rangle-\langle\pd_\eta|\otimes\langle \pd_\eta|1\otimes T_\alpha|\xi\rangle\otimes |\eta\rangle\right]T^\alpha |V\rangle-(\xi\leftrightarrow\eta)+\\
+    -k(\lambda,\lambda)\eta_{\alpha\beta}T\indices{^{\alpha P}_T} T^{\beta M}_N\xi^T(\pd_S\pd_P\eta^S)V^N-\beta\eta_{\alpha\beta}T^{\alpha R}_{S}T^{\beta P}_T\xi^T(\pd_P\pd_R\eta^S)V^M-(\xi\leftrightarrow\eta)
+\end{align}
+of which the second line should vanish \todo{How?}. The term proportional to $\frac{1}{2}k^2$ gives
+\begin{equation}
+    \eta_{\alpha\beta}T\indices{^{\alpha M}_N}T\indices{^{\beta P}_Q}\eta_{\gamma\delta}T\indices{^{\gamma Q}_T}T\indices{^{\delta R}_S}\xi^T(\pd_P\pd_R\eta^S)V^N
+\end{equation}
+which can be rewritten in terms of structure constants as 
+\begin{equation}
+    -f_{\alpha\beta\delta}\langle \pd_\eta|\otimes \langle \pd_\eta |T^\beta \otimes ^\delta |\xi\rangle\otimes|\eta\rangle T^\alpha |V\rangle+\eta_{\alpha\beta}\eta_{\gamma\delta}T\indices{^{\alpha M}_N}T\indices{^{\beta Q}_T}T\indices{^{\gamma P}_Q}T\indices{^{\delta R}_S}\xi^T(\pd_P\pd_R\eta^S)V^N
+\end{equation}
+where the second term should vanish\todo{How?}.
+The operator $S^\alpha$ is anti-symmetric under $\sigma$ and can thus be decomposed into $S^\alpha = S\indices{^{\alpha(MN)}_{[PQ]}}+S\indices{^{\alpha[MN]}_{(PQ)}}$ of which only the first term contributes in $\Sigma^\alpha$. 
+
+\newpage 
+\begin{equation}
+\Delta C = 2G^{PQ}(\delta^R_P\delta^M_S+\beta\delta^M_P\delta^R_S)\tensor{T}{^\beta^N_Q}(\pd_N\pd_R\xi^S)\Pi_{\beta M}+2\tensor{T}{^\alpha ^Q_U}G^{UM}\tensor{T}{^\beta ^N_Q}\tensor{T}{^R_\alpha _S}(\pd_N\pd_R\xi^S)\Pi_{\beta M}
+\end{equation}
+\begin{align*}
+    &= 2G^{RQ}(\pd_N\pd_R\xi^M)(G^{NP}\pd_MG_{PQ})+2\beta G^{MQ}(G^{NP}\pd_M G_{PQ})(\pd_N\pd_R\xi^R)-2G^{RN}\Pi_M(\pd_N\pd_R\xi^M)-2\beta G^{MN}\Pi_M(\pd_N\pd_R\xi^R)\\
+    &+2\tensor{f}{^{\beta\alpha}_\gamma}\tensor{T}{^{\gamma N}_P}G^{PM}\tensor{T}{_\alpha^R_S}(\pd_N\pd_R\xi^S)\Pi_{\beta M}+2\tensor{T}{^{\alpha N}_Q}\tensor{T}{^{\beta Q}_U}\tensor{T}{_\alpha^{R}_S}G^{UM}(\pd_N\pd_R\xi^S)\Pi_{\beta M}
+\end{align*}
+\begin{align*}
+    &= 2G^{RQ}(\pd_N\pd_R\xi^M)(G^{NP}\pd_MG_{PQ})+2\beta G^{MQ}(G^{NP}\pd_M G_{PQ})(\pd_N\pd_R\xi^R)-2G^{MN}\Pi_P(\pd_M\pd_N\xi^P)-2\beta G^{MN}\Pi_M(\pd_N\pd_P\xi^P)+\\
+    &+2\tensor{S}{^{\alpha RN}_P_S}G^{PM}(\pd_N\pd_R\xi^S)\Pi_{\alpha M}+2G^{PM}\left(-\tensor{T}{^\alpha ^N_P}\delta^R_S+\tensor{T}{^\alpha ^R_S}\delta^N_P\right)(\pd_N\pd_R\xi^S)\Pi_{\alpha M}+\\
+    &+2\tensor{T}{^\alpha ^Q_P}G^{PM}(\pd_N\pd_Q\xi^N)\Pi_{\alpha M}+2\beta \tensor{T}{^\alpha ^N_P}G^{PM}(\pd_N\pd_R\xi^R)\Pi_{\alpha M}
+\end{align*}
+Expand the sum of T-matrices in its definition and the trace part will cancel. 
+\begin{align*}
+    &=2G^{RQ}(\pd_N\pd_R\xi^M)(G^{NP}\pd_MG_{PQ})+2\beta G^{MQ}(G^{NP}\pd_M G_{PQ})(\pd_N\pd_R\xi^R)-2G^{MN}\Pi_P(\pd_M\pd_N\xi^P)-2\beta G^{MN}\Pi_M(\pd_N\pd_P\xi^P)+\\
+    &+2\tensor{S}{^{\alpha MN}_{PQ}}G^{PR}(\pd_M\pd_N\xi^Q)\Pi_{\alpha R}-2G^{PM}(\pd_N\pd_Q\xi^Q)(G^{NR}\pd_M G_{RP})+2G^{PM}(\pd_P\pd_R\xi^S)(G^{RT}\pd_M G_{TS})+\\
+    &+2(\beta+1)G^{PM}(G^{NT}\pd_M G_{TP})(\pd_N\pd_R\xi^R)-2(\beta+1)G^{MN}(\pd_N\pd_R\xi^R)\Pi_M
+\end{align*}
+\begin{align*}
+    &=2G^{RQ}(\pd_N\pd_R\xi^M)(G^{NP}\pd_MG_{PQ})+2\beta G^{MQ}(G^{NP}\pd_M G_{PQ})(\pd_N\pd_R\xi^R)+2S^{\alpha MN}_{PQ}G^{PR}(\pd_M\pd_N\xi^Q)\Pi_{\alpha R}+\\
+    &-2G^{MN}\Pi_P(\pd_M\pd_N\xi^P)-2(2\beta+1)G^{MN}(\pd_N\pd_R\xi^R)\Pi_M+\\
+    &+2\beta G^{PM}(G^{NT}\pd_M G_{TP})(\pd_N\pd_R\xi^R)+2G^{PM}(\pd_P\pd_R\xi^S)(G^{RT}\pd_M G_{TS})
+\end{align*}
+
+
+\begin{equation}
+    \Delta A = 4G^{MN}\tensor{T}{^{\alpha S}_T}(\pd_S\pd_M\xi^T)\Pi_{\alpha N}
+\end{equation}
+\begin{align*}
+    \Delta C = \tensor{T}{_\alpha^M_K}G^{KN}(\tensor{T}{^\alpha^S_T}+\tensor{T}{^{*\alpha S}_T})(\pd_S\pd_M\xi^T)\Pi_N-2w\tensor{T}{^{\alpha}^M_K}G^{KN}\Pi_{\alpha M}(\pd_S\pd_N\xi^S) =\\
+    =(\beta+1)G^{MN}(\pd_T\pd_M\xi^T)\Pi_N+\beta G^{NM}(\pd_T\pd_M\xi^T)\Pi_N+G^{SM}(\pd_S\pd_M\xi^N)\Pi_N-2w\tensor{T}{^{\alpha}^M_K}G^{KN}\Pi_{\alpha M}(\pd_S\pd_N\xi^S)
+\end{align*}
+\begin{equation}
+    \Delta D = -4w(\pd_S\pd_M\xi^S)\Pi_N G^{MN}
+\end{equation}
+
+\begin{align*}
+    \Delta \mathcal{L}_0 &= 2G^{MN}\tensor{T}{^{\alpha S}_T}(\pd_S\pd_M\xi^T)\Pi_{\alpha N}-2(2\beta+1)G^{MN}(\pd_T\pd_M\xi^T)\Pi_N-2G^{SM}(\pd_S\pd_M \xi^N)\Pi_N+4w \tensor{T}{^\alpha ^M_K}G^{KN}\Pi_{\alpha M}(\pd_S\pd_N\xi^S)+\\
+    &+4w\frac{(\lambda,\lambda)}{(\lambda,\lambda)-\frac{1}{2}}(\pd_S\pd_M\xi^S)\Pi_N G^{MN}-2G^{RQ}(\pd_N\pd_R\xi^M)(G^{NP}\pd_MG_{PQ})-2\beta G^{MQ}(G^{NP}\pd_M G_{PQ})(\pd_N\pd_R\xi^R)\\
+    &-2S^{\alpha MN}_{PQ}G^{PR}(\pd_M\pd_N\xi^Q)\Pi_{\alpha R}+2G^{MN}\Pi_P(\pd_M\pd_N\xi^P)+2(2\beta+1)G^{MN}(\pd_N\pd_R\xi^R)\Pi_M+\\
+    &-2\beta G^{PM}(G^{NT}\pd_M G_{TP})(\pd_N\pd_R\xi^R)-2G^{PM}(\pd_P\pd_R\xi^S)(G^{RT}\pd_M G_{TS})
+\end{align*}
+
+With $w=(\lambda,\lambda)-\frac{1}{2}$
+\begin{align*}
+    \Delta \mathcal{L}_0 = -2\tensor{S}{^\alpha^M^N_P_Q}G^{PR}(\pd_M\pd_N\xi^Q)\Pi_{\alpha R}+2(\beta+1)G^{MN}\Pi_M(\pd_S\pd_N\xi^S)-2G^{RQ}(\pd_N\pd_R\xi^M)(G^{NP}\pd_MG_{PQ})+\\
+    -2\beta G^{MQ}(G^{NP}\pd_M G_{PQ})(\pd_N\pd_R\xi^R)
+\end{align*}
+
+
+
+\end{document}

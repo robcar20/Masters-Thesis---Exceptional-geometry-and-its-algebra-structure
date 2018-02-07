@@ -1,0 +1,127 @@
+\chapter{Double field theory}\label{sec:DFT}
+The low-energy effective theory for the massless NS-NS fields in string theory contains gravity $g_{ij}$, a 2-form field $B_{ij}$ and a scalar field (dilaton) $\phi$. Together with diffeomorphism invariance the 2-form field also comes with an abelian gauge symmetry and the theory is given by the action 
+\begin{equation}
+    S = \int \dd ^Dx \sqrt{-g}\ee^{-2\phi}\left(R+4(\pd\phi)^2-\frac{1}{12}H^2\right),
+\end{equation}
+where $H=\dd B$ is the 3-form field strength tensor of $B$. In its presence form no signs of T-duality symmetries are present and the goal of double field theory is to make these duality transformations manifest in the theory.
+
+T-duality of closed strings compactified on a torus $T^d$ exchanges momentum on the torus with winding modes. These duality transformations are elements in the group $O(d,d,\mathbb{Z})$. Moreover, upon compactifying supergravity in $D=10$ on a torus $T^d$ one finds the continuous version of the same group, i.e.\ an $O(d,d,\mathbb{R})$ symmetry, and the goal of double field theory is to promote this duality to a manifest symmetry. In order to do this one extends space-time to include coordinates $\tilde{x}_i$ dual to the winding modes $w^i$ and arrange fields in representations of $O(d,d)$. Doing this diffemorphisms and the 2-form gauge symmetry merges to a single symmetry transformation called generalised diffemorphisms. At the same time this unifies the metric and the gauge field into a generalised metric.
+
+
+\section{Generalised diffemorphisms and the section condition}
+Ordinary diffeomorphisms $\xi^i$ are encoded in the Lie derivative acting on the tensor fields as 
+\begin{equation}
+    L_\xi g_{ij} = \xi^k\pd_kg_{ij}+2\pd_{(i}\xi^kg_{j)k} \qquad L_\xi b_{ij} = \xi^k\pd_k b_{ij} + 2 \pd_{[i}\xi^k b_{|k|j]} \qquad L_\xi \phi = \xi^i\pd_i\phi. 
+\end{equation}
+This can be viewed as a transport term coming from the Taylor expansion of the argument as well as the adjoint action of an $GL(d)$ element acting according to the index structure. The generalisation of the Lie derivative plays an import rôle in the extended geometries. 
+
+Gauge transformations $\lambda$ of the form-field is given by 
+\begin{equation}
+    \delta_\lambda b_{ij} = 2\pd_{[i}\lambda_{j]} 
+\end{equation}
+while the metric and dilaton field is inert to this transformation. Note that the gauge transformation comes with a reducibility stemming from the fact that $\lambda_i = \pd_i \chi$, where $\chi$ is a scalar function, is a trivial transformation. Reducibility is again a property that becomes important in the extended cases. 
+
+The first step to construct a doubled theory we extend spacetime from $D$ to $2D$ dimensions. In the case of type II supergravity this could be thought of compactifying all $D=10$ coordinates and double them, however, the general construction works with arbitrary $D$ without any compact directions. Hence we extend the coordinates of space-time to belong to the $2D$ vector representation of $O(D,D)$ such that 
+\begin{equation}
+    x^{i}\to X^M = (\tilde{x}_i,x^j),
+\end{equation}
+where $\tilde{x}_i$ denotes the added coordinates and $X^M$ the full space-time coordinate vector with $M=1,2,\ldots,2D$. The metric and the two-form combine to a generalised metric $\mathcal{H}_{MN}$ given by 
+\begin{equation}
+    \mathcal{H}_{MN} = \begin{pmatrix}g^{ij} & -g^{ik}b_{kj}\\
+                            b_{ik}g^{kj} & g_{ij}-b_{ik}g^{kl}b_{lj}\end{pmatrix}.
+\end{equation}
+Before moving on to the generalised diffeomorphisms we note that the group $O(D,D)$ also comes with the invariant metric $\eta_{MN}$ such that an element $h\in O(D,D)$
+\begin{equation}
+\tensor{h}{_M^P}\eta_{PL}\tensor{h}{_N^L} = \eta_{MN} = \begin{pmatrix}0&\mathbbm{1}\\ \mathbbm{1}&0\end{pmatrix}.
+\end{equation}
+The invariant metric $\eta_{MN}$ and its inverse $\eta^{MN}$ can be used to raise and lower $M=1,2,\ldots,2D$ indices. 
+
+The generalised Lie derivative on an arbitrary tensor $V^M$ is given by 
+\begin{equation}
+    \delta_\xi V^M = \mathscr{L}_\xi V^M = \xi^P\pd_P V^M+(\pd^M \xi_P-\pd_P\xi^M)V^P,
+\end{equation}
+where we implicitly used the invariant metric $\eta$ to raise and lower indices. In order to connect to the usual Lie derivative as well as being convenient for other extended geometries this can be rewritten as 
+\begin{equation}
+    \mathscr{L}_\xi V^M = L_\xi V^M + \tensor{Y}{^M^N_P_Q}\pd_N\xi^PV^Q,
+\end{equation}
+where $L_\xi V^M=\xi^P\pd_PV^M-\pd_P\xi^M V^P$ denotes the ordinary Lie derivative and $\tensor{Y}{^M^N_P_Q}=\eta^{MN}\eta_{PQ}$ is an invariant tensor of $O(d,d)$. 
+
+In order for the symmetry group to close, two consecutive transformations $\xi_1,\xi_2$ needs to yield a new transformation with some parameter $\xi(\xi_1,\xi_2)$. To this end we adopt the notation that $\Delta=\delta_\xi-\mathscr{L}_\xi$ denotes the departure of an object transforming as a tensor, i.e.\ $\delta_\xi X = \mathscr{L}_\xi X$, and look at 
+\begin{equation}
+    -\Delta_{\xi_1}(\mathscr{L}_{\xi_2} X^M) = \left(\left[\mathscr{L}_{\xi_1},\mathscr{L}_{\xi_2}\right]-\mathscr{L}_{\xi(\xi_1,\xi_2)}\right)X^M \overset{!}{=} 0.
+\end{equation}
+By doing this explicitly one finds that generalised diffeomorphisms closes if 
+\begin{equation}
+    \eta^{MN}\pd_M\otimes\pd_N = 0,
+\end{equation}
+where $\pd_M \otimes \pd_N$ indicates that each derivative act on an arbitrary field. The combined transformation $\xi(\xi_1,\xi_2)^M$ is given by the C-bracket $\left[\xi_1,\xi_2\right]_C^M = 1/2(\mathcal{L}_{\xi_1}\xi_2-\mathcal{L}_{\xi_2}\xi_1)$
+\begin{equation}
+    \xi(\xi_1,\xi_2)^M = \left[\xi_1,\xi_2\right]_C^M = \xi_1^P\pd_P\xi_2^M-\frac{1}{2}\xi_1^P\pd^M\xi_{2}-(1\leftrightarrow 2).
+\end{equation}
+The constraint $\eta^{MN}\pd_M\otimes\pd_N=0$ is called the (strong) section condition and some generalised version of this is characteristic for extended geometries. By solving the section condition one restricts space-time to an $d$-dimensional subspace of the extended space-time, e.g.\ one solution is given by $\tilde{\pd}^i=0$ which implies that no fields can depend on the extended coordinates. In fact, starting with this solution one can get all other possible solutions by applying an $O(d,d)$ transformation. 
+
+One can now check that if we solve the section condition with $\tilde{\pd}^i=0$ and set $\xi^M = (\lambda_i,\xi^i)$ that the generalized diffeomorphism reduces to the ordinary diffeomorphism and gauge transformation 
+\begin{equation}
+    \mathscr{L}_\xi g_{ij} = L_\xi g_{ij} \qquad \mathscr{L}_\xi b_{ij} = L_\xi b_{ij}+2\pd_{[i}\lambda_{j]}.
+\end{equation}
+This shows that the generalized diffemorphisms merges ordinary diffemorphisms with 2-form gauge transformations. 
+
+
+\todo[inline]{show that we receive diff+gaugetransf}
+
+
+\section{DFT action}
+In order to write down a two-derivative action for DFT we need to take a derivative of the generalised metric $\pd_L\mathcal{H}^{MN}$ and combine such terms to ensure invariance under generalised diffemorphisms. However, due to the naked derivatives invariance will not be manifest and needs to be checked. Moreover, the combination $\ee^{-2\phi}\sqrt{-g}$ is an $O(D,D)$ scalar density with weight one and can be combined as $\ee^{-2d}$. Given this the action for DFT reads
+\begin{equation}
+\begin{aligned}\label{eq:DFTaction}
+    S_{\text{DFT}} = \int \dd^Dx\dd^D\tilde{x} \ee^{-2d}\left(\frac{1}{8}\mathcal{H}^{MN}\pd_M\mathcal{H}^{KL}\pd_N\mathcal{H}_{KL}-\frac{1}{2}\mathcal{H}^{MN}\pd_M\mathcal{H}^{KL}\pd_L\mathcal{H}_{KN}\right.\\
+    \left. -2\pd_M d\pd_N\mathcal{H}^{MN}+4\mathcal{H}^{MN}\pd_M d\pd_N d\right).
+\end{aligned}
+\end{equation}
+Since the indices are contracted properly we only need to check the non-tensorial part, i.e.\ terms with derivatives, to ensure invariance under generalised diffeomorphisms. To this end we examine
+\begin{equation}
+    \Delta_\xi \pd_K \mathcal{H}^{MN} = \pd_K\left(\delta_\xi\mathcal{H}^{MN}\right)-\mathscr{L}_\xi\left(\pd_K\mathcal{H}^{MN}\right)
+\end{equation}
+which is given by 
+\begin{equation}
+    \Delta_\xi \pd_K \mathcal{H}^{MN} = 2\left(\pd_K\pd^{(M}\xi_P-\pd_K\pd_P\xi^{(M}\right)\mathcal{H}^{N)P},
+\end{equation}
+up to a term that vanish by the section condition. Likewise one finds 
+\begin{equation}
+    \Delta_\xi \pd_K\mathcal{H}_{MN} = 2\left(\pd_K\pd_{(M}\xi^P-\pd_K\pd^P\xi_{(M}\right)\mathcal{H}_{N)P}.
+\end{equation}
+For the first term in \eqref{eq:DFTaction} one finds that 
+\begin{equation}\label{eq:dftvar1}
+    \Delta_\xi\left(\frac{1}{8}\mathcal{H}^{MN}\pd_M\mathcal{H}^{KL}\pd_N\mathcal{H}_{KL}\right) = \mathcal{H}^{MN}\pd_M\mathcal{H}^{KL}\pd_N\pd_K\xi^P\mathcal{H}_{LP},
+\end{equation}
+where we used $\mathcal{H}^{PL}\pd_N\mathcal{H}_{LK}=-\pd_N\mathcal{H}^{PL}\mathcal{H}_{LK}\pd$. A similar calculation for the second term in the action gives 
+\begin{equation}
+    \Delta_\xi \left(-\frac{1}{2}\mathcal{H}^{MN}\pd_M\mathcal{H}^{KL}\pd_L\mathcal{H}_{KN}\right) = -\pd_K\pd_L\xi^M\pd_M\mathcal{H}^{KL}-\pd_K\mathcal{H}^{MN}\pd_M\pd_P\xi^L\mathcal{H}^{KP}\mathcal{H}_{NL},
+\end{equation}
+where we see that the second term in this expression cancel the variation in \eqref{eq:dftvar1}. For the last two terms we also need
+\begin{equation}
+    \Delta_\xi \pd_M d = -\frac{1}{2}\pd_M\pd_P\xi^P.
+\end{equation}
+Using this we get for the third term in \eqref{eq:DFTaction}
+\begin{equation}
+    \Delta_\xi (-2\pd_Md\pd_N\mathcal{H}^{MN}) = \pd_M\pd_P\xi^P\pd_N\mathcal{H}^{MN}+2\pd_M\pd_N\pd_P\xi^M\mathcal{H}^{NP}+2\pd_M d\pd_N\pd_P\xi^N\mathcal{H}^{NP}
+\end{equation}
+and for the last term
+\begin{equation}
+    \Delta_\xi (4\mathcal{H}^{MN}\pd_Md\pd_Nd) = -4\pd_N d\pd_M\pd_P\xi^P\mathcal{H}^{MN}.
+\end{equation}
+Integrating by parts (note the dilaton prefactor in the action) one finds that the total variation of $S_{\text{DFT}}$ indeed vanish and the action is thus invariant under generalised diffemorphisms. 
+
+
+With the supergravity solution to the section condition, $\tilde{\pd}^i = 0$, it is interesting to see that the DFT action reduce to that of supergravity (as it should)
+\begin{equation}
+    S_{\text{DFT},\tilde{\pd}=0} = \int\dd^Dx \ee^{-2\phi}\sqrt{-g}\left(R+4(\pd\phi)^2-\frac{1}{12}H^2\right).
+\end{equation}
+T-duality on a circle typically exchanges the metric with its inverse and sends $\pd\leftrightarrow\tilde{\pd}$, in fact, this can be seen be looking at the action when the dilaton and the 2-form is turned off 
+\begin{equation}
+    S_{\text{DFT},d=b=0} = \int\dd^Dx\dd^D\tilde{x}\left(R(g,\pd)+R(g^{-1},\tilde{\pd})\right),
+\end{equation}
+which clearly shows that the action is invariant under T-duality in this case.
+
+
+

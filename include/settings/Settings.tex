@@ -104,7 +104,7 @@
 
 %Added by me 
 %%%%%Bibliography%%%%%
-\usepackage[style=numeric]{biblatex}
+\usepackage[style=numeric,sorting=none,maxbibnames=5]{biblatex}
 \addbibresource{include/backmatter/references.bib}
 \usepackage{csquotes}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -112,6 +112,10 @@
 \usepackage{units}
 %\usepackage{cite}
 \usepackage{stmaryrd}%llandrrbrackets
+\usepackage{packages/Dynkin/dynkin-diagrams}
+\usepackage{tikz}
+\usepackage{include/settings/TikzDrawings}
+
 
 %\newcommand{\eqref}[1]{\text{(\ref{#1})}} % Make correct equation reference
 \newcommand{\figref}{\figurename~\ref} 

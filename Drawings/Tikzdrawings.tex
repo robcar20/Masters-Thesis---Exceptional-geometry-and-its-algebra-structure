@@ -1,0 +1,28 @@
+\documentclass[11pt,a4paper]{article}
+%\input{include/settings/Settings}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=.4]
+    \draw (-1,0) node[anchor=east]  {$A_n$};
+    \foreach \x in {0,...,5}
+    \draw[xshift=\x cm,thick] (\x cm,0) circle (.3cm);
+    \draw[dotted,thick] (0.3 cm,0) -- +(1.4 cm,0);
+    \foreach \y in {1.15,...,4.15}
+    \draw[xshift=\y cm,thick] (\y cm,0) -- +(1.4 cm,0);
+    \end{tikzpicture}
+
+\begin{tikzpicture}[scale=0.4,>=stealth']
+    \draw (0,0);
+    \foreach \x in {1,...,7}
+    \draw[xshift=\x cm,thick] (\x cm,0) circle (.2cm);
+    \foreach \y in {1.10,...,6.9}
+    \draw[xshift=\y cm,thick] (\y cm,0) -- +(1.6 cm,0); 
+    \draw[->] (10 cm, 0.5) to [out=45,in=145] (12 cm,.5) node[above,xshift=-0.32cm,yshift=0.15cm] {$e^+$};
+    \draw[<-] (4 cm, -0.5) to [out=-45,in=225] (6 cm,-.5) node[below,xshift=-0.3cm,yshift=-0.15cm] {$e^-$};
+    \draw[] (7.8,0.5) to [out=120,in=80] (8,1.7) node[above] {$h$};
+    \draw[->] (8,1.7) to [out=100,in=60] (8.2,0.5);
+\end{tikzpicture}
+\end{document}

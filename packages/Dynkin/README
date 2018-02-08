@@ -1,0 +1,19 @@
+___________________________________
+
+            Dynkin diagrams
+               
+                v3.0
+
+            12 January 2018
+___________________________________
+
+Authors   : Ben McKay
+Maintainer: Ben McKay
+E-mail    : b.mckay@ucc.ie
+Licence   : Released under the LaTeX Project Public License v1.3c or
+            later, see http://www.latex-project.org/lppl.txt
+
+----------------------------------------------------------------------
+
+Draws Dynkin di­a­grams in LaTeX doc­u­ments, us­ing the TikZ pack­age.
+Version 3.0 adds Satake diagrams, more folded Dynkin diagrams, affine extended and affine twisted Dynkin and Coxeter diagrams, and more style options.

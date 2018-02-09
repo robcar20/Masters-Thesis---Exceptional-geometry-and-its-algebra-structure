@@ -14,6 +14,53 @@
 
 
 
+\newcommand{\DynkinESeries}[1]{
+        \begin{center}
+      \begin{tikzpicture}[scale=.4]
+        \draw (-1,1) node[anchor=east]  {$\mathfrak{e}_8$};
+        \foreach \x in {0,...,6}
+        \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+        \foreach \y in {0,...,5}
+        \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+        \draw[thick] (4 cm,2 cm) circle (3 mm);
+        \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+      \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}[scale=#1]
+            \draw (-1,1) node[anchor=east]  {$\mathfrak{e}_9$};
+            \foreach \x in {0,...,7}
+            \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+            \foreach \y in {0,...,6}
+            \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+            \draw[thick] (4 cm,2 cm) circle (3 mm);
+            \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+        \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}[scale=#1]
+            \draw (-1,1) node[anchor=east]  {$\mathfrak{e}_{10}$};
+            \foreach \x in {0,...,8}
+            \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+            \foreach \y in {0,...,7}
+            \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+            \draw[thick] (4 cm,2 cm) circle (3 mm);
+            \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+        \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}[scale=#1]
+            \draw (-1,1) node[anchor=east]  {$\mathfrak{e}_{11}$};
+            \foreach \x in {0,...,9}
+            \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+            \foreach \y in {0,...,8}
+            \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+            \draw[thick] (4 cm,2 cm) circle (3 mm);
+            \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+        \end{tikzpicture}
+    \end{center}
+}
+
 
 \newcommand{\AllDynkin}{
     \begin{center}

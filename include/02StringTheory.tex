@@ -1,1 +1,56 @@
-\chapter{String theory, Supergravity \& dualities}
+\chapter{String theory, supergravity \& dualities}
+
+
+This chapter aims to introduce a few brief points on string theory, with the main point to show the presence of dualities, especially T-duality for the bosonic string. Moreover, the low-energy effective theory, supergravity, related to string theory will be introduced. This is done in order to motivate the appearance of the continuous version of the duality group upon compactification on torii. For the interested reader we recommend \cite{Blumenhagen2013} for a thorough introduction to string theory. In \ref{sec:Dualities} the notion of dualities is introduced more thoroughly. 
+
+
+\section{String theory}
+
+\section{Supergravity}
+
+\section{Dualities}\label{sec:Dualities}
+Dualities is a term that is used in different ways in physics. What we will be interested in is dualities between two theories $\mathscr{T}$ and $\tilde{\mathscr{T}}$ such that we can find a map to relate them 
+\begin{equation}
+    \mathscr{T} \leftrightarrow \mathscr{\tilde{T}}.
+\end{equation}
+A typical example of such a duality is the duality of electromagnetism in vacuum with a mapping 
+\begin{equation}
+    \left(\mathbf{E},\mathbf{B}\right) \to \left(\mathbf{B},-\mathbf{E}\right),
+\end{equation}
+under which Maxwell's equations are invariant. 
+
+In order work with interacting field theories we usually employ perturbation theory in some ``small'' coupling constant $g$, such that observables are given as a perturbation series 
+\begin{equation}\label{eq:pert}
+    R(g) = \sum_{n=0}^{\infty}a_n g^n.
+\end{equation}
+Usually these series do not converge but in many cases they are believed to be asymptotic series. Non-perturbative effects typically scale like $\sim \ee^{-1/g^n}$ which is not captured by the expansion \eqref{eq:pert}. Typically instanton effects in ordinary field theories scale with $n=2$. These considerations leads to two kinds of duality transformations weak-weak duality and weak-strong duality. 
+\begin{itemize}
+    \item Weak-weak duality: $\left(\mathscr{T},g\right)\leftrightarrow\left(\mathscr{T}',g'\right)$ with $g,g'\ll 1$.
+    \item Weak-strong duality: $\left(\mathscr{T},g\right)\leftrightarrow\left(\mathscr{T}'',g''\right)$ with $g\ll 1$ and $g''\gg 1$.
+\end{itemize}
+Weak-strong duality is of special interest since it allows us to probe the non-perturbative regime of a theory, using perturbative methods in the dual theory. Since little is usually known about the non-perturbative regime this duality is hard to prove. However, there are quantities that are protected against perturbative corrections and extrapolation to the non-perturbative regime. These play an important rôle in confirming these weak-strong dualities. Perhaps the most famous weak-strong duality is the AdS/CFT correspondence, first conjectured by Maldacena in \cite{Maldacena1999}. This is a rather special duality in the sense that it relates a string theory (which includes gravity) in a certain dimension to an conformal field theory in one spacetime dimension lower, without gravity. This a prominent example of the holographic principle introduced by 't Hooft and Susskind.
+
+Motivation for the presence of a weak-weak T-duality symmetry when compactifying type II string theories on a torus $T^d$ was introduced above, with the the T-duality group $O(d,d,\mathbb{Z})$. Moreover, type IIB has a weak-strong so-called S-duality symmetry with transformations given by $SL(2,\mathbb{Z})$. It is conjectured that these combine in to a larger set of dualities called U-duality, given by 
+\begin{equation}
+    SL(2,\mathbb{Z})\boxtimes O(d,d,\mathbb{Z}),
+\end{equation}
+where `$\boxtimes$' is a non-commutative product. For the type II theories the U-duality groups upon compactification on a torus $T^{n}$ is given in \tabref{tab:UdualityString}. These are just the discrete version of the continuous groups encountered in the supergravity. The continuous version can not be a symmetry of the full theory, it is believed to be broken by non-perturbative effects to the discrete version. However, the full $SL(2,\mathbb{Z})$ is not proven to be preserved rather 
+
+\begin{table}\centering
+    \caption{U-duality group for type II string theories on $T^n$.}\label{tab:UdualityString}
+    \begin{tabular}{|c|l|}\hline
+        n & U-duality group \\\hline
+        1 & $SL(2,\mathbb{Z})\times\mathbb{Z}_2$\\
+        2 & $SL(2,\mathbb{Z})\times SL(3,\mathbb{Z})$\\
+        3 & $SL(5,\mathbb{Z})$\\
+        4 & $SO(5,5,\mathbb{Z})$\\
+        5 & $E_{6(6)}(\mathbb{Z})$\\
+        6 & $E_{7(7)}(\mathbb{Z})$\\
+        7 & $E_{7(7)}(\mathbb{Z})$\\
+        8 & $E_{8(8)}(\mathbb{Z})$\\
+        9 & $E_{9(9)}(\mathbb{Z})$\\
+        10 &$E_{10(10)}(\mathbb{Z})$\\\hline
+    \end{tabular}
+\end{table}
+
+

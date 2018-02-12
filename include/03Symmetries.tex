@@ -10,7 +10,7 @@ together with five exceptional algebras
 \end{equation*}
 The Lie groups corresponding to the infinite families of algebras above are related to matrix groups while the exceptional algebras can not be expressed as matrices. The two main examples that are of interest in this thesis are the $\mathfrak{so}_{2n}$ and the so-called e-series $\mathfrak{e}_n$, although the general construction of extended geometries is based on an arbitrary algebra $\mathfrak{g}$. 
 
-A complete introduction to the theory of Lie algebras is beyond the scope of this theses. Instead the aim of this chapter is to introduce the main concepts that are of interest later on. For a thorough introduction to finite-dimensional Lie algebras we refer to \cite{Fuchs1997,FultonHarris2004} and for infinite-dimensional algebras \cite{Kac1990}. In section \ref{sec:groups} we briefly introduce Lie groups, representations and how to get the corresponding Lie algebra. The theory of Lie algebras is then introduced in \ref{sec:Liealgebras}, especially its representation theory. Extensions of ordinary Lie algebras to Kac-Moody algebras is then introduced in \ref{sec:KacMoody} and to Borcherds superalgebras in \ref{sec:Borcherds}. In the latter a specific example is displayed which is used later on for the construction of extended geometries. The appearance of these kinds of extended symmetry algebras in string theory and supergravity is presented in \cite{CederwallPalmkvistSuperalgebras2015,Aldazabal2014,Palmkvist2015ExpGeomSuperAlg}.
+A complete introduction to the theory of Lie algebras is beyond the scope of this theses. Instead the aim of this chapter is to introduce the main concepts that are of interest later on. For a thorough introduction to finite-dimensional Lie algebras we refer to \cite{Fuchs1997,FultonHarris2004,Gaberdiel2013} and for infinite-dimensional algebras \cite{Kac1990}. In section \ref{sec:groups} we briefly introduce Lie groups, representations and how to get the corresponding Lie algebra. The theory of Lie algebras is then introduced in \ref{sec:Liealgebras}, especially its representation theory. Extensions of ordinary Lie algebras to Kac-Moody algebras is then introduced in \ref{sec:KacMoody} and to Borcherds superalgebras in \ref{sec:Borcherds}. In the latter a specific example is displayed which is used later on for the construction of extended geometries. The appearance of these kinds of extended symmetry algebras in string theory and supergravity is presented in \cite{CederwallPalmkvistSuperalgebras2015,Aldazabal2014,Palmkvist2015ExpGeomSuperAlg,deWitTensorHierarchies2008}.
 
 
 
@@ -40,7 +40,7 @@ In general a Lie group is a curved manifold which makes it somewhat difficult to
 \begin{equation}
 \tilde{g} = \frac{\dd}{\dd t}\gamma(t)|_{t=0}.
 \end{equation}
-The tangent space $T_\mathrm{e}G$ is a vector space which is easier to deal with. Moreover, the dimension of the Lie algebra is determined by the dimensions of the manifold $G$.
+The tangent space $T_\mathrm{e}G$ is a vector space which is easier to deal with. Moreover, the dimension of the Lie algebra is determined by the dimensions of the manifold $G$. On the other hand one also introduce the exponential map $\text{exp}: \mathfrak{g}\to G$ in order to retrieve to group. For matrix group this map is simply the exponential of matrices in the usual sense. However, the topology of the group becomes important. For a compact connected group $G$ the exponential map is onto such that any element in $G$ can be written using elements of the algebra. On the other hand for a compact group that is not connected only the connected part can be reached. 
 
 The group $G$ carries an representation on the algebra called the Adjoint representation $\text{Ad}: G\to \text{Aut}(\mathfrak{g})$ by $g\in G$ and $\tilde{g}\in\mathfrak{g}$
 \begin{equation}\label{eq:Liegrouprep}
@@ -62,9 +62,10 @@ which equips the tangent space with an anti-symmetric bilinear product, hence de
 \begin{equation}
     \begin{aligned}
         \rho_\otimes:\quad &\mathfrak{g}\to\text{End}\left(\mathbb{V}_1\otimes\mathbb{V}_2\right) \\
-                & g\mapsto \rho_1(g)\otimes \mathbf{1}+\mathbf{1}\otimes\rho_2(g).
+                & g\mapsto \rho_1(g)\otimes \mathbf{1}+\mathbf{1}\otimes\rho_2(g),
     \end{aligned}
 \end{equation}
+where $\mathbf{1}$ is the identity matrix.
 
 
 \section{Lie algebras}\label{sec:Liealgebras}
@@ -80,9 +81,9 @@ where $[\cdot,\cdot]$ denotes the matrix commutator. Note that this differ from 
 
 Being a vector space we can introduce a basis $T^a$, where $a=1,2,\ldots,\text{dim}\,\mathfrak{g}$, and write the Lie brackets as 
 \begin{equation}
-    \llbracket T^a,T^b\rrbracket = f^{ab}_c T^c,
+    \llbracket T^a,T^b\rrbracket = \tensor{f}{^{ab}_c} T^c,
 \end{equation}
-where we sum over repeated indices. The $f^{ab}_c$ is called the structure constants and contains information about the Lie algebra. If the structure constants vanish the algebra is called abelian.
+where we sum over repeated indices. The $\tensor{f}{^{ab}_c}$ is called the structure constants and contains information about the Lie algebra. If the structure constants vanish the algebra is called abelian.
 
 A subset $\mathfrak{h}\subset \mathfrak{g}$ is a subalgebra of $\mathfrak{g}$ if \begin{equation}
     \llbracket\mathfrak{h},\mathfrak{h}\rrbracket\subseteq \mathfrak{h}
@@ -103,10 +104,10 @@ where $I_\rho$ is a normalization constant that depends on the representation. I
 \begin{equation}
     \kappa(\llbracket g,h\rrbracket,k) = \kappa(h,\llbracket g,k\rrbracket). 
 \end{equation}
-Interesting properties can be read of from the Killing form, e.g.\ a semi-simple algebra implies that the Killing form is non-degenerate. 
+Interesting properties can be read of from the Killing form, e.g.\ a semi-simple algebra implies that the Killing form is non-degenerate. Moreover, if $\kappa$ is negative definite, then the algebra is called compact meaning in turn that the corresponding exponentiated Lie group is a compact manifold. 
 
 
-\subsection{Example $\mathfrak{a}_1$}
+\subsection{Example -- Chevalley set}
 As an example we will study $\mathfrak{a}_1\cong\mathfrak{sl}(2,\mathbb{C})$, which is an important algebra because, as we will see later, more complicated algebras can be constructed as collection of ``interacting'' $\mathfrak{a}_1$ subalgebras. A basis for this algebra of traceless matrices over $\mathbb{C}$ can be chosen as 
 \begin{equation}
     h=\begin{pmatrix}1&0\\0 &-1\end{pmatrix}\qquad e_+=\begin{pmatrix}0&1\\0 &0\end{pmatrix}\qquad e_-=\begin{pmatrix}0&0\\1 &0\end{pmatrix}.
@@ -240,7 +241,49 @@ A description of a Lie algebra in terms of its Cartan matrix also enables specif
 
 
 \subsection{Real forms}
-\todo[inline]{Unitarity and real representations, chevalley involution, real forms}
+The analysis above implicitly used $\mathbb{C}$ as field. However, one often are interested in only real linear combinations of elements in the algebra. Choosing a basis $T^a$, $a=1,2,\ldots, r$ it is clear that if the structure constants $\tensor{f}{^{ab}_c}$ are real then we can restrict to real linear combinations. We define a real form $\hat{\mathfrak{g}}$ of an algebra $\mathfrak{g}$ if it satisfies 
+\begin{equation}
+    \mathfrak{g} \cong \hat{\mathfrak{g}}\oplus i\hat{\mathfrak{g}},
+\end{equation}
+i.e.\ if the complexification of $\hat{\mathfrak{g}}$ is isomorphic to $\mathfrak{g}$. A generic Lie algebra $\mathfrak{g}$ typically has multiple non-isomorphic real forms. Two particularly real forms that can be constructed for any Lie algebra is the split real form and the compact real form of which both will be play in important rôle below. 
+
+In a Cartan-Weyl basis we know that the structure constants are real, hence by restricting to real linear combinations we get a real form, this is the \emph{split real form}. One can show that on the split real form, the Killing form is block-diagonal and on the subspace spanned by $E^{\pm\alpha}$ is given by 
+\begin{equation}
+    \kappa \propto \begin{pmatrix} 0&1\\1&0\end{pmatrix}.
+\end{equation}
+
+For any real form $\hat{\mathfrak{g}}$ the Killing form is non-degenerate and one can introduce a basis such that 
+\begin{equation}
+    \kappa = \begin{pmatrix}\mathbf{1}_p& 0\\0&-\mathbf{1}_{d-p},
+    \end{pmatrix}
+\end{equation}
+where $d$ is the dimension the real form. One can show that the $d-p$-dimensional subspace on which $\kappa$ is negative definite is actually a subalgebra of $\hat{\mathfrak{g}}$. This is called the \emph{maximal compact subalgebra}, typically denoted $\mathfrak{k}$, of $\hat{\mathfrak{g}}$ and it is by construction a real form.
+
+Later on we will deal with so called non-linear sigma models where physical fields take values in the coset group
+\begin{equation}
+G/H,
+\end{equation}
+where $G$ is the group obtained by exponentiating a split real form and $H$ is likewise the group corresponding to the maximal compact subalgebra of $G$.
+
+Another way to define the maximal compact subalgebra through the so-called Chevalley involution $\omega$. An involution is a Lie algebra automorphism with eigenvalues $\pm 1$. The Chevalley involution is defined through its action on Chevalley generators
+\begin{equation}
+    \omega(H^i) = -H^i\qquad \omega(E^i_+) = -E^i_- \qquad \omega(E^i_-) = -E^i_+.
+\end{equation}
+The maximal compact subalgebra $\mathfrak{k}$ of $\mathfrak{g}$ can then by defined as the subset that is pointwise fixed under $\omega$
+\begin{equation}
+    K(\mathfrak{g}) = \{g\in\mathfrak{g}\,|\, \omega (g) = g \}. 
+\end{equation}
+With the definition of the Chevalley involution one sees that the maximal compact subalgebra therefore is spanned by $E^i+-E^i_-$, $i=1,\ldots,r$. The algebra $\mathfrak{g}$ can thus be decomposed as 
+\begin{equation}
+    \mathfrak{g} = \mathfrak{p}\oplus\mathfrak{k},
+\end{equation}
+where $\omega$ acts as $\mp 1$ on $\mathfrak{p}$ and $\mathfrak{k}$ respectively. Note that $\mathfrak{p}$ is not an subalgebra, instead it transform in a representation of $\mathfrak{k}$ 
+\begin{equation}
+    \llbracket \mathfrak{p},\mathfrak{p}\rrbracket \subset \mathfrak{k},\qquad \llbracket \mathfrak{k},\mathfrak{p}\rrbracket\subset \mathfrak{p},\qquad \llbracket \mathfrak{k},\mathfrak{k}\rrbracket \subset \mathfrak{k}.
+\end{equation}
+
+\todo[inline]{Unitarity and real representations}
+
 \subsection{Invariant tensors and projection operators}
 
 \todo[inline]{highest root, weyl vector, coexeter labels}
@@ -273,7 +316,7 @@ with one zero eigenvalue. These are infinite dimensional and are called affine K
 
 The extension of a Lie algebra can be done by adding a set of Chevalley generators $\{H^0,E_{\pm}^0\}$ to the existing $3r$ generators $\{H^i,E_\pm^i\}_{(i=1,2,\ldots,r)}$. This amounts to the addition of one node to the Dynkin diagram according to the generalised Cartan matrix $A^{IJ}$, where $I,J=0,1,2,\ldots, r$. For the affine algebras $A$ has one zero eigenvalue and $r$ strictly positive, this equivalent to upon removing any one node of the extended Dynkin diagram, one should obtain the Dynkin diagram of a finite dimensional Lie algebra. Analogously hyperbolic Kac-Moody algebras are Lorentzian KM algebras of indefinite type that upon removing any node in the Dynkin diagram, finite dimensional and at most one affine Kac-Moody algebra is obtained. Kac-Moody algebras are then constructed in the same way as finite dimensional Lie algebras through the Chevalley-Serre relations in \eqref{eq:ChevalleySerre2} by replacing $i,j\to I,J=0,1,2,\ldots,r$ and $A^{ij}\to A^{IJ}$.
 
-An interesting example of extended algebras that are of physical interest are obtained by extending the exceptional Lie algebra $\mathfrak{e}_8$. We first extend $\mathfrak{e}_8$ to an affine algebra $\mathfrak{e}_9$ in \figref{fig:DynkinEseries}. One can then go even further and succesively add two more nodes to obtain a hyperbolic algebra $\mathfrak{e}_{10}$ and a Lorentzian, but not hyperbolic, algebra $\mathfrak{e}_{11}$ also displayed in \figref{fig:DynkinEseries}. For further discussion about these algebras see \cite{PhdJakob2009,PhdDaniel2010}.
+Interesting examples of extended algebras that are of physical interest are obtained by extending the exceptional Lie algebra $\mathfrak{e}_8$. We first extend $\mathfrak{e}_8$ to an affine algebra $\mathfrak{e}_9$ in \figref{fig:DynkinEseries}. One can then go even further and succesively add two more nodes to obtain a hyperbolic algebra $\mathfrak{e}_{10}$ and a Lorentzian, but not hyperbolic, algebra $\mathfrak{e}_{11}$ also displayed in \figref{fig:DynkinEseries}. For further discussion about these algebras see \cite{PhdJakob2009,PhdDaniel2010}.
 \begin{figure}
     \DynkinESeries{0.4}
     \caption{Caption}

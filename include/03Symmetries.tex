@@ -1,5 +1,5 @@
 \chapter{Symmetry algebras}\label{chap:symmetries}
-Symmetries is a crucial part of the fundamental theories of physics and as such the corresponding mathematics describing symmetries needs to be understood. Therefore Lie algebras and its representation theory is introduced. Extended geometries are based on a certain Lie algebra and the distinguishing properties of the algebras yield different geometrical theories. In order to constructed extended geometries we need, in particular, to understand Dynkin diagrams, weights and representation theory. Moreover, we extend the finite dimensional Lie algebras to certain infinite dimensional algebras, Kac-Moody algebras as well as to certain superalgebras which seems to encode important knowledge about the theory based on the non-extended algebra. 
+Symmetries is a crucial part of the fundamental theories of physics and as such the corresponding mathematics describing symmetries needs to be understood. Therefore Lie algebras and its representation theory is introduced. Extended geometries are based on a Lie algebra and distinguishing properties of the algebras yield different geometrical theories. In order to construct extended geometries we need, in particular, to understand Dynkin diagrams, weights and representation theory. Moreover, we extend the finite dimensional Lie algebras to certain infinite dimensional algebras, Kac-Moody algebras as well as a super Borcherds algebra, which encode important knowledge about the theory. 
 Finite dimensional simple Lie algebras has been completely classified and comes in four different (infinite) families 
 \begin{equation*}
     \mathfrak{a}_{n-1} \cong \mathfrak{sl}_{n}\quad \mathfrak{b}_{n}\cong \mathfrak{so}_{2n+1}\quad \mathfrak{c}_{n} \cong \mathfrak{sp}_{2n}\quad \mathfrak{d}_{n}\cong \mathfrak{so}_{2n} 
@@ -10,7 +10,7 @@ together with five exceptional algebras
 \end{equation*}
 The Lie groups corresponding to the infinite families of algebras above are related to matrix groups while the exceptional algebras can not be expressed as matrices. The two main examples that are of interest in this thesis are the $\mathfrak{so}_{2n}$ and the so-called e-series $\mathfrak{e}_n$, although the general construction of extended geometries is based on an arbitrary algebra $\mathfrak{g}$. 
 
-A complete introduction to the theory of Lie algebras is beyond the scope of this theses. Instead the aim of this chapter is to introduce the main concepts that are of interest later on. For a thorough introduction to finite-dimensional Lie algebras we refer to \cite{Fuchs1997,FultonHarris2004,Gaberdiel2013} and for infinite-dimensional algebras \cite{Kac1990}. In section \ref{sec:groups} we briefly introduce Lie groups, representations and how to get the corresponding Lie algebra. The theory of Lie algebras is then introduced in \ref{sec:Liealgebras}, especially its representation theory. Extensions of ordinary Lie algebras to Kac-Moody algebras is then introduced in \ref{sec:KacMoody} and to Borcherds superalgebras in \ref{sec:Borcherds}. In the latter a specific example is displayed which is used later on for the construction of extended geometries. The appearance of these kinds of extended symmetry algebras in string theory and supergravity is presented in \cite{CederwallPalmkvistSuperalgebras2015,Aldazabal2014,Palmkvist2015ExpGeomSuperAlg,deWitTensorHierarchies2008}.
+A complete introduction to the theory of Lie algebras is beyond the scope of this theses. Instead the aim of this chapter is to introduce the main concepts that are of interest later on. For a thorough introduction to finite-dimensional Lie algebras we refer to \cite{Fuchs1997,FultonHarris2004,Gaberdiel2013} and for infinite-dimensional algebras \cite{Kac1990}. In section \ref{sec:groups} we briefly introduce Lie groups, representations and how to get the corresponding Lie algebra. The theory of Lie algebras is then introduced in section \ref{sec:Liealgebras}, especially its representation theory. Extensions of ordinary Lie algebras to Kac-Moody algebras and to Borcherds superalgebras is introduced in section \ref{sec:KacMoody} and \ref{sec:Borcherds} respectively. In the latter a specific example is displayed which is used later on for the construction of extended geometries. The appearance of these kinds of extended symmetry algebras in string theory and supergravity is presented in \cite{CederwallPalmkvistSuperalgebras2015,Aldazabal2014,Palmkvist2015ExpGeomSuperAlg,deWitTensorHierarchies2008}.
 
 
 
@@ -21,19 +21,19 @@ A group is simply a set $G$ together with an associative multiplication rule `$\
     \exists\, e \in G \qquad \text{s.t.} \qquad e\cdot g = g = g \cdot e\qquad &\text{(unit element)}\\
     \exists\, g^{-1}\in G\qquad \text{s.t.}\qquad g^{-1}\cdot g = e = g\cdot g^{-1} \qquad &\text{(inverse element)}.
 \end{align*}
-These group axioms are natural properties of symmetry transformations. Finite groups, although interesting in their own right, will not appear extensively in this thesis, instead the main interest is continuous infinite-dimensional groups called Lie groups. A Lie group $G$ is a group which is also a differentiable manifold together with group operations that are also smooth, a typical example being $SO(3)$ describing rotations in three dimensions. Elements in the Lie group acts as symmetry operations on physical objects such as fields. How they act is described by a representation ($\rho,\mathbb{V}$)\footnote{Quite often a ``representation'' is interchangeably used for $\rho$ and $\mathbb{V}$, we adopt to this as it is usually clear from context what is meant.}, where $\mathbb{V}$ is a module (vector space) on which the group acts according to the map $\rho$. The map $\rho$ is an homomorphism acting on $g_1,g_2\in G$ as
+These group axioms are natural properties of symmetry transformations. Finite groups, although interesting in their own right, will not appear extensively in this thesis, instead the main interest is continuous infinite-dimensional groups called Lie groups. A Lie group $G$ is a group which is also a differentiable manifold together with a group operation that is smooth. A typical example of a Lie group is $SO(3)$ describing rotations in three dimensions. Elements in the Lie group acts as symmetry operations on physical objects such as fields. How they act is described by a representation ($\rho,\mathbb{V}$)\footnote{Quite often a ``representation'' is interchangeably used for $\rho$ and $\mathbb{V}$, we adopt to this as it is usually clear from context what is meant.}, where $\mathbb{V}$ is a module (vector space) on which the group acts according to the map $\rho$. The map $\rho$ is an homomorphism acting on $g_1,g_2\in G$ as
 \begin{equation}
     \rho : G\to \text{Aut}(\mathbb{V}) \qquad \rho(g_1\cdot g_2) = \rho(g_1)\circ\rho(g_2),
 \end{equation}
 where `$\cdot$' denotes group multiplication and `$\circ$' composition of linear maps (matrix multiplication for finite-dimensional $\mathbb{V}$). A subrepresentation $\mathbb{W}\subset\mathbb{V}$ is a subspace that is preserved under the action of $G$ i.e.\
 \begin{equation}
-    \rho(g)w \in \mathbb{W} \qquad \text{for any} \quad g\in G\, w\in\mathbb{W}.
+    \rho(g)w \in \mathbb{W} \qquad \text{for any} \quad g\in G\quad w\in\mathbb{W}.
 \end{equation}
 Importantly, a representation is called irreducible if it does not contain any subrepresentation except for the trivial $\{0\}$ and $\mathbb{V}$ itself. Given two representations $(\rho_1,\mathbb{V}_1)$ and $(\rho_2,\mathbb{V}_2)$ then $\mathbb{V}_1\oplus\mathbb{V}_2$ and $\mathbb{V}_1\otimes\mathbb{V}_2$ with $\rho_\oplus = \rho_1\oplus\rho_2$ and $\rho_\otimes = \rho_1\otimes\rho_2$ also constitute representations. Moreover, a representation is called indecomposable if can not be described as a direct sum of representations. Irreducible and indecomposable representations are thus ``building'' blocks for a general representation. Note that a decomposable representation is reducible while a reducible representation need not be decomposable. However, in the cases we are looking at reducible representations will be decomposable. It follows that given two representations $R_1$ and $R_2$ that 
 \begin{equation}
     R_1\otimes R_2 = \bigoplus_i R_i,
 \end{equation}
-i.e.\ the tensor product representation can be written as a direct sum of irreducible representations.
+i.e.\ the tensor product representation can be written as a direct sum of irreducible representations $R_i$.
 
 
 In general a Lie group is a curved manifold which makes it somewhat difficult to work with. As such it is often beneficial to linearize and look at infinitesimal transformations at the identity element. Lets therefore look at the case when $G\in \text{Aut}(\mathbb{V})$, i.e.\ $G$ is a matrix group, and take $t\in [-a,a]$ with $a\in\mathbb{R_+}$ and the set of curves $\gamma(t): [-a,a]\to G$ such that $\gamma(0)= e\in G$. The tangent space at the identity $T_\mathrm{e}G$ then consist of elements $\tilde{g}$ in the corresponding \emph{Lie algebra}
@@ -58,15 +58,7 @@ It is then easily seen that on matrix algebras the adjoint action acts as a comm
 \begin{equation}
     \text{ad}(h)(g) = [h,g],
 \end{equation}
-which equips the tangent space with an anti-symmetric bilinear product, hence defining an algebra. As for groups we also define the tensor product representation for Lie algebras. Given two representations the tensor product representations is defined by the module $\mathbb{V}_1\otimes\mathbb{V}_2$ with an action given by 
-\begin{equation}
-    \begin{aligned}
-        \rho_\otimes:\quad &\mathfrak{g}\to\text{End}\left(\mathbb{V}_1\otimes\mathbb{V}_2\right) \\
-                & g\mapsto \rho_1(g)\otimes \mathbf{1}+\mathbf{1}\otimes\rho_2(g),
-    \end{aligned}
-\end{equation}
-where $\mathbf{1}$ is the identity matrix.
-
+which equips the tangent space with an anti-symmetric bilinear product, hence defining an algebra. 
 
 \section{Lie algebras}\label{sec:Liealgebras}
 In general a Lie algebra $\mathfrak{g}$ is a vector space with an anti-symmetric bilinear product called the Lie bracket $\llbracket\cdot,\cdot\rrbracket: \mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}$ that satisfies the Jacobi identity $a,b,c\in\mathfrak{g}$
@@ -77,13 +69,21 @@ which can easily be seen to be true for matrix commutators. Note that the lie br
 \begin{equation}\label{eq:lierep}
     \rho(\llbracket a,b\rrbracket) = [\rho(a),\rho(b)],
 \end{equation}
-where $[\cdot,\cdot]$ denotes the matrix commutator. Note that this differ from the properties of a representation for the group, but the property \eqref{eq:lierep} follow from consistency with eq.\eqref{eq:Liegrouprep}.
+where $[\cdot,\cdot]$ denotes the matrix commutator. Note that this differ from the properties of a representation for the group, but the property \eqref{eq:lierep} follow from consistency with eq.\eqref{eq:Liegrouprep}. As for groups we also define the tensor product representation for Lie algebras. Given two representations the tensor product representations is defined by the module $\mathbb{V}_1\otimes\mathbb{V}_2$, with an action given by 
+\begin{equation}
+    \begin{aligned}
+        \rho_\otimes:\quad &\mathfrak{g}\to\text{End}\left(\mathbb{V}_1\otimes\mathbb{V}_2\right) \\
+                & g\mapsto \rho_1(g)\otimes \mathbf{1}+\mathbf{1}\otimes\rho_2(g),
+    \end{aligned}
+\end{equation}
+where $\mathbf{1}$ is the identity matrix.
+
 
 Being a vector space we can introduce a basis $T^a$, where $a=1,2,\ldots,\text{dim}\,\mathfrak{g}$, and write the Lie brackets as 
 \begin{equation}
     \llbracket T^a,T^b\rrbracket = \tensor{f}{^{ab}_c} T^c,
 \end{equation}
-where we sum over repeated indices. The $\tensor{f}{^{ab}_c}$ is called the structure constants and contains information about the Lie algebra. If the structure constants vanish the algebra is called abelian.
+where we sum over repeated indices. The $\tensor{f}{^{ab}_c}$ is called the structure constants and specify the algebra. If the structure constants vanish the algebra is called abelian.
 
 A subset $\mathfrak{h}\subset \mathfrak{g}$ is a subalgebra of $\mathfrak{g}$ if \begin{equation}
     \llbracket\mathfrak{h},\mathfrak{h}\rrbracket\subseteq \mathfrak{h}
@@ -92,9 +92,9 @@ and it is called an invariant subalgebra, or ideal, if also
 \begin{equation}
     \llbracket\mathfrak{h},\mathfrak{g}\rrbracket\subseteq \mathfrak{h}.
 \end{equation}
-This give the important notion of simple and semi-simple algebras: a semi-simple algebra is an algebra with no abelian ideals and a simple algebra on the other hand is an algebra containing no proper ideals (i.e.\ no ideals other than the ${0}$ and $\mathfrak{g}$ itself). Simple algebras can then be used as building blocks for more general algebras, for example the Lie algebra related to the standard model with gauge group $SU(3)\times SU(2)\times U(1)$ is given by $\mathfrak{g}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$, where each component is a simple algebra. 
+This give the important notion of simple and semi-simple algebras: a semi-simple algebra is an algebra with no abelian ideals and a simple algebra on the other hand is an algebra containing no proper ideals (i.e.\ no ideals other than the $\{0\}$ and $\mathfrak{g}$ itself). Simple algebras can then be used as building blocks for more general algebras, for example the Lie algebra related to the standard model with gauge group $SU(3)\times SU(2)\times U(1)$ is given by $\mathfrak{g}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$, where each component is a simple algebra. 
 
-So far we have though about the real algebras, i.e.\ real linear combinations of elements in the vector space. Note, however, that the matrix algebras such as $\mathfrak{su}(2)$ still contained complex entries. It is often convenient to extend the field ($\mathbb{R}\to\mathbb{C}$) and allow for complex linear combinations instead, which we will do from now on. One of the consequences of this is that algebras that are different over $\mathbb{R}$ could be the same when complexified, e.g.\ $\mathfrak{su}(2)_\mathbb{C}\cong \mathfrak{sl}(2,\mathbb{C})$ while $\mathfrak{su}(2)_\mathbb{R}\ncong\mathfrak{sl}(2,\mathbb{\mathbb{R}})$. 
+So far the real algebras have implicitly been considered, i.e.\ real linear combinations of elements in the vector space. Note, however, that the matrix algebras such as $\mathfrak{su}(2)$ still contained complex entries. It is often convenient to extend the field ($\mathbb{R}\to\mathbb{C}$) and allow for complex linear combinations instead, which we will do from now on. One of the consequences of this is that algebras that are inequivalent over $\mathbb{R}$ could be the isomorphic when complexified, e.g.\ $\mathfrak{su}(2)_\mathbb{C}\cong \mathfrak{sl}(2,\mathbb{C})$ while $\mathfrak{su}(2)_\mathbb{R}\ncong\mathfrak{sl}(2,\mathbb{\mathbb{R}})$. 
 
 A simple Lie algebra $\mathfrak{g}$ is equipped with symmetric invariant bilinear form called the Killing form. Given a representation $\rho$ the Killing form is given by 
 \begin{equation}
@@ -104,11 +104,11 @@ where $I_\rho$ is a normalization constant that depends on the representation. I
 \begin{equation}
     \kappa(\llbracket g,h\rrbracket,k) = \kappa(h,\llbracket g,k\rrbracket). 
 \end{equation}
-Interesting properties can be read of from the Killing form, e.g.\ a semi-simple algebra implies that the Killing form is non-degenerate. Moreover, if $\kappa$ is negative definite, then the algebra is called compact meaning in turn that the corresponding exponentiated Lie group is a compact manifold. 
+Interesting properties can be read of from the Killing form, e.g.\ a semi-simple algebra implies that the Killing form is non-degenerate. Moreover, if $\kappa$ is negative definite, then the algebra is called compact meaning in turn that the corresponding exponentiated Lie group is a compact manifold. Importantly one can also use the Killing form and its inverse to raise and lower adjoint indices.
 
 
 \subsection{Example -- Chevalley set}
-As an example we will study $\mathfrak{a}_1\cong\mathfrak{sl}(2,\mathbb{C})$, which is an important algebra because, as we will see later, more complicated algebras can be constructed as collection of ``interacting'' $\mathfrak{a}_1$ subalgebras. A basis for this algebra of traceless matrices over $\mathbb{C}$ can be chosen as 
+As an example we will study $\mathfrak{a}_1\cong\mathfrak{sl}(2,\mathbb{C})$, which is an important algebra because, as we will see later, more complicated algebras can be constructed as a collection of ``interacting'' $\mathfrak{a}_1$ subalgebras. A basis for this algebra of traceless matrices over $\mathbb{C}$ can be chosen as 
 \begin{equation}
     h=\begin{pmatrix}1&0\\0 &-1\end{pmatrix}\qquad e_+=\begin{pmatrix}0&1\\0 &0\end{pmatrix}\qquad e_-=\begin{pmatrix}0&0\\1 &0\end{pmatrix}.
 \end{equation}
@@ -116,7 +116,7 @@ The structure constants in this basis is easily calculated
 \begin{equation}
     [h,e_+] = 2e_+\qquad [h,e_-]=-2e_- \qquad [e_+,e_-]=h,
 \end{equation}
-the elements $e_{\pm}$ can thus be seen as step operators increasing(decreasing) the eigenvalue of $h$ by $\pm 2$. From a physicist point of view this resembles the $\{2J_3,J_+,J_-\}$ basis of angular momentum in quantum mechanics. The Killing form is easily calculated and one finds 
+the elements $e_{\pm}$ can thus be seen as step operators increasing(decreasing) the eigenvalue of $h$ by $\pm 2$. From a physicist point of view this resembles the $\{2J_3,J_+,J_-\}$ basis of angular momentum in quantum mechanics. The Killing form in the fundamental representations is easily calculated and one finds 
 \begin{equation}
     \kappa = \begin{pmatrix}2&0&0\\0&0&1\\0&1&0\end{pmatrix},
 \end{equation}
@@ -127,7 +127,7 @@ Suppose that we have a finite dimensional irreducible representation $\mathbb{V}
 \begin{equation}
     \mathbb{V} = \bigoplus_\alpha \mathbb{V}_\alpha,
 \end{equation}
-where $v\in\mathbb{V}_\alpha$ is an eigenvector of $h$ such that\footnote{Here we dropped the explicit use of $\rho(h)v :=hv$, and we will continue to do so.} $hv_\alpha = \alpha v$. As for spin representation in quantum mechanics one deduce that possible eigenvalues are integers symmetrically distributed around the origin. A representation for $\mathfrak{a}_1$ can thus be specified by a vector $v_\lambda$, where $\lambda$ is the largest eigenvalue of $h$ on $\mathbb{V}$. The representation can then by built up by applying the lowering operator $e^-$ as ${v_\lambda,e^-v_\lambda,(e^-)^2v_\lambda,\ldots,(e^-)^{n+1}v_\lambda}$. Note that $e^+ v_\lambda = 0$ as well as $e^-(e^-)^{n+1}v_\lambda=0$, the vectors $v_n$ and $(e^-)^{n+1}v_n$ are therefore called highest and lowest weight vectors respectively. The eigenvalues of $h$ on $\mathbb{V}$ is called weight, and especially, $\lambda$ is called the highest weight.
+where $v\in\mathbb{V}_\alpha$ is an eigenvector of $h$ such that\footnote{Here we dropped the explicit use of $\rho(h)v :=hv$, and we will continue to do so.} $hv_\alpha = \alpha v$. As for spin representation in quantum mechanics one deduce that possible eigenvalues are integers symmetrically distributed around the origin. A representation for $\mathfrak{a}_1$ can thus be specified by a vector $v_\lambda$, where $\lambda$ is the largest eigenvalue of $h$ on $\mathbb{V}$. The representation can then by built up by applying the lowering operator $e^-$ as ${v_\lambda,e^-v_\lambda,(e^-)^2v_\lambda,\ldots,(e^-)^{n+1}v_\lambda}$. Note that $e^+ v_\lambda = 0$ as well as $e^-(e^-)^{n+1}v_\lambda=0$, the vectors $v_n$ and $(e^-)^{n+1}v_n$ are therefore called highest and lowest weight vectors respectively. The eigenvalues of $h$ on $\mathbb{V}$ is called weight, and especially, $\lambda$ is called the highest weight. 
 
 \begin{figure}
     \centering
@@ -137,13 +137,13 @@ where $v\in\mathbb{V}_\alpha$ is an eigenvector of $h$ such that\footnote{Here w
 \end{figure}
 
 \subsection{Roots, weights and representations}
-Based on the $\mathfrak{a}_1$ example we will now build up the representation theory for an arbitrary simple Lie algebra $\mathfrak{g}$. The starting point is to find a maximal commuting subalgebra $\mathfrak{h}$ called the Cartan subalgebra, in the example above this was just given by \{$h$\}. The Cartan subalgebra then act diagonally on any irreducible finite-dimensional representation $\mathbb{V}$. Hence, the representation can be decomposed as 
+Based on the $\mathfrak{a}_1$ example we will now build up the representation theory for an arbitrary simple Lie algebra $\mathfrak{g}$. The starting point is to find a maximal commuting subalgebra $\mathfrak{h}$ called the Cartan subalgebra. In the example above this was just given by $\{h\}$. The Cartan subalgebra then act diagonally on any irreducible finite-dimensional representation $\mathbb{V}$. This property is analogous to the fact that commuting operators in quantum mechanics can be simultaneously diagonalizable. Hence, the representation can be decomposed as 
 \begin{equation}
     \mathbb{V} = \bigoplus_\alpha \mathbb{V}_\alpha.
 \end{equation}
 Compared to the case where $\mathfrak{h}$ were one-dimensional, the eigenvalue $\alpha$ in this case is rather a vector containing the eigenvalues for each element in $\mathfrak{h}$. In other words we have $\alpha\in \mathfrak{h}^*$, in the space dual to the Cartan subalgebra $\alpha:\mathfrak{h}\to \mathbb{C}$. The dimension of the Cartan subalgebra is called the rank $r$ and often denoted as a subscript $\mathfrak{g}_r$, e.g.\ $\mathfrak{a}_r$, $\mathfrak{e}_8$ and so on. Especially, decomposing the adjoint representation we find
 \begin{equation}\label{eq:algdecomp}
-    \mathfrak{g} = \mathfrak{h}\bigoplus_{\alpha\in\Delta} \mathfrak{g}_\alpha,
+    \mathfrak{g} = \mathfrak{h}\oplus\bigoplus_{\alpha\in\Delta} \mathfrak{g}_\alpha,
 \end{equation}
 where, by definition, for any $h\in\mathfrak{h}$ and $v_\alpha\in\mathfrak{g}_\alpha$ 
 \begin{equation}
@@ -153,13 +153,13 @@ This choice of basis is called the Cartan-Weyl basis. The sum in \eqref{eq:algde
 \begin{equation}
     \text{ad}_{\mathfrak{g}_\alpha}(\mathfrak{g}_\beta) = \llbracket\mathfrak{g}_\alpha,\mathfrak{g}_\beta\rrbracket \subset \mathfrak{g}_{\alpha+\beta}.
 \end{equation}
-We thus see that by acting with an element in $\mathfrak{g}_\alpha$ on some other element in $\mathfrak{g}_\beta$, one can ``move'' around in the algebra, or equivalently in the adjoint representation. Acting with the Cartan subalgebra on the other hand preserves the subspace $\mathfrak{g}_\beta$. As such one defines the root lattice $\Lambda_R$, which simply is a rank $r$ lattice spanned by integral linear combinations of the roots $\alpha\in\Delta$. Furthermore, we split the set $\Delta$ in to positive and negative roots as $\Delta = \Delta^+\cup\Delta^-$. This can be thought of as choosing a hyperplane in the root lattice such that no root lies in the hyperplane, the set of roots thus gets divided in to two disjoint unions. Intuitively the positive roots corresponds to raising operators while the negative roots acts as lowering operators. There is some arbitrariness in this choice, however, the particular choice is without significance as long as one sticks to it. There is a canonical choice of basis for the root lattice called simple roots; these are rank $r$ positive roots such that any positive root is obtained by positive linear combinations of the simple roots. 
+We thus see that by acting with an element in $\mathfrak{g}_\alpha$ on some other element in $\mathfrak{g}_\beta$, one can ``move'' around in the algebra, or equivalently in the adjoint representation. Acting with the Cartan subalgebra on the other hand preserves the subspace $\mathfrak{g}_\beta$. As such one defines the root lattice $\Lambda_R$, which simply is a rank $r$ lattice spanned by integral linear combinations of the roots $\alpha\in\Delta$. Furthermore, we split the set $\Delta$ in to positive and negative roots as $\Delta = \Delta^+\cup\Delta^-$. This can be thought of as choosing a hyperplane in the root lattice such that no root lies in the hyperplane, the set of roots thus gets divided in two disjoint unions. Intuitively the positive roots corresponds to raising operators while the negative roots acts as lowering operators. There is some arbitrariness in this choice, however, the particular choice is without significance as long as one sticks to it. There is a canonical choice of basis for the root lattice called simple roots; these are rank $r$ positive roots such that any positive root is obtained by non-negative linear combinations of the simple roots. 
 
-The discussion above concerned the adjoint representation, let us continue to some arbitrary finite dimensional representation $\mathbb{V}$. As above this can be decomposed in to eigenspaces of $\mathfrak{h}$
+The discussion above concerned the adjoint representation, let us continue to some arbitrary finite dimensional irreducible representation $\mathbb{V}$. As above this can be decomposed in to eigenspaces of $\mathfrak{h}$
 \begin{equation}
     \mathbb{V} = \bigoplus_\beta \mathbb{V}_\beta,
 \end{equation}
-where $\beta$, called weights, is in some finite set in $\mathfrak{h}^*$. Using the defining property of Lie algebra representations one finds that by applying an element $e_\alpha\in\mathfrak{g}$ on $v_\alpha\in\mathbb{V}_\beta$ that 
+where $\beta$, called weights, lie in some finite subset of $\mathfrak{h}^*$. Using the defining property of Lie algebra representations one finds that by applying an element $e_\alpha\in\mathfrak{g}$ on $v_\alpha\in\mathbb{V}_\beta$ that 
 \begin{equation}
     \rho(e_\alpha)v_\beta \in \mathbb{V}_{\alpha+\beta}.
 \end{equation}
@@ -167,7 +167,7 @@ Hence, root vectors (a root vector $e_\alpha$ is a vector in the vector space wi
 \begin{equation}
     \mathfrak{a}_1^\alpha = e_\alpha \oplus e_{-\alpha} \oplus \llbracket e_\alpha,e_{-\alpha}\rrbracket.
 \end{equation}
-Any representation $\mathbb{V}$ of $\mathfrak{g}$ must also be an representation of the subalgebras $\mathfrak{a}_1^\alpha$, and since the weights of $\mathfrak{a}_1$ is integer it follows that also the weights of any representation $\mathbb{V}$ of $\mathfrak{g}$ are integer valued, i.e.\ a weight $\beta\in\mathfrak{h}^*$ satisfies for any $h\in\mathfrak{h}$ that $\beta(h)\in\mathbb{Z}$. With this one defines the weight lattice $\Lambda_W$, which is a rank $r$ lattice containing all weights $\beta$ such that $\beta(h)\in\mathbb{Z}$. Any representation is therefore equivalent to a collection of weights in $\Lambda_W$. 
+Any representation $\mathbb{V}$ of $\mathfrak{g}$ must also be an representation of the subalgebras $\mathfrak{a}_1^\alpha$, and since the weights of $\mathfrak{a}_1$ is integer valued it follows that also the weights of any representation $\mathbb{V}$ of $\mathfrak{g}$ are integer valued, i.e.\ a weight $\beta\in\mathfrak{h}^*$ satisfies $\beta(h)\in\mathbb{Z}$ for any $h\in\mathfrak{h}$. With this one defines the weight lattice $\Lambda_W$, which is a rank $r$ lattice containing all weights $\beta$ such that $\beta(h)\in\mathbb{Z}$. Any representation is therefore equivalent to a collection of weights in $\Lambda_W$. 
 
 Importantly, any irreducible finite dimensional representation can be characterized by a highest weight $\lambda$, as such we call the representation a highest weight representation. A highest weight $\lambda$ and the corresponding highest weight vector is defined such that acting with any root vector corresponding to a positive root $\alpha\in\Delta^+$ give
 \begin{equation}
@@ -176,7 +176,7 @@ Importantly, any irreducible finite dimensional representation can be characteri
 
 In the $\mathfrak{a}_1$ analogy with quantum mechanics this simply corresponds to the highest $2J_3$ eigenvalue with the generalisation that $\lambda$ is now a ``vector of quantum numbers''. Given any highest weight vector $v_\lambda$ the corresponding highest weight representation $\mathbb{V}$ consist of elements obtained by acting with root vectors corresponding to negative roots $\alpha\in\Delta^-$ on $v_\lambda$.
 
-The Killing form for semi-simple Lie algebras was introduced above as a non-degenerate symmetric bilinear form on the algebra. Being non-degenerate implies that it defines an inner product on $\mathfrak{g}$. The inner product in turn defines an isomorphism between algebra $\mathfrak{g}$ and its dual space $\mathfrak{g}^*$. Therefore, since the roots $\alpha\in\mathfrak{h}^*$, we can associate any root $\alpha$ with an element $H^\alpha$ in the Cartan subalgebra according to 
+The Killing form for semi-simple Lie algebras was introduced above as a non-degenerate symmetric bilinear form on the algebra. Being non-degenerate implies that it defines an inner product on $\mathfrak{g}$. The inner product in turn defines an isomorphism between algebra $\mathfrak{g}$ and its dual space $\mathfrak{g}^*$. Therefore, since $\alpha\in\mathfrak{h}^*$, any root $\alpha$ is associated with an element $H^\alpha$ in the Cartan subalgebra according to 
 \begin{equation}
     \alpha(h) = c_\alpha \kappa(H^\alpha,h),
 \end{equation}
@@ -196,15 +196,31 @@ Any weight vector can thus be expanded in terms of the fundamental weight
 \begin{equation}
     \lambda = \sum_i \lambda^i\Lambda_{(i)},
 \end{equation}
-where the coefficients $\lambda^i$ are called Dynkin labels. Any highest weight representation is thus specified by rank $r$ number of integers. 
+where the coefficients $\lambda^i$ are called Dynkin labels. Any finite highest weight representation is thus specified by rank $r$ number of integers, such a weight is called integral. Moreover, if the $\lambda^i$ is only non-negative integers the weight $\lambda$ is called dominant. An irreducible finite-dimensional module of a semi-simple Lie algebra is thus defined by an integral dominant highest weight $\lambda$ of multiplicity one. 
 
+A partial ordering is introduced between between weights as follows: given two weight $\lambda$ and $\mu$, then $\lambda>\mu$ if $\lambda-\mu$ is expressible as a non-negative linear combination of positive roots. Moreover, the height $h$ of a root $\beta = a_i\alpha^{(i)}$ is defined as 
+\begin{equation}
+    h = \sum_{i=1}^r a_i.
+\end{equation}
+For a simple Lie algebra there exists a unique highest root, typically denoted $\theta$, such that $h_\theta>h_\alpha$, for any other root $\alpha$. Moreover, one defines the so-called Coxeter labels $a_i$ and dual Coxeter labels $a_i^\vee$ as the coefficients of the highest root in simple roots and coroots respectivelya according to
+\begin{equation}
+    \theta = a_i\alpha^{(i)},\qquad \theta = \frac{2}{(\theta,\theta)}a_i^\vee \alpha^{(i)\vee}.
+\end{equation}
+Yet another important object that we will need is the Weyl vector $\rho$. The Weyl vector is defined as 
+\begin{equation}
+    \rho := \frac{1}{2}\sum_{\alpha\in\Delta^+}\alpha,
+\end{equation}
+and one can show that it can also be rewritten as
+\begin{equation}
+    \rho = \sum_{i=1}^r \Lambda_{(i)}.
+\end{equation}
 
 \subsection{Cartan matrix and Dynkin diagrams}
-We have seen that a Lie algebra is specified by its root system. Another way to characterize a Lie algebra, that also is convenient for further extensions later on, is through its Cartan matrix. All one need is the simple roots and the inner product on $\mathfrak{h}^*$. The Cartan matrix is then defined as 
+We have seen that a Lie algebra is specified by its root system. Another way to characterize a Lie algebra that also is convenient for further extensions later on, is through its Cartan matrix. All one need is the simple roots and the inner product on $\mathfrak{h}^*$. The Cartan matrix is then defined as 
 \begin{equation}
     A^{ij} := (\alpha^{(i)},\alpha^{(j)\vee})  = \frac{2}{(\alpha^{(j)},\alpha^{(j)})}(\alpha^{(i)},\alpha^{(j)}),
 \end{equation}
-where $\alpha^{(i)},\alpha^{(j)\vee}$ are simple roots and simple coroots. In fact, a finite dimensional simple Lie algebra is completely characterized by a Cartan matrix with the following properties:
+where $\alpha^{(i)}$ and $\alpha^{(j)\vee}$ are simple roots and coroots respectively. In fact, a finite dimensional simple Lie algebra is completely characterized by a Cartan matrix with the following properties:
 \begin{equation}
     \begin{aligned}
         A^{ii} = 2,\\
@@ -241,31 +257,31 @@ A description of a Lie algebra in terms of its Cartan matrix also enables specif
 
 
 \subsection{Real forms}
-The analysis above implicitly used $\mathbb{C}$ as field. However, one often are interested in only real linear combinations of elements in the algebra. Choosing a basis $T^a$, $a=1,2,\ldots, r$ it is clear that if the structure constants $\tensor{f}{^{ab}_c}$ are real then we can restrict to real linear combinations. We define a real form $\hat{\mathfrak{g}}$ of an algebra $\mathfrak{g}$ if it satisfies 
+The analysis above implicitly used $\mathbb{C}$ as field. However, one often are interested in only real linear combinations of elements in the algebra. Choosing a basis $T^a$, $a=1,2,\ldots, r$ it is clear that if the structure constants $\tensor{f}{^{ab}_c}$ restriction to real linear combinations is consistent. A real form $\hat{\mathfrak{g}}$ of an algebra $\mathfrak{g}$ satisfy
 \begin{equation}
     \mathfrak{g} \cong \hat{\mathfrak{g}}\oplus i\hat{\mathfrak{g}},
 \end{equation}
-i.e.\ if the complexification of $\hat{\mathfrak{g}}$ is isomorphic to $\mathfrak{g}$. A generic Lie algebra $\mathfrak{g}$ typically has multiple non-isomorphic real forms. Two particularly real forms that can be constructed for any Lie algebra is the split real form and the compact real form of which both will be play in important rôle below. 
+i.e.\ the complexification of $\hat{\mathfrak{g}}$ is isomorphic to $\mathfrak{g}$. A generic Lie algebra $\mathfrak{g}$ typically has multiple non-isomorphic real forms. Two real forms that can be constructed for any Lie algebra is the split real form and the compact real form.
 
-In a Cartan-Weyl basis we know that the structure constants are real, hence by restricting to real linear combinations we get a real form, this is the \emph{split real form}. One can show that on the split real form, the Killing form is block-diagonal and on the subspace spanned by $E^{\pm\alpha}$ is given by 
+In a Cartan-Weyl basis we know that the structure constants are real, hence by restricting to real linear combinations we get a real form, this is the \emph{split real form}. One can show that on the split real form, the Killing form is block-diagonal and on the subspace spanned by $E^{\pm\alpha}$ it is given by 
 \begin{equation}
     \kappa \propto \begin{pmatrix} 0&1\\1&0\end{pmatrix}.
 \end{equation}
 
-For any real form $\hat{\mathfrak{g}}$ the Killing form is non-degenerate and one can introduce a basis such that 
+For any Lie algebra $\mathfrak{g}$ the Killing form is non-degenerate and one can introduce a basis such that 
 \begin{equation}
     \kappa = \begin{pmatrix}\mathbf{1}_p& 0\\0&-\mathbf{1}_{d-p},
     \end{pmatrix}
 \end{equation}
-where $d$ is the dimension the real form. One can show that the $d-p$-dimensional subspace on which $\kappa$ is negative definite is actually a subalgebra of $\hat{\mathfrak{g}}$. This is called the \emph{maximal compact subalgebra}, typically denoted $\mathfrak{k}$, of $\hat{\mathfrak{g}}$ and it is by construction a real form.
+where $d$ is the dimension the algebra. If $p=0$, one can choose a basis such that $\kappa^{ab} = -\delta^{ab}$. This defines the compact real form of $\mathfrak{g}$. Furthermore, for a real form $\hat{\mathfrak{g}}$ the $d-p$-dimensional subspace on which $\kappa$ is negative definite is actually a subalgebra of $\hat{\mathfrak{g}}$. This is called the \emph{maximal compact subalgebra}, typically denoted $\mathfrak{k}$, of $\hat{\mathfrak{g}}$ and it is by construction a real form.
 
 Later on we will deal with so called non-linear sigma models where physical fields take values in the coset group
 \begin{equation}
 G/H,
 \end{equation}
-where $G$ is the group obtained by exponentiating a split real form and $H$ is likewise the group corresponding to the maximal compact subalgebra of $G$.
+where $G$ is the group obtained by exponentiating a split real form $\mathfrak{g}$ and $H$ is likewise the group corresponding to the maximal compact subalgebra of $\mathfrak{g}$.  
 
-Another way to define the maximal compact subalgebra through the so-called Chevalley involution $\omega$. An involution is a Lie algebra automorphism with eigenvalues $\pm 1$. The Chevalley involution is defined through its action on Chevalley generators
+Another way to define the maximal compact subalgebra is by the so-called Chevalley involution\footnote{An involution is a Lie algebra automorphism with eigenvalue $\pm 1$.} $\omega$. The Chevalley involution is defined through its action on Chevalley generators
 \begin{equation}
     \omega(H^i) = -H^i\qquad \omega(E^i_+) = -E^i_- \qquad \omega(E^i_-) = -E^i_+.
 \end{equation}
@@ -273,7 +289,7 @@ The maximal compact subalgebra $\mathfrak{k}$ of $\mathfrak{g}$ can then by defi
 \begin{equation}
     K(\mathfrak{g}) = \{g\in\mathfrak{g}\,|\, \omega (g) = g \}. 
 \end{equation}
-With the definition of the Chevalley involution one sees that the maximal compact subalgebra therefore is spanned by $E^i+-E^i_-$, $i=1,\ldots,r$. The algebra $\mathfrak{g}$ can thus be decomposed as 
+With the definition of the Chevalley involution one sees that the maximal compact subalgebra therefore is spanned by $E^i_+-E^i_-$, $i=1,\ldots,r$. The algebra $\mathfrak{g}$ can thus be decomposed as 
 \begin{equation}
     \mathfrak{g} = \mathfrak{p}\oplus\mathfrak{k},
 \end{equation}
@@ -282,11 +298,71 @@ where $\omega$ acts as $\mp 1$ on $\mathfrak{p}$ and $\mathfrak{k}$ respectively
     \llbracket \mathfrak{p},\mathfrak{p}\rrbracket \subset \mathfrak{k},\qquad \llbracket \mathfrak{k},\mathfrak{p}\rrbracket\subset \mathfrak{p},\qquad \llbracket \mathfrak{k},\mathfrak{k}\rrbracket \subset \mathfrak{k}.
 \end{equation}
 
-\todo[inline]{Unitarity and real representations}
+\subsection{Invariant tensors}
+Given a gauge symmetry neither the lagrangian nor any physical observable should depend on the gauge. As such one has to construct objects that transforms in the trivial representation (singlet) of the gauge group, or equivalently the corresponding algebra. Hence, in order to have a non-trivial theory one has to extract the singlet representation from tensor product representations. This is precisely done by invariant tensors, or intertwiners. Two important examples of invariant tensors are the Killing form and the structure constants. 
 
-\subsection{Invariant tensors and projection operators}
+Suppose we have a field $\phi^N$, $N=1,2,\ldots,\text{dim}\,R_1$, in a representation $R_1$ and a field $\psi_\alpha$, $\alpha=1,2,\ldots,\text{dim}\,R_2$, in another representation $R_2$. By definition these transform as 
+\begin{equation}
+    \phi^M \mapsto \tensor{R_1(T^a)}{^M_N}\phi^N \qquad \psi_\alpha\mapsto \tensor{R_2(T^a)}{^\alpha_\beta}\psi^\beta.
+\end{equation}
 
-\todo[inline]{highest root, weyl vector, coexeter labels}
+Then the singlet contribution from the tensor product $R_1\otimes R_2$ is given by 
+\begin{equation}
+    t_{N\alpha}\phi^N\psi^\alpha \mapsto \tensor{R_1(T^a)}{^M_N}t_{M\alpha}\phi^N\psi^\alpha+\tensor{R_2(T^a)}{^\alpha_\beta}t_{N\alpha}\phi^N\psi^\beta ,
+\end{equation}
+if the tensor $t$ satisfies
+\begin{equation}\label{eq:invarianttensorDef}
+    \tensor{R_1(T^a)}{^M_N}t_{M\alpha}+\tensor{R_2(T^a)}{^\alpha_\beta}t_{N\alpha} = 0.
+\end{equation}
+The condition \eqref{eq:invarianttensorDef} is easily extended to an arbitrary tensor product representation. Note, however, that finding such an invariant tensor is not always possible since not all tensor product representations include a singlet representation. This constrains the possible terms in a lagrangian. 
+
+Given a representation $R$ and its conjugate dual $\overbar{R}$, it is possible to create new invariant tensors by summing, taking products and contracting indices
+\begin{equation}
+\begin{aligned}
+\tensor{t}{^{n_1\ldots}_{m_1\ldots}}+\tensor{\tilde{t}}{^{n_1\ldots}_{m_1\ldots}},\\
+\tensor{t}{^{n_1\ldots}_{m_1\ldots}}\tensor{\tilde{t}}{^{k_1\ldots}_{j_1\ldots}},\\
+\tensor{t}{^{n_1\ldots j\ldots}_{m_1\ldots j\ldots}}.
+\end{aligned}
+\end{equation}
+
+The minimal set of invariant tensors needed for constructing any invariant tensors is called  primitive invariants. For the fundamental representation and its dual one finds that $\delta^i_j$, $\epsilon^{i_1\ldots i_n}$ and $\epsilon_{i_1\ldots i_n}$ are primitive invariants for any algebra. For the $\mathfrak{a}_n$ these are actually the only primitive invariants, for the other finite simple Lie algebras the rest is listed in \tabref{tab:PrimInvariant}.
+\begin{table}\centering
+    \caption{Primitive invariants for finite simple Lie algebras are listed. We use $d^{\ldots}$ and $f^{\ldots}$ for completely symmetric and anti-symmetric tensors respectively. For $\mathfrak{e}_8$ there exists at least one primitive tensor $t^{ijkl\ldots}$, but it is unknown.}
+    \label{tab:PrimInvariant}
+    \begin{tabular}{|c|c|}\hline
+        $\mathfrak{g}$ & t\\\hline
+        $\mathfrak{b}_r$,$\mathfrak{d}_r$ & $\delta^{ij}$\\\hline
+        $\mathfrak{c}_r$ & $f^{ij}$\\\hline
+        $\mathfrak{e}_6$ & $d^{ijk}$\\\hline
+        $\mathfrak{e}_7$ & $f^{ij},d^{ijkl}$\\\hline
+        $\mathfrak{e}_8$ & $\delta^{ij},f^{ijk},t^{ijkl\ldots}$\\\hline
+        $\mathfrak{f}_4$ & $\delta^{ij},d^{ijk}$\\\hline
+        $\mathfrak{g}_2$ & $\delta^{ij},f^{ijk}$\\\hline
+    \end{tabular}
+\end{table}
+
+Using invariant tensor one can construct projection operators $\mathbb{P}_\lambda$, which projects a tensor product representation on to one of its irreducible subrepresentations. A projection operator $\mathbb{P}$ is defined such that 
+\begin{equation}
+    \mathbb{P}\mathbb{P} = \mathbb{P}\quad \text{and}\quad \mathbb{P}\mathbb{Q} = 0,
+\end{equation}
+if $\mathbb{Q}$ is a projection operator onto some other subrepresentation.
+
+In order to define projection operators we look at a four-fold tensor product of representations $R(\lambda_1),R(\lambda_2),R(\lambda_3)$ and $R(\lambda_4)$. This can generally be decomposed as 
+\begin{equation}
+    \left(R(\lambda_1)\otimes R(\lambda_2)\right)\otimes\left(R(\lambda_3)\otimes R(\lambda_4)\right) \cong \sum_{\lambda,\lambda'}\Lambda_{\lambda_1\lambda_2}^\lambda\Lambda_{\lambda_3\lambda_4}^{\lambda'} R(\lambda)\otimes R(\lambda'),
+\end{equation}
+where $\Lambda_{\alpha\beta}^\gamma$ specifies the decomposition of $R(\alpha)\otimes R(\beta)$ into a sum of irreducible representations $R(\gamma)$. In this decomposition there is a one-to-one correspondence between the number of singlets and pairs of $\left(R(\lambda),R(\lambda')\cong \overbar{R(\lambda)}\right)$. Each such invariant tensor can thus be used as a projection operator onto the intermediate representations $R(\lambda)$ and $\overbar{R(\lambda}$. This can be viewed as the tree diagram of a four-particle scattering with cubic interaction vertices, the representations $R(\lambda_{1,2})$ and $R(\lambda_{3,4})$ are then in and out states respectively, and $R(\lambda)$ corresponds to intermediate state. 
+
+An important example of invariant tensors are Casimir operators. These are certain elements in the center in universal enveloping algebra of $\mathfrak{g}$, i.e.\ they commute with any element in $\mathfrak{g}$. For example, the quadratic Casimir $C_2$ is an element in $\mathfrak{g}\otimes\mathfrak{g}$ such that 
+\begin{equation}
+    \left(\text{ad}(x)\otimes\mathbf{1}+\mathbf{1}\otimes\text{ad}(x)\right)C_2 = 0,
+\end{equation}
+with an analogous invariance condition for the n-th Casimir operator $C_n\in\mathfrak{g}^{\otimes n}$. By a version of Schur's lemma for Lie algebras it then follows that an irreducible representation of a Casimir operator is proportional to the identity. A well-known example of a quadratic Casimir is the $J^2$ spin operator in quantum mechanics with an eigenvalue $j(j+1)$ on a spin-$j$ representation. Generally the quadratic Casimir is given by
+\begin{equation}
+    C_2 = \kappa_{ab}T^aT^b,
+\end{equation}
+where $\kappa_{ab}$ is the inverse Killing form. 
+
 
 \section{Kac-Moody algebras}\label{sec:KacMoody}
 We have seen in \ref{sec:Liealgebras} that any finite dimensional simple Lie algebra is characterized by its Cartan matrix with properties 
@@ -308,25 +384,25 @@ and the Chevalley-Serre generators satisfying
 \end{aligned}
 \end{equation}
 
-This serves as convenient starting point for extending to more general symmetry algebras, as we will relax the condition $\text{det}A>0$. However, before this we will make the restriction that the so-called generalized Cartan matrix $A$ is symmetrisable, meaning that $DA$ is a symmetric matrix for some diagonal matrix $D$. This is important in order to define a bilinear symmetric invariant form. Dropping the requirement of a positive-definite Cartan matrix, three classes of algebras is obtained. Obviously the first class is finite simple Lie algebras. The second class is constitutes algebras with a positive semi-definite generalized Cartan matrix $A$, i.e.\
+This serves as convenient starting point for extending to more general symmetry algebras, as we will relax the condition $\text{det}\,A>0$. However, before this we will make the restriction that the so-called generalized Cartan matrix $A$ is symmetrisable, meaning that $DA$ is a symmetric matrix for some diagonal matrix $D$. This is important in order to define a bilinear symmetric invariant form. Dropping the requirement of a positive-definite Cartan matrix, three classes of algebras is obtained. Obviously the first class is finite simple Lie algebras. The second class constitute algebras with a positive semi-definite generalized Cartan matrix $A$, i.e.\
 \begin{equation}
-    \text{det A} = 0,
+    \text{det}\, A = 0,
 \end{equation}
-with one zero eigenvalue. These are infinite dimensional and are called affine Kac-Moody algebras, the restriction on these is still strong enough for complete classification. The third class which is not included in either of the first two cases are called indefinite Kac-Moody algebras. A subclass of indefinite KM algebras are Lorentzian algebras, these have one negative eigenvalue and the rest strictly positive. 
+with one zero eigenvalue. These are infinite dimensional and are called affine Kac-Moody algebras, the restriction on these is still strong enough for complete classification. The third class which is not included in either of the first two cases are called indefinite Kac-Moody algebras. A subclass of indefinite KM algebras are Lorentzian algebras, the Killing form of a Lorentzian algebra has one negative eigenvalue and the rest positive. 
 
-The extension of a Lie algebra can be done by adding a set of Chevalley generators $\{H^0,E_{\pm}^0\}$ to the existing $3r$ generators $\{H^i,E_\pm^i\}_{(i=1,2,\ldots,r)}$. This amounts to the addition of one node to the Dynkin diagram according to the generalised Cartan matrix $A^{IJ}$, where $I,J=0,1,2,\ldots, r$. For the affine algebras $A$ has one zero eigenvalue and $r$ strictly positive, this equivalent to upon removing any one node of the extended Dynkin diagram, one should obtain the Dynkin diagram of a finite dimensional Lie algebra. Analogously hyperbolic Kac-Moody algebras are Lorentzian KM algebras of indefinite type that upon removing any node in the Dynkin diagram, finite dimensional and at most one affine Kac-Moody algebra is obtained. Kac-Moody algebras are then constructed in the same way as finite dimensional Lie algebras through the Chevalley-Serre relations in \eqref{eq:ChevalleySerre2} by replacing $i,j\to I,J=0,1,2,\ldots,r$ and $A^{ij}\to A^{IJ}$.
+The extension of a Lie algebra can be done by adding a set of Chevalley generators $\{H^0,E_{\pm}^0\}$ to the existing $3r$ generators $\{H^i,E_\pm^i\}_{(i=1,2,\ldots,r)}$. This amounts to the addition of one node to the Dynkin diagram according to the generalised Cartan matrix $A^{IJ}$, where $I,J=0,1,2,\ldots, r$. For the affine algebras $A$ has one zero eigenvalue and $r$ strictly positive, this equivalent to upon removing any one node of the extended Dynkin diagram, one should obtain a Dynkin diagram of a direct sum of finite dimensional Lie algebras. Analogously hyperbolic Kac-Moody algebras are Lorentzian KM algebras of indefinite type that upon removing any node in the Dynkin diagram, a direct sum of finite dimensional and at most one affine Kac-Moody algebra is obtained. Kac-Moody algebras are then constructed in the same way as finite dimensional Lie algebras through the Chevalley-Serre relations in \eqref{eq:ChevalleySerre2} by replacing $i,j\to I,J=0,1,2,\ldots,r$ and $A^{ij}\to A^{IJ}$.
 
 Interesting examples of extended algebras that are of physical interest are obtained by extending the exceptional Lie algebra $\mathfrak{e}_8$. We first extend $\mathfrak{e}_8$ to an affine algebra $\mathfrak{e}_9$ in \figref{fig:DynkinEseries}. One can then go even further and succesively add two more nodes to obtain a hyperbolic algebra $\mathfrak{e}_{10}$ and a Lorentzian, but not hyperbolic, algebra $\mathfrak{e}_{11}$ also displayed in \figref{fig:DynkinEseries}. For further discussion about these algebras see \cite{PhdJakob2009,PhdDaniel2010}.
 \begin{figure}
     \DynkinESeries{0.4}
-    \caption{Caption}
+    \caption{Dynkin diagram of $\mathfrak{e}_8$ and its extensions $\mathfrak{e}_9$,$\mathfrak{e}_{10}$ and $\mathfrak{e}_{11}$}
     \label{fig:DynkinEseries}
 \end{figure}
 
 
 \section{Borcherds superalgebra}\label{sec:Borcherds}
 
-We will here give a brief set of definitions from \cite{Ray2006} for a yet larger class of algebras, super Borcherds algbras. These is also called generalized Kac-Moody algebras or Borcherds-Kac-Moody algebras (BKM). We then construct a particular example of a BKM algebra which is of relevance in the construction of extended geometries in \ref{chap:ExtendedGeometries}. Once again this is done by relaxing one of the conditions of the Cartan matrix, or since in this case we extend Kac-Moody algebras, the generalized Cartan matrix. In words one allow for the possibility of imaginary roots, such that the diagonal in the generalized Cartan matrix is of indefinite sign.
+We will here give a brief set of definitions from \cite{Ray2006} for a yet larger class of algebras, super Borcherds algbras, also called generalized Kac-Moody algebras or Borcherds-Kac-Moody algebras (BKM). A particular example of a BKM algebra which is of relevance in the construction of extended geometries in \ref{chap:ExtendedGeometries} is then introduced. The extension is again done by relaxing one of the conditions of the Cartan matrix, or since in this case we extend Kac-Moody algebras, the generalized Cartan matrix. In words one allow for the possibility of simple imaginary roots, such that the diagonal in the generalized Cartan matrix is of indefinite sign.
 
 Before moving on to the construction of Borcherds algebras, we introduce the notion of superalgebras. A superalgebra is a $\mathbb{Z}_2$ graded algebra with a bilinear product that respects this grading. In other words, a superalgbra $\mathfrak{g}$ can be decomposed into ``even'' and ``odd'' subspaces $\mathfrak{g}_0$ and $\mathfrak{g}_1$ according to 
 \begin{equation}
@@ -336,7 +412,7 @@ The bilinear product $\llbracket\cdot,\cdot\rrbracket$ then respects this in the
 \begin{equation}
     \llbracket\mathfrak{g}_p,\mathfrak{g}_q\rrbracket \subseteq \mathfrak{g}_{p+q},
 \end{equation}
-where $p+q = p+q\,\text{mod}\,2$. Typically we even and odd are used interchangeably with bosonic and fermionic respectively. More generally we define a gradiation of an algebra by $\mathbb{Z}$ as 
+where $p+q = p+q\,\text{mod}\,2$. Typically ``even'' and ``odd'' are used interchangeably with ``bosonic'' and ``fermionic'' respectively. More generally a gradation of an algebra by $\mathbb{Z}$ is defined as 
 \begin{equation}
     \mathfrak{g} = \bigoplus_{p\in\mathbb{Z}} \mathfrak{g}_{p},
 \end{equation}
@@ -344,16 +420,25 @@ if
 \begin{equation}
     \llbracket \mathfrak{g}_p,\mathfrak{g}_q\rrbracket\subseteq \mathfrak{g}_{p+q}.
 \end{equation}
+In this case one extends the Lie bracket to a supercommutator such that for $x,y\in\mathfrak{g}$
+\begin{equation}
+    \llbracket x,y\rrbracket = \left(-1\right)^{|x||y|}\llbracket x,y\rrbracket,
+\end{equation}
+where $|\cdot|=0$ if the element is even and $|\cdot|=1$ if it is odd. The Jacobi identity then becomes the super-Jacobi identity
+\begin{equation}
+    \left(-1\right)^{|x||z|}\llbracket x\llbracket y,z\rrbracket\rrbracket +\left(-1\right)^{|y||x|}\llbracket y\llbracket z,x\rrbracket\rrbracket+\left(-1\right)^{|z||y|}\llbracket z\llbracket x,y\rrbracket\rrbracket = 0.
+\end{equation}
 
-Now to the construction of Borcherds superalgebras. Let $I$ be an index set $I=1,2,\ldots,N$, where $S\subset I$ denotes indices corresponding to fermionic indices. A Borcherds superalgebra is defined by a non-degenerate symmetric generalized Cartan matrices $A_{ij}$ that satisfies the following ($i,j\in I$):
+
+Now to the construction of Borcherds superalgebras. Let $I$ be an index set $I=1,2,\ldots,N$, where $S\subset I$ denotes indices corresponding to fermionic indices. A Borcherds superalgebra is then defined by a non-degenerate symmetric generalized Cartan matrices $A_{ij}$ that satisfies the following ($i,j\in I$):
 \begin{equation}
     \begin{aligned}
         A_{ij}\leq 0 \quad\text{for}\quad i\neq j,\\
-        \text{if}\quad a_{ij}>0 \implies \frac{2a_{ij}}{a_{ii}},\\
+        \text{if}\quad a_{ij}>0 \implies \frac{2a_{ij}}{a_{ii}}\in\mathbb{Z},\\
         \text{if}\quad a_{ii}>0\quad\text{and}\quad i\in S \implies \frac{A_{ij}}{A_{ii}}\in \mathbb{Z}\quad\text{for all}\quad j\in I.
     \end{aligned}
 \end{equation}
-The corresponding Borchers superalgebra $\mathscr{A}$ is then generated by $3N$ Chevalley-generators $\{H^i,E_\pm^i\}_{(i\in I)}$ with the following Chevalley-Serre relations
+The corresponding Borcherds superalgebra $\mathscr{A}$ is then generated by $3N$ Chevalley-generators $\{H^i,E_\pm^i\}_{(i\in I)}$ with the following Chevalley-Serre relations
 \begin{subequations}
     \begin{equation}
         \llbracket H^i,H^j\rrbracket = 0,
@@ -365,11 +450,11 @@ The corresponding Borchers superalgebra $\mathscr{A}$ is then generated by $3N$ 
         \text{deg}\,E_+^i = 0 = \text{deg}\,E^i_- \quad \text{if}\quad \notin S,\qquad \text{deg}\,E_+^i = 0 = \text{deg}\,E_-^i\quad \text{if}\quad i\in S,
     \end{equation}
     \begin{equation}
-        (\text{ad}_{E_+^i})^{1-\frac{2A_{ij}}{A_{ii}}}E_+^j = (\text{ad}_{E_-^i})^{1-\frac{2A_{ij}}{A_{ii}}}E_-^j = 0 \quad \text{if}\quad A_{ii}>0\quad \text{and}\quad i\neq j,
+        (\text{ad}_{E_+^i})^{1-\frac{2A_{ij}}{A_{ii}}}E_+^j = (\text{ad}_{E_-^i})^{1-\frac{2A_{ij}}{A_{ii}}}E_-^j = 0 \quad \text{if}\quad A_{ii}>0\quad \text{and}\quad i\neq j.
     \end{equation}
 \end{subequations}
 
-
+\todo[inline]{example}
 
 
 %The first extension will be to so called affine Kac-Moody algebras. We add a set of Chevalley generators $\{h^0,E_\pm^0\}$ to the existing $3r$ generators. This is equivalent to adding a row and column to the existing Cartan matrix $A^{ij}\to A^{IJ}$, where $I,J=0,1,2,\ldots,r$. We then impose that the generalized Cartan matrix is positive-semidefinite 

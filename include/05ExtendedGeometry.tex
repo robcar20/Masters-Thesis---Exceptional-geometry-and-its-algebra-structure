@@ -1,5 +1,5 @@
 \chapter{Extended Geometries}\label{chap:ExtendedGeometries}
-In this chapter we will describe the general construction of extended geometries recently constructed in \cite{CederwallPalmkvist2017}. These are generalisations of double geometry and exceptional geometry to a geometry based on a Kac-Moody algebra $\mathfrak{g}$ and an irreducible highest weight module $R(\lambda)$. The construction is built around the generalised diffemorphisms and closure of their algebra. Moreover, a section condition is again crucial in order for the consistency of the algebra. 
+In this chapter the general construction of extended geometries recently constructed in \cite{CederwallPalmkvist2017} is described. These are generalisations of double geometry and exceptional geometry to a geometry based on a Kac-Moody algebra $\mathfrak{g}$ and an irreducible highest weight module $R(\lambda)$. The construction is built around the generalised diffemorphisms and closure of their algebra. Moreover, a section condition is again crucial in order for the consistency of the algebra. 
 
 \todo[inline]{physics}
 \section{Extended spacetime and setup}
@@ -15,7 +15,7 @@ where $Z$ is a invariant tensor of $\mathfrak{g}$. The first term can be viewed 
 \begin{equation}
     \tensor{Z}{^M^N_P_Q} = -k\eta_{\alpha\beta}\tensor{T}{^\alpha^M_Q}\tensor{T}{^\beta^N_P}+\beta\delta^M_Q\delta^N_P,
 \end{equation}
-where $\eta_{\alpha\beta}$ is the inverse of the invariant bilinear form on $\mathfrak{g}$ and $T^{\alpha}$ are the generators in the represenation $R(\lambda)$ as well was $k$ and $\beta$ constant. This can be written in an equivalent way using the tensor
+where $\eta_{\alpha\beta}$ is the inverse of the invariant bilinear form on $\mathfrak{g}$ and $T^{\alpha}$ are the generators in the represenation $R(\lambda)$ and $k$ and $\beta$ constants. This can be written in an equivalent way using the tensor
 \begin{equation}\label{eq:Y}
     \tensor{Y}{^M^P_N_Q} = \tensor{Z}{^M^P_N_Q}+\delta^M_P\delta^N_Q = -k\eta_{\alpha\beta}\tensor{T}{^\alpha^M_Q}\tensor{T}{^\beta^N_P}+\beta\delta^M_Q\delta^N_P+\delta^M_P\delta^N_Q
 \end{equation}
@@ -30,7 +30,7 @@ A crucial consistency condition is now whether the algebra closes or not, to tha
     \left(\left[\mathscr{L}_\xi,\mathscr{L}_\eta\right]-\mathscr{L}_{\frac{1}{2}\left(\mathscr{L}_\xi\eta-\mathscr{L}_\eta\xi\right)}\right)V^M\overset{?}{=}0.
 \end{equation}
 After a good deal of algebra one finds that \todo{Include calculation?}
-\begin{equation}
+\begin{equation}\label{eq:GenDiffComm}
     \left(\left[\mathscr{L}_\xi,\mathscr{L}_\eta\right]-\mathscr{L}_{\frac{1}{2}\left(\mathscr{L}_\xi\eta-\mathscr{L}_\eta\xi\right)}\right)V^M = \frac{1}{2}\tensor{Z}{^{MP}_{QN}}\tensor{Y}{^{QR}_{ST}}\xi^T\pd_P\pd_R\eta^SV^N-\left(\xi\leftrightarrow\eta\right)
 \end{equation}
 if the $Y$-tensor satisfies certain constraints. The first is the (strong) section constraint 
@@ -60,7 +60,7 @@ which indeed is the section condition for DFT introduced in section \ref{sec:DFT
     \end{align}
     \end{subequations}
 
-The equations \eqref{eq:closure1}-\eqref{eq:closure2} comes from the term involving $(\pd\xi)(\pd\eta)$. Whether the remaining term in \eqref{eq:closure} needed for closure vanish or not depends on the specific algebra together with the choice of coordinate module $R(\lambda)$, a simple criterion for this will be derived below using certain extensions of $\mathfrak{g}$. As of yet the particular form, nor any symmetry properties, of $Y$ has been used, however, inserting the explicit form \eqref{eq:Y} in \eqref{eq:closure1}-\eqref{eq:closure2} one finds that they are satisfied if the section condition is fulfilled. 
+The equations \eqref{eq:closure1}-\eqref{eq:closure2} comes from the term involving $(\pd\xi)(\pd\eta)$. Whether the remaining term in \eqref{eq:GenDiffComm} needed for closure vanish or not depends on the specific algebra together with the choice of coordinate module $R(\lambda)$, a simple criterion for this will be derived below using certain extensions of $\mathfrak{g}$. As of yet the particular form, nor any symmetry properties, of $Y$ has been used, however, inserting the explicit form \eqref{eq:Y} in \eqref{eq:closure1}-\eqref{eq:closure2} one finds that they are satisfied if the section condition is fulfilled. 
 
 Up to the remaining term we have thus seen that the closure of the algebra is entirely based on solving the section condition \eqref{eq:section}. Solving the section condition can be done in two step, first one imposes the weak section stating that any momenta $|p\rangle\in \overbar{R(\lambda)}$ lie in a minimal orbit of $G$. This is equivalent to $|p\rangle\otimes|p\rangle \in \overbar{R(2\lambda)}$ \cite{Berman2013,Bossard2017}. Secondly we demand that the product of two arbitrary momenta $|p\rangle,|q\rangle\in\overbar{R(\lambda)}$ contains only the dual of the highest modules in the symmetric $R^s_h$ and anti-symmetric $R^a_h$ product of $R(\lambda)$ respectively. In other words, the second step means that we set 
 \begin{equation}

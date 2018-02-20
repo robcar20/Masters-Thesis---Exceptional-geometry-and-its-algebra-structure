@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{standard}
+
+\begin{document}
+Coordinate module $R_1=R(\lambda)$ and the section condition 
+\begin{align}
+    \overbar{R}_2 = \vee^2 R(\lambda)\ominus R(2\lambda)\\
+    \overbar{\tilde{R}}_2 = \wedge^2 R(\lambda)\ominus R(2\lambda-\alpha_i)
+\end{align}
+\begin{equation}
+    \tensor{Y}{^M^N_P_Q} = -k\eta_{\alpha\beta}\tensor{T}{^\alpha^M_Q}\tensor{T}{^\beta^N_P}+\beta\delta^M_Q\delta^N_P+\delta^M_P\delta^N_Q
+\end{equation}
+and $\tensor{Z}{^M^N_P_Q}=\tensor{Y}{^M^N_P_Q}-\delta^M_P\delta^N_Q$. Define a covariant derivate $D$ as
+\begin{align}
+    D_M V^N = \pd_MV^N-\tensor{\Gamma}{_M_P^N}V^P\\
+    D_M V_N = \pd_MV^N+\tensor{\Gamma}{_M_N^P}V_P.
+\end{align}
+For this to be covariant we find the following transformation of the connection 
+\begin{equation}
+    \Delta_\xi\tensor{\Gamma}{_M_N^P} = \tensor{Z}{^P^Q_R_N}\pd_M\pd_Q\xi^R = \tensor{Y}{^P^Q_R_N}\pd_M\pd_Q\xi^R-\pd_M\pd_N\xi^P. 
+\end{equation}
+Note that the connection takes value in $\mathfrak{g}\otimes \overbar{R}_1$. The inhomogeneous part in the transformation of $\Gamma$ contains two derivatives and as such take values in
+\begin{equation}
+    \left[\left(\overbar{R(2\lambda)}\oplus \overbar{R(2\lambda-\alpha_i)}\right)\otimes R(\lambda)\right]\cap \left(\mathfrak{g}\otimes\overbar{R(\lambda)}\right),
+\end{equation}
+the part in $R(2\lambda-\alpha_i)$ is antisymmetric in derivative and thus vanish such that the inhomogeneous term is valued in
+\begin{equation}
+    \left[\overbar{R(2\lambda)}\otimes R(\lambda)\right]\cap \left(\mathfrak{g}\otimes\overbar{R(\lambda)}\right)
+\end{equation}
+
+Defining torsion as the module of the connection transforming like a tensor we find that 
+\begin{equation}
+    \tensor{T}{_M_N^P}\in \left[\left(\overbar{R}_2\oplus \wedge^2\overbar{R(\lambda)}\right)\otimes R(\lambda)\right]\cap \left(\mathfrak{g}\otimes\overbar{R(\lambda)}\right),
+\end{equation}
+or explicitly 
+\begin{align}
+    \tensor{T}{_{[MN]}^P} &\in \left[\wedge^2\overbar{R(\lambda)}\otimes R(\lambda)\right]\cap \left(\mathfrak{g}\otimes\overbar{R(\lambda)}\right),\\
+    \tensor{T}{_{(MN)}^P} &\in \left[\left(\vee^2\overbar{R(\lambda)}\ominus \overbar{R(2\lambda)}\right)\otimes R(\lambda)\right]\cap \left(\mathfrak{g}\otimes\overbar{R(\lambda)}\right).
+\end{align}
+The combination 
+\begin{equation}
+    \tensor{T}{_M_N^P} = \tensor{\Gamma}{_M_N^P}+\tensor{Z}{^P^Q_R_N}\tensor{\Gamma}{_Q_M^R} = 2\tensor{\Gamma}{_{[MN]}^P}+\tensor{Y}{^P^Q_R_N}\tensor{\Gamma}{_Q_M^R},
+\end{equation}
+transforms like a tensor if ancillary transformation are absent such that the following identity is fulfilled 
+\begin{equation}
+    \left(\tensor{Y}{^M^N_T_Q}\tensor{Y}{^T^P_R_S}-\tensor{Y}{^M^N_R_S}\delta^P_Q\right)\pd_{(N}\otimes\pd_{P)} = 0.
+\end{equation}
+Note that in absence of ancillary transformation $\lambda=\Lambda_j$, a fundamental weight, with corresponding Coxeter label $c_j=1$ and $\mathfrak{g}$ finite-dimensional.
+Setting the torsion to zero we find 
+\begin{equation}
+    2\tensor{\Gamma}{_{[MN]}^P}+\tensor{Y}{^P^Q_R_N}\tensor{\Gamma}{_Q_M^R} = \tensor{\Gamma}{_{MN}^P}+\tensor{Z}{^P^Q_R_N}\tensor{\Gamma}{_Q_M^R}= 0,
+\end{equation}
+of which the symmetric part is 
+\begin{equation}
+    \tensor{Y}{^P^Q_R_{(N}}\tensor{\Gamma}{_{|Q|M)}^R} = \tensor{Z}{^P^Q_R_{(N}}\tensor{\Gamma}{_{|Q|M)}^R}+\tensor{\Gamma}{_{(NM)}^R} = 0,
+\end{equation}
+and the anti-symmetric part is 
+\begin{equation}
+    2\tensor{\Gamma}{_{[MN]}^P}+2\tensor{Y}{^P^Q_R_{[N}}\tensor{\Gamma}{_{|Q|M]}^R} = 2\tensor{\Gamma}{_{[MN]}^P}+2\tensor{Z}{^P^Q_R_{[N}}\tensor{\Gamma}{_{|Q|M]}^R} =0.
+\end{equation}
+
+
+
+\textbf{Compatability with metric}\todo{Weight?}
+\begin{equation}
+    D_M\mathcal{M}_{NP} = \pd_M\mathcal{M}_{NP}+2\tensor{\Gamma}{_{M(N}^R}\mathcal{M}_{P)R}\overset{!}{=} 0,
+\end{equation}
+where $\mathcal{M}_{NP}\in \vee^2R(\lambda)$. Using the no-torsion condition we find 
+\begin{equation}
+    \pd_M\mathcal{M}_{NP} = 2\tensor{Z}{^{RQ}_{S(N}}\mathcal{M}_{P)R}\tensor{\Gamma}{_{QM}^S}
+\end{equation}
+
+
+
+
+
+
+
+
+\end{document}

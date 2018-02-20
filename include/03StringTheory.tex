@@ -1,0 +1,131 @@
+\chapter{String theory, supergravity \& dualities}
+
+
+This chapter aims to introduce a few brief points on string theory, with the main point to show the presence of dualities, especially T-duality for the bosonic string. Moreover, the low-energy effective theory, supergravity, related to string theory will be introduced. This is done in order to motivate the appearance of the continuous version of the duality group upon compactification on torii. For the interested reader we recommend \cite{Blumenhagen2013,TongLectureNotes} for an introduction to string theory. In \ref{sec:Dualities} the notion of dualities is introduced more thoroughly. 
+
+
+\section{String theory}
+
+
+\section{Supergravity and Kaluza-Klein compactification}
+Supergravity describes the low-energy effective theory of string theory in $10$ dimensions and M-theory in 11 dimensions. In fact, 11 dimensions is the largest dimension in which supergravity is consisten with one graviton and no field with spin higher than $2$. The $\mathcal{N}=1$ $D=11$ supergravity theory describing the low-energy physics of M-theory contains the following field content 
+\begin{equation}
+    \begin{cases}
+        g_{MN} \qquad &44,\\
+        A_{MNP} \qquad &84,\\
+        \psi_{M\alpha} \qquad &128,
+    \end{cases}
+\end{equation}
+i.e.\ a graviton, a three-form field and a Majorana gravitino. Moreover, we have denoted the on-shell degrees of freedom. The action is given by 
+\begin{equation}
+    S_{11} = \frac{1}{2\kappa_{11}^2}\int\dd^{11}\mathrm{x}\sqrt{-g}\left(R-\frac{1}{2}F\wedge *F\right)-\frac{1}{6}\int A_3 \wedge F_{4}\wedge F_{4}+S_F, 
+\end{equation}
+where $F_{4}=dA$ is the field strength, $S_F$ the fermionic part of the action and $\kappa_{11}^2$ is Newtons gravitational constant in $11$ dimensions. The three-form potential $A$ couples naturally to an object with a 3-dimensional worldvolume $\Sigma$, i.e.\ a 2-brane, as 
+\begin{equation}
+    C_3 \propto \int_{\Sigma}A.
+\end{equation}
+In $D=10$ there are two $\mathcal{N}=2$ supergravity theories corresponding to the low-energy effective field theory of type IIA/B string theory respectively. The field content for type IIA is given by 
+\begin{equation*}
+    IIA: \begin{cases}
+                g_{\mu\nu} \qquad &35 \qquad \text{graviton (NS--NS)}\\
+                B_{\mu\nu} \qquad &28 \qquad  \text{two-form field (NS--NS)}\\
+                \phi\qquad &1 \qquad  \text{dilaton (NS--NS)}\\
+                C_{1}\qquad &8 \qquad  \text{one-form field (R--R)}\\
+                C_{3}\qquad &56 \qquad  \text{three-form field  (R--R)}\\
+                \psi_{\mu\alpha}^\pm\qquad &112\qquad \text{Majorana-Weyl gravitinos}\\
+                \lambda_\alpha^\pm \qquad &16\qquad \text{Majorana-Weyl dilatinos},
+          \end{cases}
+\end{equation*}
+and for type IIB
+\begin{equation*}
+    IIB: \begin{cases}
+                g_{\mu\nu} \qquad &35 \qquad \text{graviton (NS--NS)}\\
+                B_{\mu\nu} \qquad &28 \qquad  \text{two-form field (NS--NS)}\\
+                \phi\qquad &1 \qquad  \text{dilaton (NS--NS)}\\
+                C_{0}\qquad &1 \qquad  \text{axion (R--R)}\\
+                C_{2}\qquad & 28 \qquad  \text{two-form field  (R--R)}\\
+                C_{4}\qquad & 35 \qquad  \text{four-form field  (R--R)}\\
+                \psi_{\mu\alpha}^{1,2}\qquad &112\qquad \text{Majorana-Weyl gravitinos}\\
+                \lambda_\alpha^{1,2} \qquad &16\qquad \text{Majorana-Weyl dilatinos}.
+          \end{cases}
+\end{equation*}
+The NS-NS sector is the same for type IIA/B with an action
+\begin{equation*}
+    S = \frac{1}{2\kappa_{10}^2}\int \dd ^Dx \sqrt{-g}\ee^{-2\phi}\left(R+4(\pd\phi)^2-\frac{1}{2}H\wedge*H\right),
+\end{equation*}
+where $H_3=\dd B$ is the field strength and $\kappa_{10}^2$ the gravitational constant in $10$ dimensions. For further details on supergravity and supersymmetry see \cite{HokerSugra2002}. 
+
+In order to reduce these theories to lower dimensions we will look at Kaluza-Klein compactifications. The idea is to assume a separation between external and interal directions such that the underlying spacetime is given by $\mathcal{M}=\mathcal{M}_{D-n}\times\mathcal{M}_n$, where $\mathcal{M}_{D-n}$ is the external spacetime and $\mathcal{M}_n$ the internal space which typically is assumed to be ``small''. 
+
+We introduce this by the baby example of a massless scalar field $\phi$ compactified on a circle $\mathcal{M}=\mathcal{M}_{D-1}\times S^1$. Due to the periodicity of $S^1$ we can expand $\phi$ in a fourier expansion and the equations of motion is given by 
+\begin{equation}
+    \left(\pd^2_{D-1}-\frac{m^2}{\left(2\pi R\right)^2}\right)\phi = 0,
+\end{equation}
+where $m\in\mathbb{Z}$ is the mode-number of $\phi$ expanded on a circle with radius $R$. We thus see that the compactification gives rise to an infinite sequence of scalar fields with mass $|m|/(2\pi R)$. In the limit of small $R$ all these fields decouple except for the massless field with $m=0$ and there is no longer any dependence on the internal. This a \emph{consistent truncation} in the sense that a solution in the lower dimensional theory will also be solution in the full theory. However, consistency for compactifications on more general internal space $\mathcal{M}_n$ are usually quite hard to prove. In fact, one success of the extended theories, double field theory and exceptional field theory, is that they allow a natural uplift for certain lower-dimensional theories that can not be well described in supergravity in $D=10$ and $D=11$. 
+
+In order to motivate the appearance of ``hidden'' symmetry groups that later on will be extended to manifest symmetries in extended geometries we consider pure gravity in $D$ dimensions compactified on a circle $\mathcal{M}_D = \mathcal{M}_{D-1}\times S^1$. By splitting coordinates $x^M\to (x^\mu,z)$ and assuming independence of the internal coordinate, the metric decompose into a lower-dimensional metric $g_{\mu\nu}$, a vector field $A_\mu$ and a scalar $\phi$ and we parametrize the $D$-dimensional metric as 
+\begin{equation}\label{eq:KKparam}
+    g_{MN} = \left(\begin{array}{c|c}
+                \ee^{2\alpha\phi}g_{\mu\nu}+\ee^{2\beta\phi}A_\mu A_\nu & \ee^{2\beta\phi}A_\mu\\\hline \ee^{2\beta\phi}A_\nu& \ee^{2\beta\phi}
+             \end{array}\right),
+\end{equation}
+where $\beta=-(D-2)\alpha$ and $\alpha$ constant. Pure gravity in $D$ dimensions is invariant under diffeomorphisms $\xi^M=\xi^M(x^\mu,z)$ in $D$ dimensions under which the metric transforms as 
+\begin{equation}
+    \delta_\xi g_{MN} = \mathcal{L}_\xi g_{MN} = \xi^P\pd_Pg_{mn}+\xi^P\pd_{M}g_{PN}+\xi^P\pd_{N}g_{MP},
+\end{equation}
+where $\mathcal{L}$ is the Lie derivative. In order to preserve the parametrization \eqref{eq:KKparam} one finds that diffemorphisms in $D$ dimensions reduce to transformations of the form
+\begin{equation}
+    \xi^M = \left(\hat{\xi}^\mu(x^\nu),cz+\lambda(x^\nu)\right),
+\end{equation}
+with some constant $c$. If $c=0$ one finds by explicit calculation that the lower dimensional fields transforms as 
+\begin{equation}
+    \delta_\xi g_{\mu\nu} = \mathcal{L}_{\hat{\xi}^\rho}g_{\mu\nu},\qquad \delta_\xi A_\mu = \mathcal{L}_{\hat{\xi}^\rho}A_{\mu}+\pd_\mu\lambda(x^\nu), \qquad \delta_\xi \phi = \mathcal{L}_{\hat{\xi}^\rho}\phi.
+\end{equation}
+We thus see that the $D-1$ dimensional theory is invariant under $D-1$ dimensional diffeomorphisms and a local $U(1)$ gauge transformation of the vector field. 
+
+\section{Dualities}\label{sec:Dualities}
+Dualities is a term that is used in different ways in physics. What we will be interested in is dualities between two theories $\mathscr{T}$ and $\tilde{\mathscr{T}}$ such that we can find a map to relate them 
+\begin{equation}
+    \mathscr{T} \leftrightarrow \mathscr{\tilde{T}}.
+\end{equation}
+A typical example of such a duality is the duality of electromagnetism in vacuum with a mapping 
+\begin{equation}
+    \left(\mathbf{E},\mathbf{B}\right) \to \left(\mathbf{B},-\mathbf{E}\right),
+\end{equation}
+under which Maxwell's equations are invariant. 
+
+In order work with interacting field theories we usually employ perturbation theory in some ``small'' coupling constant $g$, such that observables are given as a perturbation series 
+\begin{equation}\label{eq:pert}
+    R(g) = \sum_{n=0}^{\infty}a_n g^n.
+\end{equation}
+Usually these series do not converge but in many cases they are believed to be asymptotic series. Non-perturbative effects typically scale like $\sim \ee^{-1/g^n}$ which is not captured by the expansion \eqref{eq:pert}. Typically instanton effects in ordinary field theories scale with $n=2$. These considerations leads to two kinds of duality transformations weak-weak duality and weak-strong duality. 
+\begin{itemize}
+    \item Weak-weak duality: $\left(\mathscr{T},g\right)\leftrightarrow\left(\mathscr{T}',g'\right)$ with $g,g'\ll 1$.
+    \item Weak-strong duality: $\left(\mathscr{T},g\right)\leftrightarrow\left(\mathscr{T}'',g''\right)$ with $g\ll 1$ and $g''\gg 1$.
+\end{itemize}
+Weak-strong duality is of special interest since it allows us to probe the non-perturbative regime of a theory, using perturbative methods in the dual theory. Since little is usually known about the non-perturbative regime this duality is hard to prove. However, there are quantities that are protected against perturbative corrections and extrapolation to the non-perturbative regime. These play an important rôle in confirming these weak-strong dualities. Perhaps the most prominent weak-strong duality is the AdS/CFT correspondence, first conjectured by Maldacena in \cite{Maldacena1999}. This is a rather special duality in the sense that it relates a string theory (which includes gravity) in a given dimension to an conformal field theory in one spacetime dimension lower, without gravity. This one example of the holographic principle introduced by 't Hooft and Susskind.
+
+Motivation for the presence of a weak-weak T-duality symmetry when compactifying type II string theories on a torus $T^d$ was introduced above, with the the T-duality group $O(d,d,\mathbb{Z})$. Moreover, type IIB has a weak-strong so-called S-duality symmetry with transformations given by $SL(2,\mathbb{Z})$. It is conjectured that these combine in to a larger set of dualities called U-duality, given by 
+\begin{equation}
+    SL(2,\mathbb{Z})\boxtimes O(d,d,\mathbb{Z}),
+\end{equation}
+where `$\boxtimes$' is a non-commutative product. For the type II theories the U-duality groups upon compactification on a torus $T^{n}$ is given in \tabref{tab:UdualityString}. These are just the discrete version of the continuous groups encountered in the supergravity. The continuous version can not be a symmetry of the full theory, it is believed to be broken by non-perturbative effects to the discrete version. However, the full $SL(2,\mathbb{Z})$ is not proven to be preserved rather 
+
+\begin{table}\centering
+    \caption{U-duality group for type II string theories on $T^n$.}\label{tab:UdualityString}
+    \begin{tabular}{|c|l|}\hline
+        n & U-duality group \\\hline
+        1 & $SL(2,\mathbb{Z})\times\mathbb{Z}_2$\\
+        2 & $SL(2,\mathbb{Z})\times SL(3,\mathbb{Z})$\\
+        3 & $SL(5,\mathbb{Z})$\\
+        4 & $SO(5,5,\mathbb{Z})$\\
+        5 & $E_{6(6)}(\mathbb{Z})$\\
+        6 & $E_{7(7)}(\mathbb{Z})$\\
+        7 & $E_{7(7)}(\mathbb{Z})$\\
+        8 & $E_{8(8)}(\mathbb{Z})$\\
+        9 & $E_{9(9)}(\mathbb{Z})$\\
+        10 &$E_{10(10)}(\mathbb{Z})$\\\hline
+    \end{tabular}
+\end{table}
+
+

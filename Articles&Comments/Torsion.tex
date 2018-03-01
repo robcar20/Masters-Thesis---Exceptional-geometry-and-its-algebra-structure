@@ -5,8 +5,8 @@
 \begin{document}
 Coordinate module $R_1=R(\lambda)$ and the section condition 
 \begin{align}
-    \overbar{R}_2 = \vee^2 R(\lambda)\ominus R(2\lambda)\\
-    \overbar{\tilde{R}}_2 = \wedge^2 R(\lambda)\ominus R(2\lambda-\alpha_i)
+    R_2 = \vee^2 R(\lambda)\ominus R(2\lambda)\\
+    \Tilde{R}_2 = \wedge^2 R(\lambda)\ominus R(2\lambda-\alpha_i)
 \end{align}
 \begin{equation}
     \tensor{Y}{^M^N_P_Q} = -k\eta_{\alpha\beta}\tensor{T}{^\alpha^M_Q}\tensor{T}{^\beta^N_P}+\beta\delta^M_Q\delta^N_P+\delta^M_P\delta^N_Q
@@ -22,11 +22,7 @@ For this to be covariant we find the following transformation of the connection
 \end{equation}
 Note that the connection takes value in $\mathfrak{g}\otimes \overbar{R}_1$. The inhomogeneous part in the transformation of $\Gamma$ contains two derivatives and as such take values in
 \begin{equation}
-    \left[\left(\overbar{R(2\lambda)}\oplus \overbar{R(2\lambda-\alpha_i)}\right)\otimes R(\lambda)\right]\cap \left(\mathfrak{g}\otimes\overbar{R(\lambda)}\right),
-\end{equation}
-the part in $R(2\lambda-\alpha_i)$ is antisymmetric in derivative and thus vanish such that the inhomogeneous term is valued in
-\begin{equation}
-    \left[\overbar{R(2\lambda)}\otimes R(\lambda)\right]\cap \left(\mathfrak{g}\otimes\overbar{R(\lambda)}\right)
+    \left[\overbar{R(2\lambda)}\otimes R(\lambda)\right]\cap \left(\mathfrak{g}\otimes\overbar{R(\lambda)}\right).
 \end{equation}
 
 Defining torsion as the module of the connection transforming like a tensor we find that 
@@ -53,7 +49,7 @@ Setting the torsion to zero we find
 \end{equation}
 of which the symmetric part is 
 \begin{equation}
-    \tensor{Y}{^P^Q_R_{(N}}\tensor{\Gamma}{_{|Q|M)}^R} = \tensor{Z}{^P^Q_R_{(N}}\tensor{\Gamma}{_{|Q|M)}^R}+\tensor{\Gamma}{_{(NM)}^R} = 0,
+    \tensor{Y}{^P^Q_R_{(N}}\tensor{\Gamma}{_{|Q|M)}^R} = \tensor{Z}{^P^Q_R_{(N}}\tensor{\Gamma}{_{|Q|M)}^R}+\tensor{\Gamma}{_{(NM)}^P} = 0,
 \end{equation}
 and the anti-symmetric part is 
 \begin{equation}

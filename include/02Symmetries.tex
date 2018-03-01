@@ -303,7 +303,7 @@ A description of a Lie algebra in terms of its Cartan matrix also enables specif
 
 
 
-\subsection{Real forms}
+\subsection{Real forms}\label{sec:Realforms}
 The analysis above used $\mathbb{C}$ as the underlying field. However, it is often of interest to look only at real linear combinations of elements in the algebra. Choosing a basis $T^a$, $a=1,2,\ldots, \text{dim}\,\mathfrak{g}$, it is clear that if the structure constants $\tensor{f}{^{ab}_c}$ are real, a restriction to real linear combinations is consistent. More generally, a real form $\hat{\mathfrak{g}}$ of an algebra $\mathfrak{g}$ satisfies
 \begin{equation}
     \mathfrak{g} \cong \hat{\mathfrak{g}}\oplus i\hat{\mathfrak{g}},
@@ -339,6 +339,11 @@ where $\omega$ acts as $\mp 1$ on $\mathfrak{p}$ and $\mathfrak{k}$ respectively
 \begin{equation}
     \llbracket \mathfrak{p},\mathfrak{p}\rrbracket \subset \mathfrak{k},\qquad \llbracket \mathfrak{k},\mathfrak{p}\rrbracket\subset \mathfrak{p},\qquad \llbracket \mathfrak{k},\mathfrak{k}\rrbracket \subset \mathfrak{k}.
 \end{equation}
+Moreover, one could also decompose the algebra according to the Iwasawa decomposition 
+\begin{equation}
+    \mathfrak{g} = \mathfrak{k}\oplus\mathfrak{h}\oplus\mathfrak{n}_+,
+\end{equation}
+where $\mathfrak{n_+}$ is the subspac of positive roots. The subspace $\mathfrak{h}\oplus\mathfrak{n}_+$ is called a (positive) Borel subalgebra. 
 
 \subsection{Invariant tensors}
 Given a gauge symmetry neither the lagrangian nor any physical observable should depend on the gauge. As such one has to construct objects that transforms in the trivial representation (singlet) of the gauge group, or equivalently the corresponding algebra. Hence, in order to have a non-trivial theory one has to extract the singlet representation from tensor product representations. This is precisely done by invariant tensors, or intertwiners. Two important examples of such invariant tensors are the Killing form and the structure constants. 
@@ -451,7 +456,7 @@ The affine algebras is infinite-dimensional but is still constrained enough for 
 
 The extension of a simple finite Lie algebra can be done by adding a set of Chevalley generators $\{h_0,e_0,f_0\}$ to the existing $3r$ Chevalley generators $\{h_i,e_i,f_i\}_{(i=1,2,\ldots,r)}$. This amounts to the addition of one node to the Dynkin diagram according to the generalised Cartan matrix $A_{IJ}$, where $I,J=0,1,2,\ldots, r$. For the affine algebras $A$ has one zero eigenvalue and $r$ strictly positive, this is equivalent to upon removing any one node of the extended Dynkin diagram, one should obtain a Dynkin diagram of a direct sum of finite dimensional Lie algebras. One also defines a hyperbolic Kac-Moody algebras as Lorentzian KM algebras of indefinite type that upon removing any node in the Dynkin diagram, a direct sum of finite dimensional and at most one affine Kac-Moody algebra is obtained. Kac-Moody algebras are then constructed in the same way as finite dimensional Lie algebras through the Chevalley-Serre relations in \eqref{eq:ChevalleySerre2} by replacing $i,j\to I,J=0,1,2,\ldots,r$ and $a_{ij}\to A_{IJ}$. However, in the affine case the Cartan matrix is not invertible and one also needs to add a central element and a derivation, we refer to the literature for details. 
 
-Interesting examples of extended algebras that are of physical interest are obtained by extending the exceptional Lie algebra $\mathfrak{e}_8$. First extending $\mathfrak{e}_8$ to an affine algebra $\mathfrak{e}_9$ in \figref{fig:DynkinEseries}. One can then go even further and successively add two more nodes to obtain a hyperbolic algebra $\mathfrak{e}_{10}$ and a Lorentzian, but not hyperbolic, algebra $\mathfrak{e}_{11}$ also displayed in \figref{fig:DynkinEseries}. For further discussion about these algebras see \cite{PhdJakob2009,PhdDaniel2010}. The so-called $\mathfrak{e}_n$-series appears as a symmetry algebra of compactified eleven dimensional supergravity compactified on a torus $T^n$ and it is conjectured that the discrete version of $\mathfrak{e}_{11}$ survives quantization and is a symmetry for the full M-theory. The main motivation behind extended geometries presented in this thesis is to make these symmetries manifest in the theory. 
+Interesting examples of extended algebras that are of physical interest are obtained by extending the exceptional Lie algebra $\mathfrak{e}_8$. First extending $\mathfrak{e}_8$ to an affine algebra $\mathfrak{e}_9$ in \figref{fig:DynkinEseries}. One can then go even further and successively add two more nodes to obtain a hyperbolic algebra $\mathfrak{e}_{10}$ and a Lorentzian, but not hyperbolic, algebra $\mathfrak{e}_{11}$ also displayed in \figref{fig:DynkinEseries}. For further discussion about these algebras see \cite{PhdJakob2009,PhdDaniel2010}. The so-called $\mathfrak{e}_n$-series appears as a symmetry algebra of compactified eleven dimensional supergravity compactified on a torus $T^n$ and it is conjectured \cite{West2011} that the discrete version of $\mathfrak{e}_{11}$ survives quantization and is a symmetry for the full M-theory. The main motivation behind extended geometries presented in this thesis is to make these symmetries manifest in the theory. 
 \begin{figure}
     \DynkinESeries{0.4}
     \caption{Dynkin diagram of $\mathfrak{e}_8$ and its extensions $\mathfrak{e}_9$, $\mathfrak{e}_{10}$ and $\mathfrak{e}_{11}$.}
@@ -538,7 +543,7 @@ and
     \llbracket e_0,e_0\rrbracket = \llbracket f_0,f_0\rrbracket = 0,\qquad (\text{ad}_{e_i})^{1-B_{iJ}}e_J = (\text{ad}_{f_i})^{1-B_{iJ}}f_J = 0 \quad \text{for} \quad i\neq J.
 \end{equation}
 
-This constructed algebra has a $\mathbb{Z}$ consistent grading and can thus be decomposed as 
+This constructed algebra has a $\mathbb{Z}$ grading and can thus be decomposed as 
 \begin{equation}
     \mathscr{B} = \bigoplus_{p\in\mathbb{Z}} \mathscr{B}_p,
 \end{equation}
@@ -562,7 +567,7 @@ and, moreover, the Dynkin labels are given by
 \begin{equation}
     \llbracket h_i,f_0\rrbracket = -B_{i0}f_0 = \lambda_if_0.
 \end{equation}
-Likewise is $e_0$ a highest weight vector for $\mathscr{B}_1$ with Dynkin labels
+Likewise is $e_0$ a lowest weight vector for $\mathscr{B}_1$ with Dynkin labels
 \begin{equation}
     \llbracket h_i,e_0\rrbracket = -\lambda_if_0.
 \end{equation}

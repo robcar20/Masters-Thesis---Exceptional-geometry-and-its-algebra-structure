@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{standard}
+
+\begin{document}
+\begin{equation}
+    D_MG_{NP} = \pd_M G_{NP}+2\tensor{\Gamma}{_{M(N}^S}G_{P)S}
+\end{equation}
+\begin{equation}
+    \tensor{T}{_{MN}^P} = \tensor{\Gamma}{_{MN}^P}+\tensor{Z}{_{RN}^{PQ}}\tensor{\Gamma}{_{QM}^R}
+\end{equation}
+
+Metric compatibility 
+\begin{equation}
+    \pd_MG_{NP} = -\tensor{\Gamma}{_{MN}^S}G_{PS}-\tensor{\Gamma}{_{MP}^S}G_{NS} = -2\tensor{\Gamma}{_{M(NP)}},
+\end{equation}
+and likewise 
+\begin{equation}
+    \pd_MG^{NP} = 2\tensor{\Gamma}{_{M}^{(NP)}}.
+\end{equation}
+Setting torsion to zero and trace with $\delta_P^N$
+\begin{equation}
+    \tensor{\Gamma}{_{MP}^P}+\beta |R_1|\tensor{\Gamma}{_{PM}^P}=0.
+\end{equation}
+We also find 
+\begin{equation}
+    G^{NS}\pd_MG_{NS} = -2\tensor{\Gamma}{_{MS}^S} =: -2\Pi_M
+\end{equation}
+as well as 
+\begin{equation}
+    G^{NS}\pd_M G_{NS} = 2\beta |R_1|\tensor{\Gamma}{_S_M^S} \implies \tensor{\Gamma}{_S_M^S}=\frac{1}{\beta|R_1|}\Pi_M
+\end{equation}
+
+The Ricci tensor is given by 
+\begin{align*}
+    R_{MN} &= \pd_{(M}\tensor{\Gamma}{_{|P|N)}^P}-\pd_P\tensor{\Gamma}{_{(MN)}^P}+\\
+    &+\tensor{\Gamma}{_{(MN)}^Q}\tensor{\Gamma}{_{PQ}^P}-\frac{1}{2}\tensor{\Gamma}{_{PM}^Q}\tensor{\Gamma}{_{QN}^P}-\frac{1}{2}\tensor{\Gamma}{_{P(M}^Q}\tensor{\Gamma}{_{N)Q}^P}.
+\end{align*}
+
+Now we want to what extent the following is determined by the metric using metric compatibility and vanishing torsion
+\begin{equation}
+    R^\alpha := \tensor{T}{^\alpha^N_{S}}G^{SM}R_{MN}.
+\end{equation}
+\begin{align}
+    \tensor{T}{^\alpha^N_{S}}G^{SM}\pd_{(M}\tensor{\Gamma}{_{|P|N)}^P} &= \frac{1}{2}\tensor{T}{^\alpha^N_{S}}G^{SM}\pd_{M}\tensor{\Gamma}{_{PN}^P}+\frac{1}{2}\tensor{T}{^\alpha^N_{S}}G^{SM}\pd_{N}\tensor{\Gamma}{_{PM}^P} =\\
+    &= \frac{1}{2\beta|R_1|}\tensor{T}{^\alpha^N_{S}}G^{SM}\pd_M\Pi_N+\frac{1}{2\beta |R_1|}\tensor{T}{^\alpha^N_{S}}G^{SM}\pd_N\Pi_M=\\
+    &= \frac{1}{\beta|R_1|}\tensor{T}{^\alpha^N_{S}}G^{SM}\pd_{(M}\Pi_{N)}.
+\end{align}
+
+\begin{align*}
+    -\tensor{T}{^\alpha^N_{S}}G^{SM}\pd_P\tensor{\Gamma}{_{(MN)}^P}=-\frac{1}{2}\tensor{T}{^\alpha^N_{S}}\pd_P\tensor{\Gamma}{_N^S^P}-\frac{1}{2}\tensor{T}{^\alpha^N_{S}}G^{SM}\pd_P\tensor{\Gamma}{_{MN}^P}
+\end{align*}
+\begin{align*}
+    \tensor{T}{^\alpha^N_{S}}G^{SM}\tensor{\Gamma}{_{(MN)}^Q}\tensor{\Gamma}{_P_Q^P} = \frac{1}{\beta|R_1|}\tensor{T}{^\alpha^N_{S}}G^{SM}\tensor{\Gamma}{_{(MN)}^Q}\Pi_Q = \frac{1}{2\beta|R_1|}\tensor{T}{^\alpha^N_S}\tensor{\Gamma}{_N^S^Q}\Pi_Q+\frac{1}{2\beta|R_1|}\tensor{T}{^\alpha^N_S}G^{SM}\tensor{\Gamma}{_M_N^Q}\Pi_Q
+\end{align*}
+
+\begin{align*}
+    -\frac{1}{2}\tensor{T}{^\alpha^N_S}G^{SM}\tensor{\Gamma}{_P_M^Q}\tensor{\Gamma}{_Q_N^P}= 
+\end{align*}
+
+\begin{align*}
+    -\frac{1}{2}\tensor{T}{^\alpha^N_S}G^{SM}\tensor{\Gamma}{_{P(M}^Q}\tensor{\Gamma}{_{N)Q}^P} = -\frac{1}{4}\tensor{T}{^\alpha^N_S}G^{SM}\tensor{\Gamma}{_{PM}^Q}\tensor{\Gamma}{_{NQ}^P}-\frac{1}{4}\tensor{T}{^\alpha^N_S}G^{SM}\tensor{\Gamma}{_{PN}^Q}\tensor{\Gamma}{_{MQ}^P}
+\end{align*}
+
+
+
+
+
+\end{document}

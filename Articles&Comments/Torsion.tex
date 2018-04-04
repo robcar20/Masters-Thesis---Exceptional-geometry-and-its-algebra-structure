@@ -68,6 +68,71 @@ where $\mathcal{M}_{NP}\in \vee^2R(\lambda)$. Using the no-torsion condition we 
 \end{equation}
 
 
+\newpage
+
+(Lets ignore to trombone symmetry for now). Let torsion be 
+\begin{equation}
+    \tensor{T}{_{MN}^P} = \tensor{\Gamma}{_{MN}^P}+\tensor{Z}{^{PR}_{SN}}\tensor{\Gamma}{_{RM}^S},
+\end{equation}
+and equivalently 
+\begin{equation}
+    \tensor{T}{_M^\alpha}:= \tensor{T}{^\alpha^K_S}\tensor{\Gamma}{_M_K^S}-\tensor{T}{^\alpha^P_N}\tensor{T}{^\beta^N_P}\tensor{T}{^\beta^R_S}\tensor{\Gamma}{_{RM}^S}.
+\end{equation}
+With the definition of the Killing form we find 
+\begin{equation}
+    \tensor{T}{_M^\alpha} = \tensor{\Gamma}{_M^\alpha}-c_\lambda \tensor{T}{^\alpha ^R_S}\tensor{\Gamma}{_R_M^S},
+\end{equation}
+where $c_\lambda$ is a constant that depends on $R(\lambda)$. Setting torsion to zero we find 
+\begin{equation}
+    \tensor{\Gamma}{_M^\alpha} = c_\lambda \tensor{T}{^\alpha ^R_S}\tensor{\Gamma}{_R_M^S}.
+\end{equation}
+and 
+\begin{equation}
+    \tensor{\Gamma}{_M^\alpha} = \tensor{\Gamma}{_M_R^S}\tensor{T}{^\alpha^R_S} = c_\lambda \tensor{T}{^\alpha^R_S}\tensor{\Gamma}{_R_M^S}\implies \tensor{\Gamma}{_M_N^P}= c_\lambda \tensor{\Gamma}{_N_M^P}
+\end{equation}
+
+Metric compatibility gives 
+\begin{equation}
+    \pd_MG_{NP} = -\tensor{\Gamma}{_{MNP}}-\tensor{\Gamma}{_{MPN}}.
+\end{equation}
+Define 
+\begin{equation}
+    \tensor{\Gamma}{_M^{*\alpha}} = G_{PS}G^{KN}\tensor{T}{^\alpha^S_K}\tensor{\Gamma}{_{MN}^P} = \tensor{T}{^\alpha^P_K}G^{KN}\tensor{\Gamma}{_{MNP}}.
+\end{equation}
+Multiply metric comp. above with $\tensor{T}{^\alpha^P_K}G^{KN}$ and we find 
+\begin{equation}
+    \tensor{T}{^\alpha^P_K}G^{KN}\pd_MG_{NP} = -\tensor{T}{^\alpha^P_K}G^{KN}\tensor{\Gamma}{_{MNP}}-\tensor{T}{^\alpha^P_K}G^{KN}\tensor{\Gamma}{_{MPN}}
+\end{equation}
+such that 
+\begin{equation}
+    \tensor{T}{^\alpha^P_K}G^{KN}\pd_MG_{NP} = -\tensor{\Gamma}{_M^{*\alpha}}-\tensor{\Gamma}{_M^\alpha},
+\end{equation}
+we thus see that the part when $\alpha$ in $\mathfrak{g}/\mathfrak{h}$ is determined. Moreover, the LHS is precisely 
+\begin{equation}
+    \tensor{T}{^\alpha^P_K}G^{KN}\pd_MG_{NP} = c_\lambda \tensor{\Pi}{_M^\alpha}=-\left(\tensor{\Gamma}{_M^{*\alpha}}+\tensor{\Gamma}{_M^\alpha}\right).
+\end{equation}
+
+
+How about 
+\begin{equation}
+    R^\alpha = AG^{MN}\pd_{(M}\tensor{\tilde{\Gamma}}{_{N)}^\alpha}+B\tensor{\tilde{\Gamma}}{_M^\alpha}\tensor{\tilde{\Gamma}}{_N^\beta}\tensor{T}{_{\beta}^{(N}_P}G^{M)P}
+\end{equation}
+where $\tensor{\tilde{\Gamma}}{_M^\alpha}=\tensor{\Gamma}{_M^\alpha}+\tensor{\Gamma}{_M^{*\alpha}}$. Or start by looking at 
+\begin{equation}
+    \pd_{M}\left(\tensor{\Gamma}{_{N}^\alpha}+\tensor{\Gamma}{_{N}^{*\alpha}}\right) = \tensor{T}{^\alpha ^P_K}\pd_M G^{KS}\pd_NG_{SP}+\tensor{T}{^\alpha ^P_K} G^{KS}\pd_N\pd_MG_{SP}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

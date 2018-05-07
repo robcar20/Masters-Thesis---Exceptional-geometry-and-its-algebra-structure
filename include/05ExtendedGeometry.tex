@@ -1,6 +1,8 @@
 \chapter{Extended Geometries}\label{chap:ExtendedGeometries}
 In this chapter the general construction of extended geometries recently constructed in \cite{CederwallPalmkvist2017} is described. These are generalisations of double geometry and exceptional geometry to a geometry based on a Kac-Moody algebra $\mathfrak{g}$ and an irreducible highest weight module $R(\lambda)$. The construction is built around the generalised diffemorphisms and closure of their algebra. Moreover, a section condition is again crucial in order for the consistency of the algebra. 
 
+Physically what we are describing are the purely internal (scalar) degrees of freedom of supergravity upon dualisation to obtain as many scalar as possible.  
+
 \todo[inline]{physics}
 \section{Extended spacetime and setup}
 An extended geometry is based on the split real-form of a Kac-Moody algebra $\mathfrak{g}$ exponentiated to a group $G$ and an irreducible highest weight coordinate module $R(\lambda)$. As introduced in section \ref{chap:symmetries} a Kac-Moody algebra is described in terms of its Cartan matrix $a_{ij}$ which we assume to be symmetrisable, i.e.\ that there exists a diagonal matrix $d$ with nonzero entries $d_j$ such that $da$ is a symmetric matrix. 
@@ -11,21 +13,24 @@ Generalised diffemorphisms play a central rôle in the construction of extended 
 \begin{equation}
     \delta_\xi V^M = \mathscr{L}_\xi V^M = \xi^N\pd_N V^M+\tensor{Z}{^M^N}_{PQ}\pd_N\xi^PV^Q,
 \end{equation}
-where $Z$ is a invariant tensor of $\mathfrak{g}$. The first term can be viewed as a transport term coming from a Taylor expansion of the argument and the second term is a projector of the $^N_P$ indices on the adjoint of $\mathfrak{g}\oplus \mathbb{R}$. The invariant tensor $Z$ is hence given by 
+where $Z$ is a invariant tensor of $\mathfrak{g}$. The first term can be viewed as a transport term coming from a Taylor expansion of the argument and the second term is a projection operator which projects the $\tensor{}{^N_P}$ indices on the adjoint of $\mathfrak{g}\oplus \mathbb{R}$. The invariant tensor $Z$ is hence given by 
 \begin{equation}
     \tensor{Z}{^M^N_P_Q} = -k\eta_{\alpha\beta}\tensor{T}{^\alpha^M_Q}\tensor{T}{^\beta^N_P}+\beta\delta^M_Q\delta^N_P,
 \end{equation}
-where $\eta_{\alpha\beta}$ is the inverse of the invariant bilinear form on $\mathfrak{g}$ and $T^{\alpha}$ are the generators in the represenation $R(\lambda)$ and $k$ and $\beta$ constants. This can be written in an equivalent way using the tensor
+where $\eta_{\alpha\beta}$ is the inverse of the invariant bilinear form on $\mathfrak{g}$, $T^{\alpha}$ are the generators in the representation $R(\lambda)$ and $k,\beta$ constants. This can be written in an equivalent way using the tensor
 \begin{equation}\label{eq:Y}
-    \tensor{Y}{^M^P_N_Q} = \tensor{Z}{^M^P_N_Q}+\delta^M_P\delta^N_Q = -k\eta_{\alpha\beta}\tensor{T}{^\alpha^M_Q}\tensor{T}{^\beta^N_P}+\beta\delta^M_Q\delta^N_P+\delta^M_P\delta^N_Q
+    \tensor{Y}{^M^P_N_Q} = \tensor{Z}{^M^P_N_Q}+\delta^M_N\delta^P_Q = -k\eta_{\alpha\beta}\tensor{T}{^\alpha^M_Q}\tensor{T}{^\beta^N_P}+\beta\delta^M_Q\delta^N_P+\delta^M_N\delta^P_Q
 \end{equation}
 as 
 \begin{equation}
-    \mathscr{L}_\xi V^M = \xi^N\pd_N V^M-\pd_N\xi^MV^N+\tensor{Y}{^M^N}_{PQ}\pd_N\xi^PV^Q
+    \begin{aligned}
+        \mathscr{L}_\xi V^M &= \xi^N\pd_N V^M-\pd_N\xi^MV^N+\tensor{Y}{^M^N}_{PQ}\pd_N\xi^PV^Q\\
+        &= L_\xi V^M+\tensor{Y}{^M^N}_{PQ}\pd_N\xi^PV^Q.
+    \end{aligned}
 \end{equation}
-such that the contribution from the $Y$ tensor can be interpreted as the departure of the generalised Lie derivative in the structure algebra $\mathfrak{g}\oplus\mathbb{R}$ compared to that of ordinary geometry based on $\mathfrak{gl}$. 
+Here $L_\xi$ denotes the ordinary Lie derivative such that the contribution from the $Y$ tensor can be interpreted as the departure of the generalised Lie derivative in the structure algebra $\mathfrak{g}\oplus\mathbb{R}$ compared to that of ordinary geometry based on $\mathfrak{gl}$. 
 
-A crucial consistency condition is now whether the algebra closes or not, to that and we examine 
+A crucial consistency condition is now whether the algebra closes or not, to see this examine 
 \begin{equation}\label{eq:closure}
     \left(\left[\mathscr{L}_\xi,\mathscr{L}_\eta\right]-\mathscr{L}_{\frac{1}{2}\left(\mathscr{L}_\xi\eta-\mathscr{L}_\eta\xi\right)}\right)V^M\overset{?}{=}0.
 \end{equation}
@@ -37,7 +42,7 @@ if the $Y$-tensor satisfies certain constraints. The first is the (strong) secti
 \begin{equation}
     \tensor{Y}{^{MN}_{PQ}}\pd_M\otimes\pd_N = 0,
 \end{equation}
-where $\pd_M\otimes\pd_N$ indicates that each derivative act on an arbitrary field. To gets some intuition we look at the case for DFT with
+where $\pd_M\otimes\pd_N$ indicates that each derivative act on an arbitrary field. To gets some intuition for this constraint look at the case for DFT with
 \begin{equation}
     \tensor{Y}{^{MN}_{PQ}}=-2\tensor{P}{^{MN}_{PQ}}+\delta^M_P\delta^N_Q,
 \end{equation}
@@ -60,15 +65,385 @@ which indeed is the section condition for DFT introduced in section \ref{sec:DFT
     \end{align}
     \end{subequations}
 
-The equations \eqref{eq:closure1}-\eqref{eq:closure2} comes from the term involving $(\pd\xi)(\pd\eta)$. Whether the remaining term in \eqref{eq:GenDiffComm} needed for closure vanish or not depends on the specific algebra together with the choice of coordinate module $R(\lambda)$, a simple criterion for this will be derived below using certain extensions of $\mathfrak{g}$. As of yet the particular form, nor any symmetry properties, of $Y$ has been used, however, inserting the explicit form \eqref{eq:Y} in \eqref{eq:closure1}-\eqref{eq:closure2} one finds that they are satisfied if the section condition is fulfilled. 
+The equations \eqref{eq:closure1}-\eqref{eq:closure2} comes from the term involving $(\pd\xi)(\pd\eta)$. Whether the remaining term in \eqref{eq:GenDiffComm} needed for closure vanish or not depends on the specific algebra together with the choice of coordinate module $R(\lambda)$, a simple criterion for this will be derived below using certain extensions of $\mathfrak{g}$. As of yet the particular form, nor any symmetry properties, of $Y$ has been used. However, inserting the explicit form \eqref{eq:Y} in \eqref{eq:closure1}-\eqref{eq:closure2} one finds that they are satisfied if the section condition is fulfilled. 
 
-Up to the remaining term we have thus seen that the closure of the algebra is entirely based on solving the section condition \eqref{eq:section}. Solving the section condition can be done in two step, first one imposes the weak section stating that any momenta $|p\rangle\in \overbar{R(\lambda)}$ lie in a minimal orbit of $G$. This is equivalent to $|p\rangle\otimes|p\rangle \in \overbar{R(2\lambda)}$ \cite{Berman2013,Bossard2017}. Secondly we demand that the product of two arbitrary momenta $|p\rangle,|q\rangle\in\overbar{R(\lambda)}$ contains only the dual of the highest modules in the symmetric $R^s_h$ and anti-symmetric $R^a_h$ product of $R(\lambda)$ respectively. In other words, the second step means that we set 
+\subsection{Section condition}
+Up to the remaining term we have thus seen that the closure of the algebra is entirely based on solving the section condition \eqref{eq:section}. The tensor product of the coordinate module with itself can trivially be decomposed as
 \begin{equation}
-    \left(\pd\otimes\pd\right)|_{R_2} = 0 \qquad \left(\pd\otimes\pd\right)|_{\tilde{R}_2} =0,
+    \begin{aligned}
+        R(\lambda)\otimes R(\lambda) &= \vee^2 R(\lambda)\oplus \wedge^2R(\lambda)\\
+        &= \left(R_h^s\oplus R_2\right)\oplus\left(R_h^a\oplus \tilde{R}_2\right),
+    \end{aligned}
 \end{equation}
-where $R_2$ and $\tilde{R}_2$ are
+with $R_h^{s,a}$ being the highest weight representation in the symmetrized and anti-symmetrised product respectively and
 \begin{align}
     R_2 &= \vee^2 R(\lambda)\ominus R_h^s,\\
-    \tilde{R}_2 &= \wedge^2R(\lambda)\ominus  R_h^a
+    \tilde{R}_2 &= \wedge^2R(\lambda)\ominus  R_h^a.
 \end{align}
-according to the discussion above. 
+Note that the highest weight representation in the symmetrised product is given by $R_h^s=R(2\lambda)$. Solving the section condition can be done in two step, first impose the weak section stating that any momenta $|p\rangle\in \overbar{R(\lambda)}$ lie in a minimal orbit of $G$. This is equivalent to $|p\rangle\otimes|p\rangle \in \overbar{R(2\lambda)}$ \cite{Berman2013,Bossard2017}. Secondly we demand that the product of two arbitrary momenta $|p\rangle,|q\rangle\in\overbar{R(\lambda)}$ contain only the dual of the highest modules in the symmetric $R^s_h$ and anti-symmetric $R^a_h$ product of $R(\lambda)$ respectively. In other words, the second step means that we set 
+\begin{equation}
+    \left(\pd\otimes\pd\right)|_{\overbar{R_2}} = 0 \qquad \left(\pd\otimes\pd\right)|_{\overbar{\tilde{R}_2}} =0,
+\end{equation}
+
+
+The section condition plays an important rôle in extended geometries as it reduce the extended spacetime and geometry to in some sense obtain ordinary geometry based on a $GL(d)$ transformations on a $d$-dimensional subspace of $R(\lambda)$. Importantly this condition is posed and solved in a $\mathfrak{g}$ covariant manner. In other words, when the section condition is solved other sections can be reached by $G$ transformations while the $d$ dimensional subspace is stabilised by a $GL(d)$ subgroup of $G$. 
+
+In order to make progress note that the highest weight representation in the anti-symmetrised product $R_s^a$ is given by a representation $R(2\lambda-\alpha_i)$ with $\lambda(\alpha^\vee_i)\neq 0$. The highest weight state of such a representation is given by
+\begin{equation}
+    |\lambda\rangle \otimes |\lambda-\alpha_i\rangle - |\lambda-\alpha_i\rangle \otimes |\lambda\rangle,
+\end{equation}
+which indeed has the weight $2\lambda-\alpha_i$. 
+
+Consider the quadratic Casimir invariant evaluated on $R(\lambda)$, $R(2\lambda)$ and $R(2\lambda-\alpha_i)$ using \eqref{eq:Casimir}
+\begin{equation}\label{eq:CasimirOnReps}
+    \begin{aligned}
+        C_2(R(\lambda)) &= \frac{1}{2}(\lambda,\lambda+2\rho),\\
+        C_2(R(2\lambda)) &= 2C_2(R(\lambda))+(\lambda,\lambda),\\
+        C_2(R(2\lambda-\alpha_i)) &= C_2(R(2\lambda))-2(\alpha_i,\lambda)+\frac{1}{2}(\alpha_i,\alpha_i)-(\alpha_i,\rho)\\
+        &= C_2(R(2\lambda))-\lambda_i(\alpha_i,\alpha_i),
+    \end{aligned}
+\end{equation}\todo{rest of rho term?}
+where we in the second step in the last equation used the definition of the coroots and that the Weyl vector is given by \eqref{eq:Weylroots}. Look at the Casimir evaluated on a state in $R(2\lambda)$, which without loss of generality we take to be $|\lambda\rangle\otimes|\lambda\rangle$, using the explicit form in \eqref{eq:DefCasimir}
+\begin{equation}
+    \begin{aligned}
+    \frac{1}{2}\eta_{\alpha\beta}T^\alpha T^\beta\left(|\lambda\rangle\otimes|\lambda\rangle\right) =& \left(\frac{1}{2}\eta_{\alpha\beta}T^\alpha T^\beta |\lambda\rangle\right)\otimes|\lambda\rangle +|\lambda\rangle\otimes\left(\frac{1}{2}\eta_{\alpha\beta}T^\alpha T^\beta |\lambda\rangle\right)\\
+    &+ \eta_{\alpha\beta}T^\alpha\otimes T^\beta|\lambda\rangle\otimes|\lambda\rangle. 
+    \end{aligned}.
+\end{equation}
+On the other hand evaluate the right hand side of \eqref{eq:CasimirOnReps} on the same state
+\begin{equation}
+    \left(2C_2(R(\lambda))+(\lambda,\lambda)\right)|\lambda\rangle\otimes|\lambda\rangle = \left(\frac{1}{2}T^\alpha T^\beta\right)\otimes|\lambda\rangle+|\lambda\rangle\otimes\left(\frac{1}{2}T^\alpha T^\beta\right)+(\lambda,\lambda)|\lambda\rangle\otimes|\lambda\rangle. 
+\end{equation}
+We thus find the algebraic condition 
+\begin{equation}
+    \left(T^\alpha\otimes T^\beta-(\lambda,\lambda)\right) |\lambda\rangle\otimes|\lambda\rangle=0
+\end{equation}
+in order to satisfy the second equation in \eqref{eq:CasimirOnReps}. A similar condition is derived states in $R(2\lambda-\alpha_i)$ by evaluating the Casimir operator on the highest weight state $|2\lambda-\alpha_i\rangle$
+\begin{equation}
+    \begin{aligned}
+        \left(C_2(R(2\lambda-\alpha_i))-2C_2(R(\lambda)-(\lambda,\lambda)+\lambda_i(\alpha_i,\alpha_i)\right) = \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)+\lambda_i(\alpha_i,\alpha_i)\right)|\lambda\rangle\otimes|\lambda\rangle =0.
+    \end{aligned}
+\end{equation}
+
+Consider the highest weight vector $\lambda\rangle$ in a section together with some second vector $|q\rangle$ also in the section. The symmetrised and anti-symmetrised product of these two vectors should satisfy the constraints derived above, i.e.\
+\begin{equation}\label{eq:SectSym}
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)\left(|\lambda\rangle\otimes|q\rangle+|q\rangle\otimes|\lambda\rangle\right)=0,
+\end{equation}
+and 
+\begin{equation}
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)+\lambda_i(\alpha_i,\alpha_i)\right)\left(|\lambda\rangle\otimes|q\rangle-|q\rangle\otimes|\lambda\rangle\right)=0.
+\end{equation}
+Since $\lambda$ is the highest weight in $R(\lambda)$ any other vector $|q\rangle$ can be decomposed as 
+\begin{equation}
+    |q\rangle = \sum_{k\geq 0} |q\rangle_k,
+\end{equation}
+with $(h,\lambda)|q\rangle_k = ((\lambda,\lambda)-k)|q\rangle_k$. For the split real form in our normalization we have 
+\begin{equation}
+    \eta_{\alpha\beta}T^\alpha\otimes T^\beta = (h,h)+\sum_{\alpha\in\Delta}\left(e_\alpha e_{-\alpha}+e_{-\alpha}e_\alpha\right),
+\end{equation}
+such that \eqref{eq:SectSym} simplifies to 
+\begin{equation}
+    \begin{aligned}
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)\left(|\lambda\rangle\otimes|q\rangle+|q\rangle\otimes|\lambda\rangle\right) =& -\sum_{k\geq 0} k\left(|\lambda\rangle\otimes|q\rangle_k+|q\rangle_k\otimes|\lambda\rangle\right)\\
+    &+ \sum_{k\geq 0}\sum_{\alpha\in\Delta^+} \left(e_{-\alpha}|\lambda\rangle\otimes e_{\alpha}|q\rangle+e_{\alpha}|q\rangle\otimes e_{-\alpha}|\lambda\rangle\right),
+    \end{aligned}
+\end{equation}
+where we used the decomposition of $|q\rangle$ and that $\lambda$ is a highest weight, i.e.\ it is annihilated by all the positive roots. This equation is linear in $q$ so consider a single $k$ component, then this can vanish only if $e_\alpha|q\rangle_k= c_ke_{-\alpha}|\lambda\rangle$ with a constant $c_k$ and for some $\alpha\in\Delta^+$ such that 
+\begin{equation}
+    \left(1+\sigma\right)\left(c_ke_{\alpha}e_{-\alpha}|\lambda\rangle\otimes|\lambda\rangle-k|\lambda\rangle\otimes e_{-\alpha}|\lambda\rangle\right) = 0,
+\end{equation}
+where $\sigma$ is the permutation operator. Using that $e_{\alpha}e_{-\alpha}|\lambda\rangle = H_\alpha |\lambda\rangle$ we find that 
+\begin{equation}
+    c_k \lambda(\alpha^\vee) = k,
+\end{equation}
+and that $\alpha$ is a simple root \todo{Why simple?}. Moreover, any other positive root $\tilde{\alpha}\neq\alpha$ has to satisfy 
+\begin{equation}
+    e_{\tilde{\alpha}}|q\rangle_k = 0\qquad \text{or}\qquad e_{-\tilde{\alpha}}|\lambda\rangle = 0. 
+\end{equation}
+The latter condition gives that 
+\begin{equation}
+    e_{\tilde{\alpha}}e_{\tilde{-\alpha}}|\lambda\rangle = \lambda(\tilde{\alpha}^\vee)|\lambda\rangle=0,
+\end{equation}
+or equivalently $(\lambda,\tilde{\alpha)}=0$. Since $|q\rangle$ is an element in the section it should also satisfy the symmetric constraint, however note that this is a non-linear constraint. Look at therefore at the term involving $|q\rangle_k\otimes|q\rangle_k$, with the largest $k$ such that $|q\rangle$ is non-trivial, with $\alpha=\alpha_i$ a simple root and insert $|q\rangle_k=e_{-\alpha_i}|\lambda\rangle$
+\begin{equation}
+    \begin{aligned}
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)|\lambda\rangle\otimes|\lambda\rangle &= (e_{\alpha_i})e_{\alpha_i})|\lambda\rangle\otimes|\lambda\rangle+|\lambda\rangle\otimes e_{\alpha_i}e_{\alpha_i}|\lambda\rangle\\
+    +\left((h,h)-(\lambda,\lambda)\right)e_{\alpha_i}|\lambda\rangle\otimes e_{\alpha_i}|\lambda\rangle\\
+    &= (1+\sigma)e_{\alpha_i})e_{\alpha_i})|\lambda\rangle\otimes|\lambda\rangle+\left((\lambda-\alpha_i,\lambda-\alpha_i)-(\lambda,\lambda)\right).
+    \end{aligned}
+\end{equation}
+In order for this to vanish we find $e_{-\alpha_i}e_{-\alpha_i}|\lambda\rangle =0$ and 
+\begin{equation}
+    -2(\lambda,\alpha_i)+(\alpha_i,\alpha_i)=0\qquad \implies\qquad \lambda_i = 1.
+\end{equation}
+Also $e_{-\alpha_i}e_{-\alpha_i}|\lambda\rangle =0$ implies $\lambda_i=1$ which can be seen by looking at $e_{\alpha}e_{-\alpha_i}e_{-\alpha_i}|\lambda\rangle$. 
+
+A section can then be constructed as follows 
+\begin{enumerate}
+    \item Pick a highest weight state $|\lambda\rangle$.
+    \item Enlarge the section by adding the state $e_{-\alpha_i}|\lambda$ with $\lambda_i=1$.
+    \item Add another state $e_{-\alpha_{i+1}}e_{-\alpha_{i}}|\lambda\rangle$ if $\lambda_i=0$. 
+    \item Continue and add more states $e_{-\alpha_{i+l}}e_{-\alpha_{i+l-1}}\ldots e_{-\alpha_{i}}|\lambda\rangle$ as long as $\lambda_{r}\neq 0$ only for $r=i$.
+\end{enumerate}
+This is conveniently depicted in terms of a so-called gravity-line in the Dynkin diagram. As an example of this consider an extended geometry based on $E_{6(6)}$ and the coordinate module $R(\lambda)=R(\Lambda_1)$. Two possible sections are then shown in \figref{fig:E7WithSection} where the black nodes denote the series of simple roots used to construct the respective section. The gravity-line thus corresponds to the line of $d-1$ black nodes and the stabiliser of the section is $GL(d)$. 
+
+\begin{figure}
+    \ESevenDynkinWithSections{1}
+    \caption{Dynkin diagram of $\mathfrak{e}_7$ with black nodes corresponding to two different sections.}
+    \label{fig:E7WithSection}
+\end{figure}
+
+Any two vectors $|p\rangle$ and $|q\rangle$ in a section should thus satisfy 
+\begin{equation}
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)+\frac{(\alpha_i,\alpha_i)}{2}(1-\sigma)\right)|p\rangle\otimes|q\rangle = 0,
+\end{equation}
+with the last term only contribute to the anti-symmetric part. Comparing with the invariant $Y$ tensor introduced in \eqref{eq:Y} we find 
+\begin{equation}
+    \sigma Y|p\rangle\otimes|q\rangle = 0,
+\end{equation}
+with $k=2/(\alpha_i,\alpha_i)$ and $\beta=k(\lambda,\lambda)-1$. In section \ref{sec:InvYTensor} an expression for the $Y$ tensor in terms of extended algebras was derived  
+\begin{equation}
+    \sigma Y = \frac{k}{2}(g-\tilde{g}).
+\end{equation}
+We thus see that the extended algebras naturally encode the $Y$ tensor that is crucial for the section condition, and hence, also for all extended geometries. 
+
+\subsection{Ancillary transformation and closure of algebra}
+The obstruction to closure of generalised diffeomorphisms was shown in to be  \eqref{eq:GenDiffComm} 
+\begin{equation}\label{eq:GenDiffComm2}
+    \left(\left[\mathscr{L}_\xi,\mathscr{L}_\eta\right]-\mathscr{L}_{\frac{1}{2}\left(\mathscr{L}_\xi\eta-\mathscr{L}_\eta\xi\right)}\right)V^M = \frac{1}{2}\tensor{Z}{^{MP}_{QN}}\tensor{Y}{^{QR}_{ST}}\xi^T\pd_P\pd_R\eta^SV^N-\left(\xi\leftrightarrow\eta\right),
+\end{equation}
+given that the section condition is fulfilled. Look at
+\begin{equation}\label{eq:RemainderTermGauge}
+    \begin{aligned}
+        \tensor{Z}{^{MP}_{QN}}\tensor{Y}{^{QR}_{ST}}\xi^T\pd_P\pd_R\eta^SV^N &= \left(-k\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\beta P}_Q}\tensor{Y}{^{QR}_{ST}}+\beta \delta^M_N\tensor{Y}{^{PR}_{ST}}\right)\xi^T\pd_P\pd_R\eta^SV^N,\\
+        &= \big(k^2\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\beta P}_Q}\eta_{\gamma\rho}\tensor{T}{^{\gamma Q}_T}\tensor{T}{^{\rho R}_S}\\
+        &-k\beta\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\beta P}_T}\delta^R_S-k\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\beta P}_S}\delta^{R}_T\big)\xi^T\pd_P\pd_R\eta^SV^N,
+    \end{aligned}
+\end{equation}\todo{Correct parenthesis in second and third line}
+where we expanded the $Y$ tensor in the first term on the RHS and noted that the second term vanish due to the section condition. The strategy is then to commute $\tensor{T}{^{\beta P}_Q}$ and $\tensor{T}{^{\gamma Q}_T}$ in the term proportional to $k^2$ in the second line in order to again apply the section condition
+\begin{equation}\label{eq:UseOfSec}
+    \begin{aligned}
+    \eqref{eq:RemainderTermGauge}|_{k^2} = k^2\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\beta P}_Q}\eta_{\gamma\rho}\tensor{T}{^{\gamma Q}_T}\tensor{T}{^{\rho R}_S}\xi^T\pd_P\pd_R\eta^SV^N &= k^2\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\eta_{\gamma\rho}\tensor{T}{^{\rho R}_S}\left(\tensor{f}{^{\alpha\gamma}_\sigma}\tensor{T}{^{\sigma P}_T}+\tensor{T}{^{\gamma P}_Q}\tensor{T}{^{\beta Q}_T}\right)\xi^T\pd_P\pd_R\eta^SV^N\\
+    &= k^2\left(\eta_{\gamma\rho}\eta_{\alpha\beta}\tensor{f}{^{\alpha\gamma}_\sigma}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\rho R}_S}\tensor{T}{^{\sigma P}_T}\right)\xi^T\pd_P\pd_R\eta^SV^N\\
+    &+ k\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\beta Q}_T}\left(\beta\delta^R_S\delta^P_Q+\delta^R_Q\delta^P_S\right)\xi^T\pd_P\pd_R\eta^SV^N.
+    \end{aligned}
+\end{equation}
+Inserting \eqref{eq:UseOfSec} in \eqref{eq:RemainderTermGauge} the two terms proportional to $\beta$ cancel and we find 
+\begin{equation}
+    \begin{aligned}
+        \tensor{Z}{^{MP}_{QN}}\tensor{Y}{^{QR}_{ST}}\xi^T\pd_P\pd_R\eta^SV^N &= \left(k^2\eta_{\gamma\rho}\eta_{\alpha\beta}\tensor{f}{^{\alpha\gamma}_\sigma}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\rho R}_S}\tensor{T}{^{\sigma P}_T}\right)\xi^T\pd_P\pd_R\eta^SV^N\\
+        &+k\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\beta Q}_T}\left(\delta^R_Q\delta^P_S-\delta_Q^P\delta_S^R\right) \xi^T\pd_P\pd_R\eta^SV^N.
+    \end{aligned}
+\end{equation}
+In index free notation the failure of generalised diffeomorphisms to close can thus be written
+\begin{equation}\label{eq:AncillaryTransformation}
+    \left(\left[\mathscr{L}_\xi,\mathscr{L}_\eta\right]-\mathscr{L}_{\frac{1}{2}\left(\mathscr{L}_\xi\eta-\mathscr{L}_\eta\xi\right)}\right)V^M = \Sigma_\alpha T^\alpha |V\rangle,
+\end{equation}
+with 
+\begin{equation}
+    \Sigma^\alpha = \frac{k}{2}\langle \pd_\eta|\otimes\langle \pd_\eta| S^\alpha|\xi\rangle \otimes |\eta\rangle - \left(\xi\leftrightarrow\eta\right)
+\end{equation}
+and 
+\begin{equation}\label{eq:STensor}
+    S^\alpha = -k\tensor{f}{^{\alpha}_{\beta\gamma}}T^\beta\otimes T^\gamma +T^\alpha\otimes \mathbf{1}-\mathbf{1}\otimes T^\alpha. 
+\end{equation}
+The operator $S^\alpha$ is easily seen to satisfy $\sigma S^\alpha = -S^\alpha\sigma$ which implies that it can be decomposed as 
+\begin{equation}
+    \tensor{S}{^{\alpha MN}_{PQ}} = \tensor{S}{^{\alpha (MN)}_{[PQ]}}+\tensor{S}{^{\alpha [MN]}_{(PQ)}}. 
+\end{equation}
+In \eqref{eq:AncillaryTransformation} only the part $\tensor{S}{^{\alpha (MN)}_{[PQ]}}$ since partial derivatives commute. Moreover, $\langle \pd_\eta|\otimes\langle\pd_\eta|$ is symmetric and hence the expression for $\Sigma^\alpha$ can also be written as
+\begin{equation}
+    \Sigma^\alpha\to \Sigma^\alpha = \frac{k}{2}\langle \pd_\eta|\otimes\langle \pd_\eta| S^\alpha\frac{1-\sigma}{2}|\xi\rangle \otimes |\eta\rangle - \left(\xi\leftrightarrow\eta\right).
+\end{equation}
+
+We can further rewrite this as 
+\begin{equation}
+    \frac{1+\sigma}{2} S^\alpha = \frac{1+\sigma}{2}[\mathbf{1}\otimes T^\alpha,Y]
+\end{equation}
+and noting that $\ldots$ \todo{HERE} we finally can replace $S^\alpha\to (\mathbf{1}\otimes T^\alpha)Y\frac{1-\sigma}{2}$ in the expression \eqref{eq:AncillaryTransformation} for ancillary transformations. 
+
+What we learn from this rewriting is that whether or not ancillary transformations vanish is entirely dependent on the structure algebra and the coordinate module $R(\lambda)$. Note that both the upper and lower indices of $Y_-$ are anti-symmetric and therefore
+\begin{equation}
+    \tensor{Y}{_-^{MN}_{PQ}} = \frac{k}{2}\tensor{\tilde{g}}{^{MN}_{PQ}}
+\end{equation}
+
+
+
+\section{Dynamics}
+Having developed the structure of generalised diffemorphisms to describe geometry based on a general structure algebra we want to describe the dynamics of some fields on this geometry. Especially, we will write down a pseudo-action that determines the dynamics for a generalised metric $G_{MN}\in G\times \mathbb{R}^+/K$, where $G$ is the structure group and $K$ the maximal compact subalgebra of $G$. In the case of compactifying $11$-dimensional supergravity the generalised metric will contain the purely internal degrees of freedom of the metric as well as the three-form and the structure group is given by the $E_{d(d)}$ series. 
+
+Note that in the theory below we only consider an extended geometry based on a generalised structure group with some coordinate module $R(\lambda)$ that reduce to $d$-dimensional theory when solving the section condition. In other words there is no compactification ansatz and in order to include external degrees of freedom one should look at DFT or EFT instead. In this case there would be purely external external fields as well as gauge potentials, or ``graviphotons'', that can be considered as gauge fields for the in this case internal generalised diffeomorphisms. Typically the corresponding field strength tensor will however not transform covariantly but fails by a trivial transformation. To account for this one have to successively add higher rank form fields that transforms in particular representations of the structure group to compensate for this. This is the procedure that  leads to the notion of a ``tensor hierarchy''. The exact spectrum of representations of the tensor hierarchies can be derived from tensor hierarchy algebras developed in \cite{Palmkvist:2013vya}. These construction and rôle of these tensor hierarchy algebras in extended geometries are further discussed in e.g.\ \cite{Carbone:2018njd,Cederwall:2018aab}.
+
+In order to describe the dynamics the action should be quadratic in derivatives of the metric and it should transform as a scalar density of weight $1$. The action will only transform properly after the section condition is applied and in that sense it is a pseudo-action. This means that we manually impose the section condition and only look at the classical theory. In order to quantize the theory by performing a path integral one would most likely have to find a way to dynamically generate the section condition as a constraint. 
+
+Analogously to the metric in euclidean geometry being an element in $GL(d)/SO(d)$ the generalised metric is an element in $G\times \mathbb{R}^+/H$. Moreover, we take the weight of the metric to be $-2w$ instead of the canonical weight $-2\beta$ of a rank two tensor, this will be convenient to ensure that the lagrangian transforms properly. Crucially the metric determines a local embedding of the maximal compact subalgebra $K$. To see this remember that the maximal compact subalgebra $\mathfrak{k}$ is the subset of $\mathfrak{g}$ that has eigenvalue $1$ under an involution. The metric in turn determines a local involution on the generators $T^\alpha$ of $\mathfrak{g}$ given by 
+\begin{equation}
+    \begin{aligned}
+    \star:\qquad &\mathfrak{g}\to\mathfrak{g}\\
+           &T^\alpha \mapsto T^{\alpha \star} = (GT^\alpha G^{-1})^T,
+    \end{aligned}
+\end{equation}
+with $^T$ being the ordinary transpose. In index notation with $G_{MN}$ being the metric, $G^{MN}$ its inverse and the generators $\tensor{T}{^{\alpha M}_N}$ this corresponds to 
+\begin{equation}
+    (\tensor{T}{^{\alpha\star}})\tensor{}{^M_N} = G_{NP}\tensor{T}{^{\alpha P}_S}G^{SM}.
+\end{equation}
+It is then easily seen that linear combinations $T+T^\star$ and $T-T^\star$ span $\mathfrak{k}$ and $\mathfrak{g}\ominus\mathfrak{k}$ respectively. Note that $\eta_{\alpha\beta}$ is invariant under this evolution and hence $\eta_{\alpha\beta}T^{\alpha\star}\otimes T^{\beta\star}=\eta_{\alpha\beta}T^{\alpha}\otimes T^{\beta}$.
+
+As in the discussion of non-linear sigma models in \ref{sec:NonLinearSigmaModels} we will differentiate the dynamical field and contract with its inverse to obtain (similar to the Maurer-Cartan form) an element in the corresponding coset algebra $\mathfrak{g}\times\mathbb{R}/\mathfrak{k}$
+\begin{equation}
+    (G^{-1}\pd_MG)\tensor{}{^N_P} = \tensor{T}{^{\alpha N}_P}\Pi_{M\alpha}+\delta^P_N\Theta_M.
+\end{equation}
+Note that since the metric is valued in the coset we have $\Pi_{M\alpha}\tensor{T}{^{\alpha \star}}=\Pi_{M\alpha}\tensor{T}{^{\alpha}}$. Due to the non-covariant derivative in the definition of $\Pi_{M\alpha}$ and $\Theta_M$ these will not transform covariantly under generalised diffeomorphisms and to find an appropriate action we should determine the inhomogeneous transformation of these fields. 
+
+The inhomogeneous transformation of a field is given by the difference $\Delta_\xi = \delta_\xi-\mathscr{L}_\xi$ and we therefore look at 
+\begin{align}
+    \delta_\xi \left(\pd_MG_{NP}\right) &= \pd_M\left(\xi^K\pd_KG_{NP}-2\tensor{Z}{^{SK}_{T(N|}}\pd_K\xi^TG_{|P)S}\right),\\
+    \mathscr{L}_\xi \left(\pd_MG_{NP}\right) &= \xi^K\pd_K\pd_MG_{NP}-2\tensor{Z}{^{SK}_{T(N|}}\pd_K\xi^T\pd_MG_{|P)S}\nonumber\\
+        &-\tensor{Z}{^{SK}_{TM}}\pd_K\xi^T\pd_SG_{NP}. \label{eq:GenDiffMetric}
+\end{align}
+Using the section condition in the last term in \eqref{eq:GenDiffMetric} we find the inhomogeneous transformation 
+\begin{equation}
+    \Delta_\xi \left(G^{-1}\pd_MG\right)\tensor{}{^N_P} = -2\tensor{Z}{^{SK}_{T(N}}\pd_{K)}\pd_M\xi^T.
+\end{equation}
+In terms of the fields $\Pi_{M\alpha}$ and $\Theta_M$ this translates to \todo{Check the first again}
+\begin{align}
+    \Delta \Pi_{M\alpha} &= \eta_{\alpha\beta}\left(T^\beta+T^{\star\beta}\right)\tensor{}{^S_T}\pd_M\pd_S\xi^T,\\
+    \Delta \Theta_M &= -2w\pd_M\pd_K\xi^K.
+\end{align}
+
+The ansatz for the lagrangian will then be
+\begin{equation}
+    \mathcal{L} = c_1\mathcal{L}_1(\Pi_{M\alpha})+c_2\mathcal{L}_2(\Pi_{M\alpha})+c_3\mathcal{L}_3(\Theta_M)+c_4\mathcal{L}_4(\Pi_{M\alpha},\Theta_M),
+\end{equation}
+with $c_i$ constant coefficients and $\mathcal{L}_i$ field dependent terms given by 
+\begin{equation}
+    \begin{cases}\begin{aligned}
+        \mathcal{L}_1 &= G^{MN}\eta^{\alpha\beta}\Pi_{M\alpha}\Pi_{N\beta},\\
+        \mathcal{L}_2 &= G^{KL}\tensor{T}{^{\alpha M}_K}\tensor{T}{^{\beta N}_L}\Pi_{N\alpha}\Pi_{M\beta},\\
+        \mathcal{L}_3 &= G^{MN}\Theta_M\Theta_N,\\
+        \mathcal{L}_4 &= G^{MK}\tensor{T}{^{\alpha N}_K}\Pi_{M\alpha}\Theta_{N}.
+    \end{aligned}
+    \end{cases}
+\end{equation}
+The inhomogeneous transformation of $\mathcal{L}_1$ is straigthforward to compute
+\begin{equation}
+    \begin{aligned}
+        \Delta_\xi \mathcal{L}_1 &= 2G^{MN}\eta^{\alpha\beta}\Pi_{M\alpha}(T^{\gamma}+T^{\star\gamma})\tensor{}{^S_T}\eta_{\gamma\beta}\pd_N\pd_S\xi^T\\
+        &= 4G^{MN}\Pi_{M\alpha}\tensor{T}{^{\alpha S}_T}\pd_N\pd_S\xi^T,
+    \end{aligned}
+\end{equation}
+where we used that $\Pi_{M\alpha}\in\mathfrak{g}\ominus\mathfrak{k}$. Likewise we find for $\mathcal{L}_3$ that 
+\begin{equation}
+    \Delta \mathcal{L}_3 = -4wG^{MN}\Theta_M\pd_N(\pd\cdot \xi).
+\end{equation}
+In a similar fashion we find for $\mathcal{L}_4$ that 
+\begin{equation}
+        \Delta_\xi \mathcal{L}_4 = G^{MK}\tensor{T}{^{\alpha N}_K}\left(T^\beta+T^{\star\beta}\right)\tensor{}{^S_T}\pd_M\pd_S\xi^T\Theta_N-2wG^{MK}\tensor{T}{^{\alpha N}_K}\Pi_{M\alpha}\pd_N(\pd\cdot \xi).
+\end{equation}
+Using that $\eta_{\alpha\beta}T^\alpha\otimes T^{\star\beta} = \eta_{\alpha\beta}T^{\star\alpha}\otimes T^{\beta}$ and the definition of the involution $\star$ we find 
+\begin{equation}
+    \begin{aligned}
+    \Delta_\xi \mathcal{L}_4 &= G^{MK}\tensor{T}{^{\alpha N}_K}\tensor{T}{^{\alpha S}_T}\pd_M\pd_S\xi^T\Theta_N+G^{NL}\tensor{T}{^{\alpha M}_L}\tensor{T}{^{\alpha S}_T}\pd_M\pd_S\xi^T\Theta_N\\
+    &-2wG^{MK}\tensor{T}{^{\alpha N}_K}\Pi_{M\alpha}\pd_N(\pd\cdot\xi).
+    \end{aligned}
+\end{equation}
+Using the section condition and the definition of $\Pi_{M\alpha}$ this simplifies to 
+\begin{equation}
+    \begin{aligned}
+    \Delta_\xi \mathcal{L}_4 &= (2\beta+2w+1)G^{MN}\Theta_M\pd_N(\pd\cdot\xi)+G^{MN}\pd_M\pd_N\xi^T\Theta_T+\\
+    &-2wG^{MN}\pd_M\pd_N(\pd\cdot\xi),
+    \end{aligned}
+\end{equation}
+where we also integrated by parts and discarded total derivatives to obtain the term containing $\pd^3\xi$. 
+
+The remaining term $\mathcal{L}_2$ requires is a bit more complicated, to begin with we find (below we make no distinction of upper and lower adjoint indices)
+\begin{equation}
+    \begin{aligned}
+    \Delta \mathcal{L}_2 &= 2G^{KL}\tensor{T}{^{\alpha M}_K}\tensor{T}{^{\beta N}_L}\left(T^\alpha+T^{\star\alpha}\right)\tensor{}{^S_T}\pd_n\pd_S\xi^T\Pi_{M\beta}\\
+    &= 2G^{KL}\left(\tensor{T}{^{\alpha M}_K}\tensor{T}{^{\alpha S}_T}+G_{KQ}\tensor{T}{^{\alpha Q}_R}G^{RM}\tensor{T}{^{\alpha S}_T}\right)\pd_N\pd_S\xi^T\tensor{T}{^{\beta N}_L}\Pi_{M\beta}.
+    \end{aligned}
+\end{equation}
+In the first term on the second line we can use the section condition and in the second term we commute $(T^\beta T^\alpha)\tensor{}{^N_R} = (T^{\alpha}T^\beta)\tensor{}{^N_R}+\tensor{f}{^{\beta\alpha}_\gamma}\tensor{T}{^{\gamma N}_R}$ and find 
+\begin{equation}
+    \begin{aligned}
+        \Delta \mathcal{L}_2 &= 2G^{KL}\left(\beta\delta^M_K\delta^S_T+\delta^M_T\delta^S_K\right)\tensor{T}{^{\beta N}_L}\pd_N\pd_S\xi^T\Pi_{M\beta}\\
+        &+ 2G^{RM}\left(\tensor{T}{^{\alpha N}_L}\tensor{T}{^{\beta L}_R}+\tensor{f}{^{\beta\alpha}_\gamma}\tensor{T}{^{\gamma N}_R}\right)\tensor{T}{^{\alpha S}_T}\pd_N\pd_S\xi^T\Pi_{M\beta}.
+    \end{aligned}
+\end{equation}
+Noting that in the definition of $\Pi_{M\alpha}$ and $\Theta_M$ there is a derivative sitting in $_M$ and hence we can use the section condition on the first term in the second line to find 
+\begin{equation}\label{eq:Peter}
+    \begin{aligned}
+        \Delta_\xi \mathcal{L}_2 &= 2(2\beta+1)G^{RM}\tensor{T}{^{\beta N}_R}\pd_N(\pd\cdot\xi)\Pi_{M\beta}+2G^{SL}\tensor{T}{^{\alpha N}_L}\pd_S\pd_N\xi^M\Pi_{M\alpha}\\
+        &+2G^{RM}\tensor{f}{^{\beta\alpha}_\gamma}\tensor{T}{^{\gamma N}_R}\tensor{T}{^{\alpha S}_T}\pd_N\pd_S\xi^T\Pi_{M\beta}
+    \end{aligned}
+\end{equation}
+From the definition of the $S^\alpha$ tensor in \eqref{eq:STensor}
+\begin{equation}
+    \tensor{S}{^{\alpha NS}_{TR}} = -\tensor{f}{^{\alpha\beta\gamma}}\tensor{T}{^{\beta N}_R}\tensor{T}{^{\gamma S}_T}+\tensor{T}{^{\alpha N}_R}\delta^S_T-\tensor{T}{^{\alpha S}_T}\delta^N_R,
+\end{equation}
+we can rewrite the term containing the structure constants as 
+\begin{equation}\label{eq:StructureS}
+    \begin{aligned}
+        2G^{RM}\tensor{f}{^{\beta\alpha}_\gamma}\tensor{T}{^{\gamma N}_R}\tensor{T}{^{\alpha S}_T}\pd_N\pd_S\xi^T\Pi_{M\beta} &= 2G^{RM}\tensor{S}{^{\alpha NS}_{TR}}\pd_N\pd_S\xi^T\Pi_{M\alpha}\\
+        &-2G^{RM}\tensor{T}{^{\alpha N}_R}\pd_N(\pd\cdot\xi)\Pi_{M\alpha}+2G^{RM}\tensor{T}{^{\alpha S}_T}\pd_R\pd_S\xi^T\Pi_{M\alpha}.
+    \end{aligned}
+\end{equation}
+Inserting \eqref{eq:StructureS} in \eqref{eq:Peter} we find 
+\begin{equation}\label{eq:Almost}
+    \begin{aligned}
+    \Delta_\xi \mathcal{L}_2 = 2G^{RM}\tensor{S}{^{\alpha NS}_{TR}}\pd_N\pd_S\xi^T\Pi_{M\alpha}+4\beta G^{RM}\tensor{T}{^{\beta N}_R}\pd_N(\pd\cdot\xi)\Pi_{M\beta}\\
+    +2G^{SL}\tensor{T}{^{\alpha N}_L}\pd_S\pd_N\xi^M\Pi_{M\alpha}+2G^{RM}\tensor{T}{^{\alpha S}_T}\pd_R\pd_S\xi^T\Pi_{M\alpha}.
+    \end{aligned}
+\end{equation}
+Note that the last term in the second line equals $\frac{1}{2}\Delta_\xi\mathcal{L}_1$. Using the definition of $\Pi_{M\alpha}$ we can rewrite the second term in the first line as 
+\begin{equation}
+    4\beta G^{RM}\tensor{T}{^{\beta N}_R}\pd_N(\pd\cdot \xi)\Pi_{M\beta} = 4\beta G^{RM}G^{NS}\pd_M G_{SR}\pd_N(\pd\cdot\xi)-4\beta G^{MN}\Theta_M\pd_N(\pd\cdot\xi),
+\end{equation}
+which by partial integration and neglecting total derivatives can in turn be written as 
+\begin{equation}
+    4\beta G^{RM}\tensor{T}{^{\beta N}_R}\pd_N(\pd\cdot \xi)\Pi_{M\beta} = 4\beta G^{MN}\pd_M\pd_N(\pd\cdot\xi)-4\beta G^{MN}\Theta_M\pd_N(\pd\cdot\xi).
+\end{equation}
+An analogous calculation for the first term in the second line in \eqref{eq:Almost} gives 
+\begin{equation}
+    2G^{SL}\tensor{T}{^{\alpha N}_L}\pd_S\pd_N\xi^M\Pi_{M\alpha} = 2G^{MN}\pd_M\pd_N(\pd\cdot\xi)-2G^{MN}\pd_M\pd_N\xi^T\Theta_T.
+\end{equation}
+The final transformation is then given by
+\begin{equation}
+    \begin{aligned}
+    \Delta \mathcal{L}_2 &= 2G^{RM}\tensor{S}{^{\alpha NS}_{TR}}\pd_N\pd_S\xi^T\Pi_{M\alpha}+2(2\beta+1)G^{MN}\pd_M\pd_N(\pd\cdot\xi)\\
+    &-4\beta G^{MN}\Theta_M\pd_N(\pd\cdot\xi)-2G^{MN}\pd_M\pd_N\xi^T\Theta_T+\frac{1}{2}\Delta_\xi \mathcal{L}_1
+    \end{aligned}
+\end{equation}
+In order for the lagrangian $\mathcal{L}$ to transform covariantly, up to the ancillary transformation containing the $S^\alpha$ term and boundary terms, we thus find 
+\begin{equation}
+    \begin{cases}
+        2c_1+c_2 = 0\\
+        c_4-2c_2 = 0\\
+        -2wc_4+2(2\beta+1)c_2 = 0\\
+        -4wc_3+(2\beta+2w+1)c_4-4\beta c_2 = 0.
+    \end{cases}
+\end{equation}
+Setting the overall scale by $c_2=-1$ we find that 
+\begin{equation}\label{eq:Lagrangian}
+    \mathcal{L} = \frac{1}{2}\mathcal{L}_1(\Pi_{M\alpha})-\mathcal{L}_2(\Pi_{M\alpha})-\frac{(\lambda,\lambda)}{(\lambda,\lambda)-\frac{1}{2}}\mathcal{L}_3(\Theta_M)-2\mathcal{L}_4(\Pi_{M\alpha},\Theta_M),
+\end{equation}
+transforms as 
+\begin{equation}
+    \Delta_\xi \mathcal{L} = -2G^{RM}\tensor{S}{^{\alpha NS}_{TR}}\pd_N\pd_S\xi^T\Pi_{M\alpha}
+\end{equation}
+if the metric has a weight $w=(\lambda,\lambda)-\frac{1}{2}$. 
+
+We have thus found a lagrangian that transforms covariantly up to ancillary and boundary terms. However, the covariance is non-manifest and one would like derive the same expression in a with manifest transformation properties. In ordinary geometry this is done by introducing an affine connection and from this derive the Ricci tensor and Ricci scalar which roughly corresponds to the equations of motion and the Einstein-Hilbert lagrangian. An attempt to do this will be presented below. 
+
+\section{Covariant formalism}
+As in ordinary geometry fields containing bare partial derivatives typically transforms non-covariantly due to the fact diffeomorphisms are local transformations. This is again true in extended geometries and the fact that the lagrangian \eqref{eq:Lagrangian} transformed covariantly were due to some delicate cancellations. 
+
+Introduce a covariant derivative $D_M$ that acts as 
+\begin{equation}
+    D_MV^N = \pd_M V^N-\tensor{\Gamma}{_{MP}^N}V^P,
+\end{equation}
+with $\tensor{\Gamma}{_{MP}^N}$ being the connection. Just as a connection in Einstein gravity or the Yang-Mills connection in a non-abelian gauge theory this connection is a adjoint valued one-form. Imposing that $D_MV^N$ transforms covariantly one finds that the connection transforms inhomogeneously as 
+\begin{equation}
+    \Delta_\xi \tensor{\Gamma}{_{MN}^P} = \tensor{Z}{^{PQ}_{RN}}\pd_M\pd_Q\xi^R. 
+\end{equation}
+Since the tensor $Z$ manifestly projects $\tensor{}{^P_N}$ and $\tensor{}{^Q_R}$ onto the adjoint representation it is easily seen that the inhomogenous term is a derivative of an algebra valued transformation. 

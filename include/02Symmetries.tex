@@ -219,7 +219,7 @@ For a simple Lie algebra there exists a unique highest root, typically denoted $
     \theta = \sum_{i=1}^ra_i\alpha_{i},\qquad \frac{2}{(\theta,\theta)}\theta = \sum_{i=1}^r a_i^\vee \alpha_{i}^{\vee}.
 \end{equation}
 Yet another important object that is of interest is the so-called Weyl vector $\rho$. The Weyl vector is defined as
-\begin{equation}
+\begin{equation}\label{eq:Weylroots}
     \rho := \frac{1}{2}\sum_{\alpha\in\Delta^+}\alpha,
 \end{equation}
 and one can show that it can also be rewritten as
@@ -416,23 +416,23 @@ and due to invariance and non-degenaracy of the Killing form one can show that
     \kappa(e_\alpha,e_\beta) = c_\alpha\delta_{\alpha,-\beta},
 \end{equation}
 with a constant $c_\alpha$. The Casimir operator can then be rewritten using the commutation relations and the definition of the Weyl vector as 
-\begin{equation}
+\begin{equation}\label{eq:DefCasimir}
     \frac{1}{2}\kappa_{ab}T^aT^b = \frac{1}{2}(h,h)+(h,\rho)+\sum_{\alpha\in\Delta^+}c_\alpha e_{\alpha}e_{-\alpha},
 \end{equation}
 where $(h,h)$ denotes the part restricted to the Cartan subalgebra. Without loss of generality this can be evaluated on the highest weight of an irreducible representation $R(\lambda)$, which is particularly easy in the rewritten form above, and we find
-\begin{equation}
+\begin{equation}\label{eq:Casimir}
     C_2(R(\lambda)) = \frac{1}{2}(\lambda,\lambda+2\rho).
 \end{equation}
 
-
-\section{Kac-Moody algebras}\label{sec:KacMoody}
+\section{Extended algebras}
+\subsection{Kac-Moody algebras}\label{sec:KacMoody}
 In section \ref{sec:Liealgebras} a finite dimensional simple Lie algebra was characterized by an indecomposable Cartan matrix with the properties 
 \begin{equation}
     \begin{aligned}
         a_{ii} = 2,\\
         a_{ij} = 0 \Longleftrightarrow a_{ji} = 0,\\
         a_{ij}\in \mathbb{Z}_{\leq 0} \quad\text{for}\quad i\neq j,\\
-        \text{det}a >0,
+        \text{det}\,a >0,
     \end{aligned}
 \end{equation}
 and the Chevalley-Serre generators satisfying 
@@ -477,7 +477,7 @@ and the Serre relations
 \end{equation}
 For example, if the underlying algebra $\mathfrak{g}(a)$ is chosen to be $\mathfrak{e}_r$ together with the module corresponding to the highest weight $\lambda =\Lambda_1$, then this construction gives $\mathfrak{g}(A)=\mathfrak{e}_{r+1}$. For $10>r\geq 8$ the corresponding Dynkin diagram is precisely those in \figref{fig:DynkinEseries}. 
 
-\section{Borcherds superalgebras}\label{sec:Borcherds}
+\subsection{Borcherds superalgebras}\label{sec:Borcherds}
 
 We will here give a brief set of definitions from \cite{Ray2006} for a yet larger class of algebras, super Borcherds algbras, also called generalized Kac-Moody algebras or Borcherds-Kac-Moody algebras (BKM). A particular example of a BKM algebra which is of relevance in the construction of extended geometries is then introduced. The extension is again done by relaxing one of the conditions of the Cartan matrix, or since in this case we extend Kac-Moody algebras, the generalized Cartan matrix. In words one allow for the possibility of simple imaginary roots, such that the diagonal in the generalized Cartan matrix is of indefinite sign.
 
@@ -576,11 +576,13 @@ We thus see that the subspaces $\mathscr{B}_{-1}$ and $\mathscr{B}_1$ transforms
     R_2 = \vee^2R(\lambda)\ominus R(2\lambda).
 \end{equation}
 
-Given the odd simple root $\beta_0$ and the even simple roots of $\mathfrak{g}$ $\beta_i=\alpha_i$ it is possible to construct a metric on the root space
+Given the odd simple root $\beta_0$ and the even simple roots $\beta_i=\alpha_i$ of $\mathfrak{g}$ it is possible to construct a metric on the root space
 \begin{equation}
     (\beta_I,\beta_J) = (DB)_{IJ}.
 \end{equation}
 
+
+\subsection{The invariant Y tensor\label{sec:InvYTensor}}
 
 
 %The first extension will be to so called affine Kac-Moody algebras. We add a set of Chevalley generators $\{h^0,E_\pm^0\}$ to the existing $3r$ generators. This is equivalent to adding a row and column to the existing Cartan matrix $A^{ij}\to A^{IJ}$, where $I,J=0,1,2,\ldots,r$. We then impose that the generalized Cartan matrix is positive-semidefinite 

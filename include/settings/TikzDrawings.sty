@@ -22,8 +22,8 @@
         \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
         \foreach \y in {0,...,5}
         \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
-        \draw[thick] (4 cm,2 cm) circle (3 mm);
-        \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+        \draw[thick] (8 cm,2 cm) circle (3 mm);
+        \draw[thick] (8 cm, 3mm) -- +(0, 1.4 cm);
       \end{tikzpicture}
     \end{center}
     \begin{center}
@@ -33,8 +33,8 @@
             \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
             \foreach \y in {0,...,6}
             \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
-            \draw[thick] (4 cm,2 cm) circle (3 mm);
-            \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+            \draw[thick] (10 cm,2 cm) circle (3 mm);
+            \draw[thick] (10 cm, 3mm) -- +(0, 1.4 cm);
         \end{tikzpicture}
     \end{center}
     \begin{center}
@@ -44,8 +44,8 @@
             \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
             \foreach \y in {0,...,7}
             \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
-            \draw[thick] (4 cm,2 cm) circle (3 mm);
-            \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+            \draw[thick] (12 cm,2 cm) circle (3 mm);
+            \draw[thick] (12 cm, 3mm) -- +(0, 1.4 cm);
         \end{tikzpicture}
     \end{center}
     \begin{center}
@@ -55,8 +55,8 @@
             \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
             \foreach \y in {0,...,8}
             \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
-            \draw[thick] (4 cm,2 cm) circle (3 mm);
-            \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+            \draw[thick] (14 cm,2 cm) circle (3 mm);
+            \draw[thick] (14 cm, 3mm) -- +(0, 1.4 cm);
         \end{tikzpicture}
     \end{center}
 }
@@ -161,8 +161,8 @@
     \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
     \foreach \y in {0,...,4}
     \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
-    \draw[thick] (4 cm,2 cm) circle (3 mm);
-    \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+    \draw[thick] (6 cm,2 cm) circle (3 mm);
+    \draw[thick] (6 cm, 3mm) -- +(0, 1.4 cm);
   \end{tikzpicture}
 \end{center}
 
@@ -173,8 +173,119 @@
     \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
     \foreach \y in {0,...,5}
     \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
-    \draw[thick] (4 cm,2 cm) circle (3 mm);
-    \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+    \draw[thick] (8 cm,2 cm) circle (3 mm);
+    \draw[thick] (8 cm, 3mm) -- +(0, 1.4 cm);
   \end{tikzpicture}
 \end{center}
+}
+
+
+
+
+
+
+
+
+\newcommand{\BigPicture}[1]{
+    
+    \tikzstyle{decision} = [diamond, draw, fill=blue!20,
+    text width=4.5em, text badly centered, node distance=2.5cm, inner sep=0pt]
+    \tikzstyle{block} = [rectangle, draw, fill=blue!20,
+        text width=5em, text centered, rounded corners, minimum height=4em]
+    \tikzstyle{line} = [draw, very thick, color=black!50, -latex']
+    \tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=2.5cm,
+        minimum height=2em]
+
+\begin{center}
+\begin{tikzpicture}[scale=2, node distance = 2cm, auto]
+    %%%%%%%%%%%% Place nodes
+    \node [cloud] (M) {M-theory};
+    \node [cloud,below of=M] (IIB) {IIB};
+    \node [cloud,left of=IIB] (IIA) {IIA};
+    \node [cloud,right of=IIB] (SO32) {$SO(32)$};
+    \node [cloud,right of=SO32] (E8) {$E_8\times E_8$};
+    \node [cloud,left of=IIA] (I) {I};
+    \node [block, above of=E8, right of=E8] (11SUGRA) {$D=11$ $\mathcal{N}=1$ SUGRA};
+    \node [block, below of=IIB] (10SUGRA) {$D=10$ $\mathcal{N}=2$ SUGRA};
+    \node [block,above of=11SUGRA,right of=11SUGRA] (EFT) {Exceptional field theory};
+    \node [block, below of=11SUGRA,right of=11SUGRA] (EG) {Exceptional geometry};
+    \node [block,below of=10SUGRA] (4SUGRA) {$D=4$ $\mathcal{N}=8$ SUGRA};
+    \node [block,right=5em of 4SUGRA] (GaugedSUGRA) {Gauged SUGRA};
+    \node [block, below of=EG] (EXTG) {Extended geometries};
+    
+    
+    %%%%%%%%%%% Paths 
+    
+    \path [line] (M) -- (IIA);
+    \path [line] (M) -- (IIB);
+    \path [line] (M) -- (SO32);
+    \path [line] (M) -- (E8);
+    \path [line] (M) -- (I);
+    \path [line] (M) -- (11SUGRA);
+    \path [line] (IIB) -- (10SUGRA);
+    \path [line] (11SUGRA) |- (10SUGRA);
+    \path [line] (EFT) -- (11SUGRA);
+    \path [line] (10SUGRA) -- node [] {$T^n$} (4SUGRA);
+    \path [line,dashed] (EFT) -- node [align=right] {scalar\\ sector} (EG);
+    \path [line] (4SUGRA) -- node [] {gauging} (GaugedSUGRA);
+    \path [line] (10SUGRA) -- node [] {flux compactification} (GaugedSUGRA);
+    \path [line] (EXTG) -- (EG);
+    
+    
+    %Dualities string theories
+    \path[line]  (I) edge[bend right=45] node [right] {} (IIA);
+    \path[line]  (IIA) edge[bend right=45] node [right] {} (IIB);
+    \path[line]  (IIB) edge[bend right=45] node [right] {} (SO32);
+    \path[line]  (SO32) edge[bend right=45] node [right] {} (E8);
+\end{tikzpicture}
+\end{center}
+}
+
+
+\newcommand{\ESevenDynkin}[1]{
+    \begin{center}
+      \begin{tikzpicture}[scale=.4]
+        \foreach \x in {0,...,5}
+        \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+        \foreach \y in {0,...,4}
+        \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+        \draw[thick] (4 cm,2 cm) circle (3 mm);
+        \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+      \end{tikzpicture}
+    \end{center}
+}
+\newcommand{\ESevenDynkinWithSections}[1]{
+    \begin{center}
+      \begin{tikzpicture}[scale=.4]
+        \foreach \x in {0,...,5}
+        \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+        \foreach \y in {0,...,4}
+        \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+        \draw[thick] (6 cm,2 cm) circle (3 mm);
+        \draw[thick] (6 cm, 3mm) -- +(0, 1.4 cm);
+        \draw (0,-1 cm) node {$\Lambda_1$};
+        \draw[fill=black] (0,0) circle (3mm);
+        \draw[fill=black] (2 cm,0) circle (3mm);
+        \draw[fill=black] (4 cm,0) circle (3mm);
+        \draw[fill=black] (6 cm,0) circle (3mm);
+        \draw[fill=black] (6 cm,2 cm) circle (3mm);
+      \end{tikzpicture}
+    \end{center}
+    \begin{center}
+      \begin{tikzpicture}[scale=.4]
+        \foreach \x in {0,...,5}
+        \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+        \foreach \y in {0,...,4}
+        \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+        \draw[thick] (6 cm,2 cm) circle (3 mm);
+        \draw[thick] (6 cm, 3mm) -- +(0, 1.4 cm);
+        \draw (0,-1 cm) node {$\Lambda_1$};
+        \draw[fill=black] (0,0) circle (3mm);
+        \draw[fill=black] (2 cm,0) circle (3mm);
+        \draw[fill=black] (4 cm,0) circle (3mm);
+        \draw[fill=black] (6 cm,0) circle (3mm);
+        \draw[fill=black] (8 cm,0) circle (3mm);
+        \draw[fill=black] (10 cm,0) circle (3mm);
+      \end{tikzpicture}
+    \end{center}
 }

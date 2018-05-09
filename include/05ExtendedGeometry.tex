@@ -69,7 +69,7 @@ The equations \eqref{eq:closure1}-\eqref{eq:closure2} comes from the term involv
 
 \subsection{Section condition}
 Up to the remaining term we have thus seen that the closure of the algebra is entirely based on solving the section condition \eqref{eq:section}. The tensor product of the coordinate module with itself can trivially be decomposed as
-\begin{equation}
+\begin{equation}\label{eq:SectionConditionReps}
     \begin{aligned}
         R(\lambda)\otimes R(\lambda) &= \vee^2 R(\lambda)\oplus \wedge^2R(\lambda)\\
         &= \left(R_h^s\oplus R_2\right)\oplus\left(R_h^a\oplus \tilde{R}_2\right),
@@ -269,7 +269,7 @@ What we learn from this rewriting is that whether or not ancillary transformatio
 
 
 
-\section{Dynamics}
+\section{Dynamics\label{sec:Dynamics}}
 Having developed the structure of generalised diffemorphisms to describe geometry based on a general structure algebra we want to describe the dynamics of some fields on this geometry. Especially, we will write down a pseudo-action that determines the dynamics for a generalised metric $G_{MN}\in G\times \mathbb{R}^+/K$, where $G$ is the structure group and $K$ the maximal compact subalgebra of $G$. In the case of compactifying $11$-dimensional supergravity the generalised metric will contain the purely internal degrees of freedom of the metric as well as the three-form and the structure group is given by the $E_{d(d)}$ series. 
 
 Note that in the theory below we only consider an extended geometry based on a generalised structure group with some coordinate module $R(\lambda)$ that reduce to $d$-dimensional theory when solving the section condition. In other words there is no compactification ansatz and in order to include external degrees of freedom one should look at DFT or EFT instead. In this case there would be purely external external fields as well as gauge potentials, or ``graviphotons'', that can be considered as gauge fields for the in this case internal generalised diffeomorphisms. Typically the corresponding field strength tensor will however not transform covariantly but fails by a trivial transformation. To account for this one have to successively add higher rank form fields that transforms in particular representations of the structure group to compensate for this. This is the procedure that  leads to the notion of a ``tensor hierarchy''. The exact spectrum of representations of the tensor hierarchies can be derived from tensor hierarchy algebras developed in \cite{Palmkvist:2013vya}. These construction and rôle of these tensor hierarchy algebras in extended geometries are further discussed in e.g.\ \cite{Carbone:2018njd,Cederwall:2018aab}.
@@ -311,7 +311,7 @@ In terms of the fields $\Pi_{M\alpha}$ and $\Theta_M$ this translates to \todo{C
     \Delta \Theta_M &= -2w\pd_M\pd_K\xi^K.
 \end{align}
 
-The ansatz for the lagrangian will then be
+The ansatz for the lagrangian will then be\todo{Perhaps look at $k\neq 0$?}
 \begin{equation}
     \mathcal{L} = c_1\mathcal{L}_1(\Pi_{M\alpha})+c_2\mathcal{L}_2(\Pi_{M\alpha})+c_3\mathcal{L}_3(\Theta_M)+c_4\mathcal{L}_4(\Pi_{M\alpha},\Theta_M),
 \end{equation}
@@ -423,7 +423,7 @@ In order for the lagrangian $\mathcal{L}$ to transform covariantly, up to the an
         -4wc_3+(2\beta+2w+1)c_4-4\beta c_2 = 0.
     \end{cases}
 \end{equation}
-Setting the overall scale by $c_2=-1$ we find that 
+Setting $c_2=-1$ to fix the overall scale and we find that 
 \begin{equation}\label{eq:Lagrangian}
     \mathcal{L} = \frac{1}{2}\mathcal{L}_1(\Pi_{M\alpha})-\mathcal{L}_2(\Pi_{M\alpha})-\frac{(\lambda,\lambda)}{(\lambda,\lambda)-\frac{1}{2}}\mathcal{L}_3(\Theta_M)-2\mathcal{L}_4(\Pi_{M\alpha},\Theta_M),
 \end{equation}
@@ -433,17 +433,182 @@ transforms as
 \end{equation}
 if the metric has a weight $w=(\lambda,\lambda)-\frac{1}{2}$. 
 
-We have thus found a lagrangian that transforms covariantly up to ancillary and boundary terms. However, the covariance is non-manifest and one would like derive the same expression in a with manifest transformation properties. In ordinary geometry this is done by introducing an affine connection and from this derive the Ricci tensor and Ricci scalar which roughly corresponds to the equations of motion and the Einstein-Hilbert lagrangian. An attempt to do this will be presented below. 
+We have thus found a lagrangian that transforms covariantly up to ancillary and boundary terms. However, the covariance is not manifest and one would like derive the same expression in with manifest transformation properties. In ordinary geometry this is done by introducing an affine connection and from this the Ricci tensor and Ricci scalar is derived which roughly corresponds to the equations of motion and the Einstein-Hilbert lagrangian respectively. An attempt to do this will be presented in section \ref{sec:CovariantFormalism}. 
 
-\section{Covariant formalism}
-As in ordinary geometry fields containing bare partial derivatives typically transforms non-covariantly due to the fact diffeomorphisms are local transformations. This is again true in extended geometries and the fact that the lagrangian \eqref{eq:Lagrangian} transformed covariantly were due to some delicate cancellations. 
+\section{Covariant formalism\label{sec:CovariantFormalism}}
+As in ordinary geometry fields containing bare partial derivatives typically transforms non-covariantly due to the fact diffeomorphisms are local transformations. This is again true in extended geometries and the fact that the lagrangian \eqref{eq:Lagrangian} transformed covariantly were due to some delicate cancellations. We here follow \cite{Cederwall:2013naa} which studied exceptional geometry with the structure algebra $\mathfrak{e}_{d(d)}\times\mathbb{R}$ for $d\leq 8$. The discussion in \cite{Cederwall:2013naa} were however in many cases general and can be directly transferred to the formalism of extended geometries presented above and in \cite{CederwallPalmkvist2017}.
 
-Introduce a covariant derivative $D_M$ that acts as 
+Introduce a covariant derivative $D_M$ that acts on a vector field $V^N$ as  
 \begin{equation}
     D_MV^N = \pd_M V^N-\tensor{\Gamma}{_{MP}^N}V^P,
 \end{equation}
-with $\tensor{\Gamma}{_{MP}^N}$ being the connection. Just as a connection in Einstein gravity or the Yang-Mills connection in a non-abelian gauge theory this connection is a adjoint valued one-form. Imposing that $D_MV^N$ transforms covariantly one finds that the connection transforms inhomogeneously as 
-\begin{equation}
+with $\tensor{\Gamma}{_{MP}^N}$ being the connection. Just as a connection in Einstein gravity or the Yang-Mills connection in a non-abelian gauge theory this connection is a adjoint valued one-form. Especially this exclude any specific symmetry properties between the lower indices. Imposing that $D_MV^N$ transforms covariantly one finds that the connection transforms inhomogeneously as 
+\begin{equation}\label{eq:InHomoConnection}
     \Delta_\xi \tensor{\Gamma}{_{MN}^P} = \tensor{Z}{^{PQ}_{RN}}\pd_M\pd_Q\xi^R. 
 \end{equation}
-Since the tensor $Z$ manifestly projects $\tensor{}{^P_N}$ and $\tensor{}{^Q_R}$ onto the adjoint representation it is easily seen that the inhomogenous term is a derivative of an algebra valued transformation. 
+Since the tensor $Z$ manifestly projects $\tensor{}{^P_N}$ and $\tensor{}{^Q_R}$ onto the adjoint representation it is easily seen that the inhomogeneous term is a derivative of an element taking values in the structure algebra $\mathfrak{g}\times\mathbb{R}$. Moreover, imposing Leibniz property and that the covariant derivative reduces to a partial derivative of functions the action on arbitrary tensor fields is well-defined. 
+
+In ordinary geometry one usually continues by demanding that the connection is metric-compatible and torsion-free which uniquely gives the Levi-Civita connection. However, this will turn out to be rather complicated in extended geometries and in fact a unique choice of such a connection is generally not possible to find. A way to motivate this is to note that in ordinary geometry with the structure algebra $\mathfrak{gl}(d)$ the coordinate module is $d$-dimensional, the adjoint is $d^2$-dimensional and no extra representation except for the adjoint appears in the pair $\tensor{}{_N^P}$ of $\tensor{\Gamma}{_{MN}^P}$. On the other hand take an extended geometry based on the structure algebra $\mathfrak{e}_{7(7)}\times\mathbb{R}$ with the coordinate module $\mathbf{56}$ which in this case we have
+\begin{equation}
+    \text{dim}\, (\mathbf{56}\times\mathbf{56}) = 3136 > 134 = \text{dim}\, (\mathbf{adj}).
+\end{equation}
+Due to the fact that the smallest representation of $\mathfrak{e}_{7(7)}$ is large compared to the adjoint there are extra contributions to $R(\lambda)\otimes\overbar{R(\lambda)}=\mathbf{adj}\oplus\ldots$ which are not there in ordinary geometry. This is heuristically a reason behind some of the difficulties of extended geometries compared to ordinary geometry. 
+
+A metric compatible connection is one that satisfies 
+\begin{equation}
+    D_M G_{NP} = 0,
+\end{equation}
+or explicitly
+\begin{equation}\label{eq:MetricCompatibility}
+    \pd_M G_{NS} + 2\tensor{\Gamma}{_{M(N}^T}G_{S)T}.
+\end{equation}
+Multiplying \eqref{eq:MetricCompatibility} with $G^{PS}$ this further implies 
+\begin{equation}\label{eq:MetComp2}
+    \left(G^{-1}\pd_MG\right)\tensor{}{^P_N} = \tensor{\Gamma}{_{MN}^P}+(G\Gamma_MG^{-1})^T.
+\end{equation}
+We thus see that metric compatibility uniquely determines the part in $\mathfrak{g}\ominus\mathfrak{k}$. Note especially that the RHS of \eqref{eq:MetComp2} is projected onto $T^\alpha+T^{\star\alpha}$ by the definition of the locally embedded compact subalgebra. Moreover, \eqref{eq:MetComp2} shows that the building block of the lagrangian \eqref{eq:Lagrangian} is in fact a connection projected onto $\mathfrak{g}/\mathfrak{k}$. 
+
+\subsection{Torsion}
+Torsion of a connection can be defined in at least two equivalent ways (at least when ancillary transformations are absent). Following \cite{Cederwall:2013naa} we define the torsion of the connection that transforms homogeneously, i.e.\ the part of the connection which is not contained in \eqref{eq:InHomoConnection}. In fact, only the part in $\left(\vee^2\overbar{R(\lambda)}\ominus \overbar{R_h^s}\right)\otimes R(\lambda)$ of the connection transforms inhomogeneously due to \eqref{eq:InHomoConnection}, with $R_s^h$ defined in \eqref{eq:SectionConditionReps}. Torsion is thus given by the modules in the overlap 
+\begin{equation}
+    \left[\left(\left(\vee^2\overbar{R(\lambda)}\ominus\overbar{R(2\lambda)}\right)\oplus\wedge^2\overbar{R(\lambda)}\right)\otimes R(\lambda)\right] \cap \left[\overbar{R(\lambda)}\otimes \left(\mathfrak{g}\oplus \mathbb{R}\right)\right].
+\end{equation}
+
+Consider the following combination \cite{Cederwall:2013naa}
+\begin{equation}\label{eq:Torsion}
+    \tensor{T}{_{MN}^P} = \tensor{\Gamma}{_{MN}^P}+\tensor{Z}{^{PQ}_{RN}}\tensor{\Gamma}{_{QM}^R},
+\end{equation}
+and we wish to determine whether this transforms covariantly under generalised diffeomorphisms
+\begin{equation}\label{eq:TorsionTransformation}
+    \begin{aligned}
+        \Delta_\xi\tensor{T}{_M_N^P} &= \tensor{Z}{^{PS}_{TN}}\pd_M\pd_S\xi^T+\tensor{Z}{^{PQ}_{RN}}\tensor{Z}{^{RS}_{TM}}\pd_Q\pd_S\xi^T\\
+        &=\left(\tensor{Z}{^{PS}_{TN}}\delta_M^Q+\tensor{Z}{^{PQ}_{RN}}\tensor{Z}{^{RS}_{TM}}\right)\pd_Q\pd_S\xi^T.
+    \end{aligned}
+\end{equation}
+Continuing with this expression we find 
+\begin{equation}\label{eq:TorsionTransformation2}
+    \begin{aligned}
+    \text{RHS of } \eqref{eq:TorsionTransformation} &= \tensor{Z}{^{PQ}_{RN}}\tensor{Y}{^{RS}_{TM}}\pd_Q\pd_S\xi^T\\
+    & =  -\tensor{T}{^\alpha^P_N}\tensor{T}{^{\alpha Q}_R}\tensor{Y}{^{RS}_{TM}}\pd_Q\pd_S\xi^T,
+    \end{aligned}
+\end{equation}
+where in the second line we have expanded $Z$ and used the section condition on the term in $Z$ that contains a factor of $\beta$. By expanding the $Y$-tensor we further find 
+\begin{equation}
+    \begin{aligned}
+        \text{RHS of } \eqref{eq:TorsionTransformation2} &= \tensor{T}{^{\alpha P}_N}\left((T^\alpha T^\beta)\tensor{}{^Q_M}\tensor{T}{^\beta ^S_T}-\beta\delta^S_T\tensor{T}{^{\alpha Q}_M}-\delta^S_M\tensor{T}{^{\alpha Q}_T}\right)\pd_Q\pd_S\xi^T\\
+        &= \tensor{T}{^{\alpha P}_N}\left(-f^{\alpha\beta\gamma}\tensor{T}{^{\beta Q}_M}\tensor{T}{^{\gamma S}_T}+\tensor{T}{^{\alpha Q}_M}\delta^S_T-\tensor{T}{^{\alpha Q}_T}\delta^S_M\right)\pd_Q\pd_S\xi^T,\\
+    \end{aligned}
+\end{equation}
+where going to the second line we have expressed the first term as a commutator, used the section condition and that $\pd_{Q}\pd_S$ is symmetric. We thus see that the expression \eqref{eq:Torsion} transforms covariantly if ancillary transformations are absent since
+\begin{equation}
+\Delta_\xi \tensor{T}{_{MN}^P} = \tensor{T}{^{\alpha P}_N}\tensor{S}{^{\alpha QS}_{TM}}\pd_Q\pd_S\xi^T.
+\end{equation}
+However, although this expression for torsion transforms homogeneously the operator 
+\begin{equation}
+    \tensor{\mathcal{O}}{_{MN,Q}^{P,ST}} = \delta^S_M\delta^T_N\delta_Q^P+\tensor{Z}{^{PS}_{QN}}\delta^T_M
+\end{equation}
+does not satisfy $\mathcal{O}^2=\mathcal{O}$ and hence is not a projection operator. An explicit projection operator would be convenient when setting torsion to zero, however, we were not able to find such an expression in the general case. 
+
+In the construction of tensor hierarchy algebras in \cite{Carbone:2018njd} it was shown that torsion sits at level $-1$ with respect to a $\mathbb{Z}$-grading. It would therefore be interesting to see if it is possible to derive a projection operator from this algebra, similar to the way that the $Y$-tensor was derived from extensions of the structure algebra in section \ref{sec:InvYTensor}. 
+
+As an example consider an extended geometry with structure algebra $\mathfrak{e}_{7(7)}\times\mathbb{R}$ with maximal compact subalgebra $\mathfrak{su}(8)/\mathbb{Z}_2$\footnote{We ignore the discrete $\mathbb{Z}_2$ factor and consider only the double cover $\mathfrak{su}(8)$ below.} and the coordinate module $\mathbf{56}$. The connection then contains the following modules 
+\begin{equation}
+    \overbar{\mathbf{56}}\otimes\left(\mathbf{133}\oplus\mathbf{1}\right) = 2\cdot \overbar{\mathbf{56}}\oplus\mathbf{912}\oplus\mathbf{6480}.
+\end{equation}
+To determine the part that is not torsion we note that $\overbar{R(2\Lambda_7)}=\mathbf{1463}$, with $\Lambda_7$ being the highest weight of $\mathbf{56}$, is the highest weight module of $\vee^2\,\mathbf{56}$ and we thus find 
+\begin{equation}
+    \overbar{\mathbf{1463}}\otimes\mathbf{56} = \overbar{\mathbf{56}}\oplus\mathbf{6480}\oplus\ldots,
+\end{equation}
+where $\ldots$ denote terms not present in the connection. We thus see that the non-torsion part of the connection contains $\overbar{\mathbf{56}}\oplus \mathbf{6480}$ while the remaining $\mathbf{56}\oplus\mathbf{912}$ thus are torsion. We continue with this example to determine which parts of the connection are specified by imposing metric compatibility and vanishing torsion. Metric compatibility fixes the part in $\overbar{\mathbf{56}}\otimes(\mathfrak{g}\times\mathbb{R}/\mathfrak{k})$ as argued above and the remaining terms decompose under the maximal compact subalgebra as 
+\begin{equation}\label{eq:NonDeterminedE7}
+    \left(\mathbf{28}\oplus\overbar{\mathbf{28}}\right)\otimes\mathbf{63} = \mathbf{28}\oplus\mathbf{36}\oplus\mathbf{420}\oplus\mathbf{1280}\oplus \text{conj.}
+\end{equation}
+Moreover, decomposing torsion we find  
+\begin{equation}
+    \begin{aligned}
+        \overbar{\mathbf{56}}\oplus\mathbf{912}&\to \mathbf{28}\oplus\mathbf{36}\oplus\mathbf{420}\oplus\text{conj.},\\
+        \overbar{\mathbf{56}}\oplus\mathbf{6480}&\to\mathbf{28}\oplus\mathbf{420}\oplus\mathbf{1512}\oplus\text{conj},
+    \end{aligned}
+\end{equation}
+which by comparing with \eqref{eq:NonDeterminedE7} shows that there is a module $\mathbf{1280}\oplus\overbar{\mathbf{1280}}$ of $\mathfrak{su}(8)$ that is not determined by imposing metric compatibility and vanishing torsion. For other algebras in the $\mathfrak{e}$-series we refer to \cite{Cederwall:2013naa}. 
+
+The problem with having non-determined parts in the connection is that these would lead to extra d.o.f. besides the ones that we are trying to describe, i.e.\ the d.of. of the generalised metric. Thus, in order to write down a meaningful theory one should only acquire expressions that are independent of these modules.
+
+Setting torsion to zero in \eqref{eq:Torsion} imposes the following constraint 
+\begin{equation}\label{eq:VanishingTorsion}
+    \begin{aligned}
+        0 &= \tensor{\Gamma}{_{MN}^P} +\tensor{Z}{^{PQ}_{RN}}\tensor{\Gamma}{_{QM}^R}\\
+          &= 2\tensor{\Gamma}{_{[MN]}^P} +\tensor{Y}{^{PQ}_{RN}}\tensor{\Gamma}{_{QM}^R},
+    \end{aligned}
+\end{equation}
+where the second line follows from the definition of $Z$ and $Y$. It is convenient to make explicit that the connection is valued in $\overbar{R(\lambda)}\otimes\mathfrak{g}$
+\begin{equation}\label{eq:ConnectionInAdjoint}
+    \tensor{\Gamma}{_{MN}^P} = \Gamma_M^\alpha\tensor{T}{^\alpha ^P_N}+\Gamma_M\delta^P_N.
+\end{equation}
+Inserting \eqref{eq:ConnectionInAdjoint} in \eqref{eq:VanishingTorsion} we find 
+\begin{equation}\label{eq:VanishingTorsion2}
+    \begin{aligned}
+    0 &= \tensor{T}{^{\alpha P}_N}\left(\Gamma_M^\alpha-\Gamma_Q^\beta(T^\alpha T^\beta)\tensor{}{^Q_M}-\Gamma_Q\tensor{T}{^{\alpha Q}_M}\right)\\
+    &+ \delta^P_N\left(\Gamma_M+\beta\Gamma^\alpha\tensor{T}{^{\alpha R}_M}+\beta\Gamma_M\right).
+    \end{aligned}
+\end{equation}
+Multiplying with $\tensor{T}{^{\gamma N}_P}$ and $\delta^N_P$ respectively each line in \eqref{eq:VanishingTorsion2} should vanish separately.
+
+
+\todo[inline]{Comment on the status of double field theory}
+
+\section{Generalised Ricci tensor}
+In section \ref{sec:Dynamics} we derived an action that is invariant under generalised diffeomorphisms which further can be used to derive the equations of motion for the generalised metric. However, as stated above the invariance is not manifest and one would like to construct which is manifestly invariant. Below we will work towards this by constructing a generalised Ricci tensor that transforms covariantly under generalised diffeomorphisms. However, there are several intrinsic problems due to the fact that the affine connection is not uniquely determined by metric compatibility and vanishing torsion. 
+
+The most natural thing to start with is to derive curvature by taking commutators of covariant derivatives (here the commutators act on an element in $\overbar{R(\lambda)}$ which we have skipped)
+\begin{equation}
+    [D_M,D_N]\tensor{}{^P_Q} = 2\pd_{[M}\tensor{\Gamma}{_{N]Q}^P}+2\tensor{\Gamma}{_{[M|S|}^P}\tensor{\Gamma}{_{N]Q}^S}.
+\end{equation}
+Expressing the connection with indices in the adjoint \eqref{eq:ConnectionInAdjoint} the abelian part of the second factor above vanish and we are left with 
+\begin{equation}
+    \begin{aligned}
+        [D_M,D_N] &= 2\tensor{T}{^{\alpha P}_Q}\pd_{[M}\Gamma_{N]}^\alpha+2\delta^P_Q\pd_{[M}\Gamma_{N]}\\
+        &+\tensor{f}{^{\alpha\beta\gamma}}\tensor{T}{^{\gamma P}_Q}\Gamma_M^\alpha\Gamma_N^\beta+2\tensor{T}{^{\alpha P}_Q}\Gamma^\alpha_{[M}\Gamma_{N]}.
+    \end{aligned}
+\end{equation}
+Consider the inhomogeneous transformation of $\pd_M\tensor{\Gamma}{_{NQ}^P}$ which by a straightforward calculation at this point is given by 
+\begin{equation}\label{eq:DerCov}
+    \begin{aligned}
+        \Delta_\xi \pd_M\tensor{\Gamma}{_{NQ}^P} &= \tensor{Z}{^{PR}_{SP}}\pd_M\pd_N\pd_R\xi^S-\Delta_\xi \tensor{\Gamma}{_{MN}^R}\tensor{\Gamma}{_{RQ}^P}\\
+        &+\Delta_\xi \tensor{\Gamma}{_{MR}^P}\tensor{\Gamma}{_{NQ}^R}-\Delta_\xi \tensor{\Gamma}{_{MQ}^R}\tensor{\Gamma}{_{NR}^P}.
+    \end{aligned}
+\end{equation}
+Anti-symmetrising in $_{[MN]}$ the term we get 
+\begin{equation}\label{eq:CovDerTransf}
+    \begin{aligned}
+        2\Delta_\xi\pd_{[M}\tensor{\Gamma}{_{N]Q}^P} = \tensor{Y}{^{RS}_{TN}}\Delta_\xi \tensor{\Gamma}{_{SM}^T}\tensor{\Gamma}{_{RQ}^P}-\tensor{T}{^{\alpha R}_N}\tensor{S}{^{\alpha LS}_{TM}}\pd_L\pd_S\xi^T\tensor{\Gamma}{_{RQ}^P}-2\Delta_\xi\left(\tensor{\Gamma}{_{[M|Q|}^R}\tensor{\Gamma}{_{N]R}^P}\right),
+    \end{aligned}
+\end{equation}
+where the first term two terms come from the transformation of torsion, the last term from the second line in \eqref{eq:DerCov} and the term containing $\pd^3\xi$ vanish due to symmetry. The last term in \eqref{eq:CovDerTransf} cancels the contribution from $[\Gamma,\Gamma]$ in $[D,D]$ and we thus get 
+\begin{equation}\label{eq:DDTransformation}
+    \Delta_\xi [D_M,D_N]\tensor{}{^P_Q}= \tensor{Y}{^{RS}_{TN}}\Delta_\xi \tensor{\Gamma}{_{SM}^T}\tensor{\Gamma}{_{RQ}^P}-\tensor{T}{^{\alpha R}_N}\tensor{S}{^{\alpha LS}_{TM}}\pd_L\pd_S\xi^T\tensor{\Gamma}{_{RQ}^P}.
+\end{equation}
+It is worth to note that due to the symmetry properties of $S^\alpha$ only the part anti-symmetric in $_{TM}$ contributes in this expression. In double geometry with $\mathfrak{g}=\mathfrak{o}(d,d)$ it is possible to continue and construct a four-index object that indeed transforms covariantly. In the general case this has not be done and instead we will use \eqref{eq:DDTransformation} to construct a two-index tensor that transform like a tensor, this will then correspond to a generalised Ricci tensor. 
+
+Contract \eqref{eq:DDTransformation} with $\delta^N_P$ and symmetrise in $_{(MQ)}$ to find 
+\begin{equation}
+    \Delta_\xi [D_{(M},D_{|P|}]\tensor{}{^P_{Q)}} = \Delta_\xi \left(\tensor{Y}{^{RS}_{TP}}\tensor{\Gamma}{_{SM}^T}\tensor{\Gamma}{_{RQ}^P}\right)-2\tensor{T}{^{\alpha R}_P}\tensor{S}{^{\alpha LS}_{T(M|}}\pd_L\pd_S\xi^T\tensor{\Gamma}{_{R|Q)}^P}.
+\end{equation}
+The first term in the expression above is easily canceled and we thus have constructed a symmetric two-index tensor $R_{MN}$ that transforms covariantly up to ancillary transformations. Explicitly $R_{MN}$ is given by 
+\begin{equation}
+    \begin{aligned}
+        R_{MN} &= \pd_{(M}\tensor{\Gamma}{_{|P|N)}^P}-\pd_P\tensor{\Gamma}{_{(MN)}^P}+\tensor{\Gamma}{_{(MN)}^S}\tensor{\Gamma}{_{PS}^P}\\
+        &-\tensor{\Gamma}{_{P(M}^S}\tensor{\Gamma}{_{N)Q}^P}-\frac{1}{2}\tensor{Y}{^{RS}_{TP}}\tensor{\Gamma}{_{SM}^T}\tensor{\Gamma}{_{RN^P}},
+    \end{aligned}
+\end{equation}
+and transforms as 
+\begin{equation}
+    \Delta_\xi R_{MN} = -2\tensor{T}{^{\alpha R}_P}\tensor{S}{^{\alpha LS}_{T(M|}}\pd_L\pd_S\xi^T\tensor{\Gamma}{_{R|Q)}^P}.
+\end{equation}
+Note that the transformation of $R_{MN}$ is independent on whether the torsion vanish or not. At this point this indeed is a two-index tensor but the modules of the connection that is not determined by metric compatibility and vanishing torsion may still appear in $R_{MN}$. We can further project $R_{MN}$ on to $\mathfrak{g}/\mathfrak{k}$ as follows 
+\begin{equation}
+    R^\alpha := (G^{-1}T^\alpha)^{MN}R_{MN},
+\end{equation}
+which since $R_{MN}$ is symmetric lies in the coset rather than $\mathfrak{g}$. It is the projection $R^\alpha$ that is a possible candidate for the equations of motion for the generalised metric. It would therefore be interesting to find a metric-compatible torsion-free connection specified in terms of the generalised metric and compare $R^\alpha$ with the equations of motion derived from \eqref{eq:Lagrangian}. This procedure would correspond to imposing that the undetermined modules in the connection vanish. For consistency one would then have to make sure that the variation of $R^\alpha$ does not contain any of these undetermined modules as well, this is done for the exceptional case in \cite{Cederwall:2013naa}.
+
+%first of all it would be interesting to compare the equations of motion derived from \eqref{eq:Lagrangian} and compare to the generalised Ricci-tensor. However, to do this we need to find a metric compatible connection with vanishing torsion that is fully determined in terms of the generalised metric.

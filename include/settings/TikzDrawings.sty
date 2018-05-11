@@ -181,9 +181,121 @@
 
 
 
+\newcommand{\DynkinNoAncillary}{
+
+\begin{center}
+  \begin{tikzpicture}[scale=.4]
+    \draw (-1,0) node[anchor=east]  {$B_n$};
+    \foreach \x in {0,...,4}
+    \draw[xshift=\x cm,thick] (\x cm,0) circle (.3cm);
+    \draw[xshift=5 cm,thick,fill=black] (5 cm, 0) circle (.3 cm);
+    \draw[dotted,thick] (0.3 cm,0) -- +(1.4 cm,0);
+    \foreach \y in {1.15,...,3.15}
+    \draw[xshift=\y cm,thick] (\y cm,0) -- +(1.4 cm,0);
+    \draw[thick] (8.3 cm, .1 cm) -- +(1.4 cm,0);
+    \draw[thick] (8.3 cm, -.1 cm) -- +(1.4 cm,0);
+    \draw (0.3,-0.1) node[below]  {$\Lambda_1$};
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
+  \begin{tikzpicture}[scale=.4]
+    \draw (-1,0) node[anchor=east]  {$C_n$};
+    \foreach \x in {0,...,4}
+    \draw[xshift=\x cm,thick,fill=black] (\x cm,0) circle (.3cm);
+    \draw[xshift=5 cm,thick] (5 cm, 0) circle (.3 cm);
+    \draw[dotted,thick] (0.3 cm,0) -- +(1.4 cm,0);
+    \foreach \y in {1.15,...,3.15}
+    \draw[xshift=\y cm,thick] (\y cm,0) -- +(1.4 cm,0);
+    \draw[thick] (8.3 cm, .1 cm) -- +(1.4 cm,0);
+    \draw[thick] (8.3 cm, -.1 cm) -- +(1.4 cm,0);
+    \draw (10,-0.1) node[below]  {$\Lambda_n$};
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
+  \begin{tikzpicture}[scale=.4]
+    \draw (-1,0) node[anchor=east]  {$D_n$};
+    \foreach \x in {0,...,4}
+    \draw[xshift=\x cm,thick] (\x cm,0) circle (.3cm);
+    \draw[xshift=8 cm,thick] (30: 17 mm) circle (.3cm) node [right] {$\Lambda_{n-1}$};
+    \draw[xshift=8 cm,thick] (-30: 17 mm) circle (.3cm) node [right] {$\Lambda_{n}$};
+    \draw[dotted,thick] (0.3 cm,0) -- +(1.4 cm,0);
+    \foreach \y in {1.15,...,3.15}
+    \draw[xshift=\y cm,thick] (\y cm,0) -- +(1.4 cm,0);
+    \draw[xshift=8 cm,thick] (30: 3 mm) -- (30: 14 mm);
+    \draw[xshift=8 cm,thick] (-30: 3 mm) -- (-30: 14 mm);
+    \draw (0.3,-0.1) node[below]  {$\Lambda_1$};
+    %\draw[\xshift=8 cm] (30: 17mm) node[]  {$\Lambda_{n-1}$};
+    %\draw[\xshift=8 cm] (-30: 17mm) node[]  {$\Lambda_{n}$};
+  \end{tikzpicture}
+\end{center}
+
+
+\begin{center}
+  \begin{tikzpicture}[scale=.4]
+    \draw (-1,1) node[anchor=east]  {$E_6$};
+    \foreach \x in {0,...,4}
+    \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+    \foreach \y in {0,...,3}
+    \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+    \draw[thick] (4 cm,2 cm) circle (3 mm);
+    \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+    \draw (0.3,-0.1) node[below]  {$\Lambda_1$};
+    \draw (8.3,-0.1) node[below]  {$\Lambda_5$};
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
+  \begin{tikzpicture}[scale=.4]
+    \draw (-1,1) node[anchor=east]  {$E_7$};
+    \foreach \x in {0,...,5}
+    \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+    \foreach \y in {0,...,4}
+    \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+    \draw[thick] (6 cm,2 cm) circle (3 mm);
+    \draw[thick] (6 cm, 3mm) -- +(0, 1.4 cm);
+    \draw (0.3,-0.1) node[below]  {$\Lambda_1$};
+  \end{tikzpicture}
+\end{center}
+
+}
 
 
 
+
+\newcommand{\ExtendedDynkin}{
+
+\begin{center}
+  \begin{tikzpicture}[scale=.4]
+    \draw (-3,1) node[anchor=east]  {$\mathscr{A}(\mathfrak{e}_7)$};
+    \foreach \x in {0,...,5}
+    \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+    \foreach \y in {0,...,4}
+    \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+    \draw[thick] (6 cm,2 cm) circle (3 mm);
+    \draw[thick] (6 cm, 3mm) -- +(0, 1.4 cm);
+    \draw[thick] (-2 cm, 0 cm) circle (3 mm);
+    \draw[thick] (-1.7 cm, 0) -- (-0.3 cm,0);
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
+  \begin{tikzpicture}[scale=.4]
+    \draw (-3,1) node[anchor=east]  {$\mathscr{B}(\mathfrak{e}_7)$};
+    \foreach \x in {0,...,5}
+    \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+    \foreach \y in {0,...,4}
+    \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+    \draw[thick] (6 cm,2 cm) circle (3 mm);
+    \draw[thick] (6 cm, 3mm) -- +(0, 1.4 cm);
+    \draw[thick,fill=gray] (-2 cm, 0 cm) circle (3 mm);
+    \draw[thick] (-1.7 cm, 0) -- (-0.3 cm,0);
+  \end{tikzpicture}
+\end{center}
+
+
+}
 
 
 \newcommand{\BigPicture}[1]{

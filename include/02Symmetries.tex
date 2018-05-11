@@ -215,7 +215,7 @@ A partial ordering is introduced between between weights as follows: given two w
     \beta = \sum_{i=1}^ra_i\alpha_i\implies h = \sum_{i=1}^r a_i.
 \end{equation}
 For a simple Lie algebra there exists a unique highest root, typically denoted $\theta$, such that $h_\theta>h_\alpha$, for any other root $\alpha$. Moreover, one defines the so-called Coxeter labels $a_i$ and dual Coxeter labels $a_i^\vee$ as the coefficients (up to scaling) of the highest root in simple roots and coroots respectively according to
-\begin{equation}
+\begin{equation}\label{eq:HighestRoot}
     \theta = \sum_{i=1}^ra_i\alpha_{i},\qquad \frac{2}{(\theta,\theta)}\theta = \sum_{i=1}^r a_i^\vee \alpha_{i}^{\vee}.
 \end{equation}
 Yet another important object that is of interest is the so-called Weyl vector $\rho$. The Weyl vector is defined as
@@ -224,7 +224,7 @@ Yet another important object that is of interest is the so-called Weyl vector $\
 \end{equation}
 and one can show that it can also be rewritten as
 \begin{equation}
-    \rho = \sum_{i=1}^r \Lambda_{i}.
+        \rho = \sum_{i=1}^r \Lambda_{i}
 \end{equation}
 
 \subsection{Cartan matrix and Dynkin diagram}
@@ -424,7 +424,18 @@ where $(h,h)$ denotes the part restricted to the Cartan subalgebra. Without loss
     C_2(R(\lambda)) = \frac{1}{2}(\lambda,\lambda+2\rho).
 \end{equation}
 
-\section{Extended algebras}
+\section{Extended algebras\label{sec:ExtendedAlgebras}}
+Extensions of finite simple Lie algebras are introduced. In this thesis they mainly provide another way of deriving the invariant $Y$-tensor and provide a rather simple way to solve the so-called section condition introduced in section \ref{chap:ExtendedGeometries}. The $Y$-tensor together with the section condition plays a crucial rôle in extended geometries. However, there are further signs that these extended algebras, and actually even larger algebras derived from these, such as the tensor hierarchy algebra \cite{Palmkvist:2013vya} and $L_\infty$ algebras \cite{Cederwall:2018aab}, play a fundamental part in a complete theory of extended geometries \cite{Cederwall:2018aab}.
+
+As we will see below these extended algebras can be visualized in terms of Dynkin diagrams and interesting such extensions are given in \figref{fig:ExtendedDynk}.
+\todo{Make this figure similar to that in "extended geometries".}
+\begin{figure}
+    \centering
+    \ExtendedDynkin
+    \caption{Two extensions of the $\mathfrak{e}_7$ structure algebra. The upper is equivalent to $\mathfrak{e}_8$ while the lower denotes an odd-extension to a superalgebra.}
+    \label{fig:ExtendedDynk}
+\end{figure}
+
 \subsection{Kac-Moody algebras}\label{sec:KacMoody}
 In section \ref{sec:Liealgebras} a finite dimensional simple Lie algebra was characterized by an indecomposable Cartan matrix with the properties 
 \begin{equation}
@@ -445,29 +456,29 @@ and the Chevalley-Serre generators satisfying
     (\text{ad}_{e_i})^{1-a_{ij}}e_j = (\text{ad}_{f_i})^{1-a_{ij}}f_j = 0,
 \end{aligned}
 \end{equation}
-for $i\neq j$ in the Serre relations. This serves as convenient starting point for extensions to a more general class symmetry algebras, as we will relax the condition $\text{det}\,a>0$. However, before this we will make the restriction that the so-called generalized Cartan matrix $A$ is symmetrisable, such that there exists a symmetric invariant bilinear form. Relaxing the requirement of a positive-definite Cartan matrix three classes of Kac-Moody algebras is obtained,
+for $i\neq j$ in the Serre relations. This serves as convenient starting point for extensions to a more general class of symmetry algebras, especially we will relax the condition $\text{det}\,a>0$. However, before this we will make the restriction that the so-called generalized Cartan matrix $A$ is symmetrisable, such that there exists a symmetric invariant bilinear form. Relaxing the requirement of a positive-definite Cartan matrix three classes of Kac-Moody algebras is obtained,
 \begin{itemize}
     \item if $\text{det}\,A >0$, then $\mathfrak{g}(A)$ is simple finite dimensional Lie algebra,
     \item if $\text{det}\,A =0$ with one negative eigenvalue, then $\mathfrak{g}(A)$ is an \emph{affine} algebra,  
     \item if $A$ does not satisfy either of the above constraints then it is an indefinite Kac-Moody algebra.
 \end{itemize}
 
-The affine algebras is infinite-dimensional but is still constrained enough for a complete classification. Indefinite Kac-Moody algebras are also infinite-dimensional but has not been classified. A subclass of indefinite algebras is Lorentzian KM algebras, these are characterised by having a non-degenerate symmetric bilinear form with precisely one negative eigenvalue. 
+The affine algebras is infinite-dimensional but is still constrained enough for a complete classification. Indefinite Kac-Moody algebras are also infinite-dimensional but have not been classified. A subclass of indefinite algebras is Lorentzian KM algebras, these are characterised by having a non-degenerate symmetric bilinear form with precisely one negative eigenvalue. 
 
-The extension of a simple finite Lie algebra can be done by adding a set of Chevalley generators $\{h_0,e_0,f_0\}$ to the existing $3r$ Chevalley generators $\{h_i,e_i,f_i\}_{(i=1,2,\ldots,r)}$. This amounts to the addition of one node to the Dynkin diagram according to the generalised Cartan matrix $A_{IJ}$, where $I,J=0,1,2,\ldots, r$. For the affine algebras $A$ has one zero eigenvalue and $r$ strictly positive, this is equivalent to upon removing any one node of the extended Dynkin diagram, one should obtain a Dynkin diagram of a direct sum of finite dimensional Lie algebras. One also defines a hyperbolic Kac-Moody algebras as Lorentzian KM algebras of indefinite type that upon removing any node in the Dynkin diagram, a direct sum of finite dimensional and at most one affine Kac-Moody algebra is obtained. Kac-Moody algebras are then constructed in the same way as finite dimensional Lie algebras through the Chevalley-Serre relations in \eqref{eq:ChevalleySerre2} by replacing $i,j\to I,J=0,1,2,\ldots,r$ and $a_{ij}\to A_{IJ}$. However, in the affine case the Cartan matrix is not invertible and one also needs to add a central element and a derivation, we refer to the literature for details. 
+The extension of a simple finite Lie algebra can be done by adding a set of Chevalley generators $\{h_0,e_0,f_0\}$ to the existing $3r$ Chevalley generators $\{h_i,e_i,f_i\}_{(i=1,2,\ldots,r)}$. This amounts to the addition of one node to the Dynkin diagram according to the generalised Cartan matrix $A_{IJ}$, where $I,J=0,1,2,\ldots, r$. For the affine algebras $A$ has one zero eigenvalue and $r$ strictly positive, this is equivalent to upon removing any one node of the extended Dynkin diagram, one should obtain a Dynkin diagram representing a direct sum of finite dimensional Lie algebras. One also defines a hyperbolic Kac-Moody algebras as Lorentzian KM algebras of indefinite type that upon removing any node in the Dynkin diagram, a direct sum of finite dimensional and at most one affine Kac-Moody algebra is obtained. Kac-Moody algebras are then constructed in the same way as finite dimensional Lie algebras through the Chevalley-Serre relations in \eqref{eq:ChevalleySerre2} by replacing $i,j\to I,J=0,1,2,\ldots,r$ and $a_{ij}\to A_{IJ}$. However, in the affine case the Cartan matrix is not invertible and one also needs to add a central element and a derivation, we refer to the literature for details. 
 
-Interesting examples of extended algebras of physical interest are obtained by extending the exceptional Lie algebra $\mathfrak{e}_8$. First extending $\mathfrak{e}_8$ to an affine algebra $\mathfrak{e}_9$ in \figref{fig:DynkinEseries}. One can then go even further and successively add two more nodes to obtain a hyperbolic algebra $\mathfrak{e}_{10}$ and a Lorentzian, but not hyperbolic, algebra $\mathfrak{e}_{11}$ also displayed in \figref{fig:DynkinEseries}. For further discussion about these algebras see \cite{PhdJakob2009,PhdDaniel2010}. The so-called $\mathfrak{e}_n$-series appears as a symmetry algebra of compactified eleven dimensional supergravity compactified on a torus $T^n$ and it is conjectured \cite{West2011} that the discrete version of $\mathfrak{e}_{11}$ survives quantization and is a symmetry for the full M-theory. The main motivation behind extended geometries presented in this thesis is to make these symmetries manifest in the theory. 
+Interesting examples of extended algebras of physical interest are obtained by extending the exceptional Lie algebra $\mathfrak{e}_8$. First extending $\mathfrak{e}_8$ to an affine algebra $\mathfrak{e}_9$ shown in \figref{fig:DynkinEseries}. One can then go even further and successively add two more nodes to obtain a hyperbolic algebra $\mathfrak{e}_{10}$ and a Lorentzian, but not hyperbolic, algebra $\mathfrak{e}_{11}$ also displayed in \figref{fig:DynkinEseries}. For further discussion about these algebras see \cite{PhdJakob2009,PhdDaniel2010}. This so-called $\mathfrak{e}_n$-series appears as ``hidden'' symmetries of eleven dimensional supergravity compactified on a torus $T^n$. For $n\geq 9$ these are infinite-dimensional and it is believed that a discrete $\mathfrak{e}_n$ survives quantization. FUrthermore, it is conjectured \cite{West2011} that the discrete version of $\mathfrak{e}_{11}$ is a symmetry for the full M-theory. The main motivation behind extended geometries presented in this thesis is to make these symmetries manifest in the theory before compactification. 
 \begin{figure}
     \DynkinESeries{0.4}
     \caption{Dynkin diagram of $\mathfrak{e}_8$ and its extensions $\mathfrak{e}_9$, $\mathfrak{e}_{10}$ and $\mathfrak{e}_{11}$.}
     \label{fig:DynkinEseries}
 \end{figure}
 
-We now present a construction of a Kac-Moody algebra based on some other Kac-Moody algebra $\mathfrak{g}=\mathfrak{g}(a)$ and a module $R(\lambda)$ following that of \cite{CederwallPalmkvist2017}. Assume that $a_{ij}$, $i,j=1,2,\ldots,r$ is an invertible symmetrisable generalised Cartan matrix. We then extend this further to a generalised Cartan matrix $A_{IJ}$, $I,J=0,1,\ldots,r$, by adding one row and one column as 
+We now construct a specific example of Kac-Moody algebras based on some other Kac-Moody algebra $\mathfrak{g}=\mathfrak{g}(a)$ and a module $R(\lambda)$ following that of \cite{CederwallPalmkvist2017}. Assume that $a_{ij}$, $i,j=1,2,\ldots,r$ is an invertible symmetrisable generalised Cartan matrix. We then extend this further to a generalised Cartan matrix $A_{IJ}$, $I,J=0,1,\ldots,r$, by adding one row and one column as 
 \begin{equation}
     A_{00}=2,\qquad A_{i0} = -\lambda_i,\qquad A_{ij} = a_{ij},
 \end{equation}
-such that the matrix $A$ is also symmetrisable using a diagonal matrix $D_I$, with $D_0=1/k$ and $D_i = \frac{(\alpha_i,\alpha_i)}{2}$. It follows that $A_{0i}=kD_iA_{i0}$. The algebra $\mathscr{A}$ is constructed from $A$ with the Chevalley relations 
+such that the matrix $A$ is symmetrisable using a diagonal matrix $D_I$, with $D_0=1/k$ and $D_i = \frac{(\alpha_i,\alpha_i)}{2}$. It then follows that $A_{0i}=kD_iA_{i0}$. The algebra $\mathscr{A}$ is constructed from $A$ with the Chevalley relations 
 \begin{equation}
     \llbracket h_I,e_J\rrbracket = A_{IJ}e_J,\qquad \llbracket h_I,f_J\rrbracket = -A_{IJ}f_J,\qquad \llbracket e_I,f_J\rrbracket = \delta_{IJ}h_J,
 \end{equation}
@@ -475,8 +486,7 @@ and the Serre relations
 \begin{equation}\label{eq:SerreKacMoody}
     (\text{ad}_{e_i})^{1-A_{iJ}}e_J = (\text{ad}_{f_i})^{1-A_{iJ}}f_J = 0 \quad \text{for} \quad i\neq J.
 \end{equation}
-Moreover, since $A$ is symmetrisable we can construct a symmetric invariant bilinear form on the weight space as $(DA)_{IJ}=(\alpha_I,\alpha_J)$, with $\alpha_I$ simple roots. On the other hand this induces a symmetric invariant bilinear form on the Cartan subalgebra as 
-$(h_I,h_J) = (\alpha_I^\vee,\alpha_J^\vee)$ with the $\alpha_I^\vee$ the coroot to $\alpha_I$. 
+Moreover, since $A$ is symmetrisable we can construct a symmetric invariant bilinear form on the weight space as $(DA)_{IJ}=(\alpha_I,\alpha_J)$, with $\alpha_I$ simple roots. 
 
 For example, if the underlying algebra $\mathfrak{g}(a)$ is chosen to be $\mathfrak{e}_r$ together with the module corresponding to the highest weight $\lambda =\Lambda_1$, then this construction gives $\mathfrak{g}(A)=\mathfrak{e}_{r+1}$. For $10>r\geq 8$ the corresponding Dynkin diagram is precisely those in \figref{fig:DynkinEseries}. 
 
@@ -496,15 +506,15 @@ where $p+q = p+q\,(\text{mod}\,2)$. Typically ``even'' and ``odd'' are used inte
 \begin{equation}
     \mathfrak{g} = \bigoplus_{p\in\mathbb{Z}} \mathfrak{g}_{p},
 \end{equation}
-if
+and it is \emph{consistent} if 
 \begin{equation}
     \llbracket \mathfrak{g}_p,\mathfrak{g}_q\rrbracket\subseteq \mathfrak{g}_{p+q}.
 \end{equation}
 In a supergraded algebra the Lie bracket becomes a supercommutator such that for $x,y\in\mathfrak{g}$
 \begin{equation}
-    \llbracket x,y\rrbracket = \left(-1\right)^{|x||y|}\llbracket x,y\rrbracket,
+    \llbracket x,y\rrbracket = \left(-1\right)^{|x||y|}\llbracket y,x\rrbracket,
 \end{equation}
-where $|\cdot|=0$ if the element is even and $|\cdot|=1$ if it is odd. The Jacobi identity then becomes the super-Jacobi identity
+where $|\cdot|=0,1$ if the element is even or odd respectively. The Jacobi identity then becomes the super-Jacobi identity
 \begin{equation}
     \left(-1\right)^{|x||z|}\llbracket x\llbracket y,z\rrbracket\rrbracket +\left(-1\right)^{|y||x|}\llbracket y\llbracket z,x\rrbracket\rrbracket+\left(-1\right)^{|z||y|}\llbracket z\llbracket x,y\rrbracket\rrbracket = 0.
 \end{equation}
@@ -533,11 +543,11 @@ The corresponding Borcherds superalgebra $\mathscr{B}=\mathfrak{g}(B)$ is then g
     \end{equation}
 \end{subequations}
 
-We move on to a specific example of a BKM superalgebra relevant for extended geometries, which again follows that of \cite{CederwallPalmkvist2017}. As for the Kac-Moody example above start start with an invertible and symmetrisable generalised Cartan matrix $a_{ij}$, where $i,j=1,2,\ldots,r$. As above, add one row and one column and form a symmetrisable matrix $B_{IJ}$, where $I,J=0,1,\ldots r$, according to 
+The BKM algebras constitute a large class of algebras and the general definition above was mainly given for the interested reader. Instead we consider the construction of a specific type of BKM superalgebras relevant for extended geometries, which again follows that of \cite{CederwallPalmkvist2017}. As for the Kac-Moody example above start start with an invertible and symmetrisable generalised Cartan matrix $a_{ij}$, with $i,j=1,2,\ldots,r$. As above, add one row and one column and form a symmetrisable matrix $B_{IJ}$, with $I,J=0,1,\ldots r$, according to 
 \begin{equation}
     B_{00} = 0,\qquad B_{i0} = -\lambda_i,\qquad B_{ij} = a_{ij}.
 \end{equation}
-It follows as in the KM-case that $B$ is symmetrised with the diagonal matrix $D_0=1/k$ and $D_i=\frac{(\alpha_i,\alpha_i)}{2}$ and that $B_{0i}=kD_iB_{i0}$. As we have seen, adding a row and column is equivalent to adding a set of Chevalley generators $\{h_0,e_0,f_0\}$, however, the elements $e_0$ and $f_0$ are now odd generators. The construction goes through the same way with the Chevalley-Serre relations with the ordinary Lie bracket replaced with the supercommutator 
+It follows as in the KM-case that $B$ is symmetrised with the diagonal matrix $D_0=1/k$ and $D_i=\frac{(\alpha_i,\alpha_i)}{2}$ and that $B_{0i}=kD_iB_{i0}$. As we have seen, adding a row and column is equivalent to adding a set of Chevalley generators $\{h_0,e_0,f_0\}$, however, the elements $e_0$ and $f_0$ are now odd generators. The construction goes through in much the same way using the Chevalley-Serre relations with the ordinary Lie bracket replaced with the supercommutator 
 \begin{equation}
     \llbracket h_I,e_J\rrbracket = B_{IJ},\qquad \llbracket h_I,f_J\rrbracket = -B_{IJ}f_J,\qquad \llbracket e_I,f_J\rrbracket = \delta_{IJ}h_J,
 \end{equation}
@@ -546,23 +556,23 @@ and
     \llbracket e_0,e_0\rrbracket = \llbracket f_0,f_0\rrbracket = 0,\qquad (\text{ad}_{e_i})^{1-B_{iJ}}e_J = (\text{ad}_{f_i})^{1-B_{iJ}}f_J = 0 \quad \text{for} \quad i\neq J.
 \end{equation}
 
-This constructed algebra has a $\mathbb{Z}$ grading and can thus be decomposed as 
+The algebra $\mathscr{B}$ has a consistent $\mathbb{Z}$-grading and can thus be decomposed as 
 \begin{equation}
     \mathscr{B} = \bigoplus_{p\in\mathbb{Z}} \mathscr{B}_p,
 \end{equation}
-where $e_0\in\mathscr{B}_{1}$, $f_0\in\mathscr{B}_{-1}$ and the remaining $3r+1$ Chevalley generators in $\mathscr{B}_0$. Note that the integer $p$ can be interpreted as the difference between the number of $e_0$ and $f_0$ generators present in an element. The subspace at $p=0$ is even and given by 
+where $e_0\in\mathscr{B}_{1}$, $f_0\in\mathscr{B}_{-1}$ and the remaining $3r+1$ Chevalley generators in $\mathscr{B}_0$. The subspace at $p=0$ is even and given by 
 \begin{equation}
     \mathscr{B}_0 = \mathfrak{g}\oplus c,
 \end{equation}
 where $c$ is a central element containing $h_0$. The normalisation of $c$ can be chosen as 
 \begin{equation}
-    \llbracket e_0,c \rrbracket = e_0 \implies c = \sum_{I=0}^r(B^{-1})^{0I}h_I.
+     c = \sum_{I=0}^r(B^{-1})^{0I}h_I \implies \llbracket c,e_0 \rrbracket = e_0.
 \end{equation}
-Since $\llbracket\mathscr{B}_r,\mathscr{B}_p\rrbracket \subseteq \mathscr{B}_{p+r}$ it follows especially that 
+The grading thus corresponds to the eigenvalue of $c$, it is easily shown using the Jacobi-identity that $f_0$ has eigenvalue $-1$ which it must since $\llbracket e_0,f_0\rrbracket\in \mathscr{B}_0$. Morever $\llbracket\mathscr{B}_r,\mathscr{B}_p\rrbracket \subseteq \mathscr{B}_{p+r}$ from which it follows especially that 
 \begin{equation}
     \llbracket\mathscr{B}_0,\mathscr{B}_p\rrbracket \subseteq \mathscr{B}_p.
 \end{equation}
-The subspaces $\mathscr{B}_p$ are thus irreducible representations of $\mathfrak{g}\oplus \mathbb{R}$ under the adjoint action. It follows from the Chevalley relations that $f_0$ is a highest weight vector in $\mathscr{B}_{-1}$ under $\mathfrak{g}$ since 
+The subspaces $\mathscr{B}_p$ are thus irreducible representations of $\mathfrak{g}\oplus \mathbb{R}$ under the adjoint action. Since the $c$ by definition commutes with the adjoint action we indeed see that the grading is consistent. In terms of the weight lattice $\Lambda_W$ the element $c$ measures the projection of a weight onto a line orthogonal to the $\Lambda_{W_\mathfrak{g}}\subset \Lambda_W$. Furthermore, it follows from the Chevalley relations that $f_0$ is a highest weight vector in $\mathscr{B}_{-1}$ under $\mathfrak{g}$ since 
 \begin{equation}
     \llbracket e_i, f_0\rrbracket = 0,
 \end{equation}
@@ -579,27 +589,28 @@ We thus see that the subspaces $\mathscr{B}_{-1}$ and $\mathscr{B}_1$ transforms
     R_2 = \vee^2R(\lambda)\ominus R(2\lambda).
 \end{equation}
 
-Given the odd simple root $\beta_0$ and the even simple roots $\beta_i=\alpha_i$ of $\mathfrak{g}$ it is possible to construct a metric on the root space
+Given the odd simple root $\beta_0$ and the even simple roots $\beta_i=\alpha_i$ of $\mathfrak{g}$ it is possible to construct a metric on the root space as usual
 \begin{equation}
     (\beta_I,\beta_J) = (DB)_{IJ}.
 \end{equation}
-This further induces an inner product on the Cartan subalgebra $(h_I,h_J)=(\beta_I^\vee,\beta_J^\vee)$, with $\beta_i^\vee$ being the coorots of $\mathfrak{g}$ and $\beta_0^\vee$ defined by $\beta_I(\beta_0^\vee)=k(\beta_I,\beta_0)$ for any simple root $\beta_I$. As for simple Lie algebras the inner product can be extended to the whole algebra $\mathscr{B}$ using invariance property. Note, however, that while this inner product is symmetric on $(e_i,f_J)$ it is anti-symmetric on $(e_0,f_0)=k$ due to the fact that $e_0$ and $f_0$ are odd roots.    
+As for simple Lie algebras the inner product can be extended to the whole algebra $\mathscr{B}$ using invariance property. Note, however, that while this inner product is symmetric on $(e_i,f_J)$ it is anti-symmetric on $(e_0,f_0)=-(f_0,e_0)=k$ due to the fact that $e_0$ and $f_0$ are odd roots.    
 
 
-\subsection{The invariant Y tensor\label{sec:InvYTensor}}
+\subsection{The invariant Y-tensor\label{sec:InvYTensor}}
 Below we will use the extended algebras $\mathscr{A}$ and $\mathscr{B}$ to derive the $Y$-tensor that plays a crucial rôle in extended geometries. Moreover, we will assume that the respective generalised Cartan matrices $A$ and $B$ are invertible. This construction was presented in \cite{CederwallPalmkvist2017} in which the assumption of invertible generalised Cartan matrices were relaxed.
 
-Starting with the purely bosonic algebra $\mathscr{A}$ we note that just as in the case for the algebra $\matscr{B}$ there is a consistent $\mathbb{Z}$-grading; hence the algebra can be decomposed as 
+Starting with the purely bosonic algebra $\mathscr{A}$ we note that just as in the case for the algebra $\mathscr{B}$ there is a consistent $\mathbb{Z}$-grading; hence the algebra can be decomposed as 
 \begin{equation}
     \mathscr{A} =\bigoplus_{p\in \mathbb{Z}}\mathscr{A}_p.
 \end{equation}
 By the definition of a consistent grading the subspaces $\mathscr{A}_p$ are again modules under the $\mathscr{A}_0=\mathfrak{g}\oplus \tilde{c}$ subalgebra. Especially, at level $\pm 1$ these modules are isomorphic to $R(\lambda)$ and $\overbar{R(\lambda)}$ of $\mathfrak{g}$ respectively which follows from the Serre relations in \eqref{eq:SerreKacMoody}. Introducing a basis $\tilde{E}^M$ for $R(\lambda)$ and $\tilde{F}_M$ for $\overbar{R(\lambda)}$ implies that \todo{Show $c$}
 \begin{equation}\label{eq:A0Action}
     \begin{cases}
-        \llbracket T^\alpha, \tilde{E}^M\rrbracket = -\tensor{T}{^{\alpha M}_N}\tilde{E}^M,\qquad \llbracket c,\tilde{E}^M\rrbracket= \sum_I\\
-        \llbracket T^\alpha, \tilde{F}_M\rrbracket = \tensor{T}{^{\alpha N}_M}\tilde{F}_N,\qquad \llbracket\rrbracket=.
+        \llbracket T^\alpha, \tilde{E}^M\rrbracket = -\tensor{T}{^{\alpha M}_N}\tilde{E}^M,\qquad \llbracket c,\tilde{E}^M\rrbracket= \tilde{E}^M\\
+        \llbracket T^\alpha, \tilde{F}_M\rrbracket = \tensor{T}{^{\alpha N}_M}\tilde{F}_N,\qquad \llbracket c,\tilde{F}_N\rrbracket= -\tilde{F}_N. 
     \end{cases}
 \end{equation}
+Note that there exists is an isomorphism between $\mathscr{A}_{\pm 1}$ and $\mathscr{B}_{\pm 1}$. This is however not true at higher levels. 
 
 We then look at the commutator 
 \begin{equation}\label{eq:Comm}
@@ -607,23 +618,24 @@ We then look at the commutator
 \end{equation}
 where $b$ is a constant and we used the grading of $\mathscr{A}$. Choosing a normalisation of the basis such that $(\tilde{E}^M,\tilde{F}_N)=\delta^M_N$ and the invariance of $(\cdot,\cdot)$ we find 
 \begin{equation}
-    (\llbracket\tilde{E}^M,\tilde{F}_N\rrbracket,T^\alpha) = -(\tilde{F}_N,\llbracket\tilde{E^M},T^\alpha\rrbracket) = -\tensor{T}{^{\alpha M}_N},
+    (\llbracket\tilde{E}^M,\tilde{F}_N\rrbracket,T^\alpha) = (\tilde{E}^N,\llbracket\tilde{F}_N,T^\alpha\rrbracket) = -\tensor{T}{^{\alpha M}_N},
 \end{equation}
 and by inserting the ansatz \eqref{eq:Comm}
 \begin{equation}
-    \eta_{\gamma\beta}\tensor{T}{^{\gamma M}_N}(X^\beta,T^\alpha)+b(c,T^\alpha) = \tensor{T}{^{\alpha M}_N}.
+    \eta_{\gamma\beta}\tensor{T}{^{\gamma M}_N}(X^\beta,T^\alpha)+b(c,T^\alpha) = -\tensor{T}{^{\alpha M}_N}.
 \end{equation}
-Using $(c,T^\alpha)=0$ and $(T^\alpha,T^\beta)=\eta^{\alpha\beta}$ we find $X^\beta = -T^\beta$. Similarily we have 
+Using $(c,T^\alpha)=0$ and $(T^\alpha,T^\beta)=\eta^{\alpha\beta}$ we find $X^\beta = -T^\beta$. Similarly we have 
 \begin{equation}
     (\llbracket\tilde{E}^M,\tilde{F}_N\rrbracket,c) = b\delta^M_N(c,c) = -(\tilde{F}_N,\llbracket \tilde{E}^M,c\rrbracket) = \delta^M_N.
 \end{equation}
-With the normalisation $(c,c)=k(A^{-1})^{00}$ we finally find 
+
+The metric on the Cartan subalgebra of $\mathscr{B}$ is given by the inverse of the metric on the root space and hence $(c,c)=k(A^{-1})^{00}$ which gives 
 \begin{equation}
     \llbracket \tilde{E}^M,\tilde{F}_N\rrbracket = -\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}T^\beta+\frac{1}{k(A^{-1})^{00}}\delta^M_Nc.
 \end{equation}
 Consider now the invariant tensor 
 \begin{equation}
-    \tensor{f}{^{MN}_{PQ}}=(\llbracket\llbracket\tilde{E}^M,\tilde{F}_P\rrbracket,\tilde{E}^N\rrbracket,\tilde{F}_Q)
+    \tensor{\tilde{f}}{^{MN}_{PQ}}=(\llbracket\llbracket\tilde{E}^M,\tilde{F}_P\rrbracket,\tilde{E}^N\rrbracket,\tilde{F}_Q)
 \end{equation}
 which by inserting the explicit expression for $\llbracket\tilde{E}^M,\tilde{F}_P\rrbracket$ found above, we get 
 \begin{equation}
@@ -636,27 +648,27 @@ Using the Jacobi identity and invariance of the inner product it is straigthforw
 \begin{equation}
     \tensor{\tilde{g}}{^{MN}_{PQ}} := (\llbracket\tilde{E}^M,\tilde{E}^N\rrbracket,\llbracket\tilde{F}_P,\tilde{F}_Q\rrbracket),
 \end{equation}
-is given by $\tensor{\tilde{g}}{^{MN}_{PQ}}=2\tensor{\tilde{f}}{^{[MN]}_{PQ}}$. 
+which further is given by $\tensor{\tilde{g}}{^{MN}_{PQ}}=2\tensor{\tilde{f}}{^{[MN]}_{PQ}}$. 
 
-Analogous expressions is easily derived from the BKM algebra $\mathscr{B}$. We have already that $\mathscr{B}$ is consistently graded and that the subspaces at level $\pm 1$ is isomorphic to $R(\lambda)$ and $\overbar{R(\lambda)}$ modules of the $\mathfrak{g}\subset\mathscr{B}_0$ subalgebra. As in the purely bosonic case we introduce a basis $E^M$ and $F_M$ at level $\pm 1$ respectively. Note, however, that elements at level $\pm 1$ contains one odd simple root and are therefore also odd. Especially this implies that $(E^M,F_N)$ is anti-symmetric, $\llbracket E^M,F_N\rrbracket$ is symmetric and we have to use the super-Jacobi identity. 
+Analogous expressions are easily derived from the BKM algebra $\mathscr{B}$. We have already that $\mathscr{B}$ is consistently graded and that the subspaces at level $\pm 1$ is isomorphic to $R(\lambda)$ and $\overbar{R(\lambda)}$ modules of the $\mathfrak{g}\subset\mathscr{B}_0$ subalgebra. As in the purely bosonic case we introduce a basis $E^M$ and $F_M$ at level $\pm 1$ respectively. Note, however, that elements at level $\pm 1$ are odd. Especially this implies that $(E^M,F_N)=-(F_N,E^M)=-1$, $\llbracket E^M,F_N\rrbracket$ is symmetric and we have to use the super-Jacobi identity. 
 
 The $\mathfrak{g}$ subalgebra act on $E^M$ and $F_M$ as in \eqref{eq:A0Action} with the replacements $\tilde{E}\mapsto E$ and $\tilde{F}\mapsto F$. Taking the extra sign factors into account is straightforward following the steps above to find 
 \begin{equation}
     \begin{aligned}
-        \tensor{f}{^{MN}_{PQ}} &:= (\llbracket\llbracket E^M,F_P\rrbracket E^N,F_Q)\\
+        \tensor{f}{^{MN}_{PQ}} &:= (\llbracket\llbracket E^M,F_P\rrbracket,E^N\rrbracket,F_Q)\\
                                 &= \eta_{\alpha\beta}\tensor{T}{^{\alpha M}_P}\tensor{T}{^{\beta N}_Q}+\frac{1}{k(B^{-1})^{00}}\delta^M_P\delta^N_Q.
     \end{aligned}
 \end{equation}
-Moreover it easily seen that $\tensor{g}{^{MN}_{PQ}}:=-2\tensor{f}{^{(MN)}_{PQ}}$ is given by
+Furthermore it easily seen that $\tensor{g}{^{MN}_{PQ}}:=-2\tensor{f}{^{(MN)}_{PQ}}$ is given by
 \begin{equation}
     \tensor{g}{^{MN}_{PQ}} = (\llbracket E^M,E^N\rrbracket,\llbracket F_P,F_Q\rrbracket). 
 \end{equation}
 
-Before constructing the $Y$ tensor we will rewrite $f,\tilde{f}$ slightly by writing the weight $\lambda$ in simple roots $\alpha_i$ as 
+Before constructing the $Y$-tensor we rewrite $f,\tilde{f}$ slightly by expanding the weight $\lambda$ in simple roots $\alpha_i$ as 
 \begin{equation}
     \lambda = c_j\alpha_j\qquad \text{s.t.}\qquad \lambda_i = \lambda(\alpha_i^\vee).
 \end{equation}
-Noting that $B_{iJ}B^{J0}=\delta^{i0}=0$ it is found that 
+Noting that $B_{ij}(B^{-1})_{j0}=\delta_{i0}-B_{i0}=-B_{i0}$ it is found that 
 \begin{equation}
     \lambda = \frac{(B^{-1})^{j0}}{(B^{-1})^{00}}\alpha_i \implies \lambda(\alpha_i^\vee) = B_{ij}\frac{(B^{-1})^{j0}}{(B^{-1})^{00}} = -B_{i0},
 \end{equation}
@@ -664,10 +676,23 @@ which by construction fulfills $-B_{i0}=\lambda_i$. We can now express the lengt
 \begin{equation}
     (\lambda,\lambda) = \sum_{i,j=1}^r (\alpha_i,\alpha_j)\frac{(B^{-1})^{i0}}{(B^{-1})^{00}}\frac{(B^{-1})^{j0}}{(B^{-1})^{00}},
 \end{equation}
-which by definition of the inner product on the root space $(\alpha_i,\alpha_j)=d_iB_{ij}$ and using $d_B_{i0}=B_{0i}/k$ we find 
+which by definition of the inner product on the root space $(\alpha_i,\alpha_j)=D_iB_{ij}$ and using $D_iB_{i0}=B_{0i}/k$ we find 
 \begin{equation}
     (\lambda,\lambda) = -\frac{1}{k(B^{-1})^{00}}. 
 \end{equation}
-Similarly we can express 
+Likewise the factor of $(A^{-1})^{00}$ in $\tensor{f}{^{MN}_{PQ}}$ can be replaced using $\text{det}\, A=2\,\text{det}\,a+\text{det}\,B$ and $(B^{-1})^{00}=\text{det}\, a/\text{det}\,B$ which follows from the general formula for the inverse $B^{-1}=C^T/\text{det}\, B$, where $C^T$ is the transposed comatrix,
+\begin{equation}
+    (\lambda,\lambda) = \frac{2}{k}-\frac{1}{k(A^{-1})^{00}}.
+\end{equation}
+
+We are now ready to construct the $Y$-tensor as 
+\begin{equation}\label{eq:YTensor}
+    \begin{aligned}
+        \tensor{Y}{^{MN}_{PQ}} &= \frac{k}{2}\left(\tensor{g}{^{MN}_{QP}}-\tensor{\tilde{g}}{^{MN}_{QP}}\right)\\
+        & = -k\eta_{\alpha\beta}\tensor{T}{^{\alpha N}_Q}\tensor{T}{^{\beta M}_P}+\left[k(\lambda,\lambda)-1\right]\delta^N_P\delta^M_Q+\delta^N_Q\delta^M_P.
+    \end{aligned}
+\end{equation}
+
+The main reason for introducing the extended algebras $\mathscr{A}$ and $\mathscr{B}$ is the construction of the $Y$-tensor in \eqref{eq:YTensor} as this will in some sense provide the deviation of extended geometries from ordinary geometry that is based on $\mathfrak{g}=\mathfrak{gl}(n)$. However, the full rôle of these extended algebras is still being explored \cite{Palmkvist:2013vya,Cederwall:2018aab,HohmZwiebach2013}. We further discuss this intruiging appearance of these extended algebras in section \ref{sec:GaugeStructureAndExtendedAlgebras}. 
 
 %The first extension will be to so called affine Kac-Moody algebras. We add a set of Chevalley generators $\{h^0,E_\pm^0\}$ to the existing $3r$ generators. This is equivalent to adding a row and column to the existing Cartan matrix $A^{ij}\to A^{IJ}$, where $I,J=0,1,2,\ldots,r$. We then impose that the generalized Cartan matrix is positive-semidefinite 

@@ -1,4 +1,4 @@
-\chapter{Flux compactifications}
+\chapter{Flux compactifications and (exceptional) generalised geometry\label{chap:FluxCompactifications}}
 
 \section{Phenomenology and moduli stabilization}
 As is well-knwon string theory/M-theory lives in a 10/11-dimensional spacetime, yet our everyday experience tells us otherwise. Hence, in order for string theory/M-theory to be able to describe the real world it has to have consistent low-energy description that matches our observations. 
@@ -71,20 +71,19 @@ which is free. An important example of a principle fibre bundle is the frame bun
 The existence of invariant tensors on $\mathcal{M}$ is equivalent to adding further structure to a principal $G$-bundle such that it is possible to impose a restriction to a principal $H$-bundle, where $H\subset G$ with the same base manifold. Typically this is defined the other way around,  
 
 
-In order to define a reduced structure group we need a so-called bundle map. A bundle map is a linear map $\rho$ such that the following diagram commutes
+In order to define a reduced structure group we need a so-called bundle map. A bundle map is a linear map $\rho: P\to \overbar{P}$ and continuous map between the base manifolds $f: \mathcal{M}\to \overbar{\mathcal{M}}$ such that the following diagram commutes
 \begin{center}
 \begin{tikzpicture}
   \matrix (m) [matrix of math nodes,row sep=3em,column sep=4em,minimum width=2em]
   {
-     F_t(x) & F(x) \\
-     A_t & A \\};
+     P & \overbar{P} \\
+     \mathcal{M} & \overbar{\mathcal{M}} \\};
   \path[-stealth]
-    (m-1-1) edge node [left] {$\mathcal{B}_X$} (m-2-1)
-            edge [double] node [below] {$\mathcal{B}_t$} (m-1-2)
-    (m-2-1.east|-m-2-2) edge node [below] {$\mathcal{B}_T$}
-            node [above] {$\exists$} (m-2-2)
-    (m-1-2) edge node [right] {$\mathcal{B}_T$} (m-2-2)
-            edge [dashed,-] (m-2-1);
+    (m-1-1) edge node [left] {$\pi$} (m-2-1)
+            edge [] node [above] {$\rho$} (m-1-2)
+    (m-2-1.east|-m-2-2) edge node [below] {$f$}
+            node [above] {} (m-2-2)
+    (m-1-2) edge node [right] {$\overbar{\pi}$} (m-2-2);
 \end{tikzpicture}
 \end{center}
 

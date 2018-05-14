@@ -1,17 +1,17 @@
-\chapter{String theory, supergravity \& dualities}
+\chapter{String theory, supergravity \& dualities\label{chap:StringTheory}}
 
 
-This chapter aims to introduce a few brief points on string theory, with the main point to show the presence of dualities, especially T-duality for the bosonic string. Moreover, the low-energy effective theory, supergravity, related to string theory will be introduced. This is done in order to motivate the appearance of the continuous version of the duality group upon compactification on torii. For the interested reader we recommend \cite{Blumenhagen2013,TongLectureNotes} for an introduction to string theory. In \ref{sec:Dualities} the notion of dualities is introduced more thoroughly. 
+This chapter aims to put into context the extended geometries introduced in this thesis. The first section introduces some concepts of string theory, with the main point to show the presence of dualities, especially T-duality for the bosonic string. Moreover, the low-energy effective theory, supergravity, related to string theory will be introduced in section \ref{sec:Supergravity}. This is done in order to motivate the appearance of the continuous version of the duality group upon compactification on torii. In section \ref{sec:Dualities} the notion of dualities is introduced more thoroughly. To the interested reader we recommend \cite{Blumenhagen2013,TongLectureNotes} for an introduction to string theory.
 
 
 \section{String theory}
-In string theory the fundamental constituents are strings, 1-dimensional extended objects rather than 0-dimensional point-like particles. Of course since our usual picture of point-like particles and quantum field theories works extraordinarly well, such a theory of extended objects should have a low-energy description in terms of quantum fields. Put differently, the typical string length should be small compared to distances we could measure at say the LHC such that a string looks effectively pointlike. 
+In string theory the fundamental constituents are strings, 1-dimensional extended objects rather than point-like particles. Of course since our usual picture of point-like particles and quantum field theories works extraordinarly well, such a theory of extended objects should have a low-energy description in terms of quantum fields. Put differently, the typical string length should be small compared to distances we could measure at say the LHC such that a string looks effectively pointlike. 
 
 Bosonic string theory can be described by the Polyakov action
 \begin{equation}
     S = -\frac{T}{2}\int \dd^2\sigma \sqrt{\gamma}\gamma_{\alpha\beta}\pd_\alpha X^\mu\pd_\beta X^\nu G_{\mu\nu}(X),
 \end{equation}
-where $T$ is the string tension, $\Sigma$ the string worldsheet parameterized by $\sigma^{\alpha}\in\Sigma$ with $\alpha=0,1$ and $X^\mu: \sigma \to \mathcal{M}$ is an embedding of the world-sheet into a manifold $\mathcal{M}$ with metric $G$. The string tension is related to the so-called Regge slope with dimensions of an area $\alpha'= 1/(2\pi T)$. For what follows we consider strings in flat space $G_{\mu\nu}=\eta_{\mu\nu}$. 
+where $T$ is the string tension, $\Sigma$ the string worldsheet parameterized by $\sigma^{\alpha}\in\Sigma$ with $\alpha=0,1$ and $X^\mu: \sigma \to \mathcal{M}$  an embedding of the world-sheet into a manifold $\mathcal{M}$ with metric $G$. The string tension is related to the so-called Regge slope with dimensions of an area $\alpha'= 1/(2\pi T)$. For what follows we consider strings in flat space $G_{\mu\nu}=\eta_{\mu\nu}$. 
 
 The Polyakov action in flat space has several important symmetries: 
 \begin{align}
@@ -45,8 +45,12 @@ which in conformal gauge ($\gamma_{\alpha\beta}=\eta_{\alpha\beta}$) simply is a
     \pd^\alpha\pd_\alpha X^\mu = 0.
 \end{equation}
 This is easily solved by $X^\mu(\sigma,\tau)=X^\mu_R(\tau-\sigma)+X^\mu_L(\tau+\sigma)$ ($\tau =\sigma^0$ and $\sigma=\sigma^1$) and 
+\begin{equation}
+    X^\mu_{L,R} = \frac{1}{2}(x^\mu\pm c^\mu)+\frac{\pi\alpha'}{l}p^\mu(\tau\pm\sigma)+\ii \sqrt{\frac{\alpha'}{2}}\sum_{n\in\mathbb{Z}}\frac{1}{n}\alpha^\mu_n\ee^{-\frac{2\pi}{l}\ii n(\tau\pm sigma)},
+\end{equation}
+with $l$ being the length of the string. The first two tirms describe constant motion of the center of mass of the string while the sum denotes oscillations along the string. 
 
-\section{Supergravity and Kaluza-Klein compactification}
+\section{Supergravity and Kaluza-Klein compactification\label{sec:Supergravity}}
 Supergravity describes the low-energy effective theory of string theory in $10$ dimensions and M-theory in 11 dimensions. In fact, 11 dimensions is the largest dimension in which supergravity is consistent with one graviton and no field with spin higher than $2$. The $\mathcal{N}=1$ $D=11$ supergravity theory describing the low-energy physics of M-theory contains the following field content 
 \begin{equation}
     \begin{cases}
@@ -126,11 +130,11 @@ We thus see that the $D-1$ dimensional theory transforms as one would expect und
 \end{equation}
 By choosing $\alpha = -\frac{c}{D-1}$ the lower-dimensional metric $\delta g_{\mu\nu}$ becomes invariant under the remaining global scaling symmetry. This remaining scaling symmetry is a common feature of supergravity theories typically referred to as a trombone symmetry. 
 
-Compactification on a torus $T^n=S^1\times S^1\times\ldots\times S^1$ continues in much the same way and by recursively compactifying on circles. We omit the details but note that similarly to the case above one finds that the diffeomorphisms preserving the reduction ansatz, $x^M\to (x^\mu,y^i)$, where $i=1,2,\ldots n$, is given by 
+Compactification on a torus $T^n=S^1\times S^1\times\ldots\times S^1$ continues in much the same way by recursively compactifying on circles. We omit the details but note that similarly to the case above one finds that the diffeomorphisms preserving the reduction ansatz, $x^M\to (x^\mu,y^i)$, where $i=1,2,\ldots n$, is given by 
 \begin{equation}
     \xi^M = \left(\hat{\xi}^\mu(x^\nu),\tensor{M}{^i_j}y^j+\lambda^i(x^\nu)\right),
 \end{equation}
-where $M\in SL(N,\mathbb{R})\times \mathbb{R}$ a constant matrix and $\lambda^i$ are $n$ $U(1)$ gauge paramers. Again there is a scaling symmetry of the uncompactified theory which can be combined with $\mathbb{R}$ factor in $M$. As such we find that compactified gravity on a torus $T^n$ has a global $SL(n)\times\mathbb{R}$. However, coupling matter to gravity may enhance this symmetry to even larger groups. Furthermore, it turns out that these symmetries can be studied by looking at the scalar sector only, the parts containing ``Kaluza-Klein'' vectors will, non-trivially, possess the same symmetry as the scalar sector. Note that since the scalars coming from the internal components of the metric characterise the internal manifold, e.g.\ compactification on $S^1$ gives rise to a scalar field $\phi$ and its vacuum expectation value (classical solution) determines the radius of of the circle.
+where $M\in SL(N,\mathbb{R})\times \mathbb{R}$ a constant matrix and $\lambda^i$ are $n$ $U(1)$ gauge paramers. Again there is a scaling symmetry of the uncompactified theory which can be combined with $\mathbb{R}$ factor in $M$. As such we find that compactified gravity on a torus $T^n$ has a global $SL(n)\times\mathbb{R}$ symmetry. However, coupling matter to gravity may enhance this symmetry to even larger groups. Furthermore, it turns out that these symmetries can be studied by looking at the scalar sector only, the parts containing ``Kaluza-Klein'' vectors will, non-trivially, possess the same symmetry as the scalar sector. Note that scalars coming from the internal components of the metric characterise the internal geometry, e.g.\ compactification on $S^1$ gives rise to a scalar field $\phi$ and its vacuum expectation value (classical solution) determines the radius of of the circle.
 
 Consider the bosonic sector of $D=11$ supergravity with the metric $g_{MN}$ and the three-form $A_{MNP}$. Split spacetime as $\mathcal{M}_{11}=\mathcal{M}_{11-n}\times\mathcal{M}_n$ with a corresponding split for the coordinates $x^M\to (x^\mu,y^i)$. The fields decompose as 
 \begin{align}
@@ -155,9 +159,9 @@ As above, it is sufficient to consider the scalar sector of the theory. The numb
 \end{table}
 
 \subsection{Non-linear sigma model\label{sec:NonLinearSigmaModels}}
-We have argued above that the compactification of $D=11$ supergravity on $T^n$ give rise a hidden global symmetry $G$. In order write a Lagrangian for the scalar sector that is manifestly invariant under this symmetry we will consider a non-linear sigma model. The idea is that the scalar fields can be considered as ``coordinates'' on a coset space $G/K$, where $K$ is the maximal compact subgroup of $G$. In fact, by counting the dimension of the coset $\text{dim}\,(G/K)=\text{dim}\,(G)-\text{dim}\,(K)$ using the $\tabref{tab:Scalar}$ one finds that is equal to the number of scalars fields. 
+We have argued above that the compactification of $D=11$ supergravity on $T^n$ give rise a hidden global symmetry $G$. In order to write down a Lagrangian for the scalar sector that is manifestly invariant under this symmetry we will consider a non-linear sigma model. The idea is that the scalar fields can be considered as ``coordinates'' on a coset space $G/K$, where $K$ is the maximal compact subgroup of $G$. In fact, by counting the dimension of the coset $\text{dim}\,(G/K)=\text{dim}\,(G)-\text{dim}\,(K)$ using the $\tabref{tab:Scalar}$ one finds that is equal to the number of scalars fields. 
 
-To parameterize this Lagrangian it is convenient to look at the algebra $\mathfrak{g}$ and $\mathfrak{k}$ that upon exponentiated give the related groups $G$ and $H$ respectively. As we saw in subsection \ref{sec:Realforms} the algebra $\mathfrak{g}$ can be decomposed as 
+To parameterize this Lagrangian it is convenient to look at the algebra $\mathfrak{g}$ and its maximal compact subalgebra $\mathfrak{k}$ that upon exponentiated give the related groups $G$ and $H$ respectively. As we saw in subsection \ref{sec:Realforms} the algebra $\mathfrak{g}$ can be decomposed as 
 \begin{equation}
     \mathfrak{g} = \mathfrak{k}\oplus \mathfrak{h}\oplus\mathfrak{n}_+,
 \end{equation}
@@ -165,7 +169,7 @@ where $\mathfrak{h}$ and $\mathfrak{n}^+$ denote the Cartan subalgebra and the p
 \begin{equation}
     G = K\times H\times N_+.
 \end{equation}
-An element $\mathcal{V}$ in $K/G$ describing the scalar fields $\{\phi^a,\chi^i\}$ can thus be parameterised by 
+An element $\mathcal{V}$ in $G/K$ describing the scalar fields $\{\phi^a,\chi^i\}$ can thus be parameterised by 
 \begin{equation}\label{eq:vparam}
     \mathcal{V} = \ee^{\phi^a(x)h_a}\ee^{\chi^i(x)e_i},
 \end{equation}
@@ -181,11 +185,11 @@ By taking the differential of $\mathcal{V}$ and multiplying with its inverse we 
 \begin{equation}
     \mathcal{V}^{-1}\dd \mathcal{V} = \mathcal{Q}+\mathcal{P},
 \end{equation}
-where $\mathcal{Q}\in\mathfrak{k}$ and $\mathcal{P}=\mathfrak{g}\ominus\mathfrak{k}$. Since the elements in $\mathfrak{k}$ and $\mathfrak{p}$ have eigenvalues $1$ and $-1$ under the Chevalley involution one obtains the different terms as
+where $\mathcal{Q}\in\mathfrak{k}$ and $\mathcal{P}=\mathfrak{g}\ominus\mathfrak{k}$. Since the elements in $\mathfrak{k}$ and $\mathfrak{p}$ have eigenvalues $1$ and $-1$ under the Chevalley involution one obtain the different terms as
 \begin{equation}
     \mathcal{Q} = \frac{1}{2}\left(\mathcal{V}^{-1}\dd \mathcal{V}+\omega\left(\mathcal{V}^{-1}\dd \mathcal{V}\right)\right),\\\qquad \mathcal{P} = \frac{1}{2}\left(\mathcal{V}^{-1}\dd \mathcal{V}-\omega\left(\mathcal{V}^{-1}\dd \mathcal{V}\right)\right).
 \end{equation}
-In order to write down an object invariant under global $G$ and local $K$ in terms of the physical component $\mathcal{P}$ we need an invariant tensor for the tensor product representation of adjoint representations. The Killing form is such an invariant tensor and an invariant term can thus be written as 
+In order to write down an object invariant under global $G$ and local $K$ in terms of the physical component $\mathcal{P}$ we need an invariant tensor for the tensor product of two adjoint representations. The Killing form is such an invariant tensor and an manifestly invariant term can thus be written as 
 \begin{equation}
     \mathcal{L} \sim \kappa(\mathcal{P}_\mu,\mathcal{P}_\nu)g^{\mu\nu}\sqrt{-g},
 \end{equation}
@@ -193,7 +197,7 @@ where $g^{\mu\nu}$ is the inverse metric of the external space. We have thus fou
 
 
 \section{Dualities}\label{sec:Dualities}
-Dualities is a term that is used in different ways in physics. What we will be interested in is dualities between two theories $\mathscr{T}$ and $\tilde{\mathscr{T}}$ such that we can find a map to relate them 
+Duality is a term that is used in many different ways in physics. What we will be interested in are dualities between two theories $\mathscr{T}$ and $\tilde{\mathscr{T}}$ such that we can find a map to relate them 
 \begin{equation}
     \mathscr{T} \leftrightarrow \mathscr{\tilde{T}}.
 \end{equation}
@@ -203,22 +207,22 @@ A typical example of such a duality is the duality of electromagnetism in vacuum
 \end{equation}
 under which Maxwell's equations are invariant. 
 
-In order work with interacting field theories we usually employ perturbation theory in some ``small'' coupling constant $g$, such that observables are given as a perturbation series 
+Usually we are interested in interacting field theories where we have to employ perturbation theory in some ``small'' coupling constant $g$, such that observables are given as a perturbation series
 \begin{equation}\label{eq:pert}
     R(g) = \sum_{n=0}^{\infty}a_n g^n.
 \end{equation}
-Usually these series do not converge but in many cases they are believed to be asymptotic series. Non-perturbative effects typically scale like $\sim \ee^{-1/g^n}$ which is not captured by the expansion \eqref{eq:pert}. Typically instanton effects in ordinary field theories scale with $n=2$. These considerations leads to two kinds of duality transformations weak-weak duality and weak-strong duality. 
+These series typically do not converge but in many cases they are believed to be asymptotic series. Non-perturbative effects has a characteristic scaling $\sim \ee^{-1/g^n}$ which is not captured by the expansion \eqref{eq:pert} in which instanton effects in ordinary field theories scale typically scale with $n=2$. In interacting theories we thus get two two kinds of duality transformations: weak-weak duality and weak-strong duality. 
 \begin{itemize}
     \item Weak-weak duality: $\left(\mathscr{T},g\right)\leftrightarrow\left(\mathscr{T}',g'\right)$ with $g,g'\ll 1$.
     \item Weak-strong duality: $\left(\mathscr{T},g\right)\leftrightarrow\left(\mathscr{T}'',g''\right)$ with $g\ll 1$ and $g''\gg 1$.
 \end{itemize}
-Weak-strong duality is of special interest since it allows us to probe the non-perturbative regime of a theory, using perturbative methods in the dual theory. Since little is usually known about the non-perturbative regime this duality is hard to prove. However, there are quantities that are protected against perturbative corrections and extrapolation to the non-perturbative regime. These play an important rôle in confirming these weak-strong dualities. Perhaps the most prominent weak-strong duality is the AdS/CFT correspondence, first conjectured by Maldacena in \cite{Maldacena1999}. This is a rather special duality in the sense that it relates a string theory (which includes gravity) in a given dimension to an conformal field theory in one spacetime dimension lower, without gravity. This is one example of the holographic principle introduced by 't Hooft and Susskind.
+Weak-strong duality is of special interest since it allows us to probe the non-perturbative regime of a theory, using perturbative methods in the dual theory. Since little is usually known about the non-perturbative regime such a duality is however hard to prove. However, there are quantities that are protected against perturbative corrections and extrapolation to the non-perturbative regime is possible. These play an important rôle in confirming these weak-strong dualities. Perhaps the most prominent weak-strong duality is the AdS/CFT correspondence, first conjectured by Maldacena in \cite{Maldacena1999}. This is a rather special duality in the sense that it relates a string theory (which includes gravity) in a given dimension to an conformal field theory in one spacetime dimension lower, without gravity. 
 
-Motivation for the presence of a weak-weak T-duality symmetry when compactifying type II string theories on a torus $T^d$ was introduced above, with the the T-duality group $O(d,d,\mathbb{Z})$. Moreover, type IIB has a weak-strong so-called S-duality symmetry with transformations given by $SL(2,\mathbb{Z})$. It is conjectured that these combine in to a larger set of dualities called U-duality, given by 
+Motivation for the presence of a weak-weak T-duality symmetry when compactifying type II string theories on a torus $T^d$ was introduced above, with the the T-duality group $O(d,d,\mathbb{Z})$. Moreover, type IIB has a weak-strong so-called S-duality symmetry with transformations given by $SL(2,\mathbb{Z})$. It is conjectured that these combine in to a larger set of dualities called U-duality \cite{Hull:1994ys}, given by 
 \begin{equation}
     SL(2,\mathbb{Z})\boxtimes O(d,d,\mathbb{Z}),
 \end{equation}
-where `$\boxtimes$' is a non-commutative product. For the type II theories the U-duality groups upon compactification on a torus $T^{n}$ is given in \tabref{tab:UdualityString}. These are just the discrete version of the continuous groups encountered in the supergravity. The continuous version can not be a symmetry of the full theory, it is believed to be broken by non-perturbative effects to the discrete version. 
+where `$\boxtimes$' is a non-commutative product. For the type II theories the U-duality groups upon compactification on a torus $T^{n}$ is given in \tabref{tab:UdualityString} which are just the discrete version of the continuous groups encountered in the supergravity. The continuous version can not be a symmetry of the full theory, instead they are are believed to be broken by non-perturbative effects to the corresponding discrete version. 
 
 \begin{table}\centering
     \caption{U-duality group for type II string theories on $T^n$.}\label{tab:UdualityString}

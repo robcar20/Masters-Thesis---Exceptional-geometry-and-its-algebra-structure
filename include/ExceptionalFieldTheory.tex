@@ -1,110 +1,292 @@
 \chapter{Exceptional field theory\label{chap:ExceptionalFieldTheory}}
 
-Double field theory aimed to make the continuous T-duality group a manifest symmetry of supergravity. The goal of exceptional field theory on the other hand does the same for the U-duality groups. As we have argued these duality groups $E_{d(d)}$ appear upon compactification of supergravity on a $d$-dimensional torus and is. One inherent difference compared to DFT is that the behaviour of the duality group is rather different between dimensions, making the general analysis more complicated. Moreover, for $d\geq 9$ the duality groups become infinite-dimensional which can in some sense be understood by noting that in this scalars are dual to scalars. %There is a conjecture by West \cite{West2011} that the full M-theory possess $E_{11}(\mathbb{Z})$ as a symmetry. 
+Double field theory aimed to make the continuous T-duality group a manifest symmetry of supergravity. The goal of exceptional field theory on the other hand does the same for the U-duality groups by replacing $O(d,d)\to E_{d(d)}$. As we have argued these duality groups $E_{d(d)}$ appear upon compactification of supergravity on a $d$-dimensional torus and the corresponding the discrete versions are the dualities of string theory/M-theory. One inherent difference compared to DFT is that the behaviour of the duality group is rather different between dimensions making the general analysis more complicated. Moreover, for $d\geq 9$ the duality groups become infinite-dimensional which in some sense could be understood by noting that in $d\leq 2$ external dimensions scalars become dual to scalars. %There is a conjecture by West \cite{West2011} that the full M-theory possess $E_{11}(\mathbb{Z})$ as a symmetry. 
 
-In section \ref{sec:Uduality} we start by reviewing the relevant U-duality groups and then in section \ref{sec:E6} we will sketch the steps of constructing $E_{6(6)}$ exceptional field theory following \cite{E62014}. For a similar construction for $E_{7(7)}$ and $E_{8(8)}$, see \cite{E72014,E82014}. 
+We will introduce exception field theory by the specific example of $E_{6(6)}$ exceptional field theory following \cite{E62014}. For a similar construction for $E_{7(7)}$ and $E_{8(8)}$, see \cite{E72014,E82014}. 
 
-There are two main points that we want to convey in this chapter besides providing another concrete example of an extended geometry. First we want to show some details on how to include external dimensions since this is the main part which differs from double field theory and extended geometries. In the former case all coordinates were enlargened while in extended geometries we simply drop the external space and consider only the purely internal sector. Secondly we want to motivate the appearance of a hierachy of form fields related the tensor hierarchy of gauged supergravities. This hierarchy seems to be deeply connected to extended geometries and will be discuss further in \ref{sec:GaugeStructureAndExtendedAlgebras}. 
-
-
-\section{U-duality}\label{sec:Uduality}
-It was argued in \ref{sec:Supergravity} that compactifiying eleven dimensional supergravity on a $T^d$ torus there is a global ``hidden'' symmetry group given by the exceptional series $E_{d(d)}$ \cite{CREMMER197848,Cremmer:1997ct,Hull:1994ys}. 
-
+There are two main points that we want to convey in this chapter besides providing another concrete example of an extended geometry. First we want to show some details on how to include external dimensions since this is the main part which differs from double field theory and extended geometries. In the former case all coordinates were enlargened while in extended geometries we simply drop the external space and consider only the purely internal sector. Secondly we want to motivate the appearance of a hierachy of form fields related the tensor hierarchy of gauged supergravities. This hierarchy seems to be deeply connected to extended geometries and will be discussed further in \ref{sec:GaugeStructureAndExtendedAlgebras}. Moreover, we will demonstrate three different solutions to the section condition, the first solution makes the global $E_{d(d)}$ symmetry of supergravity compactified on a torus $T^d$ manifest while the other two clarify the embedding of M-theory and type IIB supergravity respectively in the constructed exceptional field theory. 
 
 \section{E6 -- Exceptional field theory \label{sec:E6}}
-The bosonic sector of eleven dimensional supergravity consist of the a metric $g_{AB}$ and a three-form $A_{ABC}$. Compactifying this theory on a $T^6$ torus we get $3\times 7$ scalars from the metric and naively ${n}\choose{3}$ from the three-form. However, we also get a three-form in $5$ dimensions that is dual to a scalar since $5-3-2=0$. We thus get a total of $42$ scalars precisely as many as the number of generators in the coset $\mathfrak{e}_{6(6)}/\mathfrak{usp}(8)$, with $\mathfrak{usp}(8)$ being the maximal compact subalgebra of $\mathfrak{e}_{6(6)}$. This is in agreement with the discussion in section \ref{sec:Supergravity}. 
+The bosonic sector of eleven dimensional supergravity consist of the metric $g_{AB}$ and a three-form $A_{ABC}$. Compactifying this theory on a $T^6$ torus we get $3\times 7=21$ scalars from the metric and naively ${{6}\choose{3}}=20$ scalars from the three-form. However, it is also possible to dualise a three-form in $5$ dimensions to a scalar since $5-3-2=0$ and in total there are thus $42$ scalars. This equals the number of generators in the coset $\mathfrak{e}_{6(6)}/\mathfrak{usp}(8)$, with $\mathfrak{usp}(8)$ being the maximal compact subalgebra of $\mathfrak{e}_{6(6)}$, in agreement with the discussion in section \ref{sec:Supergravity}. 
 
-What we want to do is to expand spacetime similar to the DFT case by splitting the coordinates $X^A\to (x^\mu,y^i)$, with $\mu=1,2,\ldots 5$ and $i = 1,2,\ldots 6$, and then extend the internal coordinates to lie in $\overbar{\mathbf{27}}$ of $E_{6(6)}$ as $y^i\to z^M$, with $M=1,2,\ldots 27$. The extended spacetime is then $5+27$ dimensional and organize in to a coset element $\mathcal{M}_{MN}(x,z)\in E_{6(6)}/SU(8)$. 
+What we want to do is to expand spacetime similar to the DFT case by splitting the coordinates $x^A\to (x^\mu,y^i)$, with $\mu=1,2,\ldots 5$ and $i = 1,2,\ldots 6$, and then extend the internal coordinates to transform in $\mathbf{27}$ of $E_{6(6)}$ as $y^i\to z^M$, with $M=1,2,\ldots 27$. The extended spacetime is then $5+27$ dimensional and the $41$ scalars organize in to a coset element $\mathcal{M}_{MN}(x,z)\in E_{6(6)}/USp(8)$. 
 
-Just as in DFT we introduce generalised diffeomorphisms that encode the $E_{6(6)}$ transformations that we are `geometrizing' acting on a vector $V^M\in\overbar{\mathbf{27}}$ with weight $w$ as 
+Just as in DFT we introduce generalised diffeomorphisms that encode the $E_{6(6)}$ transformations that we are `geometrizing' by its action on a vector $V^M\in\mathbf{27}$ with weight $w$ as 
 \begin{equation}
-    \delta_\xi V^M = \mathscr{L}_\xi V^M = \xi^P\pd_PV^M-\tensor{Z}{^{MN}_{PQ}}\pd_N\xi^P W^Q+w\pd_P\xi^PV^M,
+    \delta_\xi V^M = \mathscr{L}_\xi V^M = \xi^P\pd_PV^M+\tensor{Z}{^{MN}_{PQ}}\pd_N\xi^P W^Q+w\pd_P\xi^PV^M,
 \end{equation}
 with the $E_{6(6)}$ invariant tensor
 \begin{equation}
     \begin{aligned}
-    \tensor{Z}{^{MN}_{PQ}} &= -6\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_Q}\tensor{T}{^{\beta N}_P} \\
-    &= -\frac{1}{3}\delta^M_Q\delta^N_P+\delta^M_P\delta^N_Q-10d_{PQS}d^{MNS},
+    \tensor{Z}{^{MN}_{PQ}} &= 6\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_Q}\tensor{T}{^{\beta N}_P} \\
+    &= \frac{1}{3}\delta^M_Q\delta^N_P-\delta^M_P\delta^N_Q+10d_{PQS}d^{MNS},
     \end{aligned}
 \end{equation}
-and $d_{MNS},d^{MNS}$ totally symmetric invariant tensors of $E_{6(6)}$ which we normalize as $d_{MNS}d^{PNS}=\delta^P_M$. Imposing Leibniz property and that the element $(V^NW_N)$, with a covector $W_N$ with weight $w'$, transforms as a scalar density of weigth $w+w'$ the action on $W_N$ is easily found. This generalises straightforward to a tensor with any number of indices. Importantly we define the section condition for $E_{6(6)}$ exceptional field theory as 
+and $d_{MNS},d^{MNS}$ totally symmetric invariant tensors of $E_{6(6)}$ which we normalize as $d_{MNS}d^{PNS}=\delta^P_M$. Imposing Leibniz property and that the element $(V^NW_N)$, with a covector $W_N$ with weight $w'$, transforms as a scalar density of weigth $w+w'$ the action on $W_N$ is easily found. This moreover generalise straightforward to a tensor with any number of indices. Importantly we define the section condition for $E_{6(6)}$ exceptional field theory as 
 \begin{equation}
     d^{MNS}\pd_N\otimes\pd_S = 0,
 \end{equation}
-which as in the DFT case is crucial for a consistent theory. Especially the section condition is need to show that the algebra of generalised diffemorphisms close according to \cite{E62014} (these results are also derived in the general case in \ref{chap:ExtendedGeometries})
+which as in the DFT case is crucial for a consistent theory. Especially the section condition is needed to show that the algebra of generalised diffemorphisms close according to \cite{E62014} (these results are also derived in the general case in chapter \ref{chap:ExtendedGeometries})
 \begin{equation}
     [\mathscr{L}_{\xi_1},\mathscr{L}_{\xi_2}] = \mathscr{L}_{\xi_{1,2}},
 \end{equation}
-where the transformation parameter $\xi_{1,2}$ is given by the E-bracket 
-\begin{equation}
-    [\xi_1,\xi_2]_E^M = 2\xi_1^P\pd_P\xi_2^M-10d^{MNP}d_{STP}\xi_2^S\pd_N\xi_1^T-(\xi_1\leftrightarrow\xi_2).
+where the transformation parameter $\xi_{1,2}=[\xi_1,\xi_2]_{\text{E}}$ is given by the E-bracket 
+\begin{equation}\begin{aligned}
+    \left[\xi_1,\xi_2\right]_{\text{E}}^M &= \frac{1}{2}(\mathscr{L}_{\xi_1}\xi_2-\mathscr{L}_{\xi_2}\xi_1)^M\\ &=\xi_1^P\pd_P\xi_2^M-5d^{MNP}d_{STP}\xi_1^S\pd_N\xi_2^T-(\xi_1\leftrightarrow\xi_2).
+    \end{aligned}
 \end{equation}
 
-
-As in an ordinary gauge theory any local internal symmetry makes bare derivatives non-covariant. The usual solution is to introduce a connection $A_\mu^M$ that transforms inhomogeneously such that a covariant derivative can be define. In this spirit we define a covariant derivative as 
+The kernel of generalised diffeomorphisms is non-trivial as parameters of the form $\xi^M=d^{MNP}\pd_N \eta_P$ does not generate a transformation. To see this consider the transformation due to such a parameter
 \begin{equation}
     \begin{aligned}
-        D_\mu &:= \pd_\mu -\mathscr{L}_{A_\mu}
+    \mathscr{L}_\xi V^M &=-d^{MNP}\pd_S\pd_N\eta^PV^S+10d^{MNP}d^{QLS}d_{STP}\pd_N\pd_Q\eta_LV^T\\
+    &+\underbrace{d^{SNP}\pd_N\eta_P\pd_SV^M}_{=0\,\text{section condition}}+\underbrace{(\lambda-\frac{1}{3})\pd_S\pd_N\eta_Pd^{SNP}V^M}_{=0\,\text{section condition}}.
+    \end{aligned}
+\end{equation}
+The last term can be rewritten as 
+\begin{equation}
+    \begin{aligned}
+    d_{STP}d^{P(MN}d^{QL)S}\pd_Q\pd_N X &= \frac{1}{12}d_{STP}\big(4d^{SNQ}d^{LMP}+4d^{SMN}d^{QLP}+4d^{SML}d^{QNP}\big)\pd_N\pd_QX\\
+    &= \frac{2}{3}d_{STP}d^{SMN}d^{QLP}\pd_N\pd_QX,
+    \end{aligned}
+\end{equation}
+for some arbitrary field $X$ and the first term vanish using the section condition. Using the following identity for the $\mathfrak{e}_6$ cubic invariant 
+\begin{equation}\label{eq:E6Identity}
+d_{STP}d^{P(MN}d^{QL)S}=\frac{2}{15}\delta_T^{(M}d^{NQL)}, 
+\end{equation}
+it is found that 
+\begin{equation}
+    \begin{aligned}
+    d_{STP}d^{SMN}d^{QLP}\pd_N\pd_QX &= \frac{3}{2}\times\frac{2}{15}\delta_T^{(M}d^{NQL)}\pd_N\pd_QX\\
+    &= \frac{1}{10}\delta^Q_Td^{MNL}\pd_N\pd_QX.
+    \end{aligned}
+    %\frac{2\times 6}{5\times 24} \delta^Q_Td^{MNL}\pd_N\pd_QX =
+\end{equation}
+It then follows immediately that $\delta_\xi V^M=0$ if $\xi^M=d^{MNP}\pd_N\eta_P$. This reducibility of transformations are typical for generalised diffemorphisms as we will see in chapter \ref{chap:ExtendedGeometries}. 
+
+We can derive other useful properties using \eqref{eq:E6Identity}. Consider $U^M=d^{MNK}\pd_NV_K$ with $V_K$ transforming with a weight $\lambda=\frac{2}{3}$. Then $U^M$ transforms as 
+\begin{equation}
+    \begin{aligned}
+        \delta U^M = d^{MNK}\pd_K(\mathscr{L}_\xi V_N) &= d^{MNK}\pd_K\left(\xi^S\pd_SV_N+\pd_N\xi^SV_S\pd_S\xi^SV_N-10d_{NLR}d^{SQR}\pd_Q\xi^LV_S\right).
+    \end{aligned}
+\end{equation}
+Using \eqref{eq:E6Identity} the last term can be rewritten using 
+\begin{equation}
+    \begin{aligned}
+    d^{N(MK}d_{NLR}d^{SQ)R}\pd_K(\pd_Q\xi^LV_S) &= \frac{1}{24}\left(8d^{NMK}d_{NLR}d^{SQR}+8d^{NMQ}d_{NLR}d^{SKR}\right)\\
+    &+8\underbrace{d^{NQK}d_{NLR}d^{SMR}\pd_K(\pd_Q\xi^LV_S)}_{=0\, \text{section condition}}\\
+    &= \frac{2\times 6}{15\times 24}d^{MKN}\pd_K\left(\pd_L\xi^LV_N+\pd_Q\xi^KV_N)\right),
+    \end{aligned}
+\end{equation}
+and we find 
+\begin{equation}\label{eq:E6FirstIdentity}
+    \begin{aligned}
+    10d^{NMK}d_{NLR}d^{SQR}\pd_K(\pd_Q\xi^LV_S) &= -10d^{NMQ}d_{NLR}d^{SKR}\pd_K(\pd_Q\xi^LV_S)\\
+    &+d^{MKN}\pd_K(\pd_L\xi^LV_N+d^{MNK}\pd_K(\pd_Q\xi^KV_N)).
+    \end{aligned}
+\end{equation}
+Inserting \eqref{eq:E6FirstIdentity} in the transformation of $U^M$ we get 
+\begin{equation}
+    \delta U^M = d^{MNK}\xi^S\pd_S\pd_KV_N+10d^{MNQ}d_{KSN}d^{LSN}d^{SKR}\pd_Q\xi^L\pd_KV^S,
+\end{equation}
+which shows that $U^M$ of this form transforms as a vector with weigth $\lambda=\frac{1}{3}$ which will be useful later on. 
+
+As in an ordinary gauge theory any local internal symmetry make bare derivatives non-covariant. The usual solution is to introduce a connection $A_\mu^M$ that transforms inhomogeneously such that a covariant derivative can be define. In this spirit we define a covariant derivative by its action on a vector $V$ 
+\begin{equation}
+    \begin{aligned}
+        D_\mu V^M &:= \pd_\mu V^M -\mathscr{L}_{A_\mu}V^M\\
              &= \pd_\mu V^M-A_\mu^P\pd_PV^M+\tensor{Z}{^{MN}_{PQ}}\pd_NA_\mu^PV^Q-\lambda\pd_P A_\mu^PV^M,
     \end{aligned}
 \end{equation}
-with $A_\mu^M$ being the gauge connection. We want to impose that 
+with $A_\mu^M$ being the gauge connection. We then impose that this transforms covariantly for any tensor field $X$, i.e.\
 \begin{equation}
-    \delta_\xi (D_\mu X) \overset{!}{=} \mathscr{L}_\xi (D_\mu X),
+    \delta_\xi (D_\mu X) \overset{!}{=} \mathscr{L}_\xi (D_\mu X).
 \end{equation}
-for any tensor field $X$. Note that this is not true for bare derivatives 
+Note especially that this is not true for bare derivatives
 \begin{equation}
-    \delta_\xi (\pd_\mu V^N) = \pd_\mu(\delta_\xi V^N) \neq \mathscr{L}_\xi (\pd_\mu V^N)
+    \delta_\xi (\pd_\mu V^N) = \pd_\mu(\delta_\xi V^N) \neq \mathscr{L}_\xi (\pd_\mu V^N),
 \end{equation}
-since the generalised diffeomorphism parameter is assumed to depend on the external spacetime as well $\xi=\xi(x,z)$. The gauge connection then does not transform as a tensor, rather it transforms inhomogeneously as \todo{do this}
+since the generalised diffeomorphism parameter is assumed to depend on the external spacetime as well $\xi=\xi(x,z)$. Look at the inhomogeneous transformation $\Delta_\xi V = \delta_\xi V -\mathscr{L}_\xi V$ on a vector field $V$
 \begin{equation}
-    \delta_\xi A_\mu^M = D_\mu\xi^M.
+    \begin{aligned}
+        \Delta_\xi V^M &= \delta_\xi(\pd_\mu V^M-\mathscr{L}_{A_\mu})-\mathscr{L}_\xi\pd_\mu V^M+\mathscr{L}_\xi\mathscr{L}_{A_\mu}V^M\\
+        &=\mathscr{L}_{\pd_\mu\xi}V^M-\mathscr{L}_{\delta A_\mu}V^M+\mathscr{L}_{[\xi,A_\mu]_{\text{E}}}V^M.
+    \end{aligned}
+\end{equation}
+We thus find that if the gauge connection transforms as $\delta A_\mu = \pd_\mu \xi^M+[\xi,A_\mu]_{\text{E}}^M$. However, this is only defined up to an trivial transformation and we use this to slightly rewrite the transformation of $A_\mu^M$ by noting that 
+\begin{equation}
+    \begin{aligned}
+    \left[\xi,A_\mu\right]_{\text{E}}^M &= \xi^P\pd_PA^M_\mu-A_\mu^P\pd_P\xi^M-5d^{MNP}d_{STP}\xi^S\pd_NA_\mu^T+5d^{MNP}d_{STP}A_\mu^S\pd_N\xi^T \\
+    &= \xi^P\pd_PA^M_\mu-A_\mu^P\pd_P\xi^M-10d^{MNP}d_{STP}\xi^S\pd_NA_\mu^T+5d^{MNP}d_{STP}\pd_N (\xi^SA_\mu^T)\\
+    &:=D_\mu \xi^M+d^{MNP}\pd_N\zeta_P,
+    \end{aligned}
+\end{equation}
+with $d^{MNP}\pd_N\zeta_P$ being a parameter in the kernel of generalised diffeomorphisms and, moreover, defining $\xi^M$ to transform with a weight $w=\frac{1}{3}$. We thus find that the covariant derivative is indeed covariant if 
+\begin{equation}
+    \delta A_\mu^M = D_\mu \xi^M. 
 \end{equation}
 
-In analogy with Yang-Mills theory we would then want to construct an field strength tensor $F^M_{\mu\nu}$ that transforms covariantly under the duality group, i.e.\ $\delta_\xi \tilde{F}^M_{\mu\nu}\overset{}=\mathscr{L}_\xi F^M_{\mu\nu}$. The obvious guess would be to define $\tilde{F}^{M}_{\mu\nu}$ as 
+In analogy with Yang-Mills theory we would then want to construct an field strength tensor $\tilde{F}^M_{\mu\nu}$ that transforms covariantly under the duality group, i.e.\ $\delta_\xi \tilde{F}^M_{\mu\nu}\overset{}=\mathscr{L}_\xi \tilde{F}^M_{\mu\nu}$. The obvious guess would be to define $\tilde{F}^{M}_{\mu\nu}$ as 
 \begin{equation}
-    \tilde{F}^M_{\mu\nu} := 2\pd_{[\mu}A_{\nu]}^M-[A_\mu,A_\nu]_E^M.
+    \begin{aligned}
+    \tilde{F}^M_{\mu\nu} :&= 2\pd_{[\mu}A_{\nu]}^M-[A_\mu,A_\nu]_{\text{E}}^M\\
+     &= 2\pd_{[\mu}A^M_{\nu]}-2A^P_{[\mu}\pd_PA^M_{\nu]}-10d^{MNP}d_{STP}A^S_{[\mu}\pd_NA^T_{\nu]}
+    \end{aligned}
 \end{equation}
-However, by a direct computation it is seen that $\tilde{F}$ does not transform covariantly but instead
+Varying the gauge potential we find 
 \begin{equation}
-    \delta_\xi \tilde{F}_{\mu\nu}^M = 2D_{[\mu}\delta A_\nu^M+10d^{MNS}d_{QTS}\pd_N\left(A^Q_{[\mu}\delta A^T_{\nu]}\right).
+    \begin{aligned}
+    \delta \tilde{F}^M_{\mu\nu} &= 2\pd_{[\mu}\delta A^M_{\nu]}+2\delta A^K_{[\mu}\pd_KA^M_{\nu]}-2A^K_{[\mu}\pd_K\delta A^M_{\nu]}+\\
+    &+10d^{MNP}d_{STP}\left(\delta A^S_{[\mu}\pd_NA^T_{\nu]}+ A^S_{[\mu}\pd_N\delta A^T_{\nu]}\right),
+    \end{aligned}
 \end{equation}
-In order to define a covariant field strength tensor we will introduce a $2$-form $B_{\mu\nu M}$ that transforms as 
+which by comparison with the expression 
 \begin{equation}
-    \delta B_{\mu\nu M} = \Delta B_{\mu\nu N}-d_{MNS}A^N_{[\mu}\delta A^S_{\nu]},
+    \begin{aligned}
+    2D_{[\mu}\delta A^M_{\nu]} = 2\pd_{[\mu}\delta A^M_{\nu]}-2A^P_{[\mu}\pd_P\delta A^M_{\nu}+2\pd_PA^M_{[\mu}\delta A^P_{\nu]}-20d^{MNP}d_{STP}\pd_NA^S_{[\mu}\delta A^T_{\nu]},
+    \end{aligned}
 \end{equation}
-and define the covariant field strength tensor of $A^M_\mu$ as 
+where we used that $A^M_\mu$ transforms with a weight $\frac{1}{3}$, can be written as 
+\begin{equation}
+    \delta \tilde{F}^M_{\mu\nu} = 2D_{[\mu}\delta A^M_{\nu]}+10d^{MNP}d_{STP}\pd_N\left(A^S_{[\mu}\delta A^T_{\nu]}\right).
+\end{equation}
+
+The last term in the transformation of $\tilde{F}^M_{\mu\nu}$ is non-covariant and in order to define a covariant field strength tensor we will introduce a $2$-form $B_{\mu\nu M}$ that transforms as 
+\begin{equation}
+    \Delta B_{\mu\nu M} = \delta B_{\mu\nu N}+d_{MNS}A^N_{[\mu}\delta A^S_{\nu]}.
+\end{equation}
+This $2$-form also possess a gauge symmetry parameterized by a $1$-form parameter $\Sigma_{\mu N}$ with weight $\frac{2}{3}$. We can then define a covariant field strength tensor of $A^M_\mu$ as 
 \begin{equation}
     F_{\mu\nu}^M = 2\pd_{[\mu}A_{\nu]}^M-[A_\mu,A_\nu]_E^M+10d^{MNS}\pd_NB_{\mu\nu S}.
 \end{equation}
+To see that this is covariant we first we define the gauge transformation of $A_\mu^M$ and $B_{\mu\nu N}$ as 
+\begin{equation}
+    \begin{aligned}
+    \delta A_\mu^M &= D_\mu\xi^M-10d^{MNK}\pd_N\Sigma_{\mu K},\\
+    \Delta B_{\mu\nu M} &= 2D_{[\mu}\Sigma_{\nu]M}+d_{MNK}\xi^NF_{\mu\nu}^K.
+    \end{aligned}
+\end{equation}
+Note that $B_{\mu\nu M}$ appeared only in the combination $d^{MNK}\pd_KB_{\mu\nu N}$ so that the gauge variation $\Delta B_{\mu\nu M}$ is only defined up to a term that vanish when contracted with $d^{MNK}\pd_K$. The gauge variation of $F_{\mu\nu}^M$ is the found to be
+\begin{equation}\label{eq:GaugeVariationE6}
+    \begin{aligned}
+        \delta F_{\mu\nu}^M &= 2D_{[\mu}D_{\nu]}\xi^M-20d^{MNK}D_{[\mu}\pd_K\Sigma_{\nu]N}\\
+        &+20d^{MNK}\pd_KD_{[\mu}\Sigma_{\nu]N}+10d^{MNK}d_{NSP}\pd_K\left(\xi^SF_{\mu\nu}^P\right).
+    \end{aligned}
+\end{equation}
+In order to see that $F_{\mu\nu^M}$ transforms as a vector we use that 
+\begin{equation}
+    \begin{aligned}
+    2D_{[\mu}D_{\nu]}V^M &=-2\mathscr{L}_{A_{[\mu}}\pd_{\nu]}V^M-2\pd_{[\mu}\mathscr{L}_{A_{\nu]}}V^M+\mathscr{L}_{[A_\mu,A_\nu]_{\text{E}}}V^M,
+    \end{aligned}
+\end{equation}
+and it is straightforward to expand the first two terms and find 
+\begin{equation}\label{eq:E6FMUNUCOMM}
+    \begin{aligned}
+        2D_{[\mu}D_{\nu]}V^M &= -2\pd_{[\mu} A_{\nu]}^K\pd_KV^M+2\pd_K\pd_{[\mu}A_{\nu}^M+2(\lambda-\frac{1}{3})\pd_P\pd_{[\mu}A_{\nu]}PV^M\\
+        &-20d^{MNL}d_{SPL}\pd_N\pd_{[\mu}A_{\nu]}^PV^S+\mathscr{L}_{[A_\mu,A_\nu]_{\text{E}}}V^M\\
+        &= -\mathscr{L}_{F_{\mu\nu}}V^M.
+    \end{aligned}
+\end{equation}
+Moreover in the gauge variation \eqref{eq:GaugeVariationE6} there is a term $d^{MNK}D_\mu\pd_K\Sigma_{\nu N}$ and we note that the covariant derivative and the partial derivative does in general not commute. However, noting that $\Sigma_{\mu N}$ carries a weight $\frac{2}{3}$ we can use that $d^{MNK}\pd_K\Sigma_{\nu N}$ transforms as vector with weight $\frac{1}{3}$. We then find
+\begin{equation}
+    \begin{aligned}
+        d^{MNK}D_\mu\pd_KV_N&=d^{MNK}\pd_K\pd_\mu V_N-d^{MNK}A_{\mu}^S\pd_S\pd_KV_N\\
+            &+\underbrace{d^{SNK}\pd_SA_\mu^M\pd_KV_N}_{=0\, \text{section condition}}-10d^{MLR}d_{LST}d^{TNK}\pd_RA_\mu^S\pd_KV_N.
+    \end{aligned}
+\end{equation}
+The last term can be rewritten using the same calculation as in \eqref{eq:E6FirstIdentity} and we thus get 
+\begin{equation}
+    \begin{aligned}
+        d^{MNK}D_\mu\pd_KV_N&=d^{MNK}\pd_K\pd_\mu V_N-d^{MNK}A_{\mu}^S\pd_S\pd_KV_N\\
+            &+10d^{MLK}d_{LST}d^{TNR}\pd_RA_\mu^S\pd_KV_N-d^{MNK}\pd_SA_\mu^S\pd_KV_N-d^{MNK}\pd_KA_\mu^S\pd_SV_N.
+    \end{aligned}
+\end{equation}
+On the other hand consider 
+\begin{equation}
+    \begin{aligned}
+    d^{MNK}\pd_KD_\mu V_N &= d^{MNK}\pd_K\left(\pd_\mu V_N-A_\mu^S\pd_SV_N-\pd_SA_\mu^SV_N\right)\\
+    &+10d^{MLK}d_{LST}d^{TNR}\pd_RA_\mu^TV_N-\underbrace{d^{MNK}\pd_K(\pd_NA_\mu^S V_S)}_{=0\, \text{section condition}},
+    \end{aligned}
+\end{equation}
+from which it is easily found that
+\begin{equation}
+    d^{MNK}\pd_KD_\mu V_N= d^{MNK}D_\mu\pd_KV_N,
+\end{equation}
+if $V_N$ transforms with a weight $\frac{2}{3}$. Using this together with \eqref{eq:E6FMUNUCOMM} it is straightforward to find the variation of the field strength tensor $F_{\mu\nu}^M$ in \eqref{eq:GaugeVariationE6} as 
+\begin{equation}
+    \begin{aligned}
+    \delta F_{\mu\nu}^M &= \xi^K\pd_KF_{\mu\nu}^M-\pd_K\xi^MF_{\mu\nu}^M+10d_{NLR}d^{MKR}\pd_K\xi^LF_{\mu\nu}^N\\
+    &= \mathscr{L}_\xi F_{\mu\nu}^M,
+    \end{aligned}
+\end{equation}
+and $F_{\mu\nu}^M$ thus transforms as a covariant vector with weight $\frac{1}{3}$. 
+
 
 Having to introduce higher order form fields in order to ensure covariance for gauge connections might seem a bit strange. However, this is a typical feature of so-called gauged supergravities \cite{deWitTensorHierarchies2008}. These are maximal supergravities obtained by compactifaction on a torus $T^d$ in which then continues bye promoting a subgroup $G_0$ of the global duality group to a local symmetry. As above one then has to introduce gauge fields in order to define covariant derivatives and the corresponding field strength tensors will also transform non-covariantly. One solves this problem by successively adding higher form fields as we have done above but however, these has to transform in particular representations $R_p$ of the duality group $G$ in order to achieve covariant field strength tensors. This leads to the notion of a ``tensor hierarchy'' of p-forms that has to be introduced in order to define gauged supergravities. Moreover, the tensor hierarchy algebra constructed in \cite{Palmkvist:2013vya} predicts precisely this series of representations. At the same time this infinite-dimensional tensor hierarchy algebra seems to be important for a full theory of extended geometries which we discuss further in \ref{sec:GaugeStructureAndExtendedAlgebras}. 
 
 In \cite{E62014} an action for the external metric $g_{\mu\nu}$, the gauge field $A^M_\mu$, the two-form $B_{\mu\nu M}$ and the scalar fields $\mathcal{M}_{MN}$ is found that is invariant under external diffemorphisms as well as internal general diffeomorphisms. This action is given by 
-\begin{equation}\label{eq:E6Action}
-    S_{E_{6(6)}} = \int \dd x^5\dd z^{27} \sqrt{|g|}\left(\tilde{R}+\frac{1}{24}g^{\mu\nu}D_\mu \mathcal{M}_{MN}D_\nu\mathcal{M}^{MN}-\frac{1}{4}\mathcal{M}_{MN}F^M_{\mu\nu}F^N_{\mu\nu}-V(\mathcal{M}_{MN},g_{\mu\nu})\right)+\mathcal{L}_{\text{top}},
+\begin{equation}\label{eq:E6Action}\begin{aligned}
+    S_{E_{6(6)}} = &\int \dd x^5\dd z^{27} \sqrt{|g|}\left(\tilde{R}+\frac{1}{24}g^{\mu\nu}D_\mu \mathcal{M}_{MN}D_\nu\mathcal{M}^{MN}-\frac{1}{4}\mathcal{M}_{MN}F^M_{\mu\nu}F^N_{\mu\nu}-V(\mathcal{M}_{MN},g_{\mu\nu})\right)\\
+    +&\int \dd x^5\dd z^{27}\mathcal{L}_{\text{top}},
+    \end{aligned}
 \end{equation}
-with
+$\mathcal{L}_{\text{top}}$ a topological term that couple $A_\mu^M$ with $B_{\mu\nu^M}$ and especially the scalar potential 
+\begin{equation}
+    \begin{aligned}
+    V = -\frac{1}{24}\mathcal{M}^{MN}\pd_M\mathcal{M}^{KL}\pd_N\mathcal{M}_{KL}+\frac{1}{2}\mathcal{M}^{MN}\pd_M\mathcal{M}^{KL}\pd_L\mathcal{M}_{NK}\\
+    -\frac{1}{2}g^{-1}\pd_M g\pd_N\mathcal{M}^{MN}-\frac{1}{4}\mathcal{M}^{MN}g^{-1}\pd_Mgg^{-1}\pd_Ng-\frac{1}{4}\mathcal{M}^{MN}\pd_Mg^{\mu\nu}\pd_Ng_{\mu\nu}. 
+    \end{aligned}
+\end{equation}
+In the extended geometries introduced in chapter \ref{chap:ExtendedGeometries} it is the potential $V$ that we will generalise and derive a general expression for. 
+
 
 \subsection{Solving the section condition}
 In order to embed ordinary supergravity in the exceptional field theory discuss above we need to solve the section condition
 \begin{equation}
     d^{MNS}\pd_N\otimes\pd_S = 0.
 \end{equation}
-A trivial solution is to drop the dependence on the internal coordinates completely by setting $\pd_M=0$. In this case the action \eqref{eq:E6Action} reduces to that of supergravity compatictified on $T^6$ and especially the lagrangian for the scalar sector is given by the non-linear sigma model introduced in section \ref{sec:NonLinearSigmaModels}. Moreover, it is in this case that the global ``hidden'' symmetry group $E_{6(6)}$ of a torus compactified supergravity becomes a manifest symmetry which was the main motivation for introducing extended geometries. Note in this case we clearly have a truncated theory in comparison to the full $E_{6(6)}$ which is untruncated. 
+A trivial solution is to drop the dependence on the internal coordinates completely by setting $\pd_M=0$. In this case the action \eqref{eq:E6Action} reduces to that of supergravity compatictified on $T^6$ and especially the lagrangian for the scalar sector is given by the non-linear sigma model introduced in section \ref{sec:NonLinearSigmaModels}. Moreover, it is in this case that the global ``hidden'' symmetry group $E_{6(6)}$ supergravity compactified on $T^6$  becomes a manifest symmetry which was the main motivation for introducing extended geometries. Note in this case we clearly have a truncated theory in comparison to the full $E_{6(6)}$ exceptional field theory which is not truncated. 
 
-By looking at the Dynkin diagram for $\mathfrak{e}_{6(6)}$ we can find other interesting solutions. 
+By looking at the Dynkin diagram for $\mathfrak{e}_{6(6)}$, shown in in \figref{fig:E6Section}, we can find at least two other interesting solutions corresponding different embeddings of a $\mathfrak{gl}$ subalgebra. In order to see how this solves the section condition begin with decomposing $\mathbf{27}$ and the adjoint $\mathbf{78}$ under $\mathfrak{sl}(6)\oplus\mathbb{R}$
+\begin{equation}
+    \begin{cases}\label{eq:E6Decomp}
+        \mathbf{27}\to \mathbf{6}_{-1}\oplus\mathbf{15}\oplus \mathbf{6}_{1},\\
+        \mathbf{78}\to \mathbf{1}_{-2}\oplus\mathbf{20}_{-1}\oplus\left[\mathbf{35}+\mathbf{1}\right]_{0}\oplus\mathbf{20}_{1}\oplus 1_{2},
+    \end{cases}
+\end{equation}
+with the subscript denoting the eigenvalue of $\mathbb{R}$. In components the vector field is then given by $z^M = (z^i,z_{ij},z^{\hat{i}})$ and the section condition can be solved by setting
+\begin{equation}
+    \pd^{ij} = 0,\qquad \pd_{\hat{i}} = 0,
+\end{equation}
+with derivatives acting on arbitrary fields. This solves the section condition since the only possibly non-trivial term is $d^{ijk}\pd_j\otimes\pd_k$ which vanish as well. This is so since $d^{MNP}$ is an invariant tensor and any non-trivial term of $d^{MNP}$ should carry weight $0$ under $\mathbb{R}$. Before looking at the second solution to the section condition consider an element in the coset space $\mathfrak{e}_{6(6)}/\mathfrak{usp}(8)$ which we in the beginning argued to parameterise the scalar fields. 
+\begin{equation}
+    \frac{E_{6(6)}}{USp(8)}\to \frac{GL(6)}{SO(6)},
+\end{equation}
+and we can identify $g_{mn}\in\frac{GL(6)}{SO(6)}$. The remaining $\text{dim}\, Usp(8)-\text{dim}\, SO(6)=21$ compact generators of $Usp(8)$ can be used to gauge away $\mathbf{20}_{-1}$ and $\mathbf{1}_{-2}$ in \eqref{eq:E6Decomp} such that we are left with $A_{mnp}\in \mathbf{20}_1$ and $\chi\in \mathbf{1}_{2}$, with $\chi$ coming from a dualized three-form in five dimensions. We have thus seen that this correspond to the M-theory solution of the section condition. The complete dictionary between $E_{6(6)}$ exceptional field theory with this section condition and M-theory is given in \cite{E62014}. 
 
+A similar story follows for the embedding $\mathfrak{sl}(5)\times \mathfrak{sl}(2)\times\mathbb{R}$ given in \figref{fig:E6Section} 
+\begin{equation}
+    \begin{cases}
+        \mathbf{27}&\to (\mathbf{5},\mathbf{1})_{4}\oplus (\overbar{\mathbf{5}},\mathbf{2})_{1}\oplus (\mathbf{10},\mathbf{1})_{-2}\oplus (\mathbf{1},\mathbf{2})_{-5},\\
+        \mathbf{78}&\to (\mathbf{5},\mathbf{1})_{-6}\oplus (\overbar{\mathbf{10}},\mathbf{2})_{-3}\oplus [(\mathbf{24},\mathbf{1})\oplus (\mathbf{1},\mathbf{3})\oplus (\mathbf{1},\mathbf{1})]_{0}\oplus (\mathbf{10},\mathbf{2})_{3}\oplus (\overbar{\mathbf{5}},\mathbf{1})_{6}.
+    \end{cases}
+\end{equation}
+In components the vector is given by $z^M=(z^{i},z_{i\alpha},z^{ij},z_{\alpha})$ and we can solve the section condition by setting
+\begin{equation}
+    \pd^{i\alpha}=0,\qquad \pd_{ij}=0,\qquad \pd^{\alpha} = 0,
+\end{equation}
+where again the derivatives act implicitly on any fields.  This again solves the section condition since $d^{ijk}$ vanish due to the grading. Considering again an element in the coset we find 
+\begin{equation}
+    \frac{E_{6(6)}}{Usp(8)}\to \frac{GL(5)}{SO(5)}\times\frac{SL(2)}{SO(2)}
+\end{equation}
+We can again use the remaining $\text{dim}\, USp(8)-\text{dim}\, SO(5)-\text{dim}\, SO(2)=25$ compact generators of $USp(8)$ to gauge away $(\overbar{\mathbf{5}},1)_{+6}\oplus(\mathbf{10},2)_{3}$. This corresponds to the type IIB supergravity solution of the section condition, to see this remember that the bosonic sector of type IIB consist of a metric $g_{ij}$, a two-form $B_2$, the dilaton $\phi$ and form fields $C_0$, $C_2$ and $C_4$. We then identify $g_{ij}\in GL(5)/SL(5)$, $(\phi,C_0)\in SL(2)/U(1)$, $(B_2,C_2)\in (\overbar{\mathbf{10}},\mathbf{2})_{-3}$ and $C_4\in (\mathbf{5},\mathbf{1})_{-6}$. The complete dictionary between $E_{6(6)}$ exceptional field theory with this section condition and type IIB supergravity is given in \cite{E62014}. 
+
+\todo{Correct figure}
 
 \begin{figure}
     \centering
-    \EsexSectionOne{1}
-    \caption{Caption}
-    \label{fig:my_label}
+    \EsexSection{1}
+    \caption{Two different solutions to the section condition with the upper corresponding to $\mathfrak{e}_{6(6)}\to \mathfrak{sl}(6)\oplus\mathbb{R}$ and the lower to $\mathfrak{e}_{6(6)}\to\mathfrak{sl}(5)\oplus\mathfrak{sl}(2)\oplus\mathbb{R}$.}
+    \label{fig:E6Section}
 \end{figure}
-\begin{figure}
-    \centering
-    \EsexSectionTwo{1}
-    \caption{Caption}
-    \label{fig:my_label}
-\end{figure}
+

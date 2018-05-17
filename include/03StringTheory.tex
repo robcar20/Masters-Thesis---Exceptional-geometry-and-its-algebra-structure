@@ -20,7 +20,7 @@ The Polyakov action in flat space has several important symmetries:
 \end{align}
 \begin{align}
     \text{World-sheet diffemorphisms:}\qquad &\delta X^\mu = -\xi^\alpha\pd_\alpha X^\mu,\\
-    &\delta \gamma_{\alpha\beta} = -\xi^\rho\pd_\rho h_{\alpha\beta}-\pd_\alpha xi^\rho \gamma_{\rho\beta}-\pd_\beta \xi^\rho h_{\alpha\rho},\\
+    &\delta \gamma_{\alpha\beta} = -\xi^\rho\pd_\rho \gamma_{\alpha\beta}-\pd_\alpha \xi^\rho \gamma_{\rho\beta}-\pd_\beta \xi^\rho \gamma_{\alpha\rho},\\
     &\delta\sqrt{-\gamma} = -\pd_\rho(\sqrt{-\gamma}\xi^\rho),
 \end{align}
 \begin{align}
@@ -30,13 +30,13 @@ The Polyakov action in flat space has several important symmetries:
 
 In the following consider a string in a flat Minkowski space with $G_{\mu\nu}=\eta_{\mu\nu}$, varying the Polyakov action w.r.t.\ to the world-sheet metric we find 
 \begin{equation}
-    \delta S = -\frac{T}{2}\int_\Sigma \dd^2\sigma \delta\gamma^{\alpha\beta}\sqrt{-\gamma}\left(\pd_\alpha X^\mu\pd_\beta X^\nu-\frac{1}{2}\gamma_{\alpha\beta}\gamma^{\rho\lambda}\pd_\rho X^\mu\pd_\lambda X^\nu\right).
+    \delta S = -\frac{T}{2}\int_\Sigma \dd^2\sigma \delta\gamma^{\alpha\beta}\sqrt{-\gamma}\left(\pd_\alpha X^\mu\pd_\beta X_\mu-\frac{1}{2}\gamma_{\alpha\beta}\gamma^{\rho\lambda}\pd_\rho X^\mu\pd_\lambda X_\mu\right).
 \end{equation}
 The world-sheet stress-energy tensor and the equations of motion is thus given by (in a suitable normalisation)
 \begin{equation}
-    T_{\alpha\beta}= \frac{4\pi}{\sqrt{-\gamma}}\frac{\delta S}{\delta\gamma^{\alpha\beta}} = -\frac{1}{\alpha'}\left(\pd_\alpha X^\mu\pd_\beta X^\nu-\frac{1}{2}\gamma_{\alpha\beta}\gamma^{\rho\lambda}\pd_\rho X^\mu\pd_\lambda X^\nu\right) = 0.
+    T_{\alpha\beta}= \frac{4\pi}{\sqrt{-\gamma}}\frac{\delta S}{\delta\gamma^{\alpha\beta}} = -\frac{1}{\alpha'}\left(\pd_\alpha X^\mu\pd_\beta X_\mu-\frac{1}{2}\gamma_{\alpha\beta}\gamma^{\rho\lambda}\pd_\rho X^\mu\pd_\lambda X_\mu\right) = 0.
 \end{equation}
-It follows that inserting a Weyl-transformation we find $T^{\alpha}_\alpha$. Moreover, since a general $2d$- metric has $3$ d.o.f.\ Weyl invariance together with world-sheet diffemorphisms is sufficient to set $h_{\alpha\beta}=\eta_{\alpha\beta}$ locally. Assuming a closed string we can throw away boundary terms to find the equations of motion for the string coordinates $X^\mu$
+It follows that inserting a Weyl-transformation we find $T^{\alpha}_\alpha=0$. Moreover, since a general $2d$- metric has $3$ d.o.f.\ Weyl invariance together with world-sheet diffemorphisms is sufficient to set $\gamma_{\alpha\beta}=\eta_{\alpha\beta}$ locally. Assuming a closed string we can throw away boundary terms to find the equations of motion for the string coordinates $X^\mu$
 \begin{equation}
     \pd_\alpha\left(\sqrt{-\gamma}\gamma^{\alpha\beta}\pd_\beta X^\mu\right) = 0,
 \end{equation}
@@ -44,11 +44,58 @@ which in conformal gauge ($\gamma_{\alpha\beta}=\eta_{\alpha\beta}$) simply is a
 \begin{equation}
     \pd^\alpha\pd_\alpha X^\mu = 0.
 \end{equation}
-This is easily solved by $X^\mu(\sigma,\tau)=X^\mu_R(\tau-\sigma)+X^\mu_L(\tau+\sigma)$ ($\tau =\sigma^0$ and $\sigma=\sigma^1$) and 
+This is easily solved by $X^\mu(\sigma,\tau)=X^\mu_R(\tau-\sigma)+X^\mu_L(\tau+\sigma)$ ($\tau =\sigma^0$ and $\sigma=\sigma^1$) and in light-cone coordinates $\sigma^{\pm}=\tau\pm\sigma$ 
 \begin{equation}
-    X^\mu_{L,R} = \frac{1}{2}(x^\mu\pm c^\mu)+\frac{\pi\alpha'}{l}p^\mu(\tau\pm\sigma)+\ii \sqrt{\frac{\alpha'}{2}}\sum_{n\in\mathbb{Z}}\frac{1}{n}\alpha^\mu_n\ee^{-\frac{2\pi}{l}\ii n(\tau\pm sigma)},
+    \begin{aligned}
+        X^\mu_R(\sigma^-) &= \frac{1}{2}x^\mu+\frac{\alpha'}{2}p^\mu\sigma^-+\ii\sqrt{\frac{\alpha'}{2}}\sum_{n\neq 0}\frac{1}{n}\alpha_n^\mu\ee^{-\ii n\sigma^-}\\
+        X^\mu_L(\sigma^+) &= \frac{1}{2}x^\mu+\frac{\alpha'}{2}p^\mu\sigma^++\ii\sqrt{\frac{\alpha'}{2}}\sum_{n\neq 0}\frac{1}{n}\tilde{\alpha}_n^\mu\ee^{-\ii n\sigma^+}. 
+    \end{aligned}
 \end{equation}
-with $l$ being the length of the string. The first two tirms describe constant motion of the center of mass of the string while the sum denotes oscillations along the string. 
+The first two terms describe constant motion of the center of mass of the string while the sum denotes oscillations along the string. In order for $X^\mu$ to be real we also have $\alpha_{n}^\mu=(\alpha_{-n}^\mu)^*$ and likewise for the left-moving oscillators. Inserting the oscillator expansion into the constraint $T_{\alpha\beta}=0$ which in light-cone coordinates are given by 
+\begin{equation}
+    \pd_+X^\mu\pd_+X_\mu =\pd_-X^\mu\pd_-X_\mu = 0,
+\end{equation}
+we find ($p_0^\mu:= \sqrt{\alpha'/2}p^\mu$)
+\begin{equation}
+    \begin{aligned}
+    \pd_-X_L = \frac{\alpha'}{2}\sum_{n\in\mathbb{Z}}\alpha_{n}^\mu \ee^{-\ii n\sigma^-}\implies\\
+    \pd_-X^\mu\pd_-X_\mu = \alpha'\sum_nL_n \ee^{-\ii n\sigma^-}=0,
+    \end{aligned}
+\end{equation}
+with $L_n:=\frac{1}{2}\sum_n \alpha_{n-m}^\mu\alpha_{m\mu}$ and similar for the right-movers. Especially interesting is the constraint $L_0=0$ since it includes the spacetime momenta $p^\mu p_\mu=-m^2$ from which the mass-formula is derived to be
+\begin{equation}
+    m^2 = \frac{4}{\alpha'}\sum_{m>0}\alpha_{-m}\cdot \alpha_{m}.
+\end{equation}
+
+Imposing canonical quantization conditions on $X^\mu$ and the conjugate momentum $\Pi_\mu=\frac{1}{2\pi\alpha'}\frac{\delta \mathcal{L}}{\delta X^\mu}$ as $[X^\mu(\sigma,\tau),\Pi_\nu(\sigma',\tau)] = \ii \delta^\mu_\nu\delta(\sigma-\sigma')$ and in terms of the expansion we find 
+\begin{equation}
+    [x^\mu,p_\nu] = \ii \delta^\mu_\nu \qquad \text{and}\qquad [\alpha^\mu_{m,L,R},\alpha^\nu_{n,L,R}] = m\delta_{m,-n}\eta^{\mu\nu}.
+\end{equation}
+Since $L_n$ now become operators there are possible order ambigiuities when quantizing and a standard result is that the bosonic string has to live in $D=26$ dimensions and the mass operator is shifted to 
+\begin{equation}
+    m^2 = \frac{4}{\alpha'}\left(\sum_{m>0}\alpha_{-m}\cdot \alpha_{m}-1\right).
+\end{equation}
+From the commutation relations $\alpha_{-m}\alpha_{m}$ is a number operator up to a factor of $m$ and one usuallly defines the total number operator as the sum $N=\sum_{m>0}\alpha_{-m}\cdot \alpha_{m}$. Since the exact same result can be found using right-moving oscillators we get the level-matching condition $N-\tilde{N}=0$.  Also we see that the mass of the ground state with no oscillators is $m^2|0\rangle=-|0\rangle$ which indicates the presence of the tachyon indicating the need for a supersymmetric string theory. 
+
+Consider the closed bosonic string compactified on $X^{25}\sim X^{25}+2\pi R$, i.e.\ on $S^1$ with radius $R$ along its 25th dimension. It follows immediately that the momenta along this direction becomes quantized as $p^{25}=n/R$ for $n\in \mathbb{Z}$. Going once around the string we need longer come back but can we wound $m$ number of times around the circle as $X^{25}(\sigma+2\pi,\tau)=X^{25}(\sigma,\tau)+2\pi mR\sim X^{25}(\sigma,\tau)$. The expansion of $X_{25}^\mu$ is then given given by 
+\begin{equation}
+    \begin{aligned}
+        X^\mu_{25,R}&=\frac{1}{2}x^\mu+\frac{\alpha'}{2}\left(\frac{n}{R}+\frac{mR}{\alpha'}\right)\sigma^++\text{osc.,}\\
+        X^\mu_{25,L}&=\frac{1}{2}x^\mu+\frac{\alpha'}{2}\left(\frac{n}{R}-\frac{mR}{\alpha'}\right)\sigma^-+\text{osc.}.
+    \end{aligned}
+\end{equation}
+The mass formula for the string states is straightforward to derive and one finds
+\begin{equation}
+    \begin{aligned}
+    m^2 &= \left(\frac{n}{R}-\frac{mR}{\alpha'}\right)^2+\frac{4}{\alpha'}\left(N-1\right)\\
+        &= \left(\frac{n}{R}+\frac{mR}{\alpha'}\right)^2+\frac{4}{\alpha'}\left(\tilde{N}-1\right).
+    \end{aligned}
+\end{equation}
+First of all we see that the level matching condition is altered to $N-\tilde{N}=mn$ and more interestingly the mass formula is given by 
+\begin{equation}
+    m^2 = \frac{n^2}{r^2}+\frac{m^2R^2}{\alpha'^2}+\frac{2}{\alpha'}(N+\tilde{N}-2).
+\end{equation}
+The first term is simple to understand as the mass contribution from the momenta on $S^1$ and remembering that the string tension was given by $T=1/(2\pi\alpha')$, the contribution from the second term is simply $(2\pi RmT)^2$, where $m$ is the number of times the string winds around $S^1$. Most importantly we find that the mass is invariant if we make the transformation $R\leftrightarrow\alpha'/R$ and $m\leftrightarrow n$, the string thus have the same spectra of states if we compactify on a circle with radius $R$, or a circle with radius $\alpha'/R$. This is a pure stringy phenomena and this is the so-called T-duality of string theory. Generalising to compactifications on a torus $T^d$ one finds an larger set of dualities given by the discrete group $O(d,d,\mathbb{Z})$. In the corresponding supergravity theory compactified on a torus the the corresponding continuous version $(d,d,\mathbb{R})$ will be a symmetry. It is precisely this continuous group that we want to make a manifest symmetry in double field theory introduced in chapter \ref{sec:DFT}.
 
 \section{Supergravity and Kaluza-Klein compactification\label{sec:Supergravity}}
 Supergravity describes the low-energy effective theory of string theory in $10$ dimensions and M-theory in 11 dimensions. In fact, 11 dimensions is the largest dimension in which supergravity is consistent with one graviton and no field with spin higher than $2$. The $\mathcal{N}=1$ $D=11$ supergravity theory describing the low-energy physics of M-theory contains the following field content 
@@ -114,13 +161,13 @@ In order to motivate the appearance of ``hidden'' symmetry groups that later on 
 \end{equation}
 where $\beta=-(D-2)\alpha$ and $\alpha$ constant. Pure gravity in $D$ dimensions is invariant under diffeomorphisms $\xi^M=\xi^M(x^\mu,y)$ in $D$ dimensions under which the metric transforms as 
 \begin{equation}
-    \delta_\xi g_{MN} = \mathcal{L}_\xi g_{MN} = \xi^P\pd_Pg_{mn}+\xi^P\pd_{M}g_{PN}+\xi^P\pd_{N}g_{MP},
+    \delta_\xi g_{MN} = \mathcal{L}_\xi g_{MN} = \xi^P\pd_Pg_{mn}+\pd_{M}\xi^Pg_{PN}+\pd_{N}\xi^Pg_{MP},
 \end{equation}
 where $\mathcal{L}$ is the Lie derivative. In order to preserve the parametrization \eqref{eq:KKparam} one finds that diffemorphisms in $D$ dimensions reduce to transformations of the form
 \begin{equation}
     \xi^M = \left(\hat{\xi}^\mu(x^\nu),cy+\lambda(x^\nu)\right),
 \end{equation}
-with some constant $c$. If $c=0$ one finds by explicit calculation that the lower dimensional fields transforms as 
+with some constant $c$. If $c=0$ one finds by explicit calculation that the lower dimensional fields transform as 
 \begin{equation}
     \delta_\xi g_{\mu\nu} = \mathcal{L}_{\hat{\xi}^\rho}g_{\mu\nu},\qquad \delta_\xi A_\mu = \mathcal{L}_{\hat{\xi}^\rho}A_{\mu}+\pd_\mu\lambda(x^\nu), \qquad \delta_\xi \phi = \mathcal{L}_{\hat{\xi}^\rho}\phi.
 \end{equation}
@@ -136,12 +183,12 @@ Compactification on a torus $T^n=S^1\times S^1\times\ldots\times S^1$ continues 
 \end{equation}
 where $M\in SL(N,\mathbb{R})\times \mathbb{R}$ a constant matrix and $\lambda^i$ are $n$ $U(1)$ gauge paramers. Again there is a scaling symmetry of the uncompactified theory which can be combined with $\mathbb{R}$ factor in $M$. As such we find that compactified gravity on a torus $T^n$ has a global $SL(n)\times\mathbb{R}$ symmetry. However, coupling matter to gravity may enhance this symmetry to even larger groups. Furthermore, it turns out that these symmetries can be studied by looking at the scalar sector only, the parts containing ``Kaluza-Klein'' vectors will, non-trivially, possess the same symmetry as the scalar sector. Note that scalars coming from the internal components of the metric characterise the internal geometry, e.g.\ compactification on $S^1$ gives rise to a scalar field $\phi$ and its vacuum expectation value (classical solution) determines the radius of of the circle.
 
-Consider the bosonic sector of $D=11$ supergravity with the metric $g_{MN}$ and the three-form $A_{MNP}$. Split spacetime as $\mathcal{M}_{11}=\mathcal{M}_{11-n}\times\mathcal{M}_n$ with a corresponding split for the coordinates $x^M\to (x^\mu,y^i)$. The fields decompose as 
+Consider now the bosonic sector of $D=11$ supergravity with the metric $g_{MN}$ and the three-form $A_{MNP}$. Split spacetime as $\mathcal{M}_{11}=\mathcal{M}_{11-n}\times\mathcal{M}_n$ with a corresponding split for the coordinates $x^M\to (x^\mu,y^i)$. The fields decompose as 
 \begin{align}
         g_{MN}\to &\begin{cases}g_{\mu\nu},\\g_{\mu i},\\g_{ij},\end{cases}\\
         A_{MNP}\to &\begin{cases}A_{\mu\nu\rho},\\A_{\mu\nu i},\\A_{\mu ij},\\A_{ijk}.\end{cases}
 \end{align}
-As above, it is sufficient to consider the scalar sector of the theory. The number of scalar originating from the metric is given by $n(n+1)/2$ and the number of scalars from the $3$-form potential is ${n}\choose{3}$. However, a $p$-form potential is dual to a $(d-p-2)$-form potential, where $d=D-n$ is the dimension of the external spacetime. We will therefore make a choice to dualize as much as possible in order to obtain a theory with as many scalar fields as possible. The number of scalars present when compactifying on $T^n$ and the ``hidden'' symmetry group $G$ is listed in \tabref{tab:Scalar}.
+As above, it is sufficient to consider the scalar sector of the theory. The number of scalars originating from the metric are $n(n+1)/2$ and the number of scalars from the $3$-form potential are ${n}\choose{3}$. However, a $p$-form potential is dual to a $(d-p-2)$-form potential, where $d=D-n$ is the dimension of the external spacetime. We will therefore make a choice to dualize as much as possible in order to obtain a theory with as many scalar fields as possible. The number of scalars present when compactifying on $T^n$ and the ``hidden'' symmetry group $G$ is listed in \tabref{tab:Scalar}.
 
 \begin{table}[]
     \centering
@@ -159,7 +206,7 @@ As above, it is sufficient to consider the scalar sector of the theory. The numb
 \end{table}
 
 \subsection{Non-linear sigma model\label{sec:NonLinearSigmaModels}}
-We have argued above that the compactification of $D=11$ supergravity on $T^n$ give rise a hidden global symmetry $G$. In order to write down a Lagrangian for the scalar sector that is manifestly invariant under this symmetry we will consider a non-linear sigma model. The idea is that the scalar fields can be considered as ``coordinates'' on a coset space $G/K$, where $K$ is the maximal compact subgroup of $G$. In fact, by counting the dimension of the coset $\text{dim}\,(G/K)=\text{dim}\,(G)-\text{dim}\,(K)$ using the $\tabref{tab:Scalar}$ one finds that is equal to the number of scalars fields. 
+We have argued above that the compactification of $D=11$ supergravity on $T^n$ give rise a hidden global symmetry $G$. In order to write down a Lagrangian for the scalar sector that is manifestly invariant under this symmetry we will consider a non-linear sigma model. The idea is that the scalar fields can be considered as ``coordinates'' on a coset space $G/K$, where $K$ is the maximal compact subgroup of $G$. It is then easily checked that the dimension of the coset $\text{dim}\,(G/K)=\text{dim}\,(G)-\text{dim}\,(K)$ using the $\tabref{tab:Scalar}$ equals the number of scalars. 
 
 To parameterize this Lagrangian it is convenient to look at the algebra $\mathfrak{g}$ and its maximal compact subalgebra $\mathfrak{k}$ that upon exponentiated give the related groups $G$ and $H$ respectively. As we saw in subsection \ref{sec:Realforms} the algebra $\mathfrak{g}$ can be decomposed as 
 \begin{equation}
@@ -189,7 +236,7 @@ where $\mathcal{Q}\in\mathfrak{k}$ and $\mathcal{P}=\mathfrak{g}\ominus\mathfrak
 \begin{equation}
     \mathcal{Q} = \frac{1}{2}\left(\mathcal{V}^{-1}\dd \mathcal{V}+\omega\left(\mathcal{V}^{-1}\dd \mathcal{V}\right)\right),\\\qquad \mathcal{P} = \frac{1}{2}\left(\mathcal{V}^{-1}\dd \mathcal{V}-\omega\left(\mathcal{V}^{-1}\dd \mathcal{V}\right)\right).
 \end{equation}
-In order to write down an object invariant under global $G$ and local $K$ in terms of the physical component $\mathcal{P}$ we need an invariant tensor for the tensor product of two adjoint representations. The Killing form is such an invariant tensor and an manifestly invariant term can thus be written as 
+In order to write down an object invariant under global $G$ and local $K$ in terms of the physical component $\mathcal{P}$ we need an invariant tensor for the tensor product of two adjoint representations. The Killing form is such an invariant tensor and a manifestly invariant term can thus be written as 
 \begin{equation}
     \mathcal{L} \sim \kappa(\mathcal{P}_\mu,\mathcal{P}_\nu)g^{\mu\nu}\sqrt{-g},
 \end{equation}
@@ -235,9 +282,9 @@ where `$\boxtimes$' is a non-commutative product. For the type II theories the U
         5 & $E_{6(6)}(\mathbb{Z})$\\
         6 & $E_{7(7)}(\mathbb{Z})$\\
         7 & $E_{7(7)}(\mathbb{Z})$\\
-        8 & $E_{8(8)}(\mathbb{Z})$\\
-        9 & $E_{9(9)}(\mathbb{Z})$\\
-        10 &$E_{10(10)}(\mathbb{Z})$\\\hline
+        8 & $E_{8(8)}(\mathbb{Z})$\\\hline
+        %9 & $E_{9(9)}(\mathbb{Z})$\\
+        %10 &$E_{10(10)}(\mathbb{Z})$\\\hline
     \end{tabular}
 \end{table}
 

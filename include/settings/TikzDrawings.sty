@@ -488,9 +488,13 @@
     \draw (-1,1) node[anchor=east]  {};
     \foreach \x in {0,...,3}
     \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
-    \foreach \y in {0,...,3}
+    \foreach \y in {0,...,2}
     \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
-    \draw (8,1) node {$\oplus$};
+    \draw[thick] (8 cm,0) circle (3 mm);
+    \draw (7,0) node {$\oplus$};
+    \draw (9,0) node {$\oplus$};
+    \draw[thick] (10 cm,0) circle (3 mm);
+    \draw (10,0) node[cross=3 em,thick] {};
     %\draw[thick] (4 cm,2 cm) circle (3 mm);
     %\draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
     %\draw (6,0) node[cross=3 em,thick] {};
@@ -519,9 +523,77 @@
     \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
     \foreach \y in {0,...,3}
     \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+    \draw (9,0) node {$\oplus$};
+    \draw[thick] (10 cm,0) circle (3 mm);
+    \draw (10,0) node[cross=3 em,thick] {};
     %\draw[thick] (4 cm,2 cm) circle (3 mm);
     %\draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
     %\draw (6,0) node[cross=3 em,thick] {};
+    \end{scope}
+  \end{tikzpicture}
+\end{center}
+}
+
+
+
+
+
+
+\newcommand{\EsexSection}[1]{
+\tikzset{cross/.style={cross out, draw},cross/.default={3 mm}}
+\begin{center}
+  \begin{tikzpicture}[scale=.4]
+    \draw (-1,1) node[anchor=east]  {};
+    \foreach \x in {0,...,4}
+    \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+    \foreach \y in {0,...,3}
+    \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+    \draw[thick] (4 cm,2 cm) circle (3 mm);
+    \draw[thick] (4 cm,4 cm) circle (3 mm);
+    \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+    \draw[thick] (4 cm, 2.3cm) -- +(0, 1.4 cm);
+    \draw (4,2) node[cross=3 em,thick] {};
+    \draw (10,1) node {$\to$};
+    
+    \begin{scope}[shift={(12,0)}]
+    \draw (-1,1) node[anchor=east]  {};
+    \foreach \x in {0,...,4}
+    \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+    \foreach \y in {0,...,3}
+    \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+    \draw (9,0) node {$\oplus$};
+    \draw[thick] (10 cm,0) circle (3 mm);
+    %\draw (10,0) node[cross=3 em,thick] {};
+    %\draw[thick] (4 cm,2 cm) circle (3 mm);
+    %\draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+    %\draw (6,0) node[cross=3 em,thick] {};
+    \end{scope}
+    
+    \begin{scope}[shift={(0,-5)}]
+    \draw (-1,1) node[anchor=east]  {};
+    \foreach \x in {0,...,4}
+    \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+    \foreach \y in {0,...,3}
+    \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+    \draw[thick] (4 cm,2 cm) circle (3 mm);
+    \draw[thick] (4 cm, 3mm) -- +(0, 1.4 cm);
+    \draw (6,0) node[cross=3 em,thick] {};
+    
+    \draw (10,1) node {$\to$};
+    
+    \begin{scope}[shift={(12,0)}]
+    
+    \draw (-1,1) node[anchor=east]  {};
+    \foreach \x in {0,...,3}
+    \draw[thick,xshift=\x cm] (\x cm,0) circle (3 mm);
+    \foreach \y in {0,...,2}
+    \draw[thick,xshift=\y cm] (\y cm,0) ++(.3 cm, 0) -- +(14 mm,0);
+    \draw[thick] (8 cm,0) circle (3 mm);
+    \draw (7,0) node {$\oplus$};
+    \draw (9,0) node {$\oplus$};
+    \draw[thick] (10 cm,0) circle (3 mm);
+    \draw (10,0) node[cross=3 em,thick] {};
+    \end{scope}
     \end{scope}
   \end{tikzpicture}
 \end{center}

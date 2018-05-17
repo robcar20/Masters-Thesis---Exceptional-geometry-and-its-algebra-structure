@@ -83,7 +83,7 @@ which indeed is the section condition for DFT introduced in section \ref{sec:DFT
     \end{align}
     \end{subequations}
 
-The equations \eqref{eq:closure1}-\eqref{eq:closure2} comes from the term involving $(\pd\xi)(\pd\eta)$. Whether the remaining term in \eqref{eq:GenDiffComm} needed for closure vanish or not depends on the specific algebra together with the choice of coordinate module $R(\lambda)$, a simple criterion for this will be derived below using certain extensions of $\mathfrak{g}$. As of yet the particular form, nor any symmetry properties, of $Y$ has been used. However, inserting the explicit form \eqref{eq:Y} in \eqref{eq:closure1}-\eqref{eq:closure2} one finds that they are satisfied if the section condition is \cite{Palmkvist2015ExpGeomSuperAlg}.
+These identities are derived in appendix \ref{app:GenDiffComm}. Whether the remaining term in \eqref{eq:GenDiffComm} needed for closure vanish or not depends on the specific algebra together with the choice of coordinate module $R(\lambda)$, a simple criterion for this will be derived below using certain extensions of $\mathfrak{g}$. As of yet the particular form, nor any symmetry properties, of $Y$ has been used. However, inserting the explicit form \eqref{eq:Y} in \eqref{eq:closure1}-\eqref{eq:closure2} one finds that they are satisfied if the section condition is \cite{Palmkvist2015ExpGeomSuperAlg}.
 
 \subsection{Section condition}
 Up to the remaining term in \eqref{eq:GenDiffComm} closure of the algebra is entirely dependent on solving the section condition \eqref{eq:section}. To this end examine the tensor product of the coordinate module with itself. This can trivially be decomposed as
@@ -306,7 +306,7 @@ Moreover, since $\mathscr{B}_{-2}=\vee^2 R(2\lambda)\ominus R(2\lambda)$ the ten
 \begin{equation}
     \llbracket \tilde{e}_0,\llbracket\tilde{e}_0,x\rrbracket\rrbracket \neq 0. 
 \end{equation}
-Note that we have used the isomorphism between $\mathscr{A}_{\pm1}$ and $\mathscr{B}_{\pm 1}$. Consider an element $x=e_\alpha$ with associated positive root $\alpha$ of $\mathfrak{g}$ such that $\alpha(\alpha_0^\vee)< 1$. With this assumption it follows that 
+Note that we have used the isomorphism between $\mathscr{A}_{\pm 1}$ and $\mathscr{B}_{\pm 1}$. Consider an element $x=e_\alpha$ with associated positive root $\alpha$ of $\mathfrak{g}$ such that $\alpha(\alpha_0^\vee)< 1$. With this assumption it follows that 
 \begin{equation}
     \llbracket \tilde{e}_0,x_\alpha\rrbracket \neq 0 \qquad \text{since}\qquad \llbracket \tilde{f}_0,\llbracket \tilde{e}_0,e_\alpha\rrbracket\rrbracket = -\alpha(\alpha_0^\vee)\neq 0, 
 \end{equation}
@@ -590,7 +590,7 @@ where in the second line we have expanded $Z$ and used the section condition on 
         &= \tensor{T}{^{\alpha P}_N}\left(-f^{\alpha\beta\gamma}\tensor{T}{^{\beta Q}_M}\tensor{T}{^{\gamma S}_T}+\tensor{T}{^{\alpha Q}_M}\delta^S_T-\tensor{T}{^{\alpha Q}_T}\delta^S_M\right)\pd_Q\pd_S\xi^T,\\
     \end{aligned}
 \end{equation}
-where going to the second line we have expressed the first term as a commutator, used the section condition and that $\pd_{Q}\pd_S$ is symmetric. We thus see that the expression \eqref{eq:Torsion} transforms covariantly if ancillary transformations are absent since $\tensor{T}{_{MN}^P}$ trnasforms as
+where going to the second line we have expressed the first term as a commutator, used the section condition and that $\pd_{Q}\pd_S$ is symmetric. We thus see that the expression \eqref{eq:Torsion} transforms covariantly if ancillary transformations are absent since $\tensor{T}{_{MN}^P}$ transforms as
 \begin{equation}
 \Delta_\xi \tensor{T}{_{MN}^P} = \tensor{T}{^{\alpha P}_N}\tensor{S}{^{\alpha SQ}_{MT}}\pd_Q\pd_S\xi^T.
 \end{equation}
@@ -624,11 +624,11 @@ As an example consider an extended geometry with structure algebra $\mathfrak{e}
 \begin{equation}
     \overbar{\mathbf{56}}\otimes\left(\mathbf{133}\oplus\mathbf{1}\right) = 2\cdot \overbar{\mathbf{56}}\oplus\mathbf{912}\oplus\mathbf{6480}.
 \end{equation}
-To determine the part that is not torsion we note that $\overbar{R(2\Lambda_1)}=\mathbf{1463}$, with $\Lambda_1$ being the highest weight of $\mathbf{56}$, is the highest weight module of $\vee^2\,\mathbf{56}$ and we thus find 
+To determine the part that is not torsion we note that $\overbar{R(2\Lambda_1)}=\overbar{\mathbf{1463}}$, with $\Lambda_1$ being the highest weight of $\mathbf{56}$, is the highest weight module of $\vee^2\,\mathbf{56}$ and we thus find 
 \begin{equation}
     \overbar{\mathbf{1463}}\otimes\mathbf{56} = \overbar{\mathbf{56}}\oplus\mathbf{6480}\oplus\ldots,
 \end{equation}
-where $\ldots$ denote terms not present in the connection. We thus see that the non-torsion part of the connection contains $\overbar{\mathbf{56}}\oplus \mathbf{6480}$ while the remaining $\mathbf{56}\oplus\mathbf{912}$ thus are torsion. We continue with this example to determine which parts of the connection are specified by imposing metric compatibility and vanishing torsion. Metric compatibility fixes the part in $\overbar{\mathbf{56}}\otimes(\mathfrak{g}\times\mathbb{R}/\mathfrak{k})$ as argued above. Decomposing the remaining terms under the maximal compact subalgebra we find 
+where $\ldots$ denote terms not present in the connection. We thus see that the non-torsion part of the connection contains $\overbar{\mathbf{56}}\oplus \mathbf{6480}$ while the remaining $\overbar{\mathbf{56}}\oplus\mathbf{912}$ thus are torsion. We continue with this example to determine which parts of the connection are specified by imposing metric compatibility and vanishing torsion. Metric compatibility fixes the part in $\overbar{\mathbf{56}}\otimes(\mathfrak{g}\times\mathbb{R}/\mathfrak{k})$ as argued above. Decomposing the remaining terms under the maximal compact subalgebra we find 
 \begin{equation}\label{eq:NonDeterminedE7}
     \left(\mathbf{28}\oplus\overbar{\mathbf{28}}\right)\otimes\mathbf{63} = \mathbf{28}\oplus\mathbf{36}\oplus\mathbf{420}\oplus\mathbf{1280}\oplus \text{conj.}
 \end{equation}

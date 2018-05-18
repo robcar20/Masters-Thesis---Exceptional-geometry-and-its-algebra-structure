@@ -73,8 +73,20 @@ where $t_{ij}:f\to t$ defined on $U_i\cap U_j$ are called transition functions. 
 \begin{equation}
     \phi_{i}^{-1}\circ\phi_j (u,f) = (u,\phi^{-1}_{i,u}\circ \phi_{j,u}f),
 \end{equation}
-and the by the definition of the transition functions we find $t_{ij,u}=\phi^{-1}_{i,u}\circ \phi_{j,u}$. The compatibility requirement then demands that $t_{ij}: U_i\cap U_j\to G$ such that fibres are patched together by the structure group $G$.  
+and the by the definition of the transition functions we find $t_{ij,u}=\phi^{-1}_{i,u}\circ \phi_{j,u}$. The compatibility requirement is then to demand that $t_{ij}: U_i\cap U_j\to R(G)$, with $R(G)$ some representation of $G$, such that fibres are patched together by the structure group $G$. This moreover defines a left action of $G$ on the bundle.
 
+A section of a bundle $P\overset{\pi}{\longrightarrow}\mathcal{M}$ is defined as a map $\sigma: \mathcal{M}\to P$ such that $\pi\circ\sigma = \text{id}_{\mathcal{M}}$. A well known example is a section of the tangent bundle $T\mathcal{M}$ which is a bundle defined as
+\begin{equation}
+    TM = \bigcup_{x\in \mathcal{M}}\{(x,y)|x\in\mathcal{M}, y\in T_x\mathcal{M} \},
+\end{equation}
+with $T_x\mathcal{M}$ being the tanget space at point $x\in\mathcal{M}$. A section then associates a vector in the fibre $T_x\mathcal{M}$ to each point $x\mathcal{M}$
+\begin{equation}
+    \begin{aligned}
+        \sigma: &\mathcal{M}\to \mathcal{M}\times T_x\mathcal{M}
+                x\mapsto (x,X)\qquad X\in T_x\mathcal{M},
+    \end{aligned}
+\end{equation}
+which is just an ordinary vector field on $\mathcal{M}$. 
 
 %then applying the two local trivialisations $\phi^{-1}_i$ and $\phi^{-1}_j$ we find two points in $P$ according to 
 %\begin{equation}
@@ -86,7 +98,12 @@ A principal fibre bundle ($P$,$\mathcal{M}$,$\pi$,$G$) is a fibre bundle with a 
 \begin{equation}
     \triangleleft: P\times G \to P,
 \end{equation}
-which is free. An important example of a principle fibre bundle is the frame bundle. The frame bundle is a fibre bundle with a typical fibre consisting of all ordered basis, such a basis being a frame, of the tangent space. 
+which is free. An important example of a principle fibre bundle is the frame bundle. The frame bundle is a fibre bundle with a typical fibre consisting of all ordered basis of the tangent space. At any patch $U_i$ on a d-dimensional manifold $\mathcal{M}$ there exists local coordinates which spans a basis $\{\pd_\mu\}_{\mu=1,2,\ldots d}$ and any other base can be written as 
+\begin{equation}
+    e_\alpha = \tensor{e}{_\alpha^\mu}\pd_\mu,
+\end{equation}
+with $\alpha=1,2,\ldots d$. The elements $\tensor{e}{_\alpha^\mu}$ can be seen as $d\times d$-dimensional matrices and thus the fibre is isomorphic to $GL(d)$. Moreover, we 
+
 
 The existence of invariant tensors on $\mathcal{M}$ is equivalent to adding further structure to a principal $G$-bundle such that it is possible to impose a restriction to a principal $H$-bundle, where $H\subset G$ with the same base manifold. Typically this is defined the other way around,  
 
@@ -106,9 +123,10 @@ In order to define a reduced structure group we need a so-called bundle map. A b
     (m-1-2) edge node [right] {$\overbar{\pi}$} (m-2-2);
 \end{tikzpicture}
 \end{center}
+Moreover, if $\rho$ and $f$ are invertible and both $(\rho,f)$ and $(\rho^{-1},f^{-1})$ are bundle maps then $(P,\mathcal{M})$ and $(\overbar{P},\overbar{\mathcal{M}})$ are isomorphic as bundles. 
 
 \todo{Bundle maps, when reduced structure group, Berger's list}
-\todo{Reduced structure group and sections}
+\todo{Reduced structure group}
 
 \subsection{Compactification on Calabi-Yau}
 Having reviewed the notion of reduced structure group and special holonomy a Calabi-Yau n-fold $CY_{n}$ can be defined as a $2n$-dimensional compact Riemannian manifolds with holonomy contained in $SU(N)$\cite{Blumenhagen2013}. We are particularly interested in $CY_3$ such that starting in $D=10$ supergravity, or string theory, the external spacetime is 4-dimensional. As such we know that for a $CY_3$ there exists some $p$-forms, or equivalently a Killing spinor, invariant under $\mathscr{H}=SU(3)$ which can be found by looking at the decomposition of 1-, 2- and 3-forms of $SO(6)\cong SU(4)\to SU(3)$
@@ -194,11 +212,7 @@ We have seen above that demanding some preserved supersymmetry in fluxless compa
 \end{itemize}
 Including fluxes alters the Killing spinor equation and the holonomy group need no longer be reduced. This effectively weakens the constraints of the internal manifold which at the same time makes things more complicated. In the spirit of extended geometries we will try to generalize the notion of geometry in order to accommodate flux degree of freedoms in terms of what is called (exceptional) \emph{generalized geometry}. The reason for doing this being that it is then possible to define an appropriate generalisation of the holonomy, or rather of the structure together with some integrability conditions. This will imply that a supersymmetric backgorund compactification should have vanishing generalised intrinsic torsion. Especially since gauge degrees of freedom are included in the geometry this holds true even when fluxes are present. 
 
-In extended geometries we enlarged spacetime by introducing coordinates in some module of the underlying structure algebra $\mathfrak{g}$. In generalized geometry on the other hand one does not go that far, instead only the tangent bundle of the (internal) manifold is being enhanced.  Therefore consider a manifold $\mathcal{M}$ and its associated tangent bundle $TM$ 
-\begin{equation}
-    TM = \bigcup_{x\in \mathcal{M}}\{(x,y)|x\in\mathcal{M}, y\in T_x\mathcal{M} \},
-\end{equation}
-where $T_x\mathcal{M}$ is the tangent space of $\mathcal{M}$ at the point $x\in\mathcal{M}$. A basis of the tangent space in local coordinates is simply given by $\{\pd/\pd x^i\}_{i=1,\ldots d}$, where $d=\text{dim}\,\mathcal{M}$. Now recall that in DFT spacetime is enlarged to $2d$ dimensions by letting $x^i\to (x^i,\tilde{x}_i)$, where the latter is the vector representation of $O(d,d)$. In generalised geometry one instead considers only a generalized tangent bundle on which in the DFT case $O(d,d)\times \mathbb{R}^+$ acts naturally and in the exceptional case $E_{d(d)}\times\mathbb{R}^+$ acts naturally.  In the former case the generalised tangent bundle is given by 
+In extended geometries we enlarged spacetime by introducing coordinates in some module of the underlying structure algebra $\mathfrak{g}$. In generalized geometry on the other hand one does not go that far, instead only the tangent bundle of the (internal) manifold is being enhanced.  Therefore consider a manifold $\mathcal{M}$ and its associated tangent bundle $T\mathcal{M}$. A basis of the tangent space in local coordinates is simply given by $\{\pd/\pd x^i\}_{i=1,\ldots d}$, where $d=\text{dim}\,\mathcal{M}$. Now recall that in DFT spacetime is enlarged to $2d$ dimensions by letting $x^i\to (x^i,\tilde{x}_i)$, where the latter is the vector representation of $O(d,d)$. In generalised geometry one instead considers only a generalized tangent bundle on which in the DFT case $O(d,d)\times \mathbb{R}^+$ acts naturally and in the exceptional case $E_{d(d)}\times\mathbb{R}^+$ acts naturally.  In the former case the generalised tangent bundle is given by 
 \begin{equation}\label{eq:GenTangentBundleDef}
 E \cong T\mathcal{M}\oplus T^*\mathcal{M}
 \end{equation}
@@ -281,7 +295,7 @@ with a section $W\in\Gamma(\text{ad}\,F)$
 \end{equation}
 
 
-\section{Generalized structure\label{sec:Generalised structures}}
+\section{Generalized structure\label{sec:GeneralisedStructures}}
 The bosonic sector of M-theory is given by the metric $g_{MN}$ and the three-form form field $A$ and its corresponding four-form field strength $F=\dd A$. We consider a warped product ansatz for the metric 
 \begin{equation}
     \dd s^2 = \ee^{2A(y)}\dd s^2(\mathbb{R}^{1,D-1})+\dd s^2(\mathcal{M}),

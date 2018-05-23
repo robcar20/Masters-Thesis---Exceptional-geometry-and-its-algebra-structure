@@ -181,18 +181,31 @@ Compactification on a torus $T^n=S^1\times S^1\times\ldots\times S^1$ continues 
 \begin{equation}
     \xi^M = \left(\hat{\xi}^\mu(x^\nu),\tensor{M}{^i_j}y^j+\lambda^i(x^\nu)\right),
 \end{equation}
-where $M\in SL(N,\mathbb{R})\times \mathbb{R}$ a constant matrix and $\lambda^i$ are $n$ $U(1)$ gauge paramers. Again there is a scaling symmetry of the uncompactified theory which can be combined with $\mathbb{R}$ factor in $M$. As such we find that compactified gravity on a torus $T^n$ has a global $SL(n)\times\mathbb{R}$ symmetry. However, coupling matter to gravity may enhance this symmetry to even larger groups. Furthermore, it turns out that these symmetries can be studied by looking at the scalar sector only, the parts containing ``Kaluza-Klein'' vectors will, non-trivially, possess the same symmetry as the scalar sector. Note that scalars coming from the internal components of the metric characterise the internal geometry, e.g.\ compactification on $S^1$ gives rise to a scalar field $\phi$ and its vacuum expectation value (classical solution) determines the radius of of the circle.
+where $M\in SL(N,\mathbb{R})\times \mathbb{R}$ a constant matrix and $\lambda^i$ are $n$ $U(1)$ gauge parameters. Again there is a scaling symmetry of the uncompactified theory which can be combined with $\mathbb{R}$ factor in $M$. As such we find that compactified gravity on a torus $T^n$ has a global $SL(n)\times\mathbb{R}$ symmetry. However, coupling matter to gravity may enhance this symmetry to even larger groups. Especially, by including form fields these have gauge symmetries parameterised by $p-1$-form fields. In order to keep the compactification ansatz $\frac{\pd}{\pd y^i}$ a one finds that scalar parts of a gauge potential $A_{j_1j_2\ldots j_p}$ transforms as 
+\begin{equation}
+    \begin{aligned}
+    \delta A_{j_1j_2\ldots j_p} &= \dd \lambda_{j_1j_2\ldots j_{p-1}}\\
+                                &= c_{j_1j_2\ldots j_p},
+    \end{aligned}
+\end{equation}
+with $c_{j_1j_2\ldots j_p}$ being a constant anti-symmetric tensor. These corresponds to constant shifts of the purely internal components of the gauge potential $A$ and, moreover, they mutally commute such that they are elements in $R^n$, where $n$ is the number of independent components of $c_{i_1\ldots}$. However, they do not necessarily commute with the global $GL(N,\mathbb{R})$ symmetry and typically there is thus a global symmetry group given by 
+\begin{equation}
+    GL(N,\mathbb{R})\ltimes \mathbb{R}^n.
+\end{equation}
+However, a $p$-form potential is dual to a $(d-p-2)$-form potential, where $d=D-n$ is the dimension of the external spacetime. By dualizing to obtain as many scalar fields as possible the global symmetry group enhances even further when this is possible \cite{Cremmer:1997ct}. In conclusion, the global hidden symmetry groups are remnants from the internal diffeomorphisms and internal form field gauge symmetry that preserves the compactification ansatz. 
+
+Furthermore, it turns out that these symmetries can be studied by looking at the scalar sector only, the parts containing ``Kaluza-Klein'' vectors will, non-trivially, possess the same symmetry as the scalar sector. Note that scalars coming from the internal components of the metric characterise the internal geometry, e.g.\ compactification on $S^1$ gives rise to a scalar field $\phi$ and its vacuum expectation value (classical solution) determines the radius of of the circle. 
 
 Consider now the bosonic sector of $D=11$ supergravity with the metric $g_{MN}$ and the three-form $A_{MNP}$. Split spacetime as $\mathcal{M}_{11}=\mathcal{M}_{11-n}\times\mathcal{M}_n$ with a corresponding split for the coordinates $x^M\to (x^\mu,y^i)$. The fields decompose as 
 \begin{align}
         g_{MN}\to &\begin{cases}g_{\mu\nu},\\g_{\mu i},\\g_{ij},\end{cases}\\
         A_{MNP}\to &\begin{cases}A_{\mu\nu\rho},\\A_{\mu\nu i},\\A_{\mu ij},\\A_{ijk}.\end{cases}
 \end{align}
-As above, it is sufficient to consider the scalar sector of the theory. The number of scalars originating from the metric are $n(n+1)/2$ and the number of scalars from the $3$-form potential are ${n}\choose{3}$. However, a $p$-form potential is dual to a $(d-p-2)$-form potential, where $d=D-n$ is the dimension of the external spacetime. We will therefore make a choice to dualize as much as possible in order to obtain a theory with as many scalar fields as possible. The number of scalars present when compactifying on $T^n$ and the ``hidden'' symmetry group $G$ is listed in \tabref{tab:Scalar}.
+As above, it is sufficient to consider the scalar sector of the theory. The number of scalars originating from the metric are $n(n+1)/2$ and the number of scalars from the $3$-form potential are ${n}\choose{3}$. We will also make the choice to dualize as much as possible in order to obtain a theory with as many scalar fields as possible. The number of scalars present when compactifying on $T^n$ and the ``hidden'' symmetry group $G$ is listed in \tabref{tab:Scalar}.
 
 \begin{table}[]
     \centering
-    \caption{Maximal number of scalars of compactified $D=11$ supergravity on $T^n$. $G$ denotes the symmetry groups and $K$ its maximal compact subgroup. The trombone symmetry is excluded.}
+    \caption{Maximal number of scalars of compactified $D=11$ supergravity on $T^n$. Here $G$ denotes the group related to split real form and $K$ the corresponding maximal compact subgroup. The trombone symmetry is excluded.}
     \label{tab:Scalar}
     \begin{tabular}{|c|c|c|c|}\hline
          $n$ & \#Scalars & $G$ & $K$ \\\hline
@@ -265,11 +278,7 @@ These series typically do not converge but in many cases they are believed to be
 \end{itemize}
 Weak-strong duality is of special interest since it allows us to probe the non-perturbative regime of a theory, using perturbative methods in the dual theory. Since little is usually known about the non-perturbative regime such a duality is however hard to prove. However, there are quantities that are protected against perturbative corrections and extrapolation to the non-perturbative regime is possible. These play an important rôle in confirming these weak-strong dualities. Perhaps the most prominent weak-strong duality is the AdS/CFT correspondence, first conjectured by Maldacena in \cite{Maldacena1999}. This is a rather special duality in the sense that it relates a string theory (which includes gravity) in a given dimension to an conformal field theory in one spacetime dimension lower, without gravity. 
 
-Motivation for the presence of a weak-weak T-duality symmetry when compactifying type II string theories on a torus $T^d$ was introduced above, with the the T-duality group $O(d,d,\mathbb{Z})$. Moreover, type IIB has a weak-strong so-called S-duality symmetry with transformations given by $SL(2,\mathbb{Z})$. It is conjectured that these combine in to a larger set of dualities called U-duality \cite{Hull:1994ys}, given by 
-\begin{equation}
-    SL(2,\mathbb{Z})\boxtimes O(d,d,\mathbb{Z}),
-\end{equation}
-where `$\boxtimes$' is a non-commutative product. For the type II theories the U-duality groups upon compactification on a torus $T^{n}$ is given in \tabref{tab:UdualityString} which are just the discrete version of the continuous groups encountered in the supergravity. The continuous version can not be a symmetry of the full theory, instead they are are believed to be broken by non-perturbative effects to the corresponding discrete version. 
+Motivation for the presence of a weak-weak T-duality symmetry when compactifying type II string theories on a torus $T^d$ was introduced above, with the the T-duality group $O(d,d,\mathbb{Z})$. Moreover, type IIB has a weak-strong so-called S-duality symmetry with transformations given by $SL(2,\mathbb{Z})$. It is conjectured that these combine in to a larger set of dualities called U-duality \cite{Hull:1994ys}, and contains as subgroup $ SL(2,\mathbb{Z})\boxtimes O(d,d,\mathbb{Z})$ where `$\boxtimes$' is a non-commutative product. For the type II theories the U-duality groups upon compactification on a torus $T^{n}$ is given in \tabref{tab:UdualityString} which are just the discrete version of the continuous groups encountered in the supergravity, however, the agreement is between type IIB on $T^{d}$ and eleven dimensional supergravity on $T^{d+1}$, since in this case the external spacetime has the same dimension. 
 
 \begin{table}\centering
     \caption{U-duality group for type II string theories on $T^n$.}\label{tab:UdualityString}
@@ -281,10 +290,8 @@ where `$\boxtimes$' is a non-commutative product. For the type II theories the U
         4 & $SO(5,5,\mathbb{Z})$\\
         5 & $E_{6(6)}(\mathbb{Z})$\\
         6 & $E_{7(7)}(\mathbb{Z})$\\
-        7 & $E_{7(7)}(\mathbb{Z})$\\
-        8 & $E_{8(8)}(\mathbb{Z})$\\\hline
-        %9 & $E_{9(9)}(\mathbb{Z})$\\
-        %10 &$E_{10(10)}(\mathbb{Z})$\\\hline
+        7 & $E_{8(8)}(\mathbb{Z})$\\
+        8 & $E_{9(9)}(\mathbb{Z})$\\\hline
     \end{tabular}
 \end{table}
 

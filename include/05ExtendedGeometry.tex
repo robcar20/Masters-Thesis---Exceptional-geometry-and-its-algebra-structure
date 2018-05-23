@@ -3,7 +3,7 @@ In this chapter the general construction of extended geometries recently constru
 
 When the structure algebra is that of a hidden duality group appearing when compactifying, say, a supergravity theory the extended geometries describe the purely internal (scalar) degrees of freedom of that theory. However, the geometries introduced in this chapter are described without reference to any specific physical theory and compactification ansatz. 
 
-In sections $\ref{sec:ExtendedSpacetimeAndSetup}-\ref{sec:Dynamics}$ we follow the construction of extended geometries presented in \cite{CederwallPalmkvist2017} by especially focusing on finding constraints to ensure closure of generalised diffeomorphisms. Moreover, a pseudo-action that is invariant under generalised diffeomorphisms that encode the dynamics of the generalised metric is introduced. In section \ref{sec:CovariantFormalism} we introduce a covariant derivative following \cite{Cederwall:2013naa} in order to derive purely geometric objects such as torsion and curvature. Lastly in section \ref{sec:GaugeStructureAndExtendedAlgebras} we discuss some intruiging features of the underlying gauge structure and also mention the rôle of extended algebras in extended geometries. 
+In sections $\ref{sec:ExtendedSpacetimeAndSetup}-\ref{sec:Dynamics}$ we follow the construction of extended geometries presented in \cite{CederwallPalmkvist2017} by especially focusing on finding constraints to ensure closure of generalised diffeomorphisms. Moreover, a pseudo-action that is invariant under generalised diffeomorphisms that encode the dynamics of the generalised metric is introduced. In section \ref{sec:CovariantFormalism} we introduce a covariant derivative following \cite{Cederwall:2013naa} in order to derive purely geometric objects such as torsion and curvature. %Lastly in section \ref{sec:GaugeStructureAndExtendedAlgebras} we discuss some intruiging features of the underlying gauge structure and also mention the rôle of extended algebras in extended geometries. 
 
 \section{Extended spacetime and setup\label{sec:ExtendedSpacetimeAndSetup}}
 Extended geometries will be based on the split real-form of a Kac-Moody algebra $\mathfrak{g}\times\mathbb{R}$ exponentiated to a group $G\times\mathbb{R}^+$ and an irreducible integrable highest weight coordinate module $R(\lambda)$. Spacetime is enlarged by letting $\pd_M\in\overbar{R(\lambda)}$ be a local coordinate basis. A vector field $\xi$ is then given by 
@@ -22,7 +22,7 @@ where $\alpha_{i,j}$ are simple roots which we normalise as $D_i=\frac{(\alpha_i
 \end{equation}
 Introducing fundamental weights $\Lambda_i$ dual to the coroots $\Lambda_i(\alpha_j^\vee)=\delta_{ij}$ induces a metric on the weight space as 
 \begin{equation}
-    (\Lambda_i,\Lambda_j) := d_ia^{-1}_{ij}.
+    (\Lambda_i,\Lambda_j) := D_ia^{-1}_{ij}.
 \end{equation}
 
 
@@ -528,9 +528,9 @@ We have thus found a lagrangian that transforms like scalar density of weight $1
 \section{Covariant formalism\label{sec:CovariantFormalism}}
 As in ordinary geometry fields containing bare partial derivatives typically transforms non-covariantly since diffeomorphisms act locally. This is again true in extended geometries and the fact that the lagrangian \eqref{eq:Lagrangian} transformed covariantly were due to some delicate cancellations. We here follow \cite{Cederwall:2013naa} which studied exceptional geometry with the structure algebra $\mathfrak{e}_{d(d)}\times\mathbb{R}$ for $d\leq 8$. The discussion in \cite{Cederwall:2013naa} were however in many cases general and can be directly transferred to the formalism of extended geometries presented above and in \cite{CederwallPalmkvist2017}.
 
-Introduce a covariant derivative $D_M$ that acts on a vector field $V^N$ as  
+Introduce a covariant derivative $\mathscr{D}_M$ that acts on a vector field $V^N$ as  
 \begin{equation}
-    D_MV^N = \pd_M V^N-\tensor{\Gamma}{_{MP}^N}V^P,
+    \mathscr{D}_MV^N = \pd_M V^N-\tensor{\Gamma}{_{MP}^N}V^P,
 \end{equation}
 with $\tensor{\Gamma}{_{MP}^N}$ being the connection. Just as a connection in Einstein gravity or the Yang-Mills connection in a non-abelian gauge theory this connection is a adjoint valued ''one-form´´, i.e.\ $\tensor{\Gamma}{_{MP}^N}\in \overbar{R(\lambda)}\otimes\left[\mathfrak{g}\oplus\mathbb{R}\right]$. Especially this exclude any specific symmetry properties between the lower indices. Imposing that $D_MV^N$ transforms covariantly one finds that the connection has to transform inhomogeneously as 
 \begin{equation}\label{eq:InHomoConnection}
@@ -538,11 +538,20 @@ with $\tensor{\Gamma}{_{MP}^N}$ being the connection. Just as a connection in Ei
 \end{equation}
 Since the tensor $Z$ manifestly projects $\tensor{}{^P_N}$ and $\tensor{}{^Q_R}$ onto the adjoint representation it is easily seen that the inhomogeneous term is a derivative of an element taking values in the structure algebra $\mathfrak{g}\times\mathbb{R}$. Moreover, imposing Leibniz property and that the covariant derivative reduces to a partial derivative of functions the action on arbitrary tensor fields is well-defined. 
 
-In ordinary geometry one usually continues by demanding that the connection is metric-compatible and torsion-free which uniquely specifies the Levi-Civita connection. However, this will turn out to be rather complicated in extended geometries and in fact a unique choice of such a connection is generally not possible to find. A way to motivate this is to note that in ordinary geometry with the structure algebra $\mathfrak{gl}(d)$ the coordinate module is $d$-dimensional, the adjoint is $d^2$-dimensional and only the adjoint module appears in the pair $\tensor{}{_N^P}$ of $\tensor{\Gamma}{_{MN}^P}$. On the other hand take an extended geometry based on the structure algebra $\mathfrak{e}_{7(7)}\times\mathbb{R}$ with the coordinate module $R(\lambda)=\mathbf{56}$. In this case 
+The covariant derivative introduced above is valid for tensors, i.e.\ an element in $R(\lambda)^p\otimes \overbar{R(\lambda)}^q$ which transforms under $\mathbb{R}$ with the canonical weight $(p-q)\beta$. For a tensor density with weight $w$ there is an extra contribution to the covariant derivative as 
 \begin{equation}
-    \text{dim}\, (\mathbf{56}\otimes\overbar{\mathbf{56}}) = 3136 > 133+1 = \text{dim}\, (\mathfrak{g})+1.
+    D_P \tensor{X}{^{M_1M_2\ldots M_p}_{N_1N_2\ldots N_q}} = \mathscr{D}_P\tensor{X}{^{M_1M_2\ldots M_p}_{N_1N_2\ldots N_q}}-\frac{1}{\beta |R(\lambda)|}(w-(p-q)\beta)\tensor{\Gamma}{_{MS}^S},
 \end{equation}
-Due to the fact that the smallest representation of $\mathfrak{e}_{7(7)}$ is large compared to the adjoint there are extra contributions to $R(\lambda)\otimes\overbar{R(\lambda)}=\mathbf{adj}\oplus\ldots$ which are not there in ordinary geometry. This is heuristically a reason behind some of the difficulties one face when introducing a connection in extended geometries. 
+with $|R(\lambda)|=\text{dim}\,R(\lambda)$ and we note that $D_P$ reduce to $\mathscr{D}_P$ when acting on a tensor.
+
+
+In ordinary geometry one usually continues by demanding that the connection is metric-compatible and torsion-free which uniquely specifies the Levi-Civita connection. However, this will turn out to be rather complicated in extended geometries and in fact a unique choice of such a connection is generally not possible to find. 
+
+%A way to motivate this is to note that in ordinary geometry with the structure algebra $\mathfrak{gl}(d)$ the coordinate module is $d$-dimensional, the adjoint is $d^2$-dimensional and only the adjoint module appears in the pair $\tensor{}{_N^P}$ of $\tensor{\Gamma}{_{MN}^P}$. On the other hand take an extended geometry based on the structure algebra $\mathfrak{e}_{7(7)}\times\mathbb{R}$ with the coordinate module $R(\lambda)=\mathbf{56}$. In this case 
+%\begin{equation}
+%    \text{dim}\, (\mathbf{56}\otimes\mathbf{56}) = 3136 > 133+1 = \text{dim}\, (\mathfrak{g})+1.
+%\end{equation}
+%Due to the fact that the smallest representation of $\mathfrak{e}_{7(7)}$ is large compared to the adjoint there are extra contributions to $R(\lambda)\otimes\overbar{R(\lambda)}=\mathbf{adj}\oplus\ldots$ which are not there in ordinary geometry. This is heuristically a reason behind some of the difficulties one face when introducing a connection in extended geometries. 
 
 A metric compatible connection is one that satisfies 
 \begin{equation}
@@ -550,15 +559,15 @@ A metric compatible connection is one that satisfies
 \end{equation}
 or explicitly
 \begin{equation}\label{eq:MetricCompatibility}
-    \pd_M G_{NS} + 2\tensor{\Gamma}{_{M(N}^T}G_{S)T}=0.
+    \pd_M G_{NS} + 2\tensor{\Gamma}{_{M(N}^T}G_{S)T}-\frac{1}{\beta |R(\lambda)|}\tensor{\Gamma}{_{MK}^K}G_{NS}=0.
 \end{equation}
 Multiplying \eqref{eq:MetricCompatibility} with $G^{PS}$ this further implies 
 \begin{equation}\label{eq:MetComp2}
-    \left(G^{-1}\pd_MG\right)\tensor{}{^P_N} = \tensor{\Gamma}{_{MN}^P}+(G\Gamma_MG^{-1})^T.
+    \left(G^{-1}\pd_MG\right)\tensor{}{^P_N} = \tensor{\Gamma}{_{MN}^P}+G_{NS}\tensor{\Gamma}{_{MT}^S}G^{TP}-\frac{1}{\beta |R|}\tensor{\Gamma}{_{MK}^K}\delta^P_N.
 \end{equation}
 We thus see that metric compatibility uniquely determines the part in $\mathfrak{g}\ominus\mathfrak{k}$. Note especially that the RHS of \eqref{eq:MetComp2} is projected onto $T^\alpha+T^{\star\alpha}$ by the definition of the locally embedded compact subalgebra. Moreover, \eqref{eq:MetComp2} shows that the building block of the lagrangian \eqref{eq:Lagrangian} is in fact a connection projected onto $\mathfrak{g}/\mathfrak{k}$. 
 
-\subsection{Torsion}
+\subsection{Torsion}\label{sec:TorsionSubSec}
 Torsion of a connection can be defined in at least two equivalent ways (at least when ancillary transformations are absent). Following \cite{Cederwall:2013naa} we define torsion of a connection as the part that transforms homogeneously, i.e.\ the part of the connection which is not contained in \eqref{eq:InHomoConnection}. In fact, only the part in $\left(\vee^2\overbar{R(\lambda)}\ominus \overbar{R_h^s}\right)\otimes R(\lambda)$ of the connection transforms inhomogeneously due to \eqref{eq:InHomoConnection}, with $R_s^h$ defined in \eqref{eq:SectionConditionReps}. The non-torsion part of the connection is thus given by the modules in the overlap 
 \begin{equation}
     \overbar{R(2\lambda)}\otimes R(\lambda) \cap \left[\overbar{R(\lambda)}\otimes \left(\mathfrak{g}\oplus \mathbb{R}\right)\right],
@@ -607,7 +616,7 @@ Setting torsion to zero in \eqref{eq:Torsion} imposes the following constraint
           &= 2\tensor{\Gamma}{_{[MN]}^P} +\tensor{Y}{^{PQ}_{RN}}\tensor{\Gamma}{_{QM}^R},
     \end{aligned}
 \end{equation}
-where the second line follows from the definition of $Z$ and $Y$. It is convenient to make explicit that the connection is valued in $\overbar{R(\lambda)}\otimes\mathfrak{g}$
+where the second line follows from the definition of $Z$ and $Y$. It is convenient to make explicit that the connection is valued in $\overbar{R(\lambda)}\otimes(\mathfrak{g}\oplus\mathbb{R})$
 \begin{equation}\label{eq:ConnectionInAdjoint}
     \tensor{\Gamma}{_{MN}^P} = \Gamma_M^\alpha\tensor{T}{^\alpha ^P_N}+\Gamma_M\delta^P_N.
 \end{equation}
@@ -620,26 +629,26 @@ Inserting \eqref{eq:ConnectionInAdjoint} in \eqref{eq:VanishingTorsion} we find
 \end{equation}
 Multiplying with $\tensor{T}{^{\gamma N}_P}$ and $\delta^N_P$ respectively each line in \eqref{eq:VanishingTorsion2} should vanish separately.
 \todo{Check dual reps or not}
-As an example consider an extended geometry with structure algebra $\mathfrak{e}_{7(7)}\times\mathbb{R}$, maximal compact subalgebra $\mathfrak{su}(8)/\mathbb{Z}_2$\footnote{We ignore the discrete $\mathbb{Z}_2$ factor and consider only the double cover $\mathfrak{su}(8)$ below.} and the coordinate module $R(\lambda)=\mathbf{56}$. The connection then contains the following modules 
+As an example consider an extended geometry with structure algebra $\mathfrak{e}_{7(7)}\times\mathbb{R}$, maximal compact subalgebra $\mathfrak{su}(8)/\mathbb{Z}_2$\footnote{We ignore the discrete $\mathbb{Z}_2$ factor and consider only the double cover $\mathfrak{su}(8)$ below.} and the coordinate module $R(\lambda)=\mathbf{56}$ which is self-dual. The connection then contains the following modules 
 \begin{equation}
-    \overbar{\mathbf{56}}\otimes\left(\mathbf{133}\oplus\mathbf{1}\right) = 2\cdot \overbar{\mathbf{56}}\oplus\mathbf{912}\oplus\mathbf{6480}.
+    \mathbf{56}\otimes\left(\mathbf{133}\oplus\mathbf{1}\right) = 2\cdot \mathbf{56}\oplus\mathbf{912}\oplus\mathbf{6480}.
 \end{equation}
 To determine the part that is not torsion we note that $\overbar{R(2\Lambda_1)}=\overbar{\mathbf{1463}}$, with $\Lambda_1$ being the highest weight of $\mathbf{56}$, is the highest weight module of $\vee^2\,\mathbf{56}$ and we thus find 
 \begin{equation}
-    \overbar{\mathbf{1463}}\otimes\mathbf{56} = \overbar{\mathbf{56}}\oplus\mathbf{6480}\oplus\ldots,
+    \overbar{\mathbf{1463}}\otimes\mathbf{56} = \mathbf{56}\oplus\mathbf{6480}\oplus\ldots,
 \end{equation}
-where $\ldots$ denote terms not present in the connection. We thus see that the non-torsion part of the connection contains $\overbar{\mathbf{56}}\oplus \mathbf{6480}$ while the remaining $\overbar{\mathbf{56}}\oplus\mathbf{912}$ thus are torsion. We continue with this example to determine which parts of the connection are specified by imposing metric compatibility and vanishing torsion. Metric compatibility fixes the part in $\overbar{\mathbf{56}}\otimes(\mathfrak{g}\times\mathbb{R}/\mathfrak{k})$ as argued above. Decomposing the remaining terms under the maximal compact subalgebra we find 
+where $\ldots$ denote terms not present in the connection. We thus see that the non-torsion part of the connection contains $\mathbf{56}\oplus \mathbf{6480}$ while the remaining $\mathbf{56}\oplus\mathbf{912}$ thus are torsion. We continue with this example to determine which parts of the connection are specified by imposing metric compatibility and vanishing torsion. Metric compatibility fixes the part in $\mathbf{56}\otimes(\mathfrak{g}\times\mathbb{R}/\mathfrak{k})$ as argued above. Decomposing the remaining terms under the maximal compact subalgebra we find 
 \begin{equation}\label{eq:NonDeterminedE7}
     \left(\mathbf{28}\oplus\overbar{\mathbf{28}}\right)\otimes\mathbf{63} = \mathbf{28}\oplus\mathbf{36}\oplus\mathbf{420}\oplus\mathbf{1280}\oplus \text{conj.}
 \end{equation}
-Moreover, decomposing torsion we find  
+Moreover, decomposing torsion and non-torsion respectively we find  
 \begin{equation}
     \begin{aligned}
-        \overbar{\mathbf{56}}\oplus\mathbf{912}&\to \mathbf{28}\oplus\mathbf{36}\oplus\mathbf{420}\oplus\text{conj.},\\
-        \overbar{\mathbf{56}}\oplus\mathbf{6480}&\to\mathbf{28}\oplus\mathbf{420}\oplus\mathbf{1512}\oplus\text{conj},
+        \mathbf{56}\oplus\mathbf{912}&\to \mathbf{28}\oplus\mathbf{36}\oplus\mathbf{420}\oplus\text{conj.},\\
+        \mathbf{56}\oplus\mathbf{6480}&\to\mathbf{28}\oplus\mathbf{420}\oplus\oplus\mathbf{1280}\mathbf{1512}\oplus\text{conj},
     \end{aligned}
 \end{equation}
-which by comparing with \eqref{eq:NonDeterminedE7} shows that there is a module $\mathbf{1280}\oplus\overbar{\mathbf{1280}}$ of $\mathfrak{su}(8)$ that is not determined by imposing metric compatibility and vanishing torsion. For the relevant modulse for other algebras in the $\mathfrak{e}_{d}$-series see \cite{Cederwall:2013naa}. 
+which by comparing with \eqref{eq:NonDeterminedE7} shows that there is a module $\mathbf{1280}\oplus\overbar{\mathbf{1280}}$ of $\mathfrak{su}(8)$ that is not determined by imposing metric compatibility and vanishing torsion. For the relevant modules for other algebras in the $\mathfrak{e}_{d}$-series see \cite{Cederwall:2013naa}. 
 
 The problem with having non-determined parts in the connection is that these would lead to extra d.o.f.\ besides the ones that we are trying to describe, i.e.\ the d.of.\ of the generalised metric. Thus, in order to write down a meaningful theory one should only acquire expressions that are independent of these modules.
 
@@ -683,7 +692,7 @@ It is worth to note that due to the symmetry properties of $S^\alpha$ only the p
 
 Contract \eqref{eq:DDTransformation} with $\delta^N_P$ and symmetrise in $_{(MQ)}$ to find 
 \begin{equation}
-    \Delta_\xi [D_{(M},D_{|P|}]\tensor{}{^P_{Q)}} = \Delta_\xi \left(\tensor{Y}{^{RS}_{TP}}\tensor{\Gamma}{_{SM}^T}\tensor{\Gamma}{_{RQ}^P}\right)-2\tensor{T}{^{\alpha R}_P}\tensor{S}{^{\alpha SL}_{(M|T}}\pd_L\pd_S\xi^T\tensor{\Gamma}{_{R|Q)}^P}.
+    \Delta_\xi [D_{(M},D_{|P|}]\tensor{}{^P_{Q)}} = \Delta_\xi \left(\frac{1}{2}\tensor{Y}{^{RS}_{TP}}\tensor{\Gamma}{_{SM}^T}\tensor{\Gamma}{_{RQ}^P}\right)-\tensor{T}{^{\alpha R}_P}\tensor{S}{^{\alpha SL}_{(M|T}}\pd_L\pd_S\xi^T\tensor{\Gamma}{_{R|Q)}^P}.
 \end{equation}
 The first term in the expression above is easily canceled and we thus have constructed a symmetric two-index tensor $R_{MN}$ that transforms covariantly up to ancillary transformations. Explicitly $R_{MN}$ is given by 
 \begin{equation}
@@ -704,4 +713,4 @@ which since $R_{MN}$ is symmetric lies in the coset rather than the whole struct
 
 %first of all it would be interesting to compare the equations of motion derived from \eqref{eq:Lagrangian} and compare to the generalised Ricci-tensor. However, to do this we need to find a metric compatible connection with vanishing torsion that is fully determined in terms of the generalised metric.
 
-\section{Some thoughts on the gauge structure and extended algebras\label{sec:GaugeStructureAndExtendedAlgebras}}
+%\section{Some thoughts on the gauge structure and extended algebras\label{sec:GaugeStructureAndExtendedAlgebras}}

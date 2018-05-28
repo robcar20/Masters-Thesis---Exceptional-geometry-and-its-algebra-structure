@@ -153,7 +153,7 @@ What follows will mostly consider structures defined by some bosonic forms such 
 \end{align}
 Moreover, in order for the structures the be compatible they should satisfy the compatibility conditions 
 \begin{equation}\label{eq:CompatibilityCalabiYau}
-    \omega\wedge\Omega = 0\qquad \omega\wedge\omega\wedge\wedge = \frac{3\ii}{4}\Omega\wedge\overbar{\Omega}.
+    \omega\wedge\Omega = 0\qquad \omega\wedge\omega\wedge\omega = \frac{3\ii}{4}\Omega\wedge\overbar{\Omega}.
 \end{equation}
 
 Taking the covariant derivative of these definitions we find that the Killing spinor equations in terms of the structure $(\omega,\Omega)$ is simply the statement that they are both closed forms 
@@ -571,11 +571,39 @@ There are further interesting models to study using the tools introduced above. 
 %It then follows that a reduced structure on which the momentum maps vanish corresponds to a supersymmetric compactification with fluxes. 
 
 \subsection{Example Calabi-Yau}
-To clarify some of the concepts introduced above we consider a specific example of compactification on $CY_3\times S^1$ following \cite{Ashmore:2015joa}. Especially we would like to reproduce the known results obtained from ordinary geometric tools. However, in order to continue with a generalised geometry based on $E_{7(7)}\times \mathbb{R}^+$ we consider a slight extension by adding a circle $S^1$. Just as in the Calabi-Yau case discussed above there exists a closed symplectic two-form $\omega$, a closed complex three-form $\Omega$ and then we there also exists a closed one-form $\zeta=\dd y$ with $y$ being the coordinate on $S^1$. These together define a $SU(3)$ structure if they moreover satisfy the compatibility conditions 
+To clarify some of the concepts introduced above we consider a specific example of compactification on $CY_3\times S^1$ following \cite{Ashmore:2015joa}. Especially we would like to reproduce the known results obtained from ordinary geometric tools. However, in order to continue with a generalised geometry based on $E_{7(7)}\times \mathbb{R}^+$ we consider a slight extension by adding a circle $S^1$. Just as in the Calabi-Yau case discussed above there exists a closed symplectic two-form $\omega$, a closed complex three-form $\Omega$ and then there also exists a closed one-form $\zeta=\dd y$ with $y$ being the coordinate on $S^1$. These structures satisfy the following compatibility conditions 
 \begin{equation}
-    g^{mn}\zeta_m\omega_{np} = 0\qquad \zeta^{\#}\Omega_{npl} = 0,
+    \begin{cases}
+        \omega\wedge\Omega = 0,\\
+        \omega\wedge\omega\wedge\omega = \frac{3}{4}\Omega\wedge\overbar{\Omega},\\
+        \iota_{\zeta^{\#}}\omega = \iota_{\zeta^{\#}}\Omega = 0,
+    \end{cases}
 \end{equation}
-as well as the compatibility conditions for $\omega$ and $\Omega$ given in \eqref{eq:CompatibilityCalabiYau}. We also defined the operation $^{\#}$ which is an isomorphism between $p$-forms and anti-symmetric $p$-vectors by simply raising indices with the metric, e.g.\ $(\Omega^{\#})^{mnp}=g^{ms}g^{nk}g^{pl}\Omega_{skl}$
+where we have defined an isomorphism $^{\#}$ on any form field as $(\rho^{\rho})^{i_1i_2\ldots i_p}=g^{i_1j_1}g^{i_2j_2}\ldots\rho_{j_1j_2\ldots j_p}$, especially $\zeta^{\#}=\pd_y$ with $y$ being the coordinate along $S^1$. Moreover the integrability conditions state that $\omega,\Omega$ and $\zeta$ are all closed. The volume form is given by 
+\begin{equation}
+    \text{vol}_7 = \frac{\ii}{8}\Omega\wedge\overbar{\Omega}\wedge \zeta. 
+\end{equation}
+Explicitly this tensors can be written in a basis $\{e^a\}_{a=1,2,\ldots 7}$, with $e_7=\zeta=\dd y$, as 
+\begin{equation}
+    \begin{aligned}\label{eq:Frame}
+        \omega = e^{12}+e^{34}+e^{56},\\
+        \Omega = (e^1+\ii e^{2})\wedge(e^3+\ii e^{4})\wedge(e^5+\ii e^{6}),
+    \end{aligned}
+\end{equation}
+from which the compatibility conditions follow immediately. Especially, in this basis we define the hodge dual $\star$ as 
+\begin{equation}
+    \star e^{i_1i_2\ldots i_p} = \frac{1}{q!}\tensor{\epsilon}{^{i_1i_2\ldots i_p}_{j_1j_2\ldots j_q}}e^{j_1j_2\ldots j_q}e^{j_1j_2\ldots j_q},
+\end{equation}
+and $\tensor{\epsilon}{^{12\ldots d}}=\tensor{\epsilon}{^{12\ldots d}}=1$. Importantly it follows that for any forms $\lambda,\rho$
+\begin{equation}
+    \text{vol}_7(\rho^{\#}\lrcorner \rho) = \lambda\wedge\star\rho.
+\end{equation}
+
+%These together define a $SU(3)$ structure if they moreover satisfy the compatibility conditions 
+%\begin{equation}
+%    g^{mn}\zeta_m\omega_{np} = 0\qquad \zeta^{\#}\Omega_{npl} = 0,
+%\end{equation}
+%as well as the compatibility conditions for $\omega$ and $\Omega$ given in \eqref{eq:CompatibilityCalabiYau}. We also defined the operation $^{\#}$ which is an isomorphism between $p$-forms and anti-symmetric $p$-vectors by simply raising indices with the metric, e.g.\ $(\Omega^{\#})^{mnp}=g^{ms}g^{nk}g^{pl}\Omega_{skl}$
 
 We then want to show that there exists an integrable hyper-multiplet structure $J_\alpha$ and an integrable vector-multiplet structure $V$ given in terms of ${\omega,\Omega,\zeta}$ and their respective integrability and compatibility condition. The hyper-multiplet structure is given by
 \begin{equation}
@@ -610,10 +638,6 @@ It is then seen that indeed $W''=-4\ii\rho J_3$. Now instead let $W''=[J_3,J_+]$
     \end{aligned}
 \end{equation}
 
-
-
-
-
 In order to check the compatibility condition $J_+\cdot X=J_-\cdot X=0$ we repeat the action of an element $W=r+a+\tilde{a}+\alpha+\tilde{\alpha}\in\text{ad}\,F$ on an element $Y=v+\omega+\sigma+\tau$
 \begin{equation}\label{eq:E7action}
     \begin{aligned}
@@ -627,12 +651,12 @@ In order to check the compatibility condition $J_+\cdot X=J_-\cdot X=0$ we repea
 Consider first $X'=J_+\cdot X=0$ then by the action \eqref{eq:E7action} we find 
 \begin{equation}
     \begin{aligned}
-        v' &= -\frac{1}{2}\rho\Omega^{\#}\lrcorner\omega,\\
-        \omega' &= \frac{1}{2}\rho\zeta^{\#}\lrcorner \Omega,\\
-        \sigma' &= \frac{1}{2}\ii\rho\Omega\wedge \omega-\frac{1}{16}\zeta \rho\Omega^{\#}\lrcorner (\Omega\wedge\overbar{\Omega}\wedge\zeta),
+        v' &= -\frac{\ii}{2}\rho\Omega^{\#}\lrcorner\omega,\\
+        \omega' &= \frac{1}{2}\rho\zeta^{\#}\lrcorner \Omega-\frac{1}{2}\rho\Omega^{\#}\lrcorner \zeta\omega\wedge\omega,\\
+        \sigma' &= \frac{\ii}{2}\rho\Omega\wedge \omega-\frac{1}{2}\rho \Omega^{\#}\lrcorner (\zeta\otimes \text{vol}_7),
     \end{aligned}
 \end{equation}
-where we inserted the explicit expression for $\text{vol}_7$. From $\omega'=0$ it follows that $\ii_{\zeta^{\#}}\Omega=0$ which in terms sets the second term of $\sigma'$ to zero. The remaining term in $\sigma'$ is then simply the compatibility condition $\omega\wedge\Omega=0$ and from which it follows that $\Omega^{\#}\wedge\omega=0$. The same condition is then fulfilled by $\overbar{\Omega}$ using $J_-\cdot X=0$. 
+Using $\iota_{\zeta^{\#}}\Omega=0$ we find that $\omega'=0$. From $\sigma'=0$ the ordinary compatibility condition $\omega\wedge\Omega=0$ follows which moreover sets $\tau'$ to zero. The same condition is then fulfilled by $\overbar{\Omega}$ using $J_-\cdot X=0$. 
 
 
 We also need to check the normalisation condition $\frac{1}{2}\ii s(X,\overbar{X})=\rho^2$ with the symplectic invariant given for any vector $V,V'\in\Gamma(E)$
@@ -646,20 +670,9 @@ from which we find
     &= \rho^2,
     \end{aligned}
 \end{equation}
-where we used $\rho^2=\text{vol}_7=\frac{1}{8}\ii\Omega\wedge\overbar{\Omega}\wedge\zeta$ and the compatibility condition $\omega\wedge\omega\wedge\omega=\frac{3}{4}\ii\Omega\wedge\overbar{\Omega}$. We thus find that $J_\alpha$ and $X$ indeed satisfy a compatible $SU(6)$ structure. Moreover, this reproduce the known compatibility condition known from ordinary Calabi-Yau compactification introduced in section \ref{sec:CalabiYau}. 
+where we used $\rho^2=\text{vol}_7=\frac{1}{8}\ii\Omega\wedge\overbar{\Omega}\wedge\zeta$ and the compatibility condition $\omega\wedge\omega\wedge\omega=\frac{3}{4}\ii\Omega\wedge\overbar{\Omega}$. We thus find that $J_\alpha$ and $X$ indeed satisfy a compatible $SU(6)$ structure. Moreover, this reproduce the known compatibility condition known from ordinary Calabi-Yau compactification introduced in section \ref{sec:CalabiYau}. Explicitly we can choose a basis $\{e^\a\}_{a=1,2,\ldots 7}$ and $\omega,\Omega$ as in \eqref{eq:Frame} and $e^7=\zeta$. 
 
-We also need to check if this structure is integrable corresponding satisfying the differential conditions on the underlying Killing spinor. As we will see this reproduce the known integrability condition on the Calabi-Yau structure. To begin with consider the integrability condition for the vector-multiplet structure $\mathscr{L}_X\overbar{X}=0$
-
-\begin{equation}
-    \begin{aligned}
-    \mathscr{L}_X\overbar{X} &= X\cdot D \overbar{X}-(D\times_{\text{ad}}X)\overbar{X}\\
-        &= L_{\zeta^{\#}}\zeta^{\#}+(-\ii L_{\zeta^{\#}}\omega-\ii\iota_{\zeta^{\#}}\dd\omega)\\
-        &+(-\frac{1}{2}L_{\zeta^{\#}}(\zeta\wedge\omega\wedge\omega)+\frac{1}{2}\iota_{\zeta^{\#}}\dd(\zeta\wedge\omega\wedge\omega)+\ii\omega\wedge\dd\omega)\\
-        &+(\ii L_{\zeta^{\#}}(\zeta\otimes\text{vol}_7)-\frac{\ii}{2})j\omega\wedge\dd(\zeta\wedge\omega\wedge\omega)+\frac{\ii}{2}j(\zeta\wedge\omega\wedge\omega)\wedge\dd\omega)
-    \end{aligned}.
-\end{equation}
-
-Consider now the triplet of momentum maps $\mu_\alpha(V)=0$ determining integrability for the hyper multiplet structure. These can be rewritten in in $J_\pm$ basis as 
+We also need to check if this structure is integrable corresponding satisfying the differential conditions on the underlying Killing spinor. As we will see this reproduce the known integrability condition on the Calabi-Yau structure. Consider the triplet of momentum maps $\mu_\alpha(V)=0$ determining integrability for the hyper multiplet structure. These can be rewritten in in $J_\pm$ basis as 
 \begin{equation}
     \begin{aligned}
     \mu_3(Y)&= -\frac{\ii}{2}\int_\mathcal{M} \kappa(J_-,\mathscr{L}_YJ_+)\\
@@ -670,14 +683,88 @@ Consider now the triplet of momentum maps $\mu_\alpha(V)=0$ determining integrab
 where going to the second line we have used the observation in \eqref{eq:GengeometryLieDerivate} and going to the last line we used the invariance of the Killing form together with the fact that the hyper multiplet is an $\mathfrak{su}(2)$ triplet. Likewise we can define the plus component of the momentum map as 
 \begin{equation}
     \begin{aligned}
-    \mu_+ &= -\ii\int_\mathcal{M}\kappa(J_3,\mathscr{L}_YJ_+)\\
-          &= -\ii\int_\mathcal{M}\kappa(J_3,L_YJ_+)+2\int_\mathcal{M}\rho\kappa(\dd\omega+\dd\sigma,J_+),
+    \mu_+(Y) &= -\ii\int_\mathcal{M}\kappa(J_3,\mathscr{L}_YJ_+)\\
+          &= -\ii\int_\mathcal{M}\kappa(J_3,L_vJ_+)+2\int_\mathcal{M}\rho\kappa(\dd\omega+\dd\sigma,J_+),
     \end{aligned}
 \end{equation}
-with similar steps as above and it straightforward to define an analogous expression for $\mu_-$. These momentum maps $\mu_3,\mu_{\pm}$ should vanish for any generalised vector $Y=v+\omega+\sigma+\tau\in\Gamma(E)$ and we can thus consider the $GL(7)$ components separately. As such consider the following 
+with similar steps as above and it straightforward to define an analogous expression for $\mu_-$. These momentum maps $\mu_3,\mu_{\pm}$ should vanish for any generalised vector $Y=v+\tilde{\omega}+\sigma+\tau\in\Gamma(E)$ and since the momentum maps are linear consider each $GL(7)$ component separately, where we denoted the two-form $\tilde{\omega}$ to not cause confusion with the two-form $\omega$ in the structure. Note also that the component $\tau$ of $Y$ drops out of the momentum maps trivally. To continue we need the $\mathfrak{e}_{7(7)}$ Killing form given by 
 \begin{equation}
-    \mu_+(\omega) = 
+    \kappa(W,W') = \frac{1}{2}\text{tr}(r)\text{tr}(r')+\text{tr}(rr')+\alpha \lrcorner a'+\alpha'\lrcorner a-\tilde{\alpha}\lrcorner \tilde{a}'-\tilde{\alpha}'\lrcorner \tilde{a}.
 \end{equation}
+
+Consider then
+\begin{equation}
+    \mu_+(\sigma) = 2\int_\mathcal{M}\rho\kappa(\dd\sigma,J_+) = 0,
+\end{equation}
+since $J_+$ does not contain any six-form. Likewise $L_vJ+$ contains a three-form and an anti-symmetric three-vector but $J_3$ does not so the using the Killing form we find 
+\begin{equation}
+    \mu_+(v) = 0.
+\end{equation}
+The only non-zero contribution from $\mu_+$ thus comes from the $\tilde{\omega}$ component $\kappa(\dd\tilde{\omega},\frac{1}{2}\rho\Omega^{\#})=\frac{1}{2}\rho\Omega^{\#}\lrcorner \dd\tilde{\omega}$ and we thus get the momentum map
+\begin{equation}
+    \mu_+(\tilde{\omega})\propto \int_\mathcal{M}\rho^2\Omega^{\#}\lrcorner \dd\tilde{\omega}.
+\end{equation}
+Using that 
+\begin{equation}
+\int_\mathcal{M}\text{vol}_7 \Omega^{\#}\lrcorner \dd\tilde{\omega}\propto \int_\mathcal{M}\star\Omega\wedge\dd\tilde{\omega}\propto\int_\mathcal{M}\Omega\wedge\zeta\wedge\dd\tilde{\omega}
+\end{equation}
+and integration by parts this reduce to 
+\begin{equation}
+    \mu_+(\tilde{w}) \propto \int_\mathcal{M}\dd(\Omega\wedge\zeta)\wedge\tilde{\omega} \overset{!}{=} 0,
+\end{equation}
+which imply that $\dd(\Omega\wedge\zeta)=0$. Considering the $\mu_3$ momentum map we find 
+\begin{equation}
+    \mu_3(\tilde{\omega}) = 2\ii\int_\mathcal{M}\rho\kappa(\dd\tilde{\omega},J_3) = 0,
+\end{equation}
+sisnce $J_3$ does not contain any anti-symmetric three-vector. For the action of the six-form we find 
+\begin{equation}
+    \begin{aligned}
+    \mu_3(\sigma) &= 2\ii\int_\mathcal{M}\rho\kappa(\dd\sigma,J_3)\\
+                  &=-\frac{1}{8}\int_\mathcal{M}\rho^2(\Omega^{\#}\wedge\Omega^{\#})\lrcorner \dd\tilde{\sigma}.
+    \end{aligned}
+\end{equation}
+Using the same procedure as above we find
+\begin{equation}
+    \int_\mathcal{M}\text{vol}_7 (\Omega^{\#}\wedge \overbar{\Omega}^{\#})\lrcorner \dd\sigma =\int_\mathcal{M} \star(\Omega\wedge\overbar{\Omega})\wedge\dd\sigma \propto \int_\mathcal{M} \dd \zeta\wedge \sigma\overset{!}{=} 0,
+\end{equation}
+and we thus find that $\zeta$ is closed. It then follows from $\dd(\zeta\wedge\Omega)=0$ and $\iota_{\zeta^{\#}}\Omega=0$ that $\Omega$ is closed. The last condition from the triplet of momentum maps is the following 
+\begin{equation}
+    \begin{aligned}
+    \mu_3(v) &= -\frac{\ii}{2}\int_\mathcal{M}\kappa(J_-,L_vJ_+)
+             &= \frac{\ii}{8}\int_\mathcal{M}\rho \left(\overbar{\Omega}^{\#}\lrcorner L_v(\rho \Omega)+L_v(\rho\Omega^{\#})\lrcorner \overbar{\Omega}\right).
+    \end{aligned}
+\end{equation}
+Since $\Omega$ is closed it is also covariantly constant and $\overbar{\Omega}^{\#}\lrcorner \Omega$ is constant we can use $\int_\mathcal{M}\overbar{\Omega}^{\#}\lrcorner \Omega L_v\kappa^2=0$ to move $\rho$ outside of the Lie derivative and use $\overbar{\Omega}^{\#}\lrcorner L_v \Omega=\star\overbar{\Omega}\wedge L_v \Omega$  
+\begin{equation}
+    \begin{aligned}
+    \mu_3(v) &\propto \int_\mathcal{M}\star\overbar{\Omega}\wedge L_v\Omega \\
+            &= \int_\mathcal{M}\star\overbar{\Omega}\wedge (\dd\iota_v\Omega+\iota_v\dd \Omega)\\
+            &= \int_{\mathcal{M}} \iota_v\zeta \wedge\overbar{\Omega}\wedge\dd\Omega \overset{!}{=}0,
+    \end{aligned}
+\end{equation}
+where going to the last line we have used $\dd\zeta=0$, $\zeta\wedge\dd\Omega=\zeta\wedge\dd\overbar{\Omega}=0$ and neglected boundary terms to find the condition $\dd\Omega\wedge\overbar{\Omega}=\Omega\wedge\dd\overbar{\Omega}=0$. 
+
+In order to define an exceptional Calabi-Yau the structures must also satisfy $\mathscr{L}_XJ_+=\mathscr{L}_XJ_-=0$.
+\begin{equation}
+    \begin{aligned}
+    \mathscr{L}_X J_+ &= L_{\zeta^{\#}}J_+-\ii\dd\omega\cdot J_++\frac{1}{2}\dd(\zeta\wedge\omega\wedge\omega)\cdot J_+\\
+    &= L_{\zeta^{\#}}J_+-\ii\dd\omega\cdot J_+,
+    \end{aligned}
+\end{equation}
+where going to the second line we used $\dd\zeta=0$ and $\dd\omega\wedge\omega=0$. 
+
+\begin{equation}
+    \begin{aligned}
+    \mathscr{L}_X\overbar{X} &= X\cdot D \overbar{X}-(D\times_{\text{ad}}X)\overbar{X}\\
+        &= L_{\zeta^{\#}}\zeta^{\#}+(-\ii L_{\zeta^{\#}}\omega-\ii\iota_{\zeta^{\#}}\dd\omega)\\
+        &+(-\frac{1}{2}L_{\zeta^{\#}}(\zeta\wedge\omega\wedge\omega)+\frac{1}{2}\iota_{\zeta^{\#}}\dd(\zeta\wedge\omega\wedge\omega)+\ii\omega\wedge\dd\omega)\\
+        &+(\ii L_{\zeta^{\#}}(\zeta\otimes\text{vol}_7)-\frac{\ii}{2})j\omega\wedge\dd(\zeta\wedge\omega\wedge\omega)+\frac{\ii}{2}j(\zeta\wedge\omega\wedge\omega)\wedge\dd\omega)
+    \end{aligned}.
+\end{equation}
+
+
+
+
 
 
 

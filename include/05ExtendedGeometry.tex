@@ -6,11 +6,9 @@ When the structure algebra is that of a hidden duality group appearing when comp
 In sections $\ref{sec:ExtendedSpacetimeAndSetup}-\ref{sec:Dynamics}$ we follow the construction of extended geometries presented in \cite{CederwallPalmkvist2017} by especially focusing on finding constraints to ensure closure of generalised diffeomorphisms. Moreover, a pseudo-action that is invariant under generalised diffeomorphisms that encode the dynamics of the generalised metric is introduced. In section \ref{sec:CovariantFormalism} we introduce a covariant derivative following \cite{Cederwall:2013naa} in order to derive purely geometric objects such as torsion and curvature. %Lastly in section \ref{sec:GaugeStructureAndExtendedAlgebras} we discuss some intruiging features of the underlying gauge structure and also mention the rôle of extended algebras in extended geometries. 
 
 \section{Extended spacetime and setup\label{sec:ExtendedSpacetimeAndSetup}}
-Extended geometries will be based on the split real-form of a Kac-Moody algebra $\mathfrak{g}\times\mathbb{R}$ exponentiated to a group $G\times\mathbb{R}^+$ and an irreducible integrable highest weight coordinate module $R(\lambda)$. Spacetime is enlarged by letting $\pd_M\in\overbar{R(\lambda)}$ be a local coordinate basis. A vector field $\xi$ is then given by 
-\begin{equation}
-    \xi = \xi^M\pd_M,
-\end{equation}
-with $\xi^M(x^M)\in R(\lambda)$ at a point $x^M\in R(\lambda)$ in a generalised spacetime. This naturally extends to arbitrary tensor fields. Ordinary geometry is formulated in a coordinate independent manner with transition functions valued in $GL(d)$; in extended geometries on the other hand this rôle is played by $G\times\mathbb{R}^+$. However, we will only consider local features since global transformations in general are still difficult to deal with. In the specific example of double field theory global transformations are well behaved \cite{Hohm:2012gk,Berman:2014jba}.
+Extended geometries will be based on the split real-form of a Kac-Moody algebra $\mathfrak{g}\times\mathbb{R}$ exponentiated to a group $G\times\mathbb{R}^+$ and an irreducible integrable highest weight coordinate module $R(\lambda)$ with derivatives in the dual module $\pd_M\in \overbar{R(\lambda})$. 
+
+Ordinary geometry is formulated in a coordinate independent manner with transition functions valued in $GL(d)$; in extended geometries on the other hand this rôle is played by $G\times\mathbb{R}^+$. However, we will only consider local features since global transformations in general are still difficult to deal with. In the specific example of double field theory global transformations are well behaved \cite{Hohm:2012gk,Berman:2014jba}.
 
 As introduced in section \ref{sec:ExtendedAlgebras} a Kac-Moody algebra is described in terms of its Cartan matrix $a_{ij}$ which we assume to be symmetrisable, i.e.\ there exists a diagonal matrix $D$ with nonzero entries $D_j$ such that $Da$ is a symmetric matrix. Note that the Kac-Moody algebra $\mathfrak{g}(a)$ is not the bosonic extended algebra $\mathscr{A}(a)$ introduced in \ref{sec:ExtendedAlgebras}. However, we will use both the bosonic extension $\mathscr{A}(\mathfrak{g})$ and the fermionic extension $\mathscr{B}(a)$ in section \ref{sec:AncillaryTransformationsAndClosure} to show closure of generalised diffeomorphisms. If the Cartan matrix $a_{ij}$ associated to a rank $r$ algebra $\mathfrak{g}$ is invertible we let $i,j=1,2,\ldots r$. Otherwise if the corank $k>0$ we extend the Cartan matrix such that $a_{ij}$ is invertible with $i,j=1,2,\ldots r+k$. Since $a$ is assumed to be symmetrisable there exists an inner product on the root space that we define as 
 \begin{equation}
@@ -52,7 +50,7 @@ A crucial consistency condition is now whether the algebra closes or not, to see
 \begin{equation}\label{eq:closure}
     \left(\left[\mathscr{L}_\xi,\mathscr{L}_\eta\right]-\mathscr{L}_{\frac{1}{2}\left(\mathscr{L}_\xi\eta-\mathscr{L}_\eta\xi\right)}\right)V^M\overset{?}{=}0.
 \end{equation}
-After a good deal of algebra one finds that \todo{Include calculation?}
+After a good deal of algebra one finds that 
 \begin{equation}\label{eq:GenDiffComm}
     \left(\left[\mathscr{L}_\xi,\mathscr{L}_\eta\right]-\mathscr{L}_{\frac{1}{2}\left(\mathscr{L}_\xi\eta-\mathscr{L}_\eta\xi\right)}\right)V^M = \frac{1}{2}\tensor{Z}{^{MP}_{QN}}\tensor{Y}{^{QR}_{ST}}\xi^T\pd_P\pd_R\eta^SV^N-\left(\xi\leftrightarrow\eta\right)
 \end{equation}
@@ -93,15 +91,16 @@ Up to the remaining term in \eqref{eq:GenDiffComm} closure of the algebra is ent
         &= \left(R_h^s\oplus R_2\right)\oplus\left(R_h^a\oplus \tilde{R}_2\right),
     \end{aligned}
 \end{equation}
-with $R_h^{s,a}$ being the highest weight representation in the symmetrized and anti-symmetrised product respectively and
+with $R_h^{s,a}$ being the highest weight representation in the symmetrised and anti-symmetrised product respectively and
 \begin{align}
     R_2 &= \vee^2 R(\lambda)\ominus R_h^s,\\
     \tilde{R}_2 &= \wedge^2R(\lambda)\ominus  R_h^a.
 \end{align}
-It is easily seen that the highest weight representation in the symmetrised product is given by $R_h^s=R(2\lambda)$. Solving the section condition can be done in two steps, first impose the weak section stating that any momenta $|p\rangle\in \overbar{R(\lambda)}$ lie in a minimal orbit of $G$. This is equivalent to $|p\rangle\otimes|p\rangle \in \overbar{R(2\lambda)}$ which obviously lie in the symmetric product of any vector \cite{Berman2013,Bossard2017}. Secondly we demand that the product of two arbitrary momenta $|p\rangle,|q\rangle\in\overbar{R(\lambda)}$ contain only the dual of the highest modules in the symmetric $R^s_h$ and anti-symmetric $R^a_h$ product of $R(\lambda)$ respectively. In other words, the second step means that we set 
+It is easily seen that the highest weight representation in the symmetrised product is given by $R_h^s=R(2\lambda)$. Solving the section condition can be done in two steps, first impose the weak section stating that any momenta $|p\rangle\in \overbar{R(\lambda)}$ lie in a minimal orbit of $G$, which is equivalent to $|p\rangle\otimes|p\rangle \in \overbar{R(2\lambda)}$ \cite{Berman2013,Bossard2017}. Secondly we demand that the product of two arbitrary momenta $|p\rangle,|q\rangle\in\overbar{R(\lambda)}$ contain only the dual of the highest modules in the symmetric $R^s_h$ and anti-symmetric $R^a_h$ product of $R(\lambda)$ respectively. In other words, the second step means that we set 
 \begin{equation}
-    \left(\pd\otimes\pd\right)|_{\overbar{R_2}} = 0, \qquad \left(\pd\otimes\pd\right)|_{\overbar{\tilde{R}_2}} =0.
+    \left(\pd\otimes\pd\right)|_{\overbar{R_2}} = 0, \qquad \left(\pd\otimes\pd\right)|_{\overbar{\tilde{R}_2}} =0,
 \end{equation}
+where $\otimes$ indicate that the derivatives acting on arbitrary fields. 
 %As in \ref{sec:ExtendedAlgebras} $R_2$ and $\tilde{R}_2$ sit at level $-2$ of $\mathscr{B}(\mathfrak{g})$ and $\mathscr{A}(\mathfrak{g})$ respectively \cite{CederwallPalmkvist2017}. 
 
 The section condition plays an important rôle in extended geometries as this specifies the embedding $GL(d)\hookrightarrow G\times\mathbb{R}^+$ that defines ordinary geometry. However, crucially the section condition is posed and solved in a $G$ covariant manner. Moreover, any solution to the section condition can be reached by a $G$ transformation of another solution while the $d$ dimensional subspace that span the vector representation of $GL(d)$ is stabilised by the $GL(d)$ subgroup of $G$.
@@ -120,8 +119,8 @@ Consider the quadratic Casimir invariant evaluated on $R(\lambda)$, $R(2\lambda)
         C_2(R(2\lambda-\alpha_i)) &= C_2(R(2\lambda))-2(\alpha_i,\lambda)+\frac{1}{2}(\alpha_i,\alpha_i)-(\alpha_i,\rho)\\
         &= C_2(R(2\lambda))-\lambda_i(\alpha_i,\alpha_i),
     \end{aligned}
-\end{equation}\todo{rest of rho term?}
-where we in the second step in the last equation used the definition of coroots and the expression of the Weyl vector given in \eqref{eq:Weylroots}. Evaluate the Casimir on a state in $R(2\lambda)$, which without loss of generality we take to be $|\lambda\rangle\otimes|\lambda\rangle$, using the explicit form in \eqref{eq:DefCasimir}
+\end{equation}
+where we in the second step in the last equation used the definition of coroots and the expression of the Weyl vector given in \eqref{eq:Weylroots}. Evaluate the Casimir on a state in $R(2\lambda)$, which without loss of generality we take to be $|\lambda\rangle\otimes|\lambda\rangle$, using the explicit form in \eqref{eq:CasimirOnReps}
 \begin{equation}
     \begin{aligned}
     \frac{1}{2}\eta_{\alpha\beta}T^\alpha T^\beta\left(|\lambda\rangle\otimes|\lambda\rangle\right) =& \left(\frac{1}{2}\eta_{\alpha\beta}T^\alpha T^\beta |\lambda\rangle\right)\otimes|\lambda\rangle +|\lambda\rangle\otimes\left(\frac{1}{2}\eta_{\alpha\beta}T^\alpha T^\beta |\lambda\rangle\right)\\
@@ -133,10 +132,10 @@ On the other hand evaluate the right hand side of \eqref{eq:CasimirOnReps} on th
     \left(2C_2(R(\lambda))+(\lambda,\lambda)\right)|\lambda\rangle\otimes|\lambda\rangle = \left(\frac{1}{2}T^\alpha T^\beta|\lambda\right)\otimes|\lambda\rangle+|\lambda\rangle\otimes\left(\frac{1}{2}T^\alpha T^\beta|\lambda\right)+(\lambda,\lambda)|\lambda\rangle\otimes|\lambda\rangle. 
 \end{equation}
 We thus find the algebraic condition 
-\begin{equation}
+\begin{equation}\label{eq:AntiSymmetricCondition}
     \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right) |\lambda\rangle\otimes|\lambda\rangle=0
 \end{equation}
-in order to satisfy the second equation in \eqref{eq:CasimirOnReps}. A similar condition is derived for states in $R(2\lambda-\alpha_i)$ by evaluating the Casimir operator on the highest weight state $|2\lambda-\alpha_i\rangle$
+when imposing \eqref{eq:CasimirOnReps}. A similar condition is derived for states in $R(2\lambda-\alpha_i)$ by evaluating the Casimir operator on the highest weight state $|2\lambda-\alpha_i\rangle$
 \begin{equation}
     \begin{aligned}
         \left[C_2(R(2\lambda-\alpha_i))-2C_2(R(\lambda)-(\lambda,\lambda)+\lambda_i(\alpha_i,\alpha_i)\right]|2\lambda-\alpha_i\rangle\\
@@ -152,59 +151,79 @@ and
 \begin{equation}
     \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)+\lambda_i(\alpha_i,\alpha_i)\right)\left(|\lambda\rangle\otimes|q\rangle-|q\rangle\otimes|\lambda\rangle\right)=0.
 \end{equation}
-Since $\lambda$ is the highest weight in $R(\lambda)$ any other vector $|q\rangle$ can be decomposed as 
-\begin{equation}
-    |q\rangle = \sum_{n\geq 0} |q\rangle_n,
-\end{equation}
-with $(h,\lambda)|q\rangle_n = ((\lambda,\lambda)-n)|q\rangle_n$. For the split real form in our normalization we have 
-\begin{equation}
-    \eta_{\alpha\beta}T^\alpha\otimes T^\beta = (h,h)+\sum_{\alpha\in\Delta}\left(e_\alpha e_{-\alpha}+e_{-\alpha}e_\alpha\right),
-\end{equation}
-such that \eqref{eq:SectSym} simplifies to 
+This is trivially satisfied by the $q=|\lambda\rangle$. Consider a state $|q\rangle = e_{-\alpha_i}|\lambda\rangle$ with $\alpha_i$ a positive simple root with $\lambda_i\neq 0$. The weak section condtion on $|q\rangle\otimes|q\rangle$ then gives 
 \begin{equation}
     \begin{aligned}
-    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)\left(|\lambda\rangle\otimes|q\rangle+|q\rangle\otimes|\lambda\rangle\right) =& -\sum_{n\geq 0} n\left(|\lambda\rangle\otimes|q\rangle_n+|q\rangle_n\otimes|\lambda\rangle\right)\\
-    &+ \sum_{n\geq 0}\sum_{\alpha\in\Delta^+} \left(e_{-\alpha}|\lambda\rangle\otimes e_{\alpha}|q\rangle_n+e_{\alpha}|q\rangle_n\otimes e_{-\alpha}|\lambda\rangle\right),
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)e_{-\alpha_i}|\lambda\rangle \otimes e_{-\alpha_i}|\lambda\rangle &= (\lambda-\alpha_i,\lambda-\alpha_i)e_{-\alpha_i}|\lambda\rangle\otimes e_{-\alpha_i}|\lambda\rangle \\
+    &+(1+\sigma)\sum_{\alpha\in \Delta^+}e_\alpha e_{-\alpha_i}|\lambda\rangle\otimes e_{-\alpha}e_{-\alpha_i}|\lambda\rangle.
     \end{aligned}
 \end{equation}
-where we used the decomposition of $|q\rangle$ and that $\lambda$ is a highest weight, i.e.\ it is annihilated by all the positive roots $\alpha\in\Delta^+$. This equation is linear in $q$ so we can consider a single component, then this vanish only if $|q\rangle_n= e_{-\alpha}|\lambda\rangle$ for some $\alpha\in\Delta^+$ such that 
-\begin{equation}
-    \left(1+\sigma\right)\left[e_{\alpha}e_{-\alpha}|\lambda\rangle\otimes|\lambda\rangle-n|\lambda\rangle\otimes e_{-\alpha}|\lambda\rangle\right] = 0,
-\end{equation}
-where $\sigma$ is the permutation operator. Using that $e_{\alpha}e_{-\alpha}|\lambda\rangle = h_\alpha |\lambda\rangle$ we find  
-\begin{equation}
-    \lambda(\alpha^\vee) = n,
-\end{equation}
-with $\alpha$ a positive simple root. Moreover, any other positive root $\tilde{\alpha}\neq\alpha$ has to satisfy 
-\begin{equation}
-    e_{\tilde{\alpha}}|q\rangle_k = 0\qquad \text{or}\qquad e_{-\tilde{\alpha}}|\lambda\rangle = 0. 
-\end{equation}
-The latter condition gives 
-\begin{equation}
-    e_{\tilde{\alpha}}e_{-\tilde{\alpha}}|\lambda\rangle = \lambda(\tilde{\alpha}^\vee)|\lambda\rangle=0.
-\end{equation}
-Since $|q\rangle$ is an element in the section also $|q\rangle\otimes|q\rangle$ should satisfy the symmetric constraint, note, hoever, that this is a non-linear constraint. Therefore consider the term involving $|q\rangle_n\otimes|q\rangle_n$, with the largest $n$ such that $|q\rangle_n$ is non-trivial. Take $\alpha=\alpha_i$ a positive simple root and insert $|q\rangle_n=e_{-\alpha_i}|\lambda\rangle$
+The first term has to vanish seperately from which we get $\lambda_i=1$. The second term then also vanish since $(\alpha_i-\alpha)$ with $\alpha_i\neq \alpha$ can not be written as a sum of positive roots and the term with $\alpha=\alpha_i$ vanish for $\lambda_i=1$. Consider then the state $(1+\sigma)|\lambda\rangle\otimes e_{-\alpha_i}|\lambda\rangle$, with $\sigma$ the permutation operator, which also should satisfy the symmetric constraint. For this state we find 
 \begin{equation}
     \begin{aligned}
-    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)|\lambda\rangle\otimes|\lambda\rangle &= (e_{-\alpha_i}e_{-\alpha_i}|\lambda)\rangle\otimes|\lambda\rangle+|\lambda\rangle\otimes (e_{-\alpha_i}e_{-\alpha_i}|\lambda\rangle)\\
-    &+\left((h,h)-(\lambda,\lambda)\right)e_{-\alpha_i}|\lambda\rangle\otimes e_{-\alpha_i}|\lambda\rangle\\
-    &= (1+\sigma)(e_{\alpha_i}e_{\alpha_i})|\lambda)\rangle\otimes|\lambda\rangle+\left[(\lambda-\alpha_i,\lambda-\alpha_i)-(\lambda,\lambda)\right]|\lambda\rangle\otimes|\lambda\rangle.
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)|\lambda\rangle \otimes e_{-\alpha_i}|\lambda\rangle &= (\lambda,\lambda-\alpha_i)(1+\sigma)|\lambda\rangle\otimes e_{-\alpha_i}|\lambda\rangle\\
+    &+(1+\sigma)\sum_{\alpha\in\Delta^+}e_{-\alpha}|\lambda\rangle\otimes e_{\alpha}e_{-\alpha_i}|\lambda\rangle. 
     \end{aligned}
 \end{equation}
-In order for this to vanish we find $e_{-\alpha_i}e_{-\alpha_i}|\lambda\rangle =0$ and 
-\begin{equation}
-    -2(\lambda,\alpha_i)+(\alpha_i,\alpha_i)=0\qquad \implies\qquad \lambda_i = 1.
+The only contribution from the sum is for $\alpha=\alpha_i$, since otherwise $(\alpha_i-\alpha)$ can not be written as a sum of positive roots, which cancels the term proportional to $\lambda_i$ in the first term. We have thus found that $|\lambda\rangle$, $|q\rangle$, and $|\lambda\rangle+|q\rangle$ all satisfy the weak section condition. 
+
+Consider now another state $|p\rangle = e_{-\beta-\alpha_i}|\lambda\rangle$ which also which also lies in the section. From the weak section condition on $(1+\sigma)|\lambda\rangle\otimes|p\rangle$ we find 
+\begin{equation}\label{eq:Abel}
+    \begin{aligned}
+        \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)e_{-\alpha_i}|\lambda\rangle \otimes e_{-\beta-\alpha_i}|\lambda\rangle &= (1+\sigma)\left[(\lambda,\lambda-\alpha_i-\beta)-(\lambda,\lambda)\right]|\lambda\rangle\otimes e_{-\beta-\alpha_i}|\lambda\rangle \\
+        &+(1+\sigma)\sum_{\alpha\in \Delta^+}e_{-\alpha}|\lambda\rangle\otimes e_{\alpha}e_{-\beta-\alpha_i}|\lambda\rangle.
+    \end{aligned}
 \end{equation}
-Also $e_{-\alpha_i}e_{-\alpha_i}|\lambda\rangle =0$ implies $\lambda_i=1$ which can be seen by looking at $e_{\alpha}e_{-\alpha_i}e_{-\alpha_i}|\lambda\rangle$. 
+The term in the sum with $\alpha=\beta+\alpha_i$ contributes a term 
+\begin{equation}
+    (1+\sigma)(\lambda(\alpha_i^\vee)+\lambda(\beta^\vee))e_{-\beta-\alpha_i}|\lambda\rangle\otimes|\lambda\rangle,
+\end{equation}
+which cancels the remaining term from the first line in \eqref{eq:Abel}. The remaining terms from the sum consists of $\alpha$ such that $\alpha\neq \beta+\alpha_i$ and $(\alpha,\lambda)\neq 0$ since otherwise if $(\alpha,\lambda)=0$, then $e_{-\alpha}|\lambda\rangle$ vanish. The contribution from $\alpha=\alpha_i$ and $\alpha=\beta$ vanish only if $(\beta,\lambda)=0$. The remaining states carry a weight $\lambda-(\alpha_i+\beta-\alpha)$, with $\alpha_i$ not included in $\alpha$ and $(\alpha,\lambda)\neq 0$, from which it follows that $\alpha_i+\beta-\alpha$ is not a sum of positive roots and any such state thus vanish. 
+
+Lastly consider the weak section condition on $|p\rangle\otimes|p\rangle$ 
+\begin{equation}\label{eq:WeakSectionP}
+    \begin{aligned}
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)e_{-\alpha_i-\beta}&|\lambda\rangle \otimes e_{-\alpha_i-\beta}|\lambda\rangle = [(\lambda-\alpha_i-\beta,\lambda-\alpha_i-\beta)]e_{-\alpha_i-\beta}|\lambda\rangle\otimes e_{-\alpha_i-\beta}|\lambda\rangle\\
+    &+(1+\sigma)\sum_{\alpha\in\Delta^{+}} e_{\alpha}e_{-\alpha_i-\beta}|\lambda\rangle\otimes e_{-\alpha}e_{-\alpha_i-\beta}e|\lambda\rangle.
+    \end{aligned}
+\end{equation}
+Any element $\alpha$ that contains a simple root $\alpha_j\neq \alpha_i$ such that $\alpha_j$ is not included in $\beta$ will not contribute to the sum since then $(\alpha_i+\beta-\alpha)$ can not be written as a sum of positive roots. We then choose $\beta=\beta_j$ according to 
+\begin{equation}
+    \beta_j = \sum_{k=1}^j \alpha_{i+k},
+\end{equation}
+such that $a_{mn}=-1$ for $|m-n|=1$ and $a_{mn}=0$ for $|m-n|>0$ for $m,n=i,i+1,\ldots, i+(d-2)$ for some value $d-2$. With this choice the set of roots $\{\alpha_i,\beta_j\}_{j=1,2,\ldots d-2}$ correspond to simple positive roots of a $\mathfrak{sl}(d)\subset \mathfrak{g}$ subalgebra. Moreover, the states $e_{-\beta_j-\alpha_i}|\lambda\rangle$ span the vector representation under this algebra. In this representation $e_\alpha$, with $\alpha$ a positive root of $\mathfrak{sl}$, is an upper-triangular matrix and $e_{-\alpha}$ its transpose from which it follows that either $e_\alpha e_{-\beta_j-\alpha_i}|\lambda\rangle$ or $e_{-\alpha}e_{-\beta_j-\alpha_i}|\lambda\rangle$ vanish. Moreover, we find that 
+\begin{equation}
+    -2(\alpha_i,\beta)+(\beta,\beta)=0,
+\end{equation}
+if $\beta=\beta_j$ and thus \eqref{eq:WeakSectionP} vanish. We have thus found that also $|p\rangle$ and $|p\rangle\otimes|\lambda\rangle$ satisfy the weak section condition. 
+Moreover, there is anti-symmetric condition from \eqref{eq:AntiSymmetricCondition} which is seen to be fulfilled by looking at the following 
+\begin{equation}
+    \begin{aligned}
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)|\lambda\rangle \otimes e_{-\alpha-\beta}|\lambda\rangle &= [(\lambda,\lambda-\alpha_i-\beta,\lambda)-\lambda)]|\lambda\rangle\otimes e_{-\alpha_i-\beta}|\lambda\rangle \\
+    &+\sum_{\alpha\in \Delta^+}e_{-\alpha}|\lambda\rangle \otimes e_{\alpha} e_{-\alpha_i-\beta}|\lambda\rangle\\
+    &= -|\lambda\rangle \otimes |p\rangle +|p\rangle\otimes |\lambda\rangle,
+    \end{aligned}
+\end{equation}
+using similar arguments as above to find that the only non-vanishing contribution from the sum is for $\alpha=\alpha_i+\beta$. It is immediate that $e_{-\alpha_i-\beta_j}|\lambda\rangle+e_{-\alpha_i-\beta_k}|\lambda\rangle$ for any $j,k$ also satisfy the section condition. The reason for this is that the only contribution of the Casimir invariant from elements not in the $\mathfrak{sl}$ subalgebra will come from $(h,h)-(\lambda,\lambda)$ which is stabilised under the $\mathfrak{sl}$ subalgebra by construction.
+
+Any two vectors $|p\rangle$ and $|q\rangle$ in a section thus satisfy 
+\begin{equation}
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)+(1-\sigma)\right)|p\rangle\otimes|q\rangle = 0,
+\end{equation}
+with the last term only contributing only to the anti-symmetric part. Comparing with the invariant $Y$ tensor introduced in \eqref{eq:Y} we find for any vector $|p\rangle$ and $|q\rangle$ in a section 
+\begin{equation}
+    Y|p\rangle\otimes|q\rangle = 0,
+\end{equation}
+with $k=1$ and $\beta=(\lambda,\lambda)-1$. 
 
 A section can then be constructed as follows 
 \begin{enumerate}
     \item Pick a highest weight state $|\lambda\rangle$.
     \item Enlarge the section by adding the state $e_{-\alpha_i}|\lambda\rangle$ with $\lambda_i=1$.
     \item Add another state $e_{-\alpha_{i+1}}e_{-\alpha_{i}}|\lambda\rangle$ if $\lambda_i=0$. 
-    \item Continue and add more states $e_{-\alpha_{i+l}}e_{-\alpha_{i+l-1}}\ldots e_{-\alpha_{i}}|\lambda\rangle$ as long as $\lambda_{r}\neq 0$ only for $r=i$.
+    \item Continue and add more states $e_{-\alpha_{i+l}}e_{-\alpha_{i+l-1}}\ldots e_{-\alpha_{i}}|\lambda\rangle$ as long as $\lambda_{i+l}\neq 0$ only for $l=0$.
 \end{enumerate}
-This is conveniently depicted in terms of a so-called gravity-line in the Dynkin diagram. As an example of this consider an extended geometry based on $E_{7(7)}$ and the coordinate module $R(\lambda)=R(\Lambda_1)$. Two possible sections are then shown in \figref{fig:E7WithSection} where the black nodes denote the series of simple roots used to construct the respective section. The gravity-line thus corresponds to the line of $d-1$ black nodes and the stabiliser of the section is $GL(d)$. 
+If one reaches a branching in the diagram one choose one direction and should stop when reaching a node with multiple connections. By construction these states span a $d$-dimensional representation under the ``gravity-line'' corresponding to an embedding of $GL(d)$ in $G$. As an example of this consider an extended geometry based on $E_{7(7)}$ and the coordinate module $R(\lambda)=R(\Lambda_1)$. Two possible sections are then shown in \figref{fig:E7WithSection} where the black nodes denote the set of simple roots defining the $\mathfrak{sl}$ subalgebra. 
 
 \begin{figure}
     \ESevenDynkinWithSections{1}
@@ -212,15 +231,7 @@ This is conveniently depicted in terms of a so-called gravity-line in the Dynkin
     \label{fig:E7WithSection}
 \end{figure}
 
-Any two vectors $|p\rangle$ and $|q\rangle$ in a section should thus satisfy 
-\begin{equation}
-    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)+\frac{(\alpha_i,\alpha_i)}{2}(1-\sigma)\right)|p\rangle\otimes|q\rangle = 0,
-\end{equation}
-with the last term only contributing only to the anti-symmetric part. Comparing with the invariant $Y$ tensor introduced in \eqref{eq:Y} we find for any vector $|p\rangle$ and $|q\rangle$ in a section 
-\begin{equation}
-    Y|p\rangle\otimes|q\rangle = 0,
-\end{equation}
-with $k=2/(\alpha_i,\alpha_i)$ and $\beta=k(\lambda,\lambda)-1$. 
+
 
 \subsection{Ancillary transformation and closure of algebra\label{sec:AncillaryTransformationsAndClosure}}
 The obstruction to closure of generalised diffeomorphisms was shown in \eqref{eq:GenDiffComm} to be  
@@ -714,3 +725,65 @@ which since $R_{MN}$ is symmetric lies in the coset rather than the whole struct
 %first of all it would be interesting to compare the equations of motion derived from \eqref{eq:Lagrangian} and compare to the generalised Ricci-tensor. However, to do this we need to find a metric compatible connection with vanishing torsion that is fully determined in terms of the generalised metric.
 
 %\section{Some thoughts on the gauge structure and extended algebras\label{sec:GaugeStructureAndExtendedAlgebras}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%
+\begin{comment}
+Since $\lambda$ is the highest weight in $R(\lambda)$ any other vector $|q\rangle$ can be decomposed as 
+\begin{equation}
+    |q\rangle = \sum_{n\geq 0} |q\rangle_n,
+\end{equation}
+with $(h,\lambda)|q\rangle_n = ((\lambda,\lambda)-n)|q\rangle_n$. For the split real form in our normalization we have 
+\begin{equation}
+    \eta_{\alpha\beta}T^\alpha\otimes T^\beta = (h,h)+\sum_{\alpha\in\Delta}\left(e_\alpha e_{-\alpha}+e_{-\alpha}e_\alpha\right),
+\end{equation}
+such that \eqref{eq:SectSym} simplifies to 
+\begin{equation}\label{eq:Section}
+    \begin{aligned}
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)\left(|\lambda\rangle\otimes|q\rangle+|q\rangle\otimes|\lambda\rangle\right) =& -\sum_{n\geq 0} n\left(|\lambda\rangle\otimes|q\rangle_n+|q\rangle_n\otimes|\lambda\rangle\right)\\
+    &+ \sum_{n\geq 0}\sum_{\alpha\in\Delta^+} \left(e_{-\alpha}|\lambda\rangle\otimes e_{\alpha}|q\rangle_n+e_{\alpha}|q\rangle_n\otimes e_{-\alpha}|\lambda\rangle\right),
+    \end{aligned}
+\end{equation}
+where we used the decomposition of $|q\rangle$ and that $\lambda$ is a highest weight, i.e.\ it is annihilated by all the positive roots $\alpha\in\Delta^+$. This equation is linear in $q$ so we can consider a single component, then this vanish only if $|q\rangle_n= e_{-\alpha}|\lambda\rangle$ for some $\alpha\in\Delta^+$ such that 
+\begin{equation}
+    \left(1+\sigma\right)\left[e_{\alpha}e_{-\alpha}|\lambda\rangle\otimes|\lambda\rangle-n|\lambda\rangle\otimes e_{-\alpha}|\lambda\rangle\right] = 0,
+\end{equation}
+where $\sigma$ is the permutation operator. Using that $e_{\alpha}e_{-\alpha}|\lambda\rangle = h_\alpha |\lambda\rangle$ we find  
+\begin{equation}
+    \lambda(\alpha^\vee) = n,
+\end{equation}
+with $\alpha$ a positive root. Consider $\alpha=\alpha_i$ a simple positive root and the vector $|q\rangle=e_{\alpha_i}|\lambda\rangle$, then this reduce to 
+\begin{equation}
+    \begin{aligned}
+    \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)e_{\alpha_i}|\lambda\rangle\otimes|\lambda\rangle &= (\lambda-\alpha_i,\lambda-\alpha_i)|\lambda\rangle\otimes|\lambda\rangle\\
+    &+\sum_{\alpha\in\Delta^+}e_{-\alpha}e_{\alpha_i}|\lambda\rangle\otimes e_{\alpha}e_{\alpha_i}|\lambda\rangle,
+    \end{aligned}
+\end{equation}
+from which we find $\lambda=1$. Both $|\lambda\rangle$ and $e_{\alpha_i}|\lambda\rangle$ and any combination thereof satisfy the section condition. 
+
+
+
+The latter condition gives 
+\begin{equation}
+    e_{\tilde{\alpha}}e_{-\tilde{\alpha}}|\lambda\rangle = \lambda(\tilde{\alpha}^\vee)|\lambda\rangle=0.
+\end{equation}
+The state $e_{-\beta-\alpha_i}|\lambda\rangle$ carries a weight $\lambda-\alpha_i-\beta$ from which we find 
+\begin{equation}
+    (\lambda-\alpha_i-\beta,\lambda-\alpha_i-\beta)-(\lambda,\lambda) = (\alpha_i,\alpha_i)+(\beta,\beta)+2(\alpha_i,\beta)-2(\alpha_i,\lambda).
+\end{equation}
+This expression vanish if $\beta=\alpha_{i+1}+\alpha_{i+2}+\ldots \alpha_{i+r}$ if $a_{j(j+1)}=-1$ and $a_{j(j+2)}=a_{(j+2)j}=0$. 
+
+
+
+\end{comment}

@@ -354,12 +354,12 @@ with $\tilde{X}^M:=\llbracket e_i,\tilde{e}_0\rrbracket\in R(\lambda)$. In other
 \end{equation}
 where we used that $\llbracket f_i,\tilde{e}_0\rrbracket=0$. We thus see that the expression \eqref{eq:pelle2} is true for any element $x\in\mathfrak{g}$. 
 
-We have thus shown that ancillary transformations \eqref{eq:AncillaryTransformation} vanish if and only if the highest weight of the coordinate module is a fundamental weight and the corresponding Coxeter label is equal to one. Such modules are easily found for finite dimensional simple Lie algebras and can be found in e.g.\ \cite{Fuchs1997}. For $\mathfrak{a}_n$ this includes any choice $\Lambda_i$ while all other examples are given in \figref{fig:DynkinNoAncillary}. Infinite-dimensional algebras all have $c_i\geq 1$ and therefore will always have ancillary transformations \cite{CederwallPalmkvist2017}. 
+We have thus shown that ancillary transformations \eqref{eq:AncillaryTransformation} vanish if and only if the highest weight of the coordinate module is a fundamental weight and the corresponding Coxeter label is equal to one. Such modules are easily found for finite dimensional simple Lie algebras and can be found in e.g.\ \cite{Fuchs1997}. For $\mathfrak{a}_n$ this includes any choice $\Lambda_i$ while all other examples are given in \figref{fig:DynkinNoAncillary}. Moreover, infinite-dimensional structure algebras will always have ancillary transformations \cite{CederwallPalmkvist2017}. 
 
 \begin{figure}
     \centering
     \DynkinNoAncillary{}
-    \caption{All structure algebras with possible choice of coordinate module for which no ancillary transformation are shown. The $\mathfrak{a}_n$ family is excluded since any choice of fundamental weight does not have ancillary transformations.}
+    \caption{All structure algebras with possible choice of coordinate module for which no ancillary transformation are shown. The $\mathfrak{a}_n$ family is not included in the figure since any choice of fundamental weight leads to an algebra of diffeomorphisms without ancillary transformations.}
     \label{fig:DynkinNoAncillary}
 \end{figure}
 
@@ -547,7 +547,7 @@ with $\tensor{\Gamma}{_{MP}^N}$ being the connection. Just as a connection in Ei
 \begin{equation}\label{eq:InHomoConnection}
     \Delta_\xi \tensor{\Gamma}{_{MN}^P} = \tensor{Z}{^{PQ}_{RN}}\pd_M\pd_Q\xi^R. 
 \end{equation}
-Since the tensor $Z$ manifestly projects $\tensor{}{^P_N}$ and $\tensor{}{^Q_R}$ onto the adjoint representation it is easily seen that the inhomogeneous term is a derivative of an element taking values in the structure algebra $\mathfrak{g}\times\mathbb{R}$. Moreover, imposing Leibniz property and that the covariant derivative reduces to a partial derivative of functions the action on arbitrary tensor fields is well-defined. 
+Since the tensor $Z$ manifestly projects $\tensor{}{^P_N}$ and $\tensor{}{^Q_R}$ onto the adjoint representation it is easily seen that the inhomogeneous term is a derivative of an element taking values in the structure algebra $\mathfrak{g}\times\mathbb{R}$. Moreover, imposing Leibniz property and that the covariant derivative reduces to a partial derivative on functions the action on arbitrary tensor fields is well-defined. 
 
 The covariant derivative introduced above is valid for tensors, i.e.\ an element in $R(\lambda)^p\otimes \overbar{R(\lambda)}^q$ which transforms under $\mathbb{R}$ with the canonical weight $(p-q)\beta$. For a tensor density with weight $w$ there is an extra contribution to the covariant derivative as 
 \begin{equation}
@@ -656,12 +656,12 @@ Moreover, decomposing torsion and non-torsion respectively we find
 \begin{equation}
     \begin{aligned}
         \mathbf{56}\oplus\mathbf{912}&\to \mathbf{28}\oplus\mathbf{36}\oplus\mathbf{420}\oplus\text{conj.},\\
-        \mathbf{56}\oplus\mathbf{6480}&\to\mathbf{28}\oplus\mathbf{420}\oplus\oplus\mathbf{1280}\mathbf{1512}\oplus\text{conj},
+        \mathbf{56}\oplus\mathbf{6480}&\to\mathbf{28}\oplus\mathbf{420}\oplus\oplus\mathbf{1280}\oplus\mathbf{1512}\oplus\text{conj},
     \end{aligned}
 \end{equation}
 which by comparing with \eqref{eq:NonDeterminedE7} shows that there is a module $\mathbf{1280}\oplus\overbar{\mathbf{1280}}$ of $\mathfrak{su}(8)$ that is not determined by imposing metric compatibility and vanishing torsion. For the relevant modules for other algebras in the $\mathfrak{e}_{d}$-series see \cite{Cederwall:2013naa}. 
 
-The problem with having non-determined parts in the connection is that these would lead to extra d.o.f.\ besides the ones that we are trying to describe, i.e.\ the d.of.\ of the generalised metric. Thus, in order to write down a meaningful theory one should only acquire expressions that are independent of these modules.
+The problem with having non-determined parts in the connection is that these would lead to extra d.o.f.\ besides the ones that we are trying to describe, i.e.\ the those of the generalised metric. Thus, in order to write down a meaningful theory one should only acquire expressions that are independent of these modules.
 
 
 
@@ -716,7 +716,7 @@ and transforms as
 \begin{equation}
     \Delta_\xi R_{MN} = -\tensor{T}{^{\alpha R}_P}\tensor{S}{^{\alpha SL}_{(M|T}}\pd_L\pd_S\xi^T\tensor{\Gamma}{_{R|Q)}^P}.
 \end{equation}
-Note that the transformation of $R_{MN}$ is independent of whether the torsion vanish or not. At this point this indeed is a two-index tensor but the modules of the connection that is not determined by metric compatibility and vanishing torsion may still appear in $R_{MN}$. We can further project $R_{MN}$ on to $\mathfrak{g}/\mathfrak{k}$ as follows 
+Note that the transformation of $R_{MN}$ is independent of whether the torsion vanishes or not. At this point this indeed is a two-index tensor but the modules of the connection that is not determined by metric compatibility and vanishing torsion may still appear in $R_{MN}$. We can further project $R_{MN}$ on to $\mathfrak{g}/\mathfrak{k}$ as follows 
 \begin{equation}
     R^\alpha := (G^{-1}T^\alpha)^{MN}R_{MN},
 \end{equation}

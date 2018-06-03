@@ -1,14 +1,14 @@
 \chapter{Flux compactifications and (exceptional) generalised
 geometry\label{chap:FluxCompactifications}}
 
-In this chapter we deviate slightly from the extensions of geometries introduced in the rest of the thesis but consider another extension with the same end-goal, making the duality groups manifest in supergravity. Much of the ideas carry over from extended geometries with the main difference being that in (exceptional) generalised geometry the spacetime is not extended, instead only the tangent bundle is. Importantly the gauge fields are again unified with the metric and encoded in the geometry. This is the main reason why exceptional generalised geometry is effective to use when studying flux compactifications. 
+In this chapter we study (exceptional) generalised geometry. These are geometries based on double geometries and exceptional geometries with a global solution to the section condition. Especially this imply that the underlying manifold is not extended and that fields are acted on naturally by the relevant duality group and are patched together by the geometric subgroup of the duality group. Importantly this allows for the presence of a non-trivial form-field as a part of the geometry. Especially geometrical tools used for fluxless compactifications can be generalised and applied also in the presence of fluxes in the generalised geometric formulation. This merger of gravitational degrees of freedom and non-gravitiational degrees of freedom is behind the effectivness of generalised geometry in the study of flux compactifications. 
 
 In the first two sections we discuss shortly some phenomenology of compactification as well as introducing geometrical tools to study supersymmetric compactifications without fluxes. In section we start consider supersymmetric backgrounds with fluxes and introduce some basics of (exceptional) generalised geometry. The generalised geometrical tools are then used in \ref{sec:GeneralisedStructures} to reexpress the conditions of supersymmetric flux compactifications as integrability conditions of generalised structures. Since this topic by itself could be a whole thesis we will not be able to give all the details, for more on compactifications in general as well as Calabi-Yau compatictifications we refer to \cite{Blumenhagen2013,Grana:2005jc}. For the formulation of generalised geometry we refer to \cite{Hull:2007zu,Coimbra:2011ky,Coimbra:2011nw} and to \cite{Ashmore:2015joa,Grana:2009im} for its application to study flux compactifications. 
 
 \section{Phenomenology and moduli stabilization}
-As is well-known string theory/M-theory lives in a 10/11-dimensional spacetime, yet our everyday experience tells us otherwise. Hence, in order for string theory/M-theory to be able to describe the real world it has to have consistent low-energy description that matches our observations. Firstly such a theory should reproduce the standard model of particle physics which has been confirmed to great precision, i.e.\ among other things it should be described by a gauge theory with gauge group $SU(3)\times SU(2)\times U(1)$ together with the correct particle spectra. Another important notion is that of supersymmetry, notably the SM is not supersymmetric in contrast to string theory/M-theory. The latter two are maximally supersymmetric and thus most, perhaps all, supersymmetry needs to be spontaneously broken. %Generically supersymmetry constrains a theory often yielding important physical consequences.
+As is well-known string theory/M-theory lives in a 10/11-dimensional spacetime, yet our everyday experience tells us otherwise. Hence, in order for string theory/M-theory to be able to describe the real world it has to have consistent low-energy description that matches our observations. Firstly such a theory should reproduce the standard model of particle physics which has been confirmed to high precision, i.e.\ among other things it should be described by a gauge theory with gauge group $SU(3)\times SU(2)\times U(1)$ together with the correct particle spectra. Another important notion is that of supersymmetry, notably the SM is not supersymmetric in contrast to string theory/M-theory. The latter two are maximally supersymmetric and thus most, perhaps all, supersymmetry needs to be spontaneously broken. %Generically supersymmetry constrains a theory often yielding important physical consequences.
 
-The idea of compactification, where a compact internal manifold is ``small'' compared to the typical size of say strings, is one way to obtain an effective theory in lower dimensions. A generic feature of compactification is presence of scalar fields typically due internal legs of some tensor field. Of especial importance are massless such scalar fields, called \emph{moduli}. The vacuum expection value of moduli is not fixed and appears as free parameters in the theory. For a given compactification ansatz there are possibly hundreds or thousands of such moduli which determine physical properties in the external theory such as gauge couplings, Yukawa couplings as well as the size and structure of the internal manifold. If all these properties are free parameters the theory loses most of its predictive power. Moreover, massless scalar fields would give rise to a long-range force which would invalidate Einstein's equivalence principle. Of course the coupling could be extremely small such that these forces are not experimentally observable. However, this approach comes with a lot of problems \todo{What problems?} and instead one tries to generate mass to these scalar fields, this is called \emph{moduli stabilization}. Generating a potential for the scalar fields would imply that the moduli fields are no longer free parameters but rather fixed by the procedure that stabilises the moduli, e.g.\ a complicated internal geometry or presence of gauge fluxes. 
+The idea of compactification, where a compact internal manifold is ``small'' compared to the typical size of say strings, is one way to obtain an effective theory in lower dimensions. A generic feature of such compactification is the presence of scalar fields typically due internal legs of some tensor field. Of especial importance are massless such scalar fields, called \emph{moduli}. The vacuum expection values of moduli are not fixed and appear as free parameters in the theory. For a given compactification ansatz there are possibly hundreds or thousands of such moduli which determine physical properties in the external theory, e.g.\ gauge couplings, Yukawa couplings as well as the size and structure of the internal manifold. However, if all these properties are free parameters the theory loses most of its predictive power. Moreover, massless scalar fields would give rise to a long-ranged force which would invalidate Einstein's equivalence principle. Of course the coupling could be extremely small such that these forces are not experimentally observable. However, this approach comes with a lot of problems \todo{What problems?} and instead one tries to generate mass to these scalar fields, this is called \emph{moduli stabilization}. Generating a potential for the scalar fields would imply that the moduli fields are no longer free parameters but rather fixed by the procedure that stabilises the moduli, e.g.\ a complicated internal geometry or presence of gauge fluxes. 
 
 The simplest internal manifold to compactify on is a torus but such a compactification preserves all the supersymmetry, i.e.\ $\mathcal{N}=8$ in four external dimensions. In order to break some supersymmetry we could abandon the torus and compactify on something more complicated, e.g.\ a Calabi-Yau three-fold which we will discuss further below. Another possibility is to introduce a non-zero flux for some $p+1$-form field 
 \begin{equation}
@@ -18,7 +18,7 @@ corresponding to a $p$-brane winding some non-trivial cycle $\Sigma_{p+1}$ in th
 \begin{equation}
     V\sim \int_{\mathcal{M}_{\text{int}}} \dd C_{p+1}\wedge \star_{g}\,\dd C_{p+1}, 
 \end{equation}
-where $\mathcal{M}_\text{int}$ denotes the internal manifold and the presence of the metric moduli in the hodge dual $\star$ is the reason for a potential being generated by expanding $C_{p+1}$ around its vacuum expectation value. This is one mechanism for generating mass to a moduli (which by definition no longer is a moduli). 
+where $\mathcal{M}_\text{int}$ denotes the internal manifold and the presence of the metric moduli in the hodge dual $\star$ is the reason for a potential being generated by expanding $C_{p+1}$ around its vacuum expectation value. This is one mechanism for generating mass to a modulus (which by definition no longer is a modulus). 
 
 \todo[inline]{String landscape}
 
@@ -29,7 +29,7 @@ To begin with we will start by reviewing compactifications on backgrounds withou
 \begin{equation}
     \mathcal{M} = \mathcal{M}_{\text{ext}}\times \mathcal{M}_{\text{int}}.
 \end{equation}
-However, finding such solutions by solving the equations of motion are generally rather difficult and we will take a different route. Supergravity in $D=11$ has $\mathcal{N}=1$ local supersymmetry, this is the maximal amount of supersymmetry with a total of $32$ supercharges. A generic vacuum solution will (spontaneuously) break all of this supersymmetry. By restricting to solutions that preserve a certain amount of supersymmetry, say $\mathcal{N}=1$ in $D=4$, we will find constraints that give a more tractable way to finding vacua. Moreover, the external spacetime is assumed to be Minkowski with possible generalisation to AdS later on. 
+However, finding such solutions by solving the equations of motion are generally rather difficult and we will take a different route. Supergravity in $D=11$ has $\mathcal{N}=1$ local supersymmetry, this is the maximal amount of supersymmetry with a total of $32$ supercharges and a generic vacuum solution will (spontaneuously) break all of this supersymmetry. By restricting to solutions that preserve a certain amount of supersymmetry, say $\mathcal{N}=1$ in $D=4$, we will find constraints that give a more tractable way to finding vacua. Moreover, we will assume that the external spacetime is Minkowski with possible generalisations, especially to AdS. 
 
 Supersymmetry is generated by a supercharge $\mathcal{Q}$ and a parameter $\epsilon$, both being spinors of $SO(1,D-1)$. A vacuum $|0\rangle$ is supersymmetric if it is annihilated by the supersymmetry transformation
 \begin{equation}
@@ -39,30 +39,30 @@ By taking an arbitrary field $\Theta$ and looking at its variation under the sup
 \begin{equation}
     \langle \delta_{\epsilon}\Theta\rangle = \langle 0|\left[\overbar{\epsilon}\mathcal{Q},\Theta\right]|0\rangle = 0.
 \end{equation}
-Schematically we have (from now variations should be understood implicitly as valid as expectation values)
+Schematically we have (from now variations should be understood implicitly to be valid as expectation values)
 \begin{equation}
     \delta_\epsilon \Theta_{\text{boson}} \sim \overbar{\epsilon}\Theta_{\text{fermion}},\qquad \delta_\epsilon \Theta_{\text{fermion}}\sim \epsilon\Theta_{\text{boson}}.
 \end{equation}
-By the assumption that $\text{dim}\,\mathcal{M}{_{\text{ext}}}=d$ being a $d$-dimensional Minkowski space we have to decompose the spinor representations under $SO(1,d-1)\times SO(D-d)$ where $D$ is the dimension of the full spacetime. Typically these will transform in a non-trivial representation under $SO(1,d-1)$ and hence have to vanish in order to preserve Poincaré symmetry of the vacuum. Thus in order to make sure that the vacuum preserve some amount of supersymmetry we need to find solutions of $\delta_\epsilon\Theta_{\text{fermions}}=0$. Note if such a solution is found we also have to make sure the equations of motion and Bianchi identities are fulfilled. 
+By the assumption that $\text{dim}\,\mathcal{M}{_{\text{ext}}}=d$ being a $d$-dimensional Minkowski space we have to decompose the spinor representations under $SO(1,d-1)\times SO(D-d)$ where $D$ is the dimension of the full spacetime. Typically these will transform in a non-trivial representation under $SO(1,d-1)$ and hence have to vanish in order to preserve Poincaré symmetry of the vacuum. Thus in order to make sure that the vacuum preserve some amount of supersymmetry we need to find non-trivial solutions of $\delta_\epsilon\Theta_{\text{fermions}}=0$. Note if such a solution is found we also have to make sure the equations of motion and Bianchi identities are fulfilled. 
 
 With a constant dilaton and vanishing fluxes the supersymmetry variation of the gravitino $\psi_M$ (that is always present in supergravity) \cite{Blumenhagen2013}
 \begin{equation}
     \delta_\epsilon\psi_M = \nabla_M\epsilon = 0 \Leftrightarrow \nabla_\mu \epsilon = 0,\qquad \nabla_m\epsilon = 0,
 \end{equation}
-where we have used that there is no mixing between greek external indices and latin internal indices in the connection due to the metric being of a product form. A spinor satisfying these conditions is called a \emph{Killing spinor}. From this one can easily show by taking a commutator of covariant derivatives that a necessary condition for the existence of a covariantly constant spinor is that the internal manifold is Ricci-flat (obviously also the external spacetime is Ricci-flat)
+where we have used that there is no mixing between greek external indices and latin internal indices in the connection due to the metric being of a product form. A spinor satisfying these conditions is called a \emph{Killing spinor}. From this one can easily show by taking a commutator of covariant derivatives that a necessary condition for the existence of a covariantly constant spinor is that the internal manifold is Ricci-flat (obviously also the external spacetime is Ricci-flat by assumption)
 \begin{equation}
     R_{mn} = 0.
 \end{equation}
 
-Curvature of a manifold is closely connected to the way an object transforms upon parallel transport. As such take some object $v$ and parallel transport it around a closed loop on the manifold. Generally the object transforms in some representation of the holonomy group $\mathscr{H}\subseteq O(d)$ under parallel transport for a $d$-dimensional riemannian manifold, since the norm does not change assuming a metric compatible connection. Likewise a spinor parallel transported in a loop transforms in a representation of $\mathscr{H}$ as well and hence, especially, the Killing spinor. But since the Killing spinor is covariantly constant it does not transform when parallel transported and needs to be a singlet under the holonomy group. As such a necessary condition for the existence of a covariantly constant spinor is related to the restriction of the holonomy group which put constraints on the metric. Such features as reduction of holonomy and structure group is conveniently described in terms of bundles briefly explained below.
+Curvature of a manifold is closely connected to the way an object transforms upon parallel transport. As such take some object $v$ and parallel transport it around a closed loop on the manifold. Generally the object transforms in some representation of the holonomy group $\mathscr{H}\subseteq O(d)$ under parallel transport for a $d$-dimensional riemannian manifold, since the norm does not change assuming a metric compatible connection. Likewise a spinor parallel transported in a loop transforms in a representation of $\mathscr{H}$ as well and hence, especially, also the Killing spinor. But since the Killing spinor is covariantly constant it does not transform when parallel transported and needs to be a singlet under the holonomy group. As such a necessary condition for the existence of a covariantly constant spinor is related to the restriction of the holonomy group which put constraints on the metric. Such features as reduction of holonomy and structure group is conveniently described in terms of bundles briefly explained below.
 
 \subsection{Mathematical interlude -- Fibre bundles}
-A short introduction to the notion of fibre bundles are introduced in order to set the terminology which will be convenient for more complicated compactifications later on. Just as a manifold is a topological space that looks locally like $\mathbb{R}^n$, i.e.\ there exists some coordinate chart on $U_i\subseteq \mathcal{M}$ such that $\phi: \mathcal{M}\to \mathbb{R}^n$, a bundle is a topological space that looks locally like a product of two topological spaces. In the cases we are interested these topological spaces will be differentiable manifolds. 
+A short introduction to the notion of fibre bundles are introduced in order to set the terminology which will be convenient for more complicated compactifications later on. Just as a manifold is a topological space that looks locally like $\mathbb{R}^n$, i.e.\ there exists some coordinate chart on $U_i\subseteq \mathcal{M}$ such that $\phi: \mathcal{M}\to \mathbb{R}^n$, a bundle is a topological space that ``looks locally'' like a product of two topological spaces. Moreover, in the cases we are interested these topological spaces will be differentiable manifolds. 
 
-A bundle is a triple $(P,\mathcal{M},\pi)$ typically also denoted $P\overset{\pi}{\longrightarrow}\mathcal{M}$, where $P$ is the total space, $\mathcal{M}$ the base space and $\pi: P\to \mathcal{M}$ the projection which is a surjection onto the base space. The notion of a bundle is a rather general concept and we will instead only be interested in (differentiable) fibre bundles. A (differentiable) fibre bundle $(P,\mathcal{M},\pi,F,G)$ is defined by a bundle $(P,\mathcal{M},\pi)$, a differentiable manifold $F$ called the fibre and a Lie group $G$ called the structure group. In order for a fibre bundle to ``look locally'' like a product manifold there exists patches on $U_i\subseteq \mathcal{M}$ diffemorphisms and $\phi_i: U_i\times F\to \pi^{-1}(U_i)$ such that $\pi\circ \phi_i(u,f)=u$, where $u\in U_i$, $f\in F$ and $\pi^{-1}(U_i)=F_p\cong F$ is the fibre at $u\in U_i$. The maps $\phi_i$ are usually called local trivializations since the map $\phi^{-1}\circ \pi^{-1}$ maps any $U_i$ to $U_i\times F$ which ``looks like a product manifold''. In order for this to make sense there needs to be some compatibility on overlapping patches $U_i\cap U_j\neq \emptyset$. Take a point $p\in P$ such that $\pi(p)=u$ with $u\in U_i\cap U_j$. Consider the mapping $\phi_{u,i}$
+A bundle is a triple $(P,\mathcal{M},\pi)$ typically also denoted $P\overset{\pi}{\longrightarrow}\mathcal{M}$, where $P$ is the total space, $\mathcal{M}$ the base space and $\pi: P\to \mathcal{M}$ the projection which is a surjection onto the base space. The notion of a bundle is a rather general concept and we will instead only be interested in (differentiable) fibre bundles. A (differentiable) fibre bundle $(P,\mathcal{M},\pi,F,G)$ is defined by a bundle $(P,\mathcal{M},\pi)$, a differentiable manifold $F$ called the fibre and a Lie group $G$ called the structure group. In order for a fibre bundle to ``look locally'' like a product manifold there exists patches on $U_i\subseteq \mathcal{M}$ diffemorphisms and linear maps $\phi_i: U_i\times F\to \pi^{-1}(U_i)$ such that $\pi\circ \phi_i(u,f)=u$, where $u\in U_i$, $f\in F$ and $\pi^{-1}(U_i)=F_p\cong F$ is the fibre at $u\in U_i$. The maps $\phi_i$ are usually called local trivializations since the map $\phi^{-1}\circ \pi^{-1}$ maps any $U_i$ to $U_i\times F$ which ``looks like a product manifold''. In order for this to make sense there needs to be some compatibility on overlapping patches $U_i\cap U_j\neq \emptyset$. Take a point $p\in P$ such that $\pi(p)=u$ with $u\in U_i\cap U_j$. Consider the mapping $\phi_{u,i}$
 \begin{equation}
     \begin{aligned}
-        \phi_{u,i}: F&\to F_u,
+        \phi_{u,i}: F&\to F_u,\\
             f&\mapsto f_u = \phi_i(u,f),
     \end{aligned}
 \end{equation}
@@ -70,7 +70,7 @@ which assigns to each point in $F$ an element in the fibre $F_u$ at $u$. On the 
 \begin{equation}
     \phi_{j}(u,f) = \phi_{i}(u,t_{ij}(f)),
 \end{equation}
-where $t_{ij}:f\to t$ defined on $U_i\cap U_j$ are called transition functions. Composing with $\phi_i^{-1}$ we find 
+where $t_{ij}:f\to f$ defined on $U_i\cap U_j$ are called transition functions. Composing with $\phi_i^{-1}$ we find 
 \begin{equation}
     \phi_{i}^{-1}\circ\phi_j (u,f) = (u,\phi^{-1}_{i,u}\circ \phi_{j,u}f),
 \end{equation}
@@ -80,14 +80,14 @@ A section of a bundle $P\overset{\pi}{\longrightarrow}\mathcal{M}$ is defined as
 \begin{equation}
     TM = \bigcup_{x\in \mathcal{M}}\{(x,y)|x\in\mathcal{M}, y\in T_x\mathcal{M} \},
 \end{equation}
-with $T_x\mathcal{M}$ being the tanget space at point $x\in\mathcal{M}$. A section then associates a vector in the fibre $T_x\mathcal{M}$ to each point $x\mathcal{M}$
+with $T_x\mathcal{M}$ being the tangent space at point $x\in\mathcal{M}$. A section then associates a vector in the fibre $T_x\mathcal{M}$ to each point $x\in\mathcal{M}$
 \begin{equation}
     \begin{aligned}
         \sigma: &\mathcal{M}\to \mathcal{M}\times T_x\mathcal{M}\\
                 x&\mapsto (x,X)\qquad X\in T_x\mathcal{M},
     \end{aligned}
 \end{equation}
-which is just an ordinary vector field on $\mathcal{M}$. 
+which is just an ordinary vector field on $\mathcal{M}$. Moreove, the space of sections of a bundle $P$ is often denoted $\gamma(P)$. 
 
 %then applying the two local trivialisations $\phi^{-1}_i$ and $\phi^{-1}_j$ we find two points in $P$ according to 
 %\begin{equation}
@@ -95,11 +95,11 @@ which is just an ordinary vector field on $\mathcal{M}$.
 %\end{equation}
 %Obviously $(u,f_i) = \phi^{-1}_i\circ \phi_j (u,f_j)$ where $\phi^{-1}_i\circ \phi_j = t_{ij}(u)$ is called a transition function $t_{ij}(u):F\to F$ defined trough a left action of the structure group $G$.\todo{left action of G} 
 
-A principal fibre bundle ($P$,$\mathcal{M}$,$\pi$,$G$) is a fibre bundle with a typical fibre being the structure group $G$ itself, i.e.\ for some $u\in U\subseteq \mathcal{M}$ $\pi^{-1}(u)\cong G$. Moreover, there is a right action of $G$
+An important class of fibre bundles are principal fibre bundles. A principal fibre bundle ($P$,$\mathcal{M}$,$\pi$,$G$) is a fibre bundle with a typical fibre being the structure group $G$ itself, i.e.\ for some $u\in U\subseteq \mathcal{M}$ we have $\pi^{-1}(u)\cong G$. Moreover, there is a right action of $G$ on $P$ as 
 \begin{equation}
     \triangleleft: P\times G \to P,
 \end{equation}
-which is free. An important example of a principle fibre bundle is the frame bundle. The frame bundle is a fibre bundle with a typical fibre consisting of all ordered basis of the tangent space. At any patch $U_i$ on a d-dimensional manifold $\mathcal{M}$ there exists local coordinates which spans a basis $\{\pd_\mu\}_{\mu=1,2,\ldots d}$ and any other base can be written as 
+which is free. An important example of a principle fibre bundle is the frame bundle. The frame bundle is a fibre bundle with a typical fibre consisting of all ordered basis of the tangent space. At any patch $U_i$ on a $d$-dimensional manifold $\mathcal{M}$ there exist local coordinates which spans a basis $\{\pd_\mu\}_{\mu=1,2,\ldots d}$ and any other base can be written as 
 \begin{equation}
     e_\alpha = \tensor{e}{_\alpha^\mu}\pd_\mu,
 \end{equation}
@@ -109,21 +109,21 @@ with $\alpha=1,2,\ldots d$. The elements $\tensor{e}{_\alpha^\mu}$ can be seen a
 \end{equation}
 for some $\Lambda\in GL(d)$. 
 
-Importantly we also want to consider tensor fields on a manifold $\mathcal{M}$ which is formally introduced by looking at associated vector bundles to a principle fibre bundle. Suppose that $(P,\pi,\mathcal{M},G)$ is a principle fibre bundle, $(\rho,\mathbb{V})$ is a $G$ representation, then an associated vector bundle $P_{\mathbb{V}}$ is given by 
+Importantly we also want to consider tensor fields on a manifold $\mathcal{M}$ which is formally introduced by looking at associated vector bundles to a principle fibre bundle. Suppose that $(P,\pi,\mathcal{M},G)$ is a principle fibre bundle and $(\rho,\mathbb{V})$ a $G$-representation. Then an associated vector bundle $P_{\mathbb{V}}$ is given by 
 \begin{equation}
     P_{\mathbb{V}} = (P\times \mathbb{V})/\sim_G,
 \end{equation}
-with $\sim_G$ defined by the natural action of $G$ on both $P$ and $\mathbb{V}$. By constructing the elements of the an associated vector bundle is thus invariant under the action of the structure group $G$ and the action of $G$ on the first factor $P$ can be considered as the inverse action of $G$ on $\mathbb{V}$. As an examaple consider an element $v=v^\alpha e_\alpha$ in tangent bundle $v\in T\mathcal{M}$ which is an associated vector bundle on which an element $\Lambda\in G$ acts as 
+with $\sim_G$ defined by the natural action of $G$ on both $P$ and $\mathbb{V}$. By construction elements of the associated vector bundle is thus invariant under the action of the structure group $G$ and the action of $G$ on the first factor $P$ can be considered as the inverse action of $G$ on $\mathbb{V}$. As an examaple consider an element $v=v^\alpha e_\alpha$ in tangent bundle $v\in T\mathcal{M}$ which is an associated vector bundle on which an element $\Lambda\in G$ acts as 
 \begin{equation}
     v \mapsto \tensor{\rho(\Lambda)}{^\alpha_\beta} v^{\beta}e_\gamma \tensor{\Lambda}{^\gamma_\alpha},
 \end{equation}
 which from invariance of $v$ we find that $\tensor{\rho(\Lambda)}{^\alpha_\beta}= \tensor{(\Lambda)}{^{-1}}\tensor{}{^{\alpha}_\beta}$. 
 
-What we mainly are interested in are the possibility of finding $H$-structures for some some closed subgroup $H\subset G$. An principal bundle $(P,\pi,\mathcal{M},G)$ has a $H$-structure if it is possible to choose frames in $P$ such that the structure group reduces to $H$. A typical example of this is the $O(d)\subset GL(d)$ structure on Riemannian manifolds, which due to the presence of a metric we can consider orthonormal frames $\tilde{e}_a$ such that 
+What we mainly are interested in are the possibility of finding so-called $H$-structures for some some closed subgroup $H\subset G$. An principal bundle $(P,\pi,\mathcal{M},G)$ has a $H$-structure if it is possible to choose frames in $P$ such that the structure group reduces to $H$. A typical example of this is an $O(d)\subset GL(d)$ structure on Riemannian manifolds. Due to the presence of a metric we can consider orthonormal frames $\tilde{e}_a$ such that 
 \begin{equation}
     g(\tilde{e}_a,\tilde{e}_b) = \delta_{ab},
 \end{equation}
-with $g$ the metric. This defines an $O(d)$ structure since on overlapping patches orthonormal frames are related by $O(d)$ transformations. The importance of this in what will follows is the fact that finding a reduced structure is equivalent to the presence of a globally defined non-vanishing tensor on $\mathcal{M}$ that is invariant under some subgroup $H\subset G$. Since it is globally defined we can choose a frame $\{e_{\alpha}\}_{a=1,2,\ldots d}$ such that the tensor is constant on overlapping patches which effectively reduce $GL(d)$ to $H$. 
+with $g$ being the metric. This defines an $O(d)$ structure since on overlapping patches orthonormal frames are related by $O(d)$ transformations. The importance of this in what will follows is the fact that finding a reduced structure is equivalent to the presence of a globally defined non-vanishing tensor on $\mathcal{M}$ which is invariant under some subgroup $H\subset G$. Since it is globally defined we can choose a frame $\{e_{\alpha}\}_{a=1,2,\ldots d}$ such that the tensor is constant on overlapping patches which effectively reduce $GL(d)$ to $H$. 
 
 
 \begin{comment}
@@ -151,62 +151,64 @@ Moreover, if $\rho$ and $f$ are invertible and both $(\rho,f)$ and $(\rho^{-1},f
 \todo{Reduced structure group}
 \end{comment}
 \subsection{Compactification on Calabi-Yau}\label{sec:CalabiYau}
-Having reviewed the notion of reduced structure group and special holonomy a Calabi-Yau n-fold $CY_{n}$ can be defined as a $2n$-dimensional compact Riemannian manifolds with holonomy contained in $SU(N)$\cite{Blumenhagen2013}. We are particularly interested in $CY_3$ such that starting in $D=10$ supergravity, or string theory, the external spacetime is 4-dimensional. As such we know that for a $CY_3$ there exists some $p$-forms, or equivalently a Killing spinor, invariant under $\mathscr{H}=SU(3)$ which can be found by looking at the decomposition of 1-, 2- and 3-forms of $SO(6)\cong SU(4)\to SU(3)$
+Having reviewed the notion of reduced structure group and special holonomy a Calabi-Yau $n$-fold $CY_{n}$ can be defined as a $2n$-dimensional compact Riemannian manifolds with holonomy contained in $SU(n)$\cite{Blumenhagen2013}. We are particularly interested in $CY_3$ such that starting with $D=10$ supergravity, or string theory, the external spacetime is 4-dimensional. As such we know that for a $CY_3$ there exists some $p$-forms, or equivalently a Killing spinor, invariant under the holonomy group $\mathscr{H}=SU(3)$ which can be found by looking at the decomposition of 1-, 2- and 3-forms of $Spin(6)\cong SU(4)\to SU(3)$
 \begin{align*}
     \mathbf{6}&\to \mathbf{3}+\mathbf{\overbar{3}},\\
     \mathbf{15}&\to \mathbf{8}+\mathbf{3}+\overbar{\mathbf{3}}+\mathbf{1},\\
     \mathbf{20}&\to \mathbf{6}+\overbar{\mathbf{6}}+\mathbf{3}+\overbar{\mathbf{3}}+2\cdot\mathbf{1}.
 \end{align*}
-There thus exists a 2-form $\omega$ and a two 3-forms (these actually combine into a complex 3-form) $\Omega$ that are singlets under $\mathscr{H}$, such pair of nowhere vanishing tensors defines a \emph{structure}. Note that we already know that such a structure is equally well defined by a nowhere vanishing globally defined spinor $\mathbf{4}$ of $SU(4)\cong SO(6)$ that decomposes under $\mathscr{H}$ as 
+It thus exist a 2-form $\omega$ and a two 3-forms (these actually combine into a complex 3-form) $\Omega$ that are singlets under $\mathscr{H}$, such pair of nowhere vanishing tensors defines a \emph{structure}. Note that we already know that such a structure is equally well defined by a nowhere vanishing globally defined spinor $\mathbf{4}$ of $SU(4)$ which decomposes under $\mathscr{H}$ as 
 \begin{equation}
     \mathbf{4}\to \mathbf{3}+\mathbf{1}.
 \end{equation}
-Explicitly, a Weyl-spinor $\psi$ of $SO(1,9)$ decomposed under $SO(1,3)\times SO(6)$ can be parameterized as 
+Explicitly, a Weyl-spinor $\psi$ of $Spin(1,9)$ decomposed under $Spin(1,3)\times Spin(6)$ can be parameterised as 
 \begin{equation}
     \psi = \eta_+\otimes\epsilon_++\eta_-\otimes\epsilon_-,
 \end{equation}
 where $\eta_\pm$ and $\epsilon_\pm$ are Weyl-spinors with chirality $\pm 1$ under $SO(1,3)$ and $SO(6)$ respectively. Morever, imposing that $\psi$ is Majorana-Weyl in ten dimensions further implies that $\eta_+$ is the charge conjugate of $\eta_-$ and likewise for $\epsilon_\pm$.
 
-What follows will mostly consider structures defined by some bosonic forms such as ($\omega,\Omega$) but from the observation above we know that this corresponds to the existence of a globally defined nowhere vanishing spinor. To preserve supersymmetry such a spinor also satifies a differential condition and hence also the structure $(\omega,\Omega)$ need to satisfy certain differential conditions. In fact, the structure $(\omega,\Omega)$ is related to the Killing spinor as
+What follows will mostly consider structures defined by some bosonic forms such as ($\omega,\Omega$) but from the observation above we know that this corresponds to the existence of a globally defined nowhere vanishing spinor. To preserve supersymmetry such a spinor also satifies a differential condition and hence also the structure $(\omega,\Omega)$ needs to satisfy certain differential conditions. In fact, the structure $(\omega,\Omega)$ is related to the Killing spinor as
 \begin{align}
     \omega_{mn} = \mp\ii \epsilon^\dagger_\pm\gamma_{mn}\epsilon_\pm,\\
     \Omega_{mnp} = -\ii\epsilon^\dagger_-\gamma_{mnp}\epsilon_+.
 \end{align}
-Moreover, in order for the structures the be compatible they should satisfy the compatibility conditions 
+Moreover, in order for the structures to be compatible they should satisfy the compatibility conditions 
 \begin{equation}\label{eq:CompatibilityCalabiYau}
     \omega\wedge\Omega = 0\qquad \omega\wedge\omega\wedge\omega = \frac{3\ii}{4}\Omega\wedge\overbar{\Omega}.
 \end{equation}
-
-Taking the covariant derivative of these definitions we find that the Killing spinor equations in terms of the structure $(\omega,\Omega)$ is simply the statement that they are both closed forms 
+Taking the covariant derivative of these definitions we find that solving the Killing spinor equations in terms of the structure $(\omega,\Omega)$ is simply the statement that they are both closed forms 
 \begin{equation}
     \dd \omega = 0, \qquad \dd \Omega = 0.
 \end{equation}
-This condition is an integrability condition and is necessary to obtain a consistent patching of the structure. %Moreover, we see that starting with $\mathcal{N}$ supersymmetries in the full theory compactification on a $CY_3$ yields a theory which again has $\mathcal{N}$ supersymmetries.
+%This condition is an integrability condition and is necessary to obtain a consistent patching of the structure. %Moreover, we see that starting with $\mathcal{N}$ supersymmetries in the full theory compactification on a $CY_3$ yields a theory which again has $\mathcal{N}$ supersymmetries.
 %Note that transformations that preserves the non-degenerate two-for in $d-$dimensions are by definition elements in $Sp(d/2,\mathbb{R})$. 
 
 \section{Flux compactifications and generalised geometry}
 In the case of vanishing flux we have seen that the Killing spinor equation led to special holonomy, which in turn put restrictions on the connection of the internal manifold. In the presence of fluxes the Killing spinor is no longer covariantly constant, however, the existence of globally defined nowhere vanishing spinor still implies a reduced structure group. This is summarized by 
 
-\begin{align*}
+\begin{equation*}
+    \begin{aligned}
     \text{vanishing flux}&\Longleftrightarrow \text{special holonomy},\\
     \text{non-zero flux}&\Longleftrightarrow \text{reduced structure group}.\\
-\end{align*}
+    \end{aligned}
+\end{equation*}
 In the presence of fluxes the Killing spinor equations of type II supergravity are given by \cite{Blumenhagen2013}
 \begin{equation}\label{eq:KillingSpinorWithFluxGravitino}
-    \delta_\epsilon \psi_M = \left(\nabla_M+\frac{1}{8}\Gamma^{NP}H_{MNP}\mathscr{P}+\frac{1}{16}\ee^\Phi\sum_{n}\slashed{F}_n\Gamma_M\mathscr{P}_n\right)\epsilon=0,
-\end{equation}
-\begin{equation}
-    \delta_\epsilon \lambda = \left(\slashed{\pd}\Phi+\frac{1}{12}\Gamma^{MNP}H_{MNP}\mathscr{P}+\frac{1}{8}\ee^\Phi\sum_{n}(-1)^n(5-n)\slashed{F}_n\mathscr{P}_n\right)\epsilon=0,
-\end{equation}
-where $\mathscr{P}$ and $\mathscr{P_n}$ are $2\times 2$-matrices, $\slashed{F}_n=\frac{1}{n!}\Gamma^{M_1M_2\ldots M_n}F_{M_1M_2\ldots M_n}$ and $n\in\{0,1,\ldots,10\}$ are even(odd) for type IIA(B). In the case of vanishing flux and a constant dilation this is seen to reduce to a covariantly constant spinor $\epsilon$ as discussed above. 
+\begin{aligned}
+    \delta_\epsilon \psi_M &= \left(\nabla_M+\frac{1}{8}\Gamma^{NP}H_{MNP}\mathscr{P}+\frac{1}{16}\ee^\Phi\sum_{n}\slashed{F}_n\Gamma_M\mathscr{P}_n\right)\epsilon=0\\,
 
-Presence of gauge fluxes are according to \eqref{eq:KillingSpinorWithFluxGravitino} obstructions to the Killing spinor being covariantly constant with respect to the Levi-Civita connection. This obstruction is conveniently analysed in terms of intrinsic torsion. It is always possible to construct a connection $\nabla$ with torsion such that the Killing spinor is covariantly constant w.r.t.\ to that connection. Thus consider a connection $\nabla=\nabla'-\kappa$ such that $\nabla_n V_m=\pd_nV_m-\tensor{\Gamma}{^'_{nm}^p}V_p-\tensor{\kappa}{_{nm}^p}V_p$, where $\nabla'$ is the Levi-Civita connection and $\kappa$ is the so-called contorsion tensor. Generically the connection coefficents $\tensor{\Gamma}{_{mn}^p}$ take values in $\Lambda^1\otimes\mathfrak{g}$, where $\Lambda^1$ is the one-form representation of $G=GL(d)$ and $\mathfrak{g}=\mathfrak{gl}(d)$ is the corresponding Lie algebra. Assuming metric compatibility fixes the part in $\mathfrak{gl}(d)/\mathfrak{so}(d)$ as we saw in section \ref{sec:CovariantFormalism} of the pair $\tensor{}{_m^p}$. This is contained in the Levi-connection but the Levi-Civita connection have extra terms such that the torsion $\tensor{\Gamma}{_{[mn]^p}}$ vanish. This implies that the contorsion take values in 
+    \delta_\epsilon \lambda = \left(\slashed{\pd}\Phi+\frac{1}{12}\Gamma^{MNP}H_{MNP}\mathscr{P}+\frac{1}{8}\ee^\Phi\sum_{n}(-1)^n(5-n)\slashed{F}_n\mathscr{P}_n\right)\epsilon=0,
+    \end{aligned}
+\end{equation}
+where $\mathscr{P}$ and $\mathscr{P_n}$ are $2\times 2$-matrices, $\slashed{F}_n=\frac{1}{n!}\Gamma^{M_1M_2\ldots M_n}F_{M_1M_2\ldots M_n}$ and $n\in\{0,1,\ldots,10\}$ are even(odd) for type IIA(B). In the case of vanishing flux and a constant dilation this reduces to a covariantly constant spinor $\epsilon$ as discussed above. 
+
+Presence of gauge fluxes is according to \eqref{eq:KillingSpinorWithFluxGravitino} obstructions to the Killing spinor being covariantly constant with respect to the Levi-Civita connection. This obstruction is conveniently analysed in terms of \emph{intrinsic torsion}. It is always possible to construct a connection $\nabla$ with torsion such that the Killing spinor is covariantly constant w.r.t.\ to that connection. Thus consider a connection $\nabla=\nabla'-\kappa$ such that $\nabla_n V_m=\pd_nV_m-\tensor{\Gamma}{^'_{nm}^p}V_p-\tensor{\kappa}{_{nm}^p}V_p$, where $\nabla'$ is the Levi-Civita connection and $\kappa$ is the so-called contorsion tensor. Generically the connection coefficents $\tensor{\Gamma}{_{mn}^p}$ take values in $\Lambda^1\otimes\mathfrak{g}$, where $\Lambda^1$ is the one-form representation of $G=GL(d)$ and $\mathfrak{g}=\mathfrak{gl}(d)$ is the corresponding Lie algebra. Assuming metric compatibility fixes the part in $\mathfrak{gl}(d)/\mathfrak{so}(d)$ as we saw in section \ref{sec:CovariantFormalism} of the pair $\tensor{}{_m^p}$. This is contained in the Levi-connection but the Levi-Civita connection contain extra terms such that the torsion $\tensor{\Gamma}{_{[mn]}^p}$ vanish. This implies that the contorsion take values in 
 \begin{equation}
     \tensor{\kappa}{_{mn}^p}\in \Lambda_1\otimes \mathfrak{h},
 \end{equation}
 where $\mathfrak{h}=\mathfrak{so}(d)$ is the maximal compact subalgebra of $\mathfrak{gl}(d)$. Assuming a reduced structure group $G'\subseteq SO(d)$ implies that we can separate the contorsion into two parts 
 \begin{equation}
-    \kappa = \kappa_\text{int}+\kappa_{0}\quad \text{where} \quad \kappa_{0}\in \Lambda_1\otimes \mathfrak{g}'\quad \text{and}\quad \kappa_{\text{int}}\in \Lambda_1\otimes \tensor{\mathfrak{g}}{^'^{\perp}}.
+    \kappa = \kappa_\text{int}+\kappa_{0}\qquad \text{where} \quad \kappa_{0}\in \Lambda_1\otimes \mathfrak{g}'\quad \text{and}\quad \kappa_{\text{int}}\in \Lambda_1\otimes \tensor{\mathfrak{g}}{^'^{\perp}}.
 \end{equation}
 The point now being that since the Killing spinor is a singlet under $\mathfrak{g}'$ the failure of the of Killing spinor to be covariantly constant \emph{with respect to the Levi-Civita connection} is given by $\kappa_{\text{int}}$. The part $\kappa_{\text{int}}$ can further be decomposed into irreducible representations of $\mathfrak{g}'$ called torsion classes. As an example take $G=GL(6)$ and $G'=SU(3)$. Under $G'$ we have the following decompositions $\Lambda_1\to \mathbf{3}\oplus\overbar{\mathbf{3}}$, $\mathfrak{g}'=\mathbf{8}$ and $\tensor{\mathfrak{g}}{^'^{\perp}}=\mathbf{1}\oplus\mathbf{3}\oplus\overbar{\mathbf{3}}$ and 
 \begin{equation}
@@ -231,17 +233,17 @@ and
 We thus see that all five torsion classes vanish for $CY_3$ in order for $(\omega,\Omega)$ to be closed. Moreover, we have seen explicitly the presence of intrinsic torsion corresponds to compacitifications with fluxes which is an obstruction to finding a covariantly constant killing spinor.
 
 
-\subsection{Generalized geometry}
+\subsection{Generalised geometry}
 We have seen above that demanding some preserved supersymmetry in fluxless compactification led to two constraints:
 \begin{itemize}
     \item Demanding existence of globally defined spinor led to a reduced structure group characterized by ($\omega,\Omega$)
     \item Imposing the Killing spinor equation led to a reduced holonomy. 
 \end{itemize}
-Including fluxes alters the Killing spinor equation and the holonomy group need no longer be reduced. This effectively weakens the constraints of the internal manifold which at the same time makes things more complicated. In the spirit of extended geometries we will try to generalize the notion of geometry in order to accommodate flux degree of freedoms in terms of what is called (exceptional) \emph{generalized geometry}. The reason for doing this being that it is then possible to define an appropriate generalisation of the holonomy, or rather of the structure together with some integrability conditions. This will imply that a supersymmetric background compactification should have vanishing generalised intrinsic torsion. Especially since gauge degrees of freedom are included in the geometry this holds true even when fluxes are present. Below we will briefly introduce (exceptional) generalised geometry needed for discussing flux compactifications and generalised structures, for a complete introduction to this field we refer to the literature \cite{Hull:2007zu,Coimbra:2011nw,Coimbra:2011ky,Ntokos:2016vnm}.
+Including fluxes alters the Killing spinor equation and the holonomy group need no longer be reduced. This effectively weakens the constraints of the internal manifold which at the same time make things more complicated. In the spirit of extended geometries we will try to generalise the notion of geometry in order to accommodate flux degree of freedoms in terms of what is called (exceptional) \emph{generalized geometry}. The reason for doing this being that it is then possible to define an appropriate generalisation of the holonomy, or rather of the structure together with some integrability conditions. This will imply that a supersymmetric background compactification should have vanishing generalised intrinsic torsion. Especially since gauge degrees of freedom are included in the geometry this holds true even when non-trivial fluxes are present. Below we will briefly introduce (exceptional) generalised geometry needed for discussing flux compactifications and generalised structures, for a complete introduction to this field we refer to the literature \cite{Hull:2007zu,Coimbra:2011nw,Coimbra:2011ky,Ntokos:2016vnm}.
 
-In extended geometries we enlarged spacetime by introducing coordinates in some module of the underlying structure group $G$ and a section condition specifying a $GL(d)\hookrightarrow G$ embedding. Generalised geometry can be considered as an extended geometry with a global solution to the section condition and a structure group given by the ``geometric'' subgroup of $G$ as we will see. The way this is introduced is that the $d$-dimensional manifold $\mathcal{M}$ is not enlarged, instead only the tangent space is enlarged to the coordinate module of $G$ on which $G$ acts naturally. 
+In extended geometries we enlarged spacetime by introducing coordinates in some module of the underlying structure group $G$ and a section condition specifying a $GL(d)\hookrightarrow G$ embedding. Generalised geometry can be considered as an extended geometry with a global solution to the section condition and a structure group given by the ``geometric'' subgroup of $G$ as we will see.  
 
-Therefore consider a manifold $\mathcal{M}$ and its associated tangent bundle $T\mathcal{M}$. A basis of the tangent space in local coordinates is simply given by $\{\pd/\pd x^i\}_{i=1,\ldots d}$, where $d=\text{dim}\,\mathcal{M}$. Now recall that in DFT spacetime is enlarged to $2d$ dimensions by letting $x^i\to (x^i,\tilde{x}_i)$, where the latter is the vector representation of $O(d,d)$. In generalised geometry one instead considers only a generalized tangent bundle on which in the DFT case $O(d,d)\times \mathbb{R}^+$ acts naturally and in the exceptional case $E_{d(d)}\times\mathbb{R}^+$ acts naturally.  In the former case the generalised tangent bundle is isomorphic to a sum of the tangent bundle and the cotangent bundle
+Therefore consider a manifold $\mathcal{M}$ and its associated tangent bundle $T\mathcal{M}$. A basis of the tangent space in local coordinates is simply given by $\{\pd/\pd x^i\}_{i=1,\ldots d}$, where $d=\text{dim}\,\mathcal{M}$. Now recall that in DFT spacetime is enlarged to $2d$ dimensions by letting $x^i\to (x^i,\tilde{x}_i)$, where the latter is the vector representation of $O(d,d)$. In generalised geometry one instead considers only a generalised tangent bundle on which in the DFT case $O(d,d)\times \mathbb{R}^+$ acts naturally and in the exceptional case $E_{d(d)}\times\mathbb{R}^+$ acts naturally.  In the former case the generalised tangent bundle is isomorphic to a sum of the tangent bundle and the cotangent bundle
 \begin{equation}\label{eq:GenTangentBundleDef}
 E \cong T\mathcal{M}\oplus T^*\mathcal{M},
 \end{equation}
@@ -255,7 +257,7 @@ which also can be written as $\eta_{MN}X^MY^N$ with $X^M,Y^N$ being the componen
 \begin{equation}
     \eta_{MN} = \frac{1}{2}\begin{pmatrix}0&\mathbf{1}\\\mathbf{1}&0\end{pmatrix}.
 \end{equation}
-This inner product is invariant under $SO(d,d)$ transformations parameterized by elements in the algebra 
+This inner product is manifestly invariant under $SO(d,d)$ transformations parameterised by elements in the algebra 
 \begin{equation}
     O = \begin{pmatrix}
             A & \beta \\
@@ -264,7 +266,7 @@ This inner product is invariant under $SO(d,d)$ transformations parameterized by
 \end{equation}
 with $A\in \mathfrak{gl}(d)$, an anti-symmetric two-vector $\beta=\beta^{ij}$ and $B$ a two-form. 
 
-In order to include the presence of the NS-NS two-form $B$ we will look at ``twisted'' elements, these are sections of $E$ that provide explicitly the isomorphism stated between an element $\tilde{X}\in\Gamma(E)$ and $X=v+\lambda\in\Gamma(TM\oplus T^*\mathcal{M})$ as
+In order to include the presence of the NS-NS two-form $B$ we will look at ``twisted'' elements. These are sections of $E$ that provide explicitly the isomorphism stated between an element $\tilde{X}\in\Gamma(E)$ and $X=v+\lambda\in\Gamma(TM\oplus T^*\mathcal{M})$ as
 \begin{equation}
     \tilde{X} := \ee^{B}X = v+\left(\lambda+\iota_v B\right),
 \end{equation}
@@ -277,7 +279,7 @@ with $\lambda_{ij}$ a one-form. This means that the twisted vectors are patched 
     \tilde{X}_i-\tilde{X}_j = \iota_v\dd \lambda_{ij}. 
 \end{equation}
 Patching of twisted vectors are therefore done by elements in the geometric subgroup $GL(d)\ltimes \Lambda^2_{\text{cl}}(\mathcal{M})$, with $\Lambda^2_{\text{cl}}(\mathcal{M})$ being closed two-forms on $\mathcal{M}$. There are some further consistency conditions such that this specifies a ``gerbe structure'' \cite{Hitchin:1999fh}, but this is outside the scope of the thesis and will not be needed. 
-The infinitesimal action of a generalised diffeomorphism parameterised acting by $O(d,d)\times \mathbb{R}^+$ is parameterised by elements in $Y=w+\rho\in\Gamma(E)$ using the generalised Lie derivative on $X=x+\lambda\Gamma(E)$ as 
+The infinitesimal action of a generalised diffeomorphism parameterised acting by $O(d,d)\times \mathbb{R}^+$ is parameterised by elements in $Y=w+\rho\in\Gamma(E)$ using the generalised Lie derivative on $X=x+\lambda\in\Gamma(E)$ as 
 \begin{equation}
     \mathscr{L}_YX^M = V^N\pd_NX^M-(\pd\times_{\text{ad}} V)\tensor{}{^M_N} X^N.
 \end{equation}
@@ -335,7 +337,7 @@ corresponding to a vector, a one-form, a two-form and a five-form. The generaliz
 \begin{equation}
     E \cong T\mathcal{M}\oplus\Lambda^2T^*\mathcal{M}\oplus\Lambda^5T^*\mathcal{M}\oplus\left(T^*\mathcal{M}\otimes \Lambda^7T^*\mathcal{M}\right).
 \end{equation}
-This is the general form for $E$ for $d\leq7$ with the last term absent if $d<7$. A section $X\in\Gamma(E)$ on a patch $U_i$ is given by 
+This is the general form for $E$ for $d\leq7$ with the last term absent if $d<7$. A section $X\in\Gamma(E)$ on a patch $U_i$ given by 
 \begin{equation}
     X = v+\omega+\sigma+\tau,
 \end{equation}
@@ -351,20 +353,20 @@ with a section $W\in\Gamma(\text{ad}\,F)$ on a patch $U_i$ is given by
 \begin{equation}\label{eq:AdDecompE7}
     W = l+r+a+\tilde{a}+\alpha+\tilde{\alpha},
 \end{equation}
-with $l\in\mathbb{R}$, $r\in (T^*U_i\otimes TU_i)$, $a\in \Lambda^3 T^*U_i$, $\tilde{a}\in \Lambda^6 T^*U_i$, $\alpha\in\Lambda^3 TU_i$ and $\tilde{\alpha}\in\Lambda^6 TU_i$. Note especially the presence of a three-form and a six-form which corresponds to the three-form and the dualized six-form of M-theory. Moreover, a section of $\Gamma(E)$ contains a vector, a two-form and five-form, which is parameterises diffeomorphisms and gauge transformations of these form fields. 
+with $l\in\mathbb{R}$, $r\in (T^*U_i\otimes TU_i)$, $a\in \Lambda^3 T^*U_i$, $\tilde{a}\in \Lambda^6 T^*U_i$, $\alpha\in\Lambda^3 TU_i$ and $\tilde{\alpha}\in\Lambda^6 TU_i$. Note especially the presence of a three-form and a six-form which corresponds to the three-form and the dualised six-form of M-theory. Moreover, a section of $\Gamma(E)$ contains a vector, a one-form, a two-form and a five-form which parameterise diffeomorphisms and gauge transformations of these form fields. 
 
-As in the introduction to $O(d,d)$ generalised geometry above sections $E$ and $\text{ad}\,F$ are twisted by the form fields of the adjoint bundle which provides the isomorphism stated above. Explicitly a section $\tilde{X}\in \Gamma(E)$ of the generalised tangent bundle is twisted by the form-fields in the adjoint bundle as
+As in the introduction to $O(d,d)$ generalised geometry above sections of $E$ and $\text{ad}\,F$ are twisted by the form fields of the adjoint bundle which provides the isomorphism stated above. Explicitly a section $\tilde{X}\in \Gamma(E)$ of the generalised tangent bundle is twisted by the form-fields in the adjoint bundle as
 \begin{equation}
     \tilde{X} = \ee^{a+\tilde{a}}X,
 \end{equation}
-with an action of $E_{7(7)}\mathbb{R}^+$ defined below. Elements in the generalised tangent bundle is therefore patched together on $U_{(i)}\cap U_{(j)}\neq 0$ as 
+with an action of $E_{7(7)}\times\mathbb{R}^+$ defined below. Elements in the generalised tangent bundle is therefore patched together on $U_{(i)}\cap U_{(j)}\neq 0$ as 
 \begin{equation}
     X_{(i)} = \ee^{\dd\Lambda_{(ij)}+\dd\tilde{\Lambda}_{(ij)}}X_{(j)},
 \end{equation}
-with a three-form $\dd \Lambda_{(ij)}$  and a six-form $\tilde{\Lambda}_{(ij)}$ corresponding to gauge symmetry of the three-form and six-form potential in M-theory respectively. 
+with a three-form $\dd \Lambda_{(ij)}$  and a six-form $\dd\tilde{\Lambda}_{(ij)}$ corresponding to the gauge symmetry of the three-form and six-form potential in M-theory respectively. 
 
 
-There is a natural action of $E_{d(d)}\times\mathbb{R}^+$, given in \cite{Ashmore:2015joa}, on a section $X\in\Gamma(E)$ as $E' = W\cdot E$ which in components is given by 
+There is a natural action of $E_{d(d)}\times\mathbb{R}^+$, given in e.g.\ \cite{Ashmore:2015joa}, on a section $X\in\Gamma(E)$ as $E' = W\cdot E$ which in components is given by 
 \begin{equation}
     \begin{aligned}
         v'&= lv+r\cdot v+\alpha\lrcorner\omega-\tilde{\alpha}\lrcorner\sigma,\\
@@ -384,7 +386,7 @@ with the definitions
         (j\omega\wedge\omega')_{i,i_1i_2\ldots i_{d}} &:= \frac{d!}{(n-1)!(d+1-n)!}\omega_{i[i_1i_2\ldots i_{n-1}}\omega'_{i_ni_{n+1}\ldots i_d]}.
     \end{aligned}
 \end{equation}
-Moreover, the $\mathfrak{gl}(d)$ subalgebra parameterised by an element $r$ acts naturally as $r\cdot v^i=r^i_jv^i$, $r\cdot\omega_{ij}=-r^k_i\omega_{kj}-r^k_j\omega_{ik}$ and with obvious extensions to other fields. The adjoint action $[W,W']$ with elements  $W\in\Gamma(\text{ad}\,F)$ and $W'\in\Gamma(\text{ad}\,F)$ is further given by 
+Moreover, the $\mathfrak{gl}(d)$ subalgebra parameterised by an element $r$ acts naturally as $r\cdot v^i=\tensor{r}{^i_j}v^i$, $r\cdot\omega_{ij}=-\tensor{r}{^k_i}\omega_{kj}-\tensor{r}{^k_j}\omega_{ik}$ with obvious extensions to other fields. The adjoint action $W''=[W,W']$ with elements  $W\in\Gamma(\text{ad}\,F)$ and $W'\in\Gamma(\text{ad}\,F)$ is further given by 
 \begin{equation}\label{eq:E7AdjointAction}
     \begin{aligned}
         l'' &= \frac{1}{3}(\alpha\lrcorner a'-\alpha'\lrcorner a)+\frac{2}{3}(\tilde{\alpha}'\lrcorner\tilde{a}-\tilde{\alpha}\lrcorner\tilde{a}'),\\
@@ -412,12 +414,12 @@ with again embedding the ordinary partial derivative as $\pd_M=(\pd_i,0,0,0)$ in
 with $L_v$ being the ordinary Lie derivative with respect to the vector component $GL(7)$ vector $v$ and $W=\dd\omega+\dd\sigma \in\Gamma(\text{ad}\,F)$. 
 
 
-\section{Generalized structure\label{sec:GeneralisedStructures}}
+\section{Generalised structure\label{sec:GeneralisedStructures}}
 The bosonic sector of M-theory is given by the metric $g_{MN}$ and the three-form form field $A$ and its corresponding four-form field strength $F=\dd A$. We consider a warped product ansatz for the metric 
 \begin{equation}
     \dd s^2 = \ee^{2A(y)}\dd s^2(\mathbb{R}^{1,D-1})+\dd s^2(\mathcal{M}),
 \end{equation}
-where $x,y$ are coordinates on $\mathbb{R}^{1,D-1}$ and $\mathcal{M}$ respectively and $A$ depends only on the internal manifold to preserve Poincaré invariance. The non-trivial fluxes will be chosen to lie entirely in $\mathcal{M}$, again to preserve the symmetries in the external spacetime. For simplicity we will consider the specific example of $D=4$ such that the internal manifold is seven-dimensional following the work of \cite{Ashmore:2015joa}. The generalised tangent space with respect to an $E_{7(7)}\times\mathbb{R}^+$ exceptional generalised geometry is then given by 
+where $x,y$ are coordinates on $\mathbb{R}^{1,D-1}$ and $\mathcal{M}$ respectively and $A$ depends only on the internal manifold to preserve external Poincaré invariance. The non-trivial fluxes will be chosen to lie entirely in $\mathcal{M}$, again to preserve the symmetries in the external spacetime. For simplicity we will consider the specific example of $D=4$ such that the internal manifold is seven-dimensional following the work of \cite{Ashmore:2015joa}. The generalised tangent space with respect to an $E_{7(7)}\times\mathbb{R}^+$ exceptional generalised geometry is then given by 
 \begin{equation}
     E \cong T\mathcal{M}\oplus\Lambda^2T^*\mathcal{M}\oplus\Lambda^5T^*\mathcal{M}\oplus\left(T^*\mathcal{M}\otimes\Lambda^7 T^*\mathcal{M}\right).
 \end{equation}
@@ -430,21 +432,21 @@ Moreover, given $E$ we can construct the generalized frame bundle $F$ given by f
 and any other frame is related to such a frame by an $E_{7(7)}\times \mathbb{R}^+$ transformation, this then defines a principle bundle $F$ with structure group $E_{7(7)}\times \mathbb{R}^+$. Any other tensor field can then be constructed as sections of an associated vector bundle, thus making the exceptional group manifest in the formulation. 
 \end{comment}
 
-The reduction of the structure group to some $G$-structure, where $G$ is a subgroup of the structure group, proved fruitful to characterise geometries preserving some amount of supersymmetry. The goal is therefore to again find ``reduced structures'', this time for some $G\subset E_{7(7)}$ subgroup. This is done by looking for some tensors invariant under the action of $G$, or in other words, finding singlets when decomposing the modules of $E_{7(7)}$ to $G$. 
+In ordinary geometry the reduction of the structure group to some $G$-structure, where $G$ is a subgroup of the structure group, proved fruitful to characterise geometries preserving some amount of supersymmetry. The goal is therefore to again find ``reduced structures'', this time for some $G\subset E_{7(7)}$ subgroup. This is done by looking for tensors invariant under the action of $G$, or in other words, finding singlets when decomposing modules of $E_{7(7)}$ under $G$. 
 
-As such we decompose the adjoint representation $\mathbf{133}$ of $\mathfrak{e}_{7(7)}$ under $SU(2)\times SO^*(12)\subset E_{7(7)}$, with $SO^*(12)$ a specific real form,
+To this end decompose the adjoint representation $\mathbf{133}$ of $E_{7(7)}$ under $SU(2)\times Spin^*(12)\subset E_{7(7)}$, with $Spin^*(12)$ a specific real form of the double cover of $SO(12)$,
 \begin{equation}
     \mathbf{133}\to (\mathbf{1},\mathbf{66})+(\mathbf{2},\mathbf{32})+(\mathbf{3},\mathbf{1}).
 \end{equation}
-We thus find a triplet of $E_{7(7)}$ tensors which are invariant under $SO(12)^*(12)$. Such a triplet $J_\alpha$ of invariant tensors define a structure, called the hypermultiplet structure, and are sections of the adjoint bundle 
+We thus find a triplet of $E_{7(7)}$ tensors which are invariant under $Spin(12)^*(12)$. Such a triplet $J_\alpha$ of invariant tensors define a structure, called the hypermultiplet structure, and are sections of the adjoint bundle 
 \begin{equation}
     J_\alpha \in \Gamma(\text{ad}\, F\otimes \left(T^*\mathcal{M}\right)^{1/2}).
 \end{equation}
-The hypermultiplet structure then satisfies the $\mathfrak{su}(2)$ algebra 
+The hypermultiplet structure satisfies the $\mathfrak{su}(2)$ algebra 
 \begin{equation}
     [J_\alpha,J_\beta] =2\rho \epsilon_{\alpha\beta\gamma}J_\gamma,
 \end{equation}
-with $\rho\in\text{det}T^*\mathcal{M}$. As in the case of vanishing flux the hypermultiplet structure $J_\alpha$ can be written in terms of the Killing spinor. Before moving on to the integrability condition that the hypermultiplet structure should satisfy we look for another structure. Decomposing the fundamental $\mathbf{56}$ of $\mathfrak{e}_{7(7)}$ under $E_{6(2)}$
+with $\rho\in\text{det}\,T^*\mathcal{M}$. As in the case of vanishing flux the hypermultiplet structure $J_\alpha$ can be written in terms of the Killing spinors. Before moving on to the integrability condition that the hypermultiplet structure should satisfy we look for another structure. Decomposing the fundamental $\mathbf{56}$ of $E_{7(7)}$ under $E_{6(2)}$
 \begin{equation}
     \mathbf{56}\to\mathbf{27}+\overbar{\mathbf{27}}+2\cdot \mathbf{1}.
 \end{equation}
@@ -452,7 +454,7 @@ The two singlets in this decomposition $V$ and $\hat{V}$ defines the vector mult
 \begin{equation}
     q(V)>0,
 \end{equation}
-where $q$ is the quartic invariant of $E_7$. This ensures that the stabiliser group is precisely the real form $E_{6(2)}$ \cite{Ferrara:1997uz}. As we will argue below the coset space with these particular real forms $E_{7(7)}/E_{6(2)}$, have a natural special kähler structure demanded by supersymmetry. The structure $\hat{V}$ is further defined in terms of $V$ as 
+where $q$ is the quartic invariant of $E_7$. This ensures that the stabiliser group is precisely the real form $E_{6(2)}$ \cite{Ferrara:1997uz}. The structure $\hat{V}$ is further defined in terms of $V$ as 
 \begin{equation}
     s(X,\hat{V}) = \frac{2}{\sqrt{q(V)}}q(X,V,V,V),
 \end{equation}
@@ -462,7 +464,7 @@ Just as in ordinary Calabi-Yau there are certain consistency conditions between 
 \begin{equation}\label{eq:CompatibilityVectorHyperStructure}
     \begin{aligned}
         J_+ \cdot X = J_-\cdot X = 0\qquad&\Longleftrightarrow\qquad J_\alpha\cdot V = 0\\
-        \frac{1}{2}\ii s(X,X^*) = \rho^2\qquad &\Longleftrightarrow\qquad \kappa(J_\alpha,J_\beta) = -2\sqrt{q(V)}\delta_{\alpha\beta}
+        \frac{1}{2}\ii s(X,\overbar{X}) = \rho^2\qquad &\Longleftrightarrow\qquad \kappa(J_\alpha,J_\beta) = -2\sqrt{q(V)}\delta_{\alpha\beta}
     \end{aligned}
 \end{equation}
 with $\rho\in\text{det}\, T^*\mathcal{M}^\frac{1}{2}$ and $J_\pm = J_1\pm \ii J_2$. 

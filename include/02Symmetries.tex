@@ -1,7 +1,7 @@
 \chapter{Symmetry algebras}\label{chap:symmetries}
-A cornerstone of extended geometries and any fundamental theory of physics is symmetry. Hence, this chapter aims to introduce the corresponding mathematics describing these symmetries, especially Lie algebras and its representation theory. In order to construct extended geometries we need, in particular, to understand Dynkin diagrams, weights and representation theory. Moreover, we extend the finite dimensional Lie algebras to certain infinite dimensional algebras, Kac-Moody algebras as well as Borcherds superalgebras, which encode important information about the theory. 
+A cornerstone of extended geometries and any fundamental theory of physics is symmetry. Hence, this chapter aims to introduce the corresponding mathematics describing these symmetries, especially Lie algebras and their representation theory. In order to construct extended geometries we need, in particular, to understand Dynkin diagrams, weights and representation theory. Moreover, we extend the finite-dimensional Lie algebras to certain infinite dimensional algebras, Kac-Moody algebras as well as Borcherds superalgebras, which encode important information about the theory. 
 
-Finite dimensional simple Lie algebras has been completely classified and comes in four different (infinite) families 
+Finite dimensional simple Lie algebras have been completely classified and come in four different (infinite) families 
 \begin{equation*}
     \mathfrak{a}_{n-1} \cong \mathfrak{sl}_{n},\quad \mathfrak{b}_{n}\cong \mathfrak{so}_{2n+1},\quad \mathfrak{c}_{n} \cong \mathfrak{sp}_{2n},\quad \mathfrak{d}_{n}\cong \mathfrak{so}_{2n},
 \end{equation*}
@@ -9,7 +9,7 @@ together with five exceptional algebras
 \begin{equation*}
     \mathfrak{g}_2,\quad \mathfrak{f}_4,\quad\mathfrak{e_6},\quad \mathfrak{e_7},\quad \mathfrak{e_8}.
 \end{equation*}
-The Lie groups corresponding to the infinite families of algebras above are related to matrix groups while the exceptional algebras can not be expressed as matrices. The two main examples that are of interest in this thesis are the $\mathfrak{so}_{2n}$ and the so-called e-series $\mathfrak{e}_n$. The general construction of extended geometries is, however, based on an arbitrary Kac-Moody algebra $\mathfrak{g}$. 
+The two main examples that are of interest in this thesis are the $\mathfrak{so}_{2n}$ family and the so-called $\mathfrak{e}_n$-series. The general construction of extended geometries is, however, based on an arbitrary Kac-Moody algebra $\mathfrak{g}$. 
 
 A complete introduction to the theory of Lie algebras is beyond the scope of this thesis. Instead the goal is to introduce main concepts that are of interest later on. For a thorough introduction to finite-dimensional Lie algebras we refer to \cite{Fuchs1997,FultonHarris2004,Gaberdiel2013} and for infinite-dimensional algebras \cite{Kac1990}. In section \ref{sec:groups} Lie groups, representations and how to retrieve the corresponding Lie algebra is reviewed. The theory of Lie algebras is then introduced in section \ref{sec:Liealgebras}. Extensions of finite dimensional Lie algebras to Kac-Moody algebras and to Borcherds superalgebras is then described in section \ref{sec:KacMoody} and \ref{sec:Borcherds} respectively. Two specific example of extended algebras is introduced which is used later on for the construction of extended geometries. The appearance of these kinds of extended symmetry algebras in string theory and supergravity is further presented in \cite{CederwallPalmkvistSuperalgebras2015,Aldazabal2014,Palmkvist2015ExpGeomSuperAlg,deWitTensorHierarchies2008}.
 
@@ -89,13 +89,13 @@ where $[\cdot,\cdot]$ denotes the matrix commutator. This differs from the prope
 where $\mathbf{1}$ is the identity matrix.
 
 
-Being a vector space it is possible to introduce a basis $T^a$, where $a=1,2,\ldots,\text{dim}\,\mathfrak{g}$, and write the Lie bracket as 
+Since $\mathfrak{g}$ is a vector space it is possible to introduce a basis $T^a$, where $a=1,2,\ldots,\text{dim}\,\mathfrak{g}$, and write the Lie bracket as 
 \begin{equation}
     \llbracket T^a,T^b\rrbracket = \tensor{f}{^{ab}_c} T^c,
 \end{equation}
-where repeated indices is summed over. The $\tensor{f}{^{ab}_c}$ is called the structure constants and specifies the algebra. If the structure constants vanish the algebra is called abelian.
+where repeated indices is summed over. The $\tensor{f}{^{ab}_c}$ are called the structure constants and specify the algebra. If the structure constants vanish the algebra is called abelian.
 
-A subset $\mathfrak{h}\subset \mathfrak{g}$ is a subalgebra of $\mathfrak{g}$ if \begin{equation}
+A linear subspace $\mathfrak{h}\subset \mathfrak{g}$ is a subalgebra of $\mathfrak{g}$ if \begin{equation}
     \llbracket\mathfrak{h},\mathfrak{h}\rrbracket\subseteq \mathfrak{h},
 \end{equation} 
 and it is called an invariant subalgebra, or ideal, if also
@@ -124,7 +124,7 @@ As an example we will study $\mathfrak{a}_1\cong\mathfrak{sl}(2,\mathbb{C})$ whi
 \end{equation}
 The structure constants in this basis is easily calculated to
 \begin{equation}
-    [h,e] = 2e_+,\qquad [h,f]=-2e_-, \qquad [e,f]=h.
+    [h,e] = 2e,\qquad [h,f]=-2e, \qquad [e,f]=h.
 \end{equation}
 Observe that the elements $e,f$ can thus be seen as step operators increasing(decreasing) the eigenvalue of $h$ by $\pm 2$. From a physicist point of view this is reminiscent of the $\{J_3,J_+,J_-\}$ basis of angular momentum in quantum mechanics and the action of the algebra is displayed in \figref{fig:SlTwoRep}. The Killing form in the fundamental representation, this is the representation with $\rho =\mathbf{1}$ for matrix algebras, is easily calculated and one finds 
 \begin{equation}
@@ -132,7 +132,7 @@ Observe that the elements $e,f$ can thus be seen as step operators increasing(de
 \end{equation}
 with an ordering $\{h,e^+,e^-\}$. Indeed we find that $\text{det}(\kappa)\neq 0$ as claimed for a simple Lie algebra.
 
-Suppose that we have a finite dimensional irreducible representation $\mathbb{V}$. Then due to the commutation relations one finds that $h$ acts diagonally on vectors $v\in \mathbb{V}$ and can therefore be decomposed into eigenspaces of $h$ according to
+Suppose that we have a finite-dimensional irreducible representation $\mathbb{V}$. Then due to the commutation relations one finds that $h$ acts diagonally on vectors $v\in \mathbb{V}$ and can therefore be decomposed into eigenspaces of $h$ according to
 \begin{equation}
     \mathbb{V} = \bigoplus_\alpha \mathbb{V}_\alpha,
 \end{equation}
@@ -165,7 +165,7 @@ where, by definition, for any $h\in\mathfrak{h}$ and $v_\alpha\in\mathfrak{g}_\a
 \begin{equation}
     \text{ad}_h(v_\alpha) = \alpha(h)v_\alpha.
 \end{equation}
-This choice of basis is called the Cartan-Weyl basis. The sum in \eqref{eq:algdecomp} is over a finite set $\Delta\subset\mathfrak{h}^*$ called the root system and the elements $\alpha\in\Delta$ are called roots. Moreover, it follows by the Jacobi-identity that 
+This choice of basis is called the Cartan-Weyl basis. The sum in \eqref{eq:algdecomp} is over a finite set $\Delta\subset\mathfrak{h}^*$ called the root system and the elements $\alpha\in\Delta$ are called roots. Moreover, it follows by the Jacobi identity that 
 \begin{equation}
     \text{ad}_{\mathfrak{g}_\alpha}(\mathfrak{g}_\beta) = \llbracket\mathfrak{g}_\alpha,\mathfrak{g}_\beta\rrbracket \subset \mathfrak{g}_{\alpha+\beta}.
 \end{equation}
@@ -430,7 +430,7 @@ Below extensions of finite simple Lie algebras are introduced. In this thesis th
 \begin{figure}
     \centering
     \ExtendedDynkin
-    \caption{Two extensions of the $\mathfrak{e}_7$ structure algebra. The upper is equivalent to $\mathfrak{e}_8$ while the lower denotes an odd-extension to a Borcherds superalgebra.}
+    \caption{Two extensions of the $\mathfrak{e}_7$ structure algebra. The upper is equivalent to $\mathfrak{e}_8$ while the lower denotes an super-extension to a Borcherds superalgebra.}
     \label{fig:ExtendedDynk}
 \end{figure}
 

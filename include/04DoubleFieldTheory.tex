@@ -8,7 +8,7 @@ where $H=\dd B$ is the 3-form field strength tensor of $B$. In its present form 
 T-duality of closed strings compactified on a torus $T^d$ exchanges momentum on the torus with winding modes by an $O(d,d,\mathbb{Z})$ transformation. Moreover, upon compactifying supergravity in $D=10$ on a torus $T^d$ one finds that the continuous version of the same group, i.e.\ $O(d,d,\mathbb{R})$, is a symmetry of the theory and the goal of double field theory is to make this manifest. In order to do this one extends spacetime to include coordinates $\tilde{x}_i$ dual to the winding modes $w^i$ and arrange fields in representations of $O(d,d)$. Doing this diffemorphisms and the 2-form gauge symmetries merge to a single symmetry transformation called generalised diffemorphisms. At the same time this unifies the metric and the gauge field into a generalised metric. For more about DFT see \cite{Berman2014,HohmZwiebach2013,DFTHullZwiebach2009,DFTAldazabal2013}. 
 
 
-\section{Generalised diffemorphisms and the section condition}
+\section{Generalised diffemorphisms and the section constraint}
 Ordinary diffeomorphisms $\xi^i$ are encoded in the Lie derivative acting on the tensor fields as 
 \begin{equation}
     L_\xi g_{ij} = \xi^k\pd_kg_{ij}+2\pd_{(i}\xi^kg_{j)k} \qquad L_\xi b_{ij} = \xi^k\pd_k b_{ij} + 2 \pd_{[i}\xi^k b_{|k|j]} \qquad L_\xi \phi = \xi^i\pd_i\phi. 
@@ -56,9 +56,9 @@ where $\pd_M \otimes \pd_N$ indicates that each derivative act on an arbitrary f
 \begin{equation}
     \xi(\xi_1,\xi_2)^M = \left[\xi_1,\xi_2\right]_C^M = \xi_1^P\pd_P\xi_2^M-\frac{1}{2}\xi_{1P}\pd^M\xi^P_2-(1\leftrightarrow 2).
 \end{equation}
-The constraint $\eta^{MN}\pd_M\otimes\pd_N=0$ is called the (strong) section condition and a generalised version of this is characteristic for extended geometries. By solving the section condition one restricts space-time to a $d$-dimensional subspace of the extended space-time, e.g.\ one solution is given by $\tilde{\pd}^i=0$ which implies that no fields can depend on the extended coordinates. In fact, starting with this solution one can get all other possible solutions by applying an $O(d,d)$ transformation. 
+The constraint $\eta^{MN}\pd_M\otimes\pd_N=0$ is called the (strong) section constraint and a generalised version of this is characteristic for extended geometries. By solving the section constraint one restricts space-time to a $d$-dimensional subspace of the extended space-time, e.g.\ one solution is given by $\tilde{\pd}^i=0$ which implies that no fields can depend on the extended coordinates. In fact, starting with this solution one can get all other possible solutions by applying an $O(d,d)$ transformation. 
 
-One can now check that if we solve the section condition with $\tilde{\pd}^i=0$ and set $\xi^M = (\lambda_i,\xi^i)$ that the generalised diffeomorphism reduces to the ordinary diffeomorphism and gauge transformation 
+One can now check that if we solve the section constraint with $\tilde{\pd}^i=0$ and set $\xi^M = (\lambda_i,\xi^i)$ that the generalised diffeomorphism reduces to the ordinary diffeomorphism and gauge transformation 
 \begin{equation}
     \mathscr{L}_\xi g_{ij} = L_\xi g_{ij} \qquad \mathscr{L}_\xi b_{ij} = L_\xi b_{ij}+2\pd_{[i}\lambda_{j]}, \qquad \mathcal{L}_\xi \phi = L_\xi\phi
 \end{equation}
@@ -84,7 +84,7 @@ which is given by
 \begin{equation}
     \Delta_\xi \pd_K \mathcal{H}^{MN} = 2\left(\pd_K\pd^{(M}\xi_P-\pd_K\pd_P\xi^{(M}\right)\mathcal{H}^{N)P},
 \end{equation}
-up to a term that vanish by the section condition. Likewise one finds 
+up to a term that vanish by the section constraint. Likewise one finds 
 \begin{equation}
     \Delta_\xi \pd_K\mathcal{H}_{MN} = 2\left(\pd_K\pd_{(M}\xi^P-\pd_K\pd^P\xi_{(M}\right)\mathcal{H}_{N)P}.
 \end{equation}
@@ -111,7 +111,7 @@ and for the last term
 Integrating by parts (note the dilaton prefactor in the action) one finds that the total variation of $S_{\text{DFT}}$ indeed vanish and the action is thus invariant under generalised diffemorphisms. 
 
 
-With the supergravity solution to the section condition, $\tilde{\pd}^i = 0$, it is interesting to see that the DFT action reduce to that of supergravity (as it should)
+With the supergravity solution to the section constraint, $\tilde{\pd}^i = 0$, it is interesting to see that the DFT action reduce to that of supergravity (as it should)
 \begin{equation}
     S_{\text{DFT},\tilde{\pd}=0} = \int\dd^Dx \ee^{-2\phi}\sqrt{-g}\left(R+4(\pd\phi)^2-\frac{1}{12}H^2\right).
 \end{equation}
@@ -123,4 +123,4 @@ which clearly shows that the action is invariant under T-duality in this case. W
 
 
 
-\todo{Diagram of section conditions (see https://arxiv.org/pdf/1204.1979.pdf)}
+\todo{Diagram of section constraints (see https://arxiv.org/pdf/1204.1979.pdf)}

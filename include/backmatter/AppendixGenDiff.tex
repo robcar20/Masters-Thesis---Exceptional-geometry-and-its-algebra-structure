@@ -1,5 +1,6 @@
-%\section{Closure of generalised diffeomorphisms\label{app:GenDiffComm}}
-In this appendix we provide the explicit calculation of closure of generalised diffeomorphisms. We want to look at $[\mathscr{L}_\xi,\mathscr{L}_\eta] V^M$ and start with one term 
+%\section{Closure of generalised diffeomorphisms}
+\label{app:GenDiffComm}
+In this appendix we provide the explicit calculation of the closure of generalised diffeomorphisms. We want to look at $[\mathscr{L}_\xi,\mathscr{L}_\eta] V^M$ and start with one term 
 \begin{equation}
     \begin{aligned}
         \mathscr{L}_{\xi}(\mathscr{L}_\eta V^M) &= \mathscr{L}_\xi(\eta^P\pd_PV^M-\pd_P\eta^MV^P+\tensor{Y}{^{MR}_{ST}}\pd_R\eta^S V^T)\\
@@ -11,32 +12,32 @@ The first term gives
 \begin{equation}
     \begin{aligned}
         (\mathscr{L}_\xi\eta^P)\pd_PV^M &= \xi^K\pd_K\eta^P\pd_PV^M-\pd_K\xi^M\pd_PV^K+\pd_K\xi^K\pd_KV^M\\
-        &+\tensor{Y}{^{MR}_{ST}}(\pd_R\xi^S)\pd_PV^T-\underbrace{\tensor{Y}{^{TR}_{SP}}(\pd_R\xi^S)\pd_TV^M}_{=0\,\text{section condition}}.
+        &+\tensor{Y}{^{MR}_{ST}}(\pd_R\xi^S)\pd_PV^T-\underbrace{\tensor{Y}{^{TR}_{SP}}(\pd_R\xi^S)\pd_TV^M}_{=0\,\text{section constraint}}.
     \end{aligned}
 \end{equation}
 The second term gives 
 \begin{equation}
     \begin{aligned}
         \eta^P(\mathscr{L}_\xi\pd_PV^M) &= \eta^P\xi^K\pd_K\pd_PV^M-\eta^P\pd_K\xi^M\pd_PV^K+\eta^P\pd_P\xi^K\pd_KV^M\\
-        &+ \tensor{Y}{^{MR}_{ST}}(\pd_R\xi^S)\pd_PV^T-\underbrace{\tensor{Y}{^{TR}_{SP}}(\pd_R\xi^S)\pd_TV^M}_{=0\, \text{section condition}},
+        &+ \tensor{Y}{^{MR}_{ST}}(\pd_R\xi^S)\pd_PV^T-\underbrace{\tensor{Y}{^{TR}_{SP}}(\pd_R\xi^S)\pd_TV^M}_{=0\, \text{section constraint}},
     \end{aligned}
 \end{equation}
 where we note that the first terms is symmetric in $\xi\leftrightarrow\eta$ and will vanish in the commutator. The third term gives 
 \begin{equation}
     \begin{aligned}
         -(\mathscr{L}_\xi\pd_PV^M)V^P&=-\xi^K\pd_K\pd_P\eta^MV^P+\pd_K\xi^M\pd_P\eta^KV^P-\pd_P\xi^K\pd_K\eta^MV^P\\
-        &-\tensor{Y}{^{MR}_{ST}}(\pd_R\xi^S)\pd_\eta^TV^P+\underbrace{\tensor{Y}{^{TR}_{SP}}(\pd_R\xi^S)\pd_TV^P}_{=0\, \text{section condition}}.
+        &-\tensor{Y}{^{MR}_{ST}}(\pd_R\xi^S)\pd_\eta^TV^P+\underbrace{\tensor{Y}{^{TR}_{SP}}(\pd_R\xi^S)\pd_TV^P}_{=0\, \text{section constraint}}.
     \end{aligned}
 \end{equation}
 The fourth term is given by 
 \begin{equation}
-    -\pd_P\eta^M\mathscr{L}_\xi V^P = -\pd_\eta^M\xi^K\pd_KV^P+\pd_P\eta^M\pd_K\xi^PV^K-\underbrace{\pd_P\eta^M\tensor{Y}{^{PR}_{ST}}(\pd_R\xi^S)\pd_P\eta^M}_{=0\, \text{section condition}}.
+    -\pd_P\eta^M\mathscr{L}_\xi V^P = -\pd_\eta^M\xi^K\pd_KV^P+\pd_P\eta^M\pd_K\xi^PV^K-\underbrace{\pd_P\eta^M\tensor{Y}{^{PR}_{ST}}(\pd_R\xi^S)\pd_P\eta^M}_{=0\, \text{section constraint}}.
 \end{equation}
 The fifth term is given by 
 \begin{equation}
     \begin{aligned}
         \tensor{Y}{^{MR}_{ST}}(\mathscr{L}_\xi \pd_R\eta^S)V^T &= \tensor{Y}{^{MR}_{ST}}V^T\left(\xi^K\pd_K\pd_R\eta^S-\pd_K\xi^S\pd_R\eta^K+\pd_R\xi^K\pd_K\eta^S\right)\\
-        &+\tensor{Y}{^{MR}_{ST}}V^T\big(\tensor{Y}{^{SK}_{LQ}}(\pd_K\xi^L)\pd_R\eta^Q-\underbrace{\tensor{Y}{^{QK}_{LR}}(\pd_K\xi^L)\pd_Q\eta^S}_{=0\, \text{section condition}}\big).
+        &+\tensor{Y}{^{MR}_{ST}}V^T\big(\tensor{Y}{^{SK}_{LQ}}(\pd_K\xi^L)\pd_R\eta^Q-\underbrace{\tensor{Y}{^{QK}_{LR}}(\pd_K\xi^L)\pd_Q\eta^S}_{=0\, \text{section constraint}}\big).
     \end{aligned}
 \end{equation}
 And finally the last term is given by 
@@ -66,7 +67,7 @@ The second term gives
 And the last term gives 
 \begin{equation}
     \begin{aligned}
-        \mathscr{L}_{\tensor{Y}{^{\circ R}_{ST}}\pd_R\xi^S\eta^T}V^M &= \underbrace{\tensor{Y}{^{KR}_{ST}}(\pd_R\xi^S)\eta^T\pd_KV^M}_{=0\, \text{section condition}}-\tensor{Y}{^{MR}_{ST}}V^K\left(\pd_K\pd_R\xi^S\eta^T+\pd_R\xi^S\pd_K\eta^T\right)\\
+        \mathscr{L}_{\tensor{Y}{^{\circ R}_{ST}}\pd_R\xi^S\eta^T}V^M &= \underbrace{\tensor{Y}{^{KR}_{ST}}(\pd_R\xi^S)\eta^T\pd_KV^M}_{=0\, \text{section constraint}}-\tensor{Y}{^{MR}_{ST}}V^K\left(\pd_K\pd_R\xi^S\eta^T+\pd_R\xi^S\pd_K\eta^T\right)\\
         &+\tensor{Y}{^{MQ}_{LK}}\tensor{Y}{^{LR}_{ST}}V^K\left(\pd_Q\pd_R\xi^S\eta^T+\pd_R\xi^S\pd_Q\eta^T\right).
     \end{aligned}
 \end{equation}

@@ -1,5 +1,5 @@
 \chapter{Extended Geometries}\label{chap:ExtendedGeometries}
-In this chapter the general construction of extended geometries constructed in \cite{CederwallPalmkvist2017} are described. These are generalisations of double geometry and exceptional geometry to a geometry based on a Kac-Moody structure algebra $\mathfrak{g}\times\mathbb{R}^+$ and an irreducible highest weight module $R(\lambda)$. The construction is built around the generalised diffemorphisms and closure of their algebra. Moreover, the so-called section condition is crucial for many reasons, in particular closure.
+In this chapter the general construction of extended geometries constructed in \cite{CederwallPalmkvist2017} are described. These are generalisations of double geometry and exceptional geometry to a geometry based on a Kac-Moody structure algebra $\mathfrak{g}\times\mathbb{R}^+$ and an irreducible highest weight module $R(\lambda)$. The construction is built around the generalised diffemorphisms and closure of their algebra. Moreover, the so-called section constraint is crucial for many reasons, in particular closure.
 
 When the structure algebra is that of a hidden duality group appearing when compactifying, say, a supergravity theory the extended geometries describe the purely internal (scalar) degrees of freedom of that theory. However, the geometries introduced in this chapter are described without reference to any specific physical theory and compactification ansatz. 
 
@@ -66,7 +66,7 @@ where $\tensor{P}{^{MN}_{PQ}}=-\frac{1}{4}\eta^{IK}\eta^{JL}(T_{IJ})^M_Q(T_{KL})
 \begin{equation}\label{eq:section}
     \tensor{Y}{^{MN}_{PQ}}\pd_M\otimes\pd_N = \eta^{MN}\pd_M\otimes\pd_N,
 \end{equation}
-which indeed is the section condition for DFT introduced in section \ref{sec:DFT}. Moreover, the $Y$-tensor also needs to satisfy the following constraints for the algebra to close
+which indeed is the section constraint for DFT introduced in section \ref{sec:DFT}. Moreover, the $Y$-tensor also needs to satisfy the following constraints for the algebra to close
 \begin{subequations}
     \begin{align}
         \begin{split}
@@ -81,10 +81,10 @@ which indeed is the section condition for DFT introduced in section \ref{sec:DFT
     \end{align}
     \end{subequations}
 
-These identities are derived in appendix \ref{app:GenDiffComm}. Whether the remaining term in \eqref{eq:GenDiffComm} needed for closure vanish or not depends on the specific algebra together with the choice of coordinate module $R(\lambda)$, a simple criterion for this will be derived below using certain extensions of $\mathfrak{g}$. As of yet the particular form nor any symmetry properties of $Y$ has been used. However, inserting the explicit form \eqref{eq:Y} in \eqref{eq:closure1}-\eqref{eq:closure2} one finds that they are satisfied if the section condition is \cite{Palmkvist2015ExpGeomSuperAlg}.
+These identities are derived in appendix \ref{app:GenDiffComm}. Whether the remaining term in \eqref{eq:GenDiffComm} needed for closure vanish or not depends on the specific algebra together with the choice of coordinate module $R(\lambda)$, a simple criterion for this will be derived below using certain extensions of $\mathfrak{g}$. As of yet the particular form nor any symmetry properties of $Y$ has been used. However, inserting the explicit form \eqref{eq:Y} in \eqref{eq:closure1}-\eqref{eq:closure2} one finds that they are satisfied if the section constraint is \cite{Palmkvist2015ExpGeomSuperAlg}.
 
-\subsection{Section condition}
-Up to the remaining term in \eqref{eq:GenDiffComm} closure of the algebra is entirely dependent on solving the section condition \eqref{eq:section}. To this end examine the tensor product of the coordinate module with itself. This can trivially be decomposed as
+\subsection{section constraint}
+Up to the remaining term in \eqref{eq:GenDiffComm} closure of the algebra is entirely dependent on solving the section constraint \eqref{eq:section}. To this end examine the tensor product of the coordinate module with itself. This can trivially be decomposed as
 \begin{equation}\label{eq:SectionConditionReps}
     \begin{aligned}
         R(\lambda)\otimes R(\lambda) &= \vee^2 R(\lambda)\oplus \wedge^2R(\lambda)\\
@@ -96,14 +96,14 @@ with $R_h^{s,a}$ being the highest weight representation in the symmetrised and 
     R_2 &= \vee^2 R(\lambda)\ominus R_h^s,\\
     \tilde{R}_2 &= \wedge^2R(\lambda)\ominus  R_h^a.
 \end{align}
-It is easily seen that the highest weight representation in the symmetrised product is given by $R_h^s=R(2\lambda)$. Solving the section condition can be done in two steps, first impose the weak section stating that any momenta $|p\rangle\in \overbar{R(\lambda)}$ lie in a minimal orbit of $G$, which is equivalent to $|p\rangle\otimes|p\rangle \in \overbar{R(2\lambda)}$ \cite{Berman2013,Bossard2017}. Secondly we demand that the product of two arbitrary momenta $|p\rangle,|q\rangle\in\overbar{R(\lambda)}$ contain only the dual of the highest modules in the symmetric $R^s_h$ and anti-symmetric $R^a_h$ product of $R(\lambda)$ respectively. In other words, the second step means that we set 
+It is easily seen that the highest weight representation in the symmetrised product is given by $R_h^s=R(2\lambda)$. Solving the section constraint can be done in two steps, first impose the weak section stating that any momenta $|p\rangle\in \overbar{R(\lambda)}$ lie in a minimal orbit of $G$, which is equivalent to $|p\rangle\otimes|p\rangle \in \overbar{R(2\lambda)}$ \cite{Berman2013,Bossard2017}. Secondly we demand that the product of two arbitrary momenta $|p\rangle,|q\rangle\in\overbar{R(\lambda)}$ contain only the dual of the highest modules in the symmetric $R^s_h$ and anti-symmetric $R^a_h$ product of $R(\lambda)$ respectively. In other words, the second step means that we set 
 \begin{equation}
     \left(\pd\otimes\pd\right)|_{\overbar{R_2}} = 0, \qquad \left(\pd\otimes\pd\right)|_{\overbar{\tilde{R}_2}} =0,
 \end{equation}
 where $\otimes$ indicate that the derivatives acting on arbitrary fields. 
 %As in \ref{sec:ExtendedAlgebras} $R_2$ and $\tilde{R}_2$ sit at level $-2$ of $\mathscr{B}(\mathfrak{g})$ and $\mathscr{A}(\mathfrak{g})$ respectively \cite{CederwallPalmkvist2017}. 
 
-The section condition plays an important rôle in extended geometries as this specifies the embedding $GL(d)\hookrightarrow G\times\mathbb{R}^+$ that defines ordinary geometry. However, crucially the section condition is solved in a $G$ covariant manner. Moreover, any solution to the section condition can be reached by a $G$ transformation of another solution while the $d$ dimensional subspace that span the vector representation of $GL(d)$ is stabilised by the $GL(d)$ subgroup of $G$.
+The section constraint plays an important rôle in extended geometries as this specifies the embedding $GL(d)\hookrightarrow G\times\mathbb{R}^+$ that defines ordinary geometry. However, crucially the section constraint is solved in a $G$ covariant manner. Moreover, any solution to the section constraint can be reached by a $G$ transformation of another solution while the $d$ dimensional subspace that span the vector representation of $GL(d)$ is stabilised by the $GL(d)$ subgroup of $G$.
 
 In order to make progress note that the highest weight representations in the anti-symmetrised product $R_s^a$ is given by representations $R(2\lambda-\alpha_i)$ with $\lambda(\alpha^\vee_i)\neq 0$. The highest weight state of such a representation is given by
 \begin{equation}
@@ -165,9 +165,9 @@ The first term has to vanish seperately from which we get $\lambda_i=1$. The sec
     &+(1+\sigma)\sum_{\alpha\in\Delta^+}e_{-\alpha}|\lambda\rangle\otimes e_{\alpha}e_{-\alpha_i}|\lambda\rangle. 
     \end{aligned}
 \end{equation}
-The only contribution from the sum comes from $\alpha=\alpha_i$, since otherwise $(\alpha_i-\alpha)$ can not be written as a sum of positive roots, which cancels the term proportional to $\lambda_i$ in the first term. We have thus found that $|\lambda\rangle$, $|q\rangle$, and $|\lambda\rangle+|q\rangle$ all satisfy the weak section condition. 
+The only contribution from the sum comes from $\alpha=\alpha_i$, since otherwise $(\alpha_i-\alpha)$ can not be written as a sum of positive roots, which cancels the term proportional to $\lambda_i$ in the first term. We have thus found that $|\lambda\rangle$, $|q\rangle$, and $|\lambda\rangle+|q\rangle$ all satisfy the weak section constraint. 
 
-Consider now another state $|p\rangle = e_{-\beta-\alpha_i}|\lambda\rangle$ which also which also lies in the section. From the weak section condition on $(1+\sigma)|\lambda\rangle\otimes|p\rangle$ we find 
+Consider now another state $|p\rangle = e_{-\beta-\alpha_i}|\lambda\rangle$ which also which also lies in the section. From the weak section constraint on $(1+\sigma)|\lambda\rangle\otimes|p\rangle$ we find 
 \begin{equation}\label{eq:Abel}
     \begin{aligned}
         \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)e_{-\alpha_i}|\lambda\rangle \otimes e_{-\beta-\alpha_i}|\lambda\rangle &= (1+\sigma)\left[(\lambda,\lambda-\alpha_i-\beta)-(\lambda,\lambda)\right]|\lambda\rangle\otimes e_{-\beta-\alpha_i}|\lambda\rangle \\
@@ -180,7 +180,7 @@ The term in the sum with $\alpha=\beta+\alpha_i$ contributes a term
 \end{equation}
 which cancels the remaining term from the first line in \eqref{eq:Abel}. The remaining terms from the sum consists of $\alpha$ such that $\alpha\neq \beta+\alpha_i$ and $(\alpha,\lambda)\neq 0$ since otherwise if $(\alpha,\lambda)=0$, then $e_{-\alpha}|\lambda\rangle$ vanish. The contribution from $\alpha=\alpha_i$ and $\alpha=\beta$ vanish only if $(\beta,\lambda)=0$. The remaining states carry a weight $\lambda-(\alpha_i+\beta-\alpha)$, with $\alpha_i$ not included in $\alpha$ and $(\alpha,\lambda)\neq 0$, from which it follows that $\alpha_i+\beta-\alpha$ is not a sum of positive roots and any such state thus vanish. 
 
-Lastly consider the weak section condition on $|p\rangle\otimes|p\rangle$ 
+Lastly consider the weak section constraint on $|p\rangle\otimes|p\rangle$ 
 \begin{equation}\label{eq:WeakSectionP}
     \begin{aligned}
     \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)\right)e_{-\alpha_i-\beta}&|\lambda\rangle \otimes e_{-\alpha_i-\beta}|\lambda\rangle = [(\lambda-\alpha_i-\beta,\lambda-\alpha_i-\beta)]e_{-\alpha_i-\beta}|\lambda\rangle\otimes e_{-\alpha_i-\beta}|\lambda\rangle\\
@@ -195,7 +195,7 @@ such that $a_{mn}=-1$ for $|m-n|=1$ and $a_{mn}=0$ for $|m-n|>0$ for $m,n=i,i+1,
 \begin{equation}
     -2(\alpha_i,\beta)+(\beta,\beta)=0,
 \end{equation}
-if $\beta=\beta_j$ and thus \eqref{eq:WeakSectionP} vanish. We have thus found that also $|p\rangle$ and $|p\rangle\otimes|\lambda\rangle$ satisfy the weak section condition. 
+if $\beta=\beta_j$ and thus \eqref{eq:WeakSectionP} vanish. We have thus found that also $|p\rangle$ and $|p\rangle\otimes|\lambda\rangle$ satisfy the weak section constraint. 
 Moreover, there is an anti-symmetric condition from \eqref{eq:AntiSymmetricCondition} which is seen to be fulfilled by looking at the following 
 \begin{equation}
     \begin{aligned}
@@ -204,7 +204,7 @@ Moreover, there is an anti-symmetric condition from \eqref{eq:AntiSymmetricCondi
     &= -|\lambda\rangle \otimes |p\rangle +|p\rangle\otimes |\lambda\rangle,
     \end{aligned}
 \end{equation}
-using similar arguments as above to find that the only non-vanishing contribution from the sum comes from $\alpha=\alpha_i+\beta$. It is immediate that $e_{-\alpha_i-\beta_j}|\lambda\rangle+e_{-\alpha_i-\beta_k}|\lambda\rangle$ for any $j,k$ also satisfy the section condition. The reason for this is that the only contribution of the Casimir invariant from elements not in the $\mathfrak{sl}$ subalgebra will come from the part involving $(h,h)-(\lambda,\lambda)$ which is stabilised by the action of the $\mathfrak{sl}$ subalgebra by construction.
+using similar arguments as above to find that the only non-vanishing contribution from the sum comes from $\alpha=\alpha_i+\beta$. It is immediate that $e_{-\alpha_i-\beta_j}|\lambda\rangle+e_{-\alpha_i-\beta_k}|\lambda\rangle$ for any $j,k$ also satisfy the section constraint. The reason for this is that the only contribution of the Casimir invariant from elements not in the $\mathfrak{sl}$ subalgebra will come from the part involving $(h,h)-(\lambda,\lambda)$ which is stabilised by the action of the $\mathfrak{sl}$ subalgebra by construction.
 
 Any two vectors $|p\rangle$ and $|q\rangle$ in a section thus satisfy 
 \begin{equation}
@@ -238,7 +238,7 @@ The obstruction to closure of generalised diffeomorphisms was shown in \eqref{eq
 \begin{equation}\label{eq:GenDiffComm2}
     \left(\left[\mathscr{L}_\xi,\mathscr{L}_\eta\right]-\mathscr{L}_{\frac{1}{2}\left(\mathscr{L}_\xi\eta-\mathscr{L}_\eta\xi\right)}\right)V^M = \frac{1}{2}\tensor{Z}{^{MP}_{QN}}\tensor{Y}{^{QR}_{ST}}\xi^T\pd_P\pd_R\eta^SV^N-\left(\xi\leftrightarrow\eta\right),
 \end{equation}
-given that the section condition is fulfilled. The goal is to rewrite this in a form that makes it easy to see whether it vanish or not. Consider therefore
+given that the section constraint is fulfilled. The goal is to rewrite this in a form that makes it easy to see whether it vanish or not. Consider therefore
 \begin{equation}\label{eq:RemainderTermGauge}
     \begin{aligned}
         \tensor{Z}{^{MP}_{QN}}\tensor{Y}{^{QR}_{ST}}\xi^T\pd_P\pd_R\eta^SV^N &= \left(-k\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\beta P}_Q}\tensor{Y}{^{QR}_{ST}}+\beta \delta^M_N\tensor{Y}{^{PR}_{ST}}\right)\xi^T\pd_P\pd_R\eta^SV^N,\\
@@ -246,7 +246,7 @@ given that the section condition is fulfilled. The goal is to rewrite this in a 
         &-k\beta\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\beta P}_T}\delta^R_S-k\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\beta P}_S}\delta^{R}_T\big)\xi^T\pd_P\pd_R\eta^SV^N,
     \end{aligned}
 \end{equation}\todo{Correct parenthesis in second and third line}
-where we expanded the $Z$-tensor in the first term on the RHS and then used that the second term vanish due to the section condition. The strategy is then to commute $\tensor{T}{^{\beta P}_Q}$ and $\tensor{T}{^{\gamma Q}_T}$ in the term proportional to $k^2$ in the second line in order to again apply the section condition
+where we expanded the $Z$-tensor in the first term on the RHS and then used that the second term vanish due to the section constraint. The strategy is then to commute $\tensor{T}{^{\beta P}_Q}$ and $\tensor{T}{^{\gamma Q}_T}$ in the term proportional to $k^2$ in the second line in order to again apply the section constraint
 \begin{equation}\label{eq:UseOfSec}
     \begin{aligned}
     \eqref{eq:RemainderTermGauge}|_{k^2} &= k^2\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\tensor{T}{^{\beta P}_Q}\eta_{\gamma\rho}\tensor{T}{^{\gamma Q}_T}\tensor{T}{^{\rho R}_S}\xi^T\pd_P\pd_R\eta^SV^N\\ &= k^2\eta_{\alpha\beta}\tensor{T}{^{\alpha M}_N}\eta_{\gamma\rho}\tensor{T}{^{\rho R}_S}\left(\tensor{f}{^{\alpha\gamma}_\sigma}\tensor{T}{^{\sigma P}_T}+\tensor{T}{^{\gamma P}_Q}\tensor{T}{^{\beta Q}_T}\right)\xi^T\pd_P\pd_R\eta^SV^N\\
@@ -289,7 +289,7 @@ The relevant part $\frac{1+\sigma}{2}S^\alpha$ can be conveniently rewritten in 
         &= [\mathbf{1}\otimes T^\alpha,Y].
     \end{aligned}
 \end{equation}
-Inserting \eqref{eq:Temp2} in \eqref{eq:Temp} and using the section condition this further reduce to 
+Inserting \eqref{eq:Temp2} in \eqref{eq:Temp} and using the section constraint this further reduce to 
 \begin{equation}
     \Sigma^\alpha \to \Sigma^\alpha = -\frac{k}{2}\langle\pd_\eta|\langle\pd_\eta |\mathbf{1}\otimes T^\alpha Y_-|\xi\rangle|\eta\rangle+(\xi\leftrightarrow\eta),
 \end{equation}
@@ -309,7 +309,7 @@ which by the definition of the invariant tensor $\tilde{g}$ is equivalent to
 \end{equation}
 
 
-In order to determine if this holds note that $\llbracket\llbracket T^\alpha ,\tilde{E}^{(M}\rrbracket,\tilde{E}^{N)}\rrbracket\in \vee^2R(\lambda)$. Due to the section condition however the only possibly non-trivial such element lies $R(2\lambda)$. Assuming that the LHS of \eqref{eq:PrelAnc} does not vanish is equivalent to finding some element in the structure algebra $x\in\mathfrak{g}$ (the contribution from the center of $\mathscr{A}_0$ is trivially zero) and a symmetric tensor $\Lambda_{MN}$ such that 
+In order to determine if this holds note that $\llbracket\llbracket T^\alpha ,\tilde{E}^{(M}\rrbracket,\tilde{E}^{N)}\rrbracket\in \vee^2R(\lambda)$. Due to the section constraint however the only possibly non-trivial such element lies $R(2\lambda)$. Assuming that the LHS of \eqref{eq:PrelAnc} does not vanish is equivalent to finding some element in the structure algebra $x\in\mathfrak{g}$ (the contribution from the center of $\mathscr{A}_0$ is trivially zero) and a symmetric tensor $\Lambda_{MN}$ such that 
 \begin{equation}
     \Lambda_{MN}\llbracket \tilde{E}^M,\llbracket\tilde{E}^N,x\rrbracket\rrbracket \neq 0.
 \end{equation}
@@ -369,7 +369,7 @@ Having developed the structure of generalised diffemorphisms to describe geometr
 
 Note that in the theory below we only consider an extended geometry based on a generalised structure group with some coordinate module $R(\lambda)$. In other words there is no external spacetime nor any compactification ansatz. In order to include external degrees of freedom one should look at DFT or EFT. In this case there would be purely external external fields as well as gauge potentials, or ``graviphotons'', that can be considered as gauge fields for the in this case internal generalised diffeomorphisms. Typically the corresponding field strength tensor will however not transform covariantly but fails by a trivial transformation. To account for this one successively has to add higher rank form fields that transforms in particular representations of the structure group to compensate for this. This is the procedure that leads to the notion of a ``tensor hierarchy''. The exact spectrum of representations of the tensor hierarchies can be derived from tensor hierarchy algebras developed in \cite{Palmkvist:2013vya}. These construction and rôle of these tensor hierarchy algebras in extended geometries are further discussed in  \cite{Cederwall:2018aab,Carbone:2018njd} and references therein.
 
-In order to describe the dynamics the action should be quadratic in derivatives of the metric and it should transform as a scalar density of weight $1$. The action will only transform properly after the section condition is applied and in that sense it is a pseudo-action. This means that we manually have to impose the section condition and only look at the classical theory. In order to e.g.\ quantize the theory by performing a path integral one would most likely have to find a way to dynamically generate the section condition as a constraint. 
+In order to describe the dynamics the action should be quadratic in derivatives of the metric and it should transform as a scalar density of weight $1$. The action will only transform properly after the section constraint is applied and in that sense it is a pseudo-action. This means that we manually have to impose the section constraint and only look at the classical theory. In order to e.g.\ quantize the theory by performing a path integral one would most likely have to find a way to dynamically generate the section constraint as a constraint. 
 
 Analogously to the metric in euclidean geometry being an element in $GL(d)/SO(d)$ the generalised metric is an element in $G\times \mathbb{R}^+/H$. Moreover, we take the weight of the metric to be $-2w$ instead of the canonical weight $-2\beta$ of a rank two tensor. This as we will see is necessary to ensure that the lagrangian transforms properly. 
 
@@ -399,7 +399,7 @@ The inhomogeneous transformation of a field is given by the difference $\Delta_\
     \mathscr{L}_\xi \left(\pd_MG_{NP}\right) &= \xi^K\pd_K\pd_MG_{NP}-2\tensor{Z}{^{SK}_{T(N|}}\pd_K\xi^T\pd_MG_{|P)S}\nonumber\\
         &-\tensor{Z}{^{SK}_{TM}}\pd_K\xi^T\pd_SG_{NP}. \label{eq:GenDiffMetric}
 \end{align}
-Using the section condition in the last term in \eqref{eq:GenDiffMetric} we find the inhomogeneous transformation 
+Using the section constraint in the last term in \eqref{eq:GenDiffMetric} we find the inhomogeneous transformation 
 \begin{equation}
     \Delta_\xi \left(G^{-1}\pd_MG\right)\tensor{}{^N_P} = -2\tensor{Z}{^{SK}_{T(N}}\pd_{K)}\pd_M\xi^T.
 \end{equation}
@@ -445,7 +445,7 @@ Using that $\eta_{\alpha\beta}T^\alpha\otimes T^{\star\beta} = \eta_{\alpha\beta
     &-2wG^{MK}\tensor{T}{^{\alpha N}_K}\Pi_{M\alpha}\pd_N(\pd\cdot\xi).
     \end{aligned}
 \end{equation}
-By the definition of $\Theta_{N}$ there is a derivative in $_N$, hence the section condition can be used to simplify both terms in the first line. We thus get
+By the definition of $\Theta_{N}$ there is a derivative in $_N$, hence the section constraint can be used to simplify both terms in the first line. We thus get
 \begin{equation}
     \begin{aligned}
     \Delta_\xi \mathcal{L}_4 &= (2\beta+2w+1)G^{MN}\Theta_M\pd_N(\pd\cdot\xi)+G^{MN}\pd_M\pd_N\xi^T\Theta_T+\\
@@ -461,14 +461,14 @@ The remaining term $\mathcal{L}_2$ requires a bit more work, to begin with we fi
     &= 2G^{KL}\left(\tensor{T}{^{\alpha M}_K}\tensor{T}{^{\alpha S}_T}+G_{KQ}\tensor{T}{^{\alpha Q}_R}G^{RM}\tensor{T}{^{\alpha S}_T}\right)\pd_N\pd_S\xi^T\tensor{T}{^{\beta N}_L}\Pi_{M\beta}.
     \end{aligned}
 \end{equation}
-In the first term on the second line use the section condition and in the second term commute $(T^\beta T^\alpha)\tensor{}{^N_R} = (T^{\alpha}T^\beta)\tensor{}{^N_R}+\tensor{f}{^{\beta\alpha}_\gamma}\tensor{T}{^{\gamma N}_R}$ to find 
+In the first term on the second line use the section constraint and in the second term commute $(T^\beta T^\alpha)\tensor{}{^N_R} = (T^{\alpha}T^\beta)\tensor{}{^N_R}+\tensor{f}{^{\beta\alpha}_\gamma}\tensor{T}{^{\gamma N}_R}$ to find 
 \begin{equation}
     \begin{aligned}
         \Delta \mathcal{L}_2 &= 2G^{KL}\left(\beta\delta^M_K\delta^S_T+\delta^M_T\delta^S_K\right)\tensor{T}{^{\beta N}_L}\pd_N\pd_S\xi^T\Pi_{M\beta}\\
         &+ 2G^{RM}\left(\tensor{T}{^{\alpha N}_L}\tensor{T}{^{\beta L}_R}+\tensor{f}{^{\beta\alpha}_\gamma}\tensor{T}{^{\gamma N}_R}\right)\tensor{T}{^{\alpha S}_T}\pd_N\pd_S\xi^T\Pi_{M\beta}.
     \end{aligned}
 \end{equation}
-Use the section condition on the first term in the second line to find 
+Use the section constraint on the first term in the second line to find 
 \begin{equation}\label{eq:Peter}
     \begin{aligned}
         \Delta_\xi \mathcal{L}_2 &= 2(2\beta+1)G^{RM}\tensor{T}{^{\beta N}_R}\pd_N(\pd\cdot\xi)\Pi_{M\beta}+2G^{SL}\tensor{T}{^{\alpha N}_L}\pd_S\pd_N\xi^M\Pi_{M\alpha}\\
@@ -603,14 +603,14 @@ Continuing with this expression we find
     & =  -\tensor{T}{^\alpha^P_N}\tensor{T}{^{\alpha Q}_R}\tensor{Y}{^{RS}_{TM}}\pd_Q\pd_S\xi^T,
     \end{aligned}
 \end{equation}
-where in the second line we have expanded $Z$ and used the section condition on the term in $Z$ that contains a factor of $\beta$. By expanding the $Y$-tensor we further find 
+where in the second line we have expanded $Z$ and used the section constraint on the term in $Z$ that contains a factor of $\beta$. By expanding the $Y$-tensor we further find 
 \begin{equation}
     \begin{aligned}
         \text{RHS of } \eqref{eq:TorsionTransformation2} &= \tensor{T}{^{\alpha P}_N}\left((T^\alpha T^\beta)\tensor{}{^Q_M}\tensor{T}{^\beta ^S_T}-\beta\delta^S_T\tensor{T}{^{\alpha Q}_M}-\delta^S_M\tensor{T}{^{\alpha Q}_T}\right)\pd_Q\pd_S\xi^T\\
         &= \tensor{T}{^{\alpha P}_N}\left(-f^{\alpha\beta\gamma}\tensor{T}{^{\beta Q}_M}\tensor{T}{^{\gamma S}_T}+\tensor{T}{^{\alpha Q}_M}\delta^S_T-\tensor{T}{^{\alpha Q}_T}\delta^S_M\right)\pd_Q\pd_S\xi^T,\\
     \end{aligned}
 \end{equation}
-where going to the second line we have expressed the first term as a commutator, used the section condition and that $\pd_{Q}\pd_S$ is symmetric. We thus see that the expression \eqref{eq:Torsion} transforms covariantly if ancillary transformations are absent since $\tensor{T}{_{MN}^P}$ transforms as
+where going to the second line we have expressed the first term as a commutator, used the section constraint and that $\pd_{Q}\pd_S$ is symmetric. We thus see that the expression \eqref{eq:Torsion} transforms covariantly if ancillary transformations are absent since $\tensor{T}{_{MN}^P}$ transforms as
 \begin{equation}
 \Delta_\xi \tensor{T}{_{MN}^P} = \tensor{T}{^{\alpha P}_N}\tensor{S}{^{\alpha SQ}_{MT}}\pd_Q\pd_S\xi^T.
 \end{equation}
@@ -770,7 +770,7 @@ with $\alpha$ a positive root. Consider $\alpha=\alpha_i$ a simple positive root
     &+\sum_{\alpha\in\Delta^+}e_{-\alpha}e_{\alpha_i}|\lambda\rangle\otimes e_{\alpha}e_{\alpha_i}|\lambda\rangle,
     \end{aligned}
 \end{equation}
-from which we find $\lambda=1$. Both $|\lambda\rangle$ and $e_{\alpha_i}|\lambda\rangle$ and any combination thereof satisfy the section condition. 
+from which we find $\lambda=1$. Both $|\lambda\rangle$ and $e_{\alpha_i}|\lambda\rangle$ and any combination thereof satisfy the section constraint. 
 
 
 

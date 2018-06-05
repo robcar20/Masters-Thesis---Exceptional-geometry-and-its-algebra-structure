@@ -1,6 +1,6 @@
 \chapter{Exceptional field theory\label{chap:ExceptionalFieldTheory}}
 
-Double field theory aimed to make the continuous T-duality group act naturally in supergravity prior to compactification. The goal of exceptional field theory on the other hand does the same for the U-duality groups by replacing $O(d,d)$ by $E_{d(d)}$. As we have argued these duality groups $E_{d(d)}$ appear upon compactification of supergravity on a $d$-dimensional torus and the corresponding discrete versions are the dualities of string theory/M-theory. One inherent difference compared to DFT is that the behaviour of the duality group is rather different between dimensions making the general analysis more complicated. Moreover, for $d\geq 9$ the duality groups become infinite-dimensional which in some sense could be understood by noting that in $d\leq 2$ external dimensions scalars become dual to scalars. %There is a conjecture by West \cite{West2011} that the full M-theory possess $E_{11}(\mathbb{Z})$ as a symmetry. 
+Double field theory aimed to make the continuous T-duality group act naturally in supergravity prior to compactification. The goal of exceptional field theory on the other hand does the same for the U-duality groups by replacing $O(d,d)$ by $E_{d(d)}$. As we have argued these duality groups $E_{d(d)}$ appear upon compactification of supergravity on a $d$-dimensional torus and the corresponding discrete versions are the dualities of string theory/M-theory. One inherent difference compared to DFT is that the duality groups are rather different between dimensions making the general analysis more complicated. Moreover, for $d\geq 9$ the duality groups become infinite-dimensional which in some sense could be understood by noting that in $d\leq 2$ external dimensions scalars become dual to scalars. %There is a conjecture by West \cite{West2011} that the full M-theory possess $E_{11}(\mathbb{Z})$ as a symmetry. 
 
 We will introduce exception field theory by the specific example of $E_{6(6)}$ exceptional field theory following \cite{E62014}. For a similar construction for $E_{7(7)}$ and $E_{8(8)}$, see \cite{E72014,E82014}. 
 
@@ -9,9 +9,9 @@ There are two main points that we want to convey in this chapter besides providi
 \section{$E_6$ -- Exceptional field theory \label{sec:E6}}
 The bosonic sector of eleven-dimensional supergravity consists of the metric $g_{AB}$ and a three-form $A_{ABC}$. Compactifying this theory on a $T^6$ torus we get $3\times 7=21$ scalars from the metric and naively ${{6}\choose{3}}=20$ scalars from the three-form. However, it is also possible to dualise a three-form in $5$ dimensions to a scalar since $5-3-2=0$ and in total there are thus $42$ scalars. This equals the number of generators in the coset $E_{6(6)}/USp(8)$, with $\mathfrak{usp}(8)$ being the maximal compact subalgebra of $\mathfrak{e}_{6(6)}$, in agreement with the discussion in section \ref{sec:Supergravity}. 
 
-What we want to do is to expand spacetime similar to the DFT case by splitting the coordinates $x^A\to (x^\mu,y^i)$, with $\mu=1,2,\ldots 5$ and $i = 1,2,\ldots 6$, and then extend the internal coordinates to transform in $\mathbf{27}$ of $E_{6(6)}$ as $y^i\to z^M$, with $M=1,2,\ldots 27$. The extended spacetime is then $5+27$ dimensional and the $41$ scalars organize in to a coset element $\mathcal{M}_{MN}(x,z)\in E_{6(6)}/USp(8)$. 
+What we want to do is to expand spacetime similar to the DFT case by splitting the coordinates $x^A\to (x^\mu,y^i)$, with $\mu=1,2,\ldots 5$ and $i = 1,2,\ldots 6$, and then extend the internal coordinates to transform in $\mathbf{27}$ of $E_{6(6)}$ as $y^i\to z^M$, with $M=1,2,\ldots 27$. The extended spacetime is then $5+27$ dimensional and the $41$ scalars organise in to a coset element $\mathcal{M}_{MN}(x,z)\in E_{6(6)}/USp(8)$. 
 
-Just as in DFT we introduce generalised diffeomorphisms that encode the $E_{6(6)}$ transformations that we are ``geometrizing'' by its action on a vector $V^M\in\mathbf{27}$ with weight $w$ as 
+Just as in DFT we introduce generalised diffeomorphisms that encode the $E_{6(6)}$ transformations that we are ``geometrising'' by its action on a vector $V^M\in\mathbf{27}$ with weight $w$ as 
 \begin{equation}
     \delta_\xi V^M = \mathscr{L}_\xi V^M = \xi^P\pd_PV^M+\tensor{P}{^{MN}_{PQ}}\pd_N\xi^P W^Q+w\pd_P\xi^PV^M,
 \end{equation}
@@ -22,7 +22,7 @@ with the $E_{6(6)}$ invariant tensor
     &= \frac{1}{3}\delta^M_Q\delta^N_P-\delta^M_P\delta^N_Q+10d_{PQS}d^{MNS},
     \end{aligned}
 \end{equation}
-and $d_{MNS},d^{MNS}$ totally symmetric invariant tensors of $E_{6(6)}$ which we normalize as $d_{MNS}d^{PNS}=\delta^P_M$. Imposing Leibniz property and that the element $(V^NW_N)$, with a covector $W_N$ with weight $w'$, transforms as a scalar density of weigth $w+w'$ the action on $W_N$ is easily found. This moreover generalise straightforward to a tensor with any number of indices. Importantly we define the section condition for $E_{6(6)}$ exceptional field theory as 
+and $d_{MNS},d^{MNS}$ totally symmetric invariant tensors of $E_{6(6)}$ which we normalise as $d_{MNS}d^{PNS}=\delta^P_M$. Imposing Leibniz property and that the element $(V^NW_N)$, with a covector $W_N$ with weight $w'$, transforms as a scalar density of weight $w+w'$ the action on $W_N$ is easily found. This moreover generalise straightforward to a tensor with any number of indices. Importantly we define the section condition for $E_{6(6)}$ exceptional field theory as 
 \begin{equation}
     d^{MNS}\pd_N\otimes\pd_S = 0,
 \end{equation}
@@ -95,7 +95,7 @@ As in an ordinary gauge theory any local internal symmetry make bare derivatives
 \begin{equation}
     \begin{aligned}
         D_\mu V^M &:= \pd_\mu V^M -\mathscr{L}_{A_\mu}V^M\\
-             &= \pd_\mu V^M-A_\mu^P\pd_PV^M+\tensor{Z}{^{MN}_{PQ}}\pd_NA_\mu^PV^Q-\lambda\pd_P A_\mu^PV^M,
+             &= \pd_\mu V^M-A_\mu^P\pd_PV^M+\tensor{P}{^{MN}_{PQ}}\pd_NA_\mu^PV^Q-\lambda\pd_P A_\mu^PV^M,
     \end{aligned}
 \end{equation}
 with $A_\mu^M$ being the gauge connection. We then impose that this transforms covariantly for any tensor field $X$, i.e.\
@@ -155,11 +155,11 @@ The last term in the transformation of $\tilde{F}^M_{\mu\nu}$ is non-covariant a
 \begin{equation}
     \Delta B_{\mu\nu M} = \delta B_{\mu\nu N}+d_{MNS}A^N_{[\mu}\delta A^S_{\nu]}.
 \end{equation}
-This $2$-form also possess a gauge symmetry parameterized by a $1$-form parameter $\Sigma_{\mu N}$ with weight $\frac{2}{3}$. We can then define a covariant field strength tensor of $A^M_\mu$ as 
+This $2$-form also possess a gauge symmetry parameterised by a $1$-form parameter $\Sigma_{\mu N}$ with weight $\frac{2}{3}$. We can then define a covariant field strength tensor of $A^M_\mu$ as 
 \begin{equation}
     F_{\mu\nu}^M = 2\pd_{[\mu}A_{\nu]}^M-[A_\mu,A_\nu]_E^M+10d^{MNS}\pd_NB_{\mu\nu S}.
 \end{equation}
-To see that this is covariant we first we define the gauge transformation of $A_\mu^M$ and $B_{\mu\nu N}$ as 
+To see that this is covariant we first define the gauge transformation of $A_\mu^M$ and $B_{\mu\nu N}$ as 
 \begin{equation}
     \begin{aligned}
     \delta A_\mu^M &= D_\mu\xi^M-10d^{MNK}\pd_N\Sigma_{\mu K},\\
@@ -222,7 +222,7 @@ if $V_N$ transforms with a weight $\frac{2}{3}$. Using this together with \eqref
 and $F_{\mu\nu}^M$ thus transforms as a covariant vector with weight $\frac{1}{3}$. 
 
 
-Having to introduce higher order form fields in order to ensure covariance for gauge connections might seem a bit strange. However, this is a typical feature of so-called gauged supergravities \cite{deWitTensorHierarchies2008}. These are maximal supergravities obtained by compactifaction on a torus $T^d$ in which a subgroup $G_0$ of the global duality group is promoted to a local symmetry. As above one then has to introduce gauge fields in order to define covariant derivatives and the corresponding field strength tensors will also transform non-covariantly. One solves this problem by successively adding higher form fields as we have done above but however, these has to transform in particular representations $R_p$ of the duality group $G$ in order to achieve covariant field strength tensors. This leads to the notion of a ``tensor hierarchy'' of $p$-forms that has to be introduced in order to define gauged supergravities. Moreover, the tensor hierarchy algebra constructed in \cite{Palmkvist:2013vya} predicts precisely this series of representations.
+Having to introduce higher order form fields in order to ensure covariance for gauge connections might seem a bit strange. However, this is a typical feature of so-called gauged supergravities \cite{deWitTensorHierarchies2008}. These are maximal supergravities obtained by compactifaction on a torus $T^d$ in which a subgroup $G_0$ of the global duality group is promoted to a local symmetry. As above one then has to introduce gauge fields in order to define covariant derivatives and the corresponding field strength tensors will also transform non-covariantly. One solves this problem by successively adding higher form fields as we have done above but however, these have to transform in particular representations $R_p$ of the duality group $G$ in order to achieve covariant field strength tensors. This leads to the notion of a ``tensor hierarchy'' of $p$-forms that have to be introduced in order to define gauged supergravities. Moreover, the tensor hierarchy algebra constructed in \cite{Palmkvist:2013vya} predicts precisely this series of representations.
 
 In \cite{E62014} an action for the external metric $g_{\mu\nu}$, the gauge field $A^M_\mu$, the two-form $B_{\mu\nu M}$ and the scalar fields $\mathcal{M}_{MN}$ is found that is invariant under external diffemorphisms as well as internal generalised diffeomorphisms. This action is given by 
 \begin{equation}\label{eq:E6Action}\begin{aligned}
@@ -237,7 +237,7 @@ $\mathcal{L}_{\text{top}}$ a topological term that couple $A_\mu^M$ with $B_{\mu
     -\frac{1}{2}g^{-1}\pd_M g\pd_N\mathcal{M}^{MN}-\frac{1}{4}\mathcal{M}^{MN}g^{-1}\pd_Mgg^{-1}\pd_Ng-\frac{1}{4}\mathcal{M}^{MN}\pd_Mg^{\mu\nu}\pd_Ng_{\mu\nu}. 
     \end{aligned}
 \end{equation}
-In the extended geometries introduced in chapter \ref{chap:ExtendedGeometries} it is the potential $V$ that we will generalise and derive a general expression for. 
+In the extended geometries introduced in chapter \ref{chap:ExtendedGeometries} it is the potential $V$ that we will derive a general expression for. 
 
 
 \subsection{Solving the section condition}
@@ -245,7 +245,7 @@ In order to embed ordinary supergravity in the exceptional field theory discuss 
 \begin{equation}
     d^{MNS}\pd_N\otimes\pd_S = 0.
 \end{equation}
-A trivial solution is to drop the dependence on the internal coordinates completely by setting $\pd_M=0$. In this case the action \eqref{eq:E6Action} reduces to that of supergravity compatictified on $T^6$ and especially the lagrangian for the scalar sector is given by the non-linear sigma model introduced in section \ref{sec:NonLinearSigmaModels}. Moreover, it is in this case that the global ``hidden'' symmetry group $E_{6(6)}$ supergravity compactified on $T^6$  becomes a manifest symmetry which was the main motivation for introducing extended geometries. Note in this case we clearly have a truncated theory in comparison to the full $E_{6(6)}$ exceptional field theory which is not truncated. 
+A trivial solution is to drop the dependence on the internal coordinates completely by setting $\pd_M=0$. In this case the action \eqref{eq:E6Action} reduces to that of supergravity compatictified on $T^6$ and especially the lagrangian for the scalar sector is given by the non-linear sigma model introduced in section \ref{sec:NonLinearSigmaModels}. Moreover, it is in this case that the global ``hidden'' symmetry group $E_{6(6)}$ supergravity compactified on $T^6$  becomes a manifest symmetry which was the main motivation for introducing extended geometries. Note that in this case we clearly have a truncated theory in comparison to the full $E_{6(6)}$ exceptional field theory which is not truncated. 
 
 By looking at the affine extended Dynkin diagram for $\mathfrak{e}_{6(6)}$, shown in in \figref{fig:E6Section}, we can find at least two other interesting solutions corresponding different embeddings of a $\mathfrak{gl}$ subalgebra. In order to see how this solves the section condition begin with decomposing $\mathbf{27}$ and the adjoint $\mathbf{78}$ under $\mathfrak{sl}(6)\oplus\mathbb{R}$ embedded as $\mathfrak{sl}(6)\oplus\mathbb{R}\subset\mathfrak{sl}(6)\oplus\mathfrak{sl}(2)\subset\mathfrak{e}_{6(6)}$ 
 \begin{equation}
@@ -258,11 +258,11 @@ with the subscript denoting the eigenvalue of $\mathbb{R}$. In components the ve
 \begin{equation}
     \pd^{ij} = 0,\qquad \pd_{\hat{i}} = 0,
 \end{equation}
-with derivatives acting on arbitrary fields. This solves the section condition since the only possibly non-trivial term is $d^{ijk}\pd_j\otimes\pd_k$ which vanish as well. This is so since $d^{MNP}$ is an invariant tensor and any non-trivial term of $d^{MNP}$ should carry weight $0$ under $\mathbb{R}$. Before looking at the second solution to the section condition consider an element in the coset space $E_{6(6)}/USp(8)$ which we in the beginning argued to parameterise the scalar fields and the corresponding coset element of the $GL(6)$ subalgebra
+with derivatives acting on arbitrary fields. This solves the section condition since the only possibly non-trivial term is $d^{ijk}\pd_j\otimes\pd_k$ which vanishes as well. The reason for this is that $d^{MNP}$ is an invariant tensor and any non-trivial term of $d^{MNP}$ should carry weight $0$ under $\mathbb{R}$. Before looking at the second solution to the section condition consider an element in the coset space $E_{6(6)}/USp(8)$ which we in the beginning argued to parameterise the scalar fields and the corresponding coset element of the $GL(6)$ subalgebra
 \begin{equation}
     \frac{E_{6(6)}}{USp(8)}\to \frac{GL(6)}{SO(6)},
 \end{equation}
-and we can identify $g_{mn}\in\frac{GL(6)}{SO(6)}$. The remaining $\text{dim}\, Usp(8)-\text{dim}\, SO(6)=21$ compact generators of $Usp(8)$ can be used to gauge away $\mathbf{20}_{-1}$ and $\mathbf{1}_{-2}$ in \eqref{eq:E6Decomp} such that we are left with $A_{mnp}\in \mathbf{20}_1$ and $\chi\in \mathbf{1}_{2}$, with $\chi$ coming from a dualized three-form in five dimensions. We have thus seen that this correspond to the M-theory solution of the section condition. The complete dictionary between $E_{6(6)}$ exceptional field theory with this section condition and M-theory is given in \cite{E62014}. 
+and we can identify $g_{mn}\in\frac{GL(6)}{SO(6)}$. The remaining $\text{dim}\, Usp(8)-\text{dim}\, SO(6)=21$ compact generators of $Usp(8)$ can be used to gauge away $\mathbf{20}_{-1}$ and $\mathbf{1}_{-2}$ in \eqref{eq:E6Decomp} such that we are left with $A_{mnp}\in \mathbf{20}_1$ and $\chi\in \mathbf{1}_{2}$, with $\chi$ coming from a dualised three-form in five dimensions. We have thus seen that this correspond to the M-theory solution of the section condition. The complete dictionary between $E_{6(6)}$ exceptional field theory with this section condition and M-theory is given in \cite{E62014}. 
 
 A similar story follows for the embedding $\mathfrak{sl}(5)\times \mathfrak{sl}(2)\times\mathbb{R}\subset \mathfrak{sl}(6)\oplus\mathfrak{sl}(2)\oplus\mathbb{R}$ given in \figref{fig:E6Section} 
 \begin{equation}

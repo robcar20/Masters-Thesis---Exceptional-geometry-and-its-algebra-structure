@@ -1,16 +1,16 @@
 \chapter{Flux compactifications and (exceptional) generalised
 geometry\label{chap:FluxCompactifications}}
 
-In this chapter we study (exceptional) generalised geometry. These are geometries based on double geometries and exceptional geometries with a global solution to the section condition. Especially this imply that the underlying manifold is not extended and that fields are acted on naturally by the relevant duality group and are patched together by the geometric subgroup of the duality group. Importantly this allows for the presence of a non-trivial form-field as a part of the geometry. Especially geometrical tools used for fluxless compactifications can be generalised and applied also in the presence of fluxes in the generalised geometric formulation. This merger of gravitational degrees of freedom and non-gravitiational degrees of freedom is behind the effectivness of generalised geometry in the study of flux compactifications. 
+In this chapter we study (exceptional) generalised geometry. These are geometries based on double geometries and exceptional geometries with a global solution to the section condition. Especially this imply that the underlying manifold is not extended and that fields are acted on naturally by the relevant duality group and are patched together by the geometric subgroup of the duality group. Importantly this allows for the presence of a non-trivial form field as a part of the geometry. Especially geometrical tools used for fluxless compactifications can be generalised and applied also in the presence of fluxes in the generalised geometric formulation. This merger of gravitational degrees of freedom and non-gravitiational degrees of freedom is behind the effectivness of generalised geometry in the study of flux compactifications. 
 
-In the first two sections we discuss shortly some phenomenology of compactification as well as introducing geometrical tools to study supersymmetric compactifications without fluxes. In section we start consider supersymmetric backgrounds with fluxes and introduce some basics of (exceptional) generalised geometry. The generalised geometrical tools are then used in \ref{sec:GeneralisedStructures} to reexpress the conditions of supersymmetric flux compactifications as integrability conditions of generalised structures. Since this topic by itself could be a whole thesis we will not be able to give all the details, for more on compactifications in general as well as Calabi-Yau compatictifications we refer to \cite{Blumenhagen2013,Grana:2005jc}. For the formulation of generalised geometry we refer to \cite{Hull:2007zu,Coimbra:2011ky,Coimbra:2011nw} and to \cite{Ashmore:2015joa,Grana:2009im} for its application to study flux compactifications. 
+In the first two sections we discuss shortly some phenomenology of compactification as well as introducing geometrical tools to study supersymmetric compactifications without fluxes. In section we start consider supersymmetric backgrounds with fluxes and introduce some basics of (exceptional) generalised geometry. The generalised geometrical tools are then used in \ref{sec:GeneralisedStructures} to re-express the conditions of supersymmetric flux compactifications as integrability conditions of generalised structures. Since this topic by itself could be a whole thesis we will not be able to give all the details, for more on compactifications in general as well as Calabi-Yau compatictifications we refer to \cite{Blumenhagen2013,Grana:2005jc}. For the formulation of generalised geometry we refer to \cite{Hull:2007zu,Coimbra:2011ky,Coimbra:2011nw} and to \cite{Ashmore:2015joa,Grana:2009im} for its application to study flux compactifications. 
 
-\section{Phenomenology and moduli stabilization}
-As is well-known string theory/M-theory lives in a 10/11-dimensional spacetime, yet our everyday experience tells us otherwise. Hence, in order for string theory/M-theory to be able to describe the real world it has to have consistent low-energy description that matches our observations. Firstly such a theory should reproduce the standard model of particle physics which has been confirmed to high precision, i.e.\ among other things it should be described by a gauge theory with gauge group $SU(3)\times SU(2)\times U(1)$ together with the correct particle spectra. Another important notion is that of supersymmetry, notably the SM is not supersymmetric in contrast to string theory/M-theory. The latter two are maximally supersymmetric and thus most, perhaps all, supersymmetry needs to be spontaneously broken. %Generically supersymmetry constrains a theory often yielding important physical consequences.
+\section{Phenomenology and moduli stabilisation}
+As is well-known string theory/M-theory lives in a 10/11-dimensional spacetime, yet our everyday experience tells us otherwise. Hence, in order for string theory/M-theory to be able to describe the real world it has to have a consistent low-energy description that matches our observations. Firstly such a theory should reproduce the standard model of particle physics which has been confirmed to high precision, i.e.\ among other things it should be described by a gauge theory with gauge group $SU(3)\times SU(2)\times U(1)$ together with the correct particle spectra. Another important notion is that of supersymmetry, notably the standard model is not supersymmetric in contrast to string theory/M-theory. The latter two are maximally supersymmetric theories and thus most, perhaps all, supersymmetry needs to be spontaneously broken. %Generically supersymmetry constrains a theory often yielding important physical consequences.
 
-The idea of compactification, where a compact internal manifold is ``small'' compared to the typical size of say strings, is one way to obtain an effective theory in lower dimensions. A generic feature of such compactification is the presence of scalar fields typically due internal legs of some tensor field. Of especial importance are massless such scalar fields, called \emph{moduli}. The vacuum expection values of moduli are not fixed and appear as free parameters in the theory. For a given compactification ansatz there are possibly hundreds or thousands of such moduli which determine physical properties in the external theory, e.g.\ gauge couplings, Yukawa couplings as well as the size and structure of the internal manifold. However, if all these properties are free parameters the theory loses most of its predictive power. Moreover, massless scalar fields would give rise to a long-ranged force which would invalidate Einstein's equivalence principle. Of course the coupling could be extremely small such that these forces are not experimentally observable. However, this approach comes with a lot of problems \todo{What problems?} and instead one tries to generate mass to these scalar fields, this is called \emph{moduli stabilization}. Generating a potential for the scalar fields would imply that the moduli fields are no longer free parameters but rather fixed by the procedure that stabilises the moduli, e.g.\ a complicated internal geometry or presence of gauge fluxes. 
+The idea of compactification, where a compact internal manifold is ``small'' compared to the typical size of say strings, is one way to obtain an effective theory in lower dimensions. A generic feature of such compactification is the presence of scalar fields typically due internal legs of some tensor field. Of especial importance are massless such scalar fields, called \emph{moduli}. The vacuum expection values of moduli are not fixed and appear as free parameters in the theory. For a given compactification ansatz there are possibly hundreds or thousands of such moduli which determine physical properties in the external theory, e.g.\ gauge couplings, Yukawa couplings as well as the size and structure of the internal manifold. However, if all these properties are free parameters the theory loses most of its predictive power. Moreover, massless scalar fields would give rise to a long-ranged force which would invalidate Einstein's equivalence principle. Of course the coupling could be extremely small such that these forces are not experimentally observable. However, this approach comes with a lot of problems \todo{What problems?} and instead one tries to generate mass to these scalar fields, this is called \emph{moduli stabilisation}. Generating a potential for the scalar fields would imply that the moduli fields are no longer free parameters but rather fixed by the procedure that stabilises the moduli, e.g.\ a complicated internal geometry or presence of gauge fluxes. 
 
-The simplest internal manifold to compactify on is a torus but such a compactification preserves all the supersymmetry, i.e.\ $\mathcal{N}=8$ in four external dimensions. In order to break some supersymmetry we could abandon the torus and compactify on something more complicated, e.g.\ a Calabi-Yau three-fold which we will discuss further below. Another possibility is to introduce a non-zero flux for some $p+1$-form field 
+The simplest internal manifold to compactify on is a torus but such a compactification preserves all the supersymmetry, i.e.\ $\mathcal{N}=8$ in four external dimensions. In order to break some supersymmetry we could abandon the torus and compactify on something more complicated, e.g.\ a Calabi-Yau three-fold which we will discuss further below. Another possibility is to introduce a non-zero flux for some $(p+1)$-form field 
 \begin{equation}
     \int_{\Sigma_{p+1}}C_{p+1}\neq 0,
 \end{equation}
@@ -43,23 +43,23 @@ Schematically we have (from now variations should be understood implicitly to be
 \begin{equation}
     \delta_\epsilon \Theta_{\text{boson}} \sim \overbar{\epsilon}\Theta_{\text{fermion}},\qquad \delta_\epsilon \Theta_{\text{fermion}}\sim \epsilon\Theta_{\text{boson}}.
 \end{equation}
-By the assumption that $\text{dim}\,\mathcal{M}{_{\text{ext}}}=d$ being a $d$-dimensional Minkowski space we have to decompose the spinor representations under $SO(1,d-1)\times SO(D-d)$ where $D$ is the dimension of the full spacetime. Typically these will transform in a non-trivial representation under $SO(1,d-1)$ and hence have to vanish in order to preserve Poincaré symmetry of the vacuum. Thus in order to make sure that the vacuum preserve some amount of supersymmetry we need to find non-trivial solutions of $\delta_\epsilon\Theta_{\text{fermions}}=0$. Note if such a solution is found we also have to make sure the equations of motion and Bianchi identities are fulfilled. 
+By the assumption that $\text{dim}\,\mathcal{M}{_{\text{ext}}}=d$ being a $d$-dimensional Minkowski space we have to decompose the spinor representations under $SO(1,d-1)\times SO(D-d)$ where $D$ is the dimension of the full spacetime. Typically these will transform in a non-trivial representation under $SO(1,d-1)$ and hence have to vanish in order to preserve Poincaré symmetry of the vacuum. Thus in order to make sure that the vacuum preserve some amount of supersymmetry we need to find non-trivial solutions of $\delta_\epsilon\Theta_{\text{fermions}}=0$. Note that if such a solution is found we also have to make sure the equations of motion and Bianchi identities are fulfilled. 
 
-With a constant dilaton and vanishing fluxes the supersymmetry variation of the gravitino $\psi_M$ (that is always present in supergravity) \cite{Blumenhagen2013}
+With a constant dilaton and vanishing fluxes the supersymmetry variation of the gravitino $\psi_M$ (which is always present in supergravity) \cite{Blumenhagen2013}
 \begin{equation}
     \delta_\epsilon\psi_M = \nabla_M\epsilon = 0 \Leftrightarrow \nabla_\mu \epsilon = 0,\qquad \nabla_m\epsilon = 0,
 \end{equation}
-where we have used that there is no mixing between greek external indices and latin internal indices in the connection due to the metric being of a product form. A spinor satisfying these conditions is called a \emph{Killing spinor}. From this one can easily show by taking a commutator of covariant derivatives that a necessary condition for the existence of a covariantly constant spinor is that the internal manifold is Ricci-flat (obviously also the external spacetime is Ricci-flat by assumption)
+where we have used that there is no mixing between greek external indices and latin internal indices in the connection due to the metric being of a product form. A spinor satisfying these conditions is called a \emph{Killing spinor}. From this one can easily show by taking a commutator of covariant derivatives that a necessary condition for the existence of a covariantly constant spinor is that the internal manifold is Ricci-flat (obviously also the external Minkowski space is Ricci-flat)
 \begin{equation}
     R_{mn} = 0.
 \end{equation}
 
-Curvature of a manifold is closely connected to the way an object transforms upon parallel transport. As such take some object $v$ and parallel transport it around a closed loop on the manifold. Generally the object transforms in some representation of the holonomy group $\mathscr{H}\subseteq O(d)$ under parallel transport for a $d$-dimensional riemannian manifold, since the norm does not change assuming a metric compatible connection. Likewise a spinor parallel transported in a loop transforms in a representation of $\mathscr{H}$ as well and hence, especially, also the Killing spinor. But since the Killing spinor is covariantly constant it does not transform when parallel transported and needs to be a singlet under the holonomy group. As such a necessary condition for the existence of a covariantly constant spinor is related to the restriction of the holonomy group which put constraints on the metric. Such features as reduction of holonomy and structure group is conveniently described in terms of bundles briefly explained below.
+Curvature of a manifold is closely connected to the way an object transforms upon parallel transport. As such take some object $v$ and parallel transport it around a closed loop on the manifold. Generally the object transforms in some representation of the holonomy group $\mathscr{H}\subseteq O(d)$ under parallel transport for a $d$-dimensional riemannian manifold, since the norm does not change assuming a metric compatible connection. Likewise a spinor parallel transported in a loop transforms in a representation of $\mathscr{H}$ as well and hence, especially, also the Killing spinor. But since the Killing spinor is covariantly constant it does not transform when parallel transported and needs to be a singlet under the holonomy group. As such a necessary condition for the existence of a covariantly constant spinor is related to the restriction of the holonomy group which put constraints on the metric. Such features as reduction of holonomy and structure group are conveniently described in terms of bundles briefly explained below.
 
 \subsection{Mathematical interlude -- Fibre bundles}
-A short introduction to the notion of fibre bundles are introduced in order to set the terminology which will be convenient for more complicated compactifications later on. Just as a manifold is a topological space that looks locally like $\mathbb{R}^n$, i.e.\ there exists some coordinate chart on $U_i\subseteq \mathcal{M}$ such that $\phi: \mathcal{M}\to \mathbb{R}^n$, a bundle is a topological space that ``looks locally'' like a product of two topological spaces. Moreover, in the cases we are interested these topological spaces will be differentiable manifolds. 
+A short introduction to the notion of fibre bundles are introduced in order to set the terminology which will be convenient for more complicated compactifications later on as well as when discussing generalised geometry. Just as a manifold is a topological space that looks locally like $\mathbb{R}^n$, i.e.\ there exists some coordinate chart on $U_i\subseteq \mathcal{M}$ such that $\phi: \mathcal{M}\to \mathbb{R}^n$, a bundle is a topological space that ``looks locally'' like a product of two topological spaces. Moreover, in the cases we are interested in these topological spaces will furthermore be differentiable manifolds. 
 
-A bundle is a triple $(P,\mathcal{M},\pi)$ typically also denoted $P\overset{\pi}{\longrightarrow}\mathcal{M}$, where $P$ is the total space, $\mathcal{M}$ the base space and $\pi: P\to \mathcal{M}$ the projection which is a surjection onto the base space. The notion of a bundle is a rather general concept and we will instead only be interested in (differentiable) fibre bundles. A (differentiable) fibre bundle $(P,\mathcal{M},\pi,F,G)$ is defined by a bundle $(P,\mathcal{M},\pi)$, a differentiable manifold $F$ called the fibre and a Lie group $G$ called the structure group. In order for a fibre bundle to ``look locally'' like a product manifold there exists patches on $U_i\subseteq \mathcal{M}$ diffemorphisms and linear maps $\phi_i: U_i\times F\to \pi^{-1}(U_i)$ such that $\pi\circ \phi_i(u,f)=u$, where $u\in U_i$, $f\in F$ and $\pi^{-1}(U_i)=F_p\cong F$ is the fibre at $u\in U_i$. The maps $\phi_i$ are usually called local trivializations since the map $\phi^{-1}\circ \pi^{-1}$ maps any $U_i$ to $U_i\times F$ which ``looks like a product manifold''. In order for this to make sense there needs to be some compatibility on overlapping patches $U_i\cap U_j\neq \emptyset$. Take a point $p\in P$ such that $\pi(p)=u$ with $u\in U_i\cap U_j$. Consider the mapping $\phi_{u,i}$
+A bundle is a triple $(P,\mathcal{M},\pi)$ typically also denoted $P\overset{\pi}{\longrightarrow}\mathcal{M}$, where $P$ is the total space, $\mathcal{M}$ the base space and $\pi: P\to \mathcal{M}$ the projection, which is a surjection onto the base space. The notion of a bundle is a rather general concept and we will instead only be interested in (differentiable) fibre bundles. A (differentiable) fibre bundle $(P,\mathcal{M},\pi,F,G)$ is defined by a bundle $(P,\mathcal{M},\pi)$, a differentiable manifold $F$ called the fibre and a Lie group $G$ called the structure group. In order for a fibre bundle to ``look locally'' like a product manifold there exists patches on $U_i\subseteq \mathcal{M}$ diffemorphisms and linear maps $\phi_i: U_i\times F\to \pi^{-1}(U_i)$ such that $\pi\circ \phi_i(u,f)=u$, where $u\in U_i$, $f\in F$ and $\pi^{-1}(U_i)=F_p\cong F$ is the fibre at $u\in U_i$. The maps $\phi_i$ are usually called local trivialisations since the map $\phi^{-1}\circ \pi^{-1}$ maps any $U_i$ to $U_i\times F$ which ``looks like a product manifold''. In order for this to make sense there needs to be some compatibility on overlapping patches $U_i\cap U_j\neq \emptyset$. Take a point $p\in P$ such that $\pi(p)=u$ with $u\in U_i\cap U_j$. Consider the mapping $\phi_{u,i}$
 \begin{equation}
     \begin{aligned}
         \phi_{u,i}: F&\to F_u,\\
@@ -119,11 +119,11 @@ with $\sim_G$ defined by the natural action of $G$ on both $P$ and $\mathbb{V}$.
 \end{equation}
 which from invariance of $v$ we find that $\tensor{\rho(\Lambda)}{^\alpha_\beta}= \tensor{(\Lambda)}{^{-1}}\tensor{}{^{\alpha}_\beta}$. 
 
-What we mainly are interested in are the possibility of finding so-called $H$-structures for some some closed subgroup $H\subset G$. An principal bundle $(P,\pi,\mathcal{M},G)$ has a $H$-structure if it is possible to choose frames in $P$ such that the structure group reduces to $H$. A typical example of this is an $O(d)\subset GL(d)$ structure on Riemannian manifolds. Due to the presence of a metric we can consider orthonormal frames $\tilde{e}_a$ such that 
+What we mainly are interested in is the possibility of finding so-called $H$-structures for some some closed subgroup $H\subset G$. A principal bundle $(P,\pi,\mathcal{M},G)$ has a $H$-structure if it is possible to choose frames in $P$ such that the structure group reduces to $H$. A typical example of this is an $O(d)\subset GL(d)$ structure on Riemannian manifolds. Due to the presence of a metric we can consider orthonormal frames $\tilde{e}_a$ such that 
 \begin{equation}
     g(\tilde{e}_a,\tilde{e}_b) = \delta_{ab},
 \end{equation}
-with $g$ being the metric. This defines an $O(d)$ structure since on overlapping patches orthonormal frames are related by $O(d)$ transformations. The importance of this in what will follows is the fact that finding a reduced structure is equivalent to the presence of a globally defined non-vanishing tensor on $\mathcal{M}$ which is invariant under some subgroup $H\subset G$. Since it is globally defined we can choose a frame $\{e_{\alpha}\}_{a=1,2,\ldots d}$ such that the tensor is constant on overlapping patches which effectively reduce $GL(d)$ to $H$. 
+with $g$ being the metric. This defines an $O(d)$ structure since on overlapping patches orthonormal frames are related by $O(d)$ transformations. The importance of this in what will follow is the fact that finding a reduced structure is equivalent to the presence of a globally defined non-vanishing tensor on $\mathcal{M}$ which is invariant under some subgroup $H\subset G$. Since it is globally defined we can choose a frame $\{e_{\alpha}\}_{a=1,2,\ldots d}$ such that the tensor is constant on overlapping patches which effectively reduce $GL(d)$ to $H$. 
 
 
 \begin{comment}
@@ -151,13 +151,13 @@ Moreover, if $\rho$ and $f$ are invertible and both $(\rho,f)$ and $(\rho^{-1},f
 \todo{Reduced structure group}
 \end{comment}
 \subsection{Compactification on Calabi-Yau}\label{sec:CalabiYau}
-Having reviewed the notion of reduced structure group and special holonomy a Calabi-Yau $n$-fold $CY_{n}$ can be defined as a $2n$-dimensional compact Riemannian manifolds with holonomy contained in $SU(n)$\cite{Blumenhagen2013}. We are particularly interested in $CY_3$ such that starting with $D=10$ supergravity, or string theory, the external spacetime is 4-dimensional. As such we know that for a $CY_3$ there exists some $p$-forms, or equivalently a Killing spinor, invariant under the holonomy group $\mathscr{H}=SU(3)$ which can be found by looking at the decomposition of 1-, 2- and 3-forms of $Spin(6)\cong SU(4)\to SU(3)$
+Having reviewed the notion of reduced structure group and special holonomy a Calabi-Yau $n$-fold $CY_{n}$ can be defined as a $2n$-dimensional compact Riemannian manifolds with holonomy contained in $SU(n)$\cite{Blumenhagen2013}. We will be particularly interested in $CY_3$ such that starting with $D=10$ supergravity, or string theory, the external spacetime is four-dimensional. As such we know that for a $CY_3$ there exists some $p$-forms, or equivalently a Killing spinor, invariant under the holonomy group $\mathscr{H}=SU(3)$ which can be found by looking at the decomposition of one-, two- and three-forms of $Spin(6)\cong SU(4)\to SU(3)$
 \begin{align*}
     \mathbf{6}&\to \mathbf{3}+\mathbf{\overbar{3}},\\
     \mathbf{15}&\to \mathbf{8}+\mathbf{3}+\overbar{\mathbf{3}}+\mathbf{1},\\
     \mathbf{20}&\to \mathbf{6}+\overbar{\mathbf{6}}+\mathbf{3}+\overbar{\mathbf{3}}+2\cdot\mathbf{1}.
 \end{align*}
-It thus exist a 2-form $\omega$ and a two 3-forms (these actually combine into a complex 3-form) $\Omega$ that are singlets under $\mathscr{H}$, such pair of nowhere vanishing tensors defines a \emph{structure}. Note that we already know that such a structure is equally well defined by a nowhere vanishing globally defined spinor $\mathbf{4}$ of $SU(4)$ which decomposes under $\mathscr{H}$ as 
+It thus exist a one-form $\omega$ and a two three-forms (these actually combine into a complex three-form) $\Omega$ that are singlets under $\mathscr{H}$, such pair of nowhere vanishing tensors defines a \emph{structure}. Note that we already know that such a structure is equally well defined by a nowhere vanishing globally defined spinor $\mathbf{4}$ of $SU(4)$ which decomposes under $\mathscr{H}$ as 
 \begin{equation}
     \mathbf{4}\to \mathbf{3}+\mathbf{1}.
 \end{equation}
@@ -165,7 +165,7 @@ Explicitly, a Weyl-spinor $\psi$ of $Spin(1,9)$ decomposed under $Spin(1,3)\time
 \begin{equation}
     \psi = \eta_+\otimes\epsilon_++\eta_-\otimes\epsilon_-,
 \end{equation}
-where $\eta_\pm$ and $\epsilon_\pm$ are Weyl-spinors with chirality $\pm 1$ under $SO(1,3)$ and $SO(6)$ respectively. Morever, imposing that $\psi$ is Majorana-Weyl in ten dimensions further implies that $\eta_+$ is the charge conjugate of $\eta_-$ and likewise for $\epsilon_\pm$.
+where $\eta_\pm$ and $\epsilon_\pm$ are Weyl-spinors with chirality $\pm 1$ under $SO(1,3)$ and $SO(6)$ respectively. Morever, imposing that $\psi$ is a Majorana-Weyl spinor in ten dimensions further implies that $\eta_+$ is the charge conjugate of $\eta_-$ and likewise for $\epsilon_\pm$.
 
 What follows will mostly consider structures defined by some bosonic forms such as ($\omega,\Omega$) but from the observation above we know that this corresponds to the existence of a globally defined nowhere vanishing spinor. To preserve supersymmetry such a spinor also satifies a differential condition and hence also the structure $(\omega,\Omega)$ needs to satisfy certain differential conditions. In fact, the structure $(\omega,\Omega)$ is related to the Killing spinor as
 \begin{align}
@@ -184,7 +184,7 @@ Taking the covariant derivative of these definitions we find that solving the Ki
 %Note that transformations that preserves the non-degenerate two-for in $d-$dimensions are by definition elements in $Sp(d/2,\mathbb{R})$. 
 
 \section{Flux compactifications and generalised geometry}
-In the case of vanishing flux we have seen that the Killing spinor equation led to special holonomy, which in turn put restrictions on the connection of the internal manifold. In the presence of fluxes the Killing spinor is no longer covariantly constant, however, the existence of globally defined nowhere vanishing spinor still implies a reduced structure group. This is summarized by 
+In the case of vanishing flux we have seen that the Killing spinor equation led to special holonomy, which in turn put restrictions on the connection of the internal manifold. In the presence of fluxes the Killing spinor is no longer covariantly constant, however, the existence of globally defined nowhere vanishing spinor still implies a reduced structure group. This is summarised by 
 
 \begin{equation*}
     \begin{aligned}
@@ -196,13 +196,12 @@ In the presence of fluxes the Killing spinor equations of type II supergravity a
 \begin{equation}\label{eq:KillingSpinorWithFluxGravitino}
 \begin{aligned}
     \delta_\epsilon \psi_M &= \left(\nabla_M+\frac{1}{8}\Gamma^{NP}H_{MNP}\mathscr{P}+\frac{1}{16}\ee^\Phi\sum_{n}\slashed{F}_n\Gamma_M\mathscr{P}_n\right)\epsilon=0\\,
-
-    \delta_\epsilon \lambda = \left(\slashed{\pd}\Phi+\frac{1}{12}\Gamma^{MNP}H_{MNP}\mathscr{P}+\frac{1}{8}\ee^\Phi\sum_{n}(-1)^n(5-n)\slashed{F}_n\mathscr{P}_n\right)\epsilon=0,
+    \delta_\epsilon \lambda &= \left(\slashed{\pd}\Phi+\frac{1}{12}\Gamma^{MNP}H_{MNP}\mathscr{P}+\frac{1}{8}\ee^\Phi\sum_{n}(-1)^n(5-n)\slashed{F}_n\mathscr{P}_n\right)\epsilon=0,
     \end{aligned}
 \end{equation}
-where $\mathscr{P}$ and $\mathscr{P_n}$ are $2\times 2$-matrices, $\slashed{F}_n=\frac{1}{n!}\Gamma^{M_1M_2\ldots M_n}F_{M_1M_2\ldots M_n}$ and $n\in\{0,1,\ldots,10\}$ are even(odd) for type IIA(B). In the case of vanishing flux and a constant dilation this reduces to a covariantly constant spinor $\epsilon$ as discussed above. 
+where $\mathscr{P}$ and $\mathscr{P_n}$ are $2\times 2$-matrices, $\slashed{F}_n=\frac{1}{n!}\Gamma^{M_1M_2\ldots M_n}F_{M_1M_2\ldots M_n}$ and $n\in\{0,1,\ldots,10\}$ are even(odd) for type IIA(B). In the case of vanishing flux and a constant dilation this reduces to a covariantly constant spinor $\epsilon$ as discussed above. Presence of gauge fluxes is according to \eqref{eq:KillingSpinorWithFluxGravitino} obstructions to the Killing spinor being covariantly constant with respect to the Levi-Civita connection. 
 
-Presence of gauge fluxes is according to \eqref{eq:KillingSpinorWithFluxGravitino} obstructions to the Killing spinor being covariantly constant with respect to the Levi-Civita connection. This obstruction is conveniently analysed in terms of \emph{intrinsic torsion}. It is always possible to construct a connection $\nabla$ with torsion such that the Killing spinor is covariantly constant w.r.t.\ to that connection. Thus consider a connection $\nabla=\nabla'-\kappa$ such that $\nabla_n V_m=\pd_nV_m-\tensor{\Gamma}{^'_{nm}^p}V_p-\tensor{\kappa}{_{nm}^p}V_p$, where $\nabla'$ is the Levi-Civita connection and $\kappa$ is the so-called contorsion tensor. Generically the connection coefficents $\tensor{\Gamma}{_{mn}^p}$ take values in $\Lambda^1\otimes\mathfrak{g}$, where $\Lambda^1$ is the one-form representation of $G=GL(d)$ and $\mathfrak{g}=\mathfrak{gl}(d)$ is the corresponding Lie algebra. Assuming metric compatibility fixes the part in $\mathfrak{gl}(d)/\mathfrak{so}(d)$ as we saw in section \ref{sec:CovariantFormalism} of the pair $\tensor{}{_m^p}$. This is contained in the Levi-connection but the Levi-Civita connection contain extra terms such that the torsion $\tensor{\Gamma}{_{[mn]}^p}$ vanish. This implies that the contorsion take values in 
+The obstruction to the Killing spinor being covariantly constant is conveniently analysed in terms of \emph{intrinsic torsion}. It is always possible to construct a connection $\nabla$ with torsion such that the Killing spinor is covariantly constant w.r.t.\ to that connection. Thus consider a connection $\nabla=\nabla'-\kappa$ such that $\nabla_n V_m=\pd_nV_m-\tensor{\Gamma}{^'_{nm}^p}V_p-\tensor{\kappa}{_{nm}^p}V_p$, where $\nabla'$ is the Levi-Civita connection and $\kappa$ is the so-called contorsion tensor. Generically the connection coefficents $\tensor{\Gamma}{_{mn}^p}$ take values in $\Lambda^1\otimes\mathfrak{g}$, where $\Lambda^1$ is the one-form representation of $G=GL(d)$ and $\mathfrak{g}=\mathfrak{gl}(d)$ is the corresponding Lie algebra. Assuming metric compatibility fixes the part in $\mathfrak{gl}(d)/\mathfrak{so}(d)$ as we saw in section \ref{sec:CovariantFormalism} of the pair $\tensor{}{_m^p}$. This is contained in the Levi-connection but the Levi-Civita connection contain further terms that ensures that the torsion $\tensor{\Gamma}{_{[mn]}^p}$ vanishes. This implies that the contorsion take values in 
 \begin{equation}
     \tensor{\kappa}{_{mn}^p}\in \Lambda_1\otimes \mathfrak{h},
 \end{equation}
@@ -230,16 +229,16 @@ and
 \begin{equation}
     \dd \Omega = \mathscr{W}_1\omega\wedge\omega+\mathscr{W}_2\wedge\omega+\overbar{\mathscr{W}}_5\wedge\Omega.
 \end{equation}
-We thus see that all five torsion classes vanish for $CY_3$ in order for $(\omega,\Omega)$ to be closed. Moreover, we have seen explicitly the presence of intrinsic torsion corresponds to compacitifications with fluxes which is an obstruction to finding a covariantly constant killing spinor.
+We thus see that all five torsion classes vanish for $CY_3$ in order for $(\omega,\Omega)$ to be closed. Moreover, we have seen explicitly that the presence of intrinsic torsion corresponds to compacitifications with fluxes which in turn is an obstruction to finding a covariantly constant Killing spinor.
 
 
 \subsection{Generalised geometry}
 We have seen above that demanding some preserved supersymmetry in fluxless compactification led to two constraints:
 \begin{itemize}
-    \item Demanding existence of globally defined spinor led to a reduced structure group characterized by ($\omega,\Omega$)
+    \item Demanding existence of globally defined spinor led to a reduced structure group characterised by ($\omega,\Omega$)
     \item Imposing the Killing spinor equation led to a reduced holonomy. 
 \end{itemize}
-Including fluxes alters the Killing spinor equation and the holonomy group need no longer be reduced. This effectively weakens the constraints of the internal manifold which at the same time make things more complicated. In the spirit of extended geometries we will try to generalise the notion of geometry in order to accommodate flux degree of freedoms in terms of what is called (exceptional) \emph{generalized geometry}. The reason for doing this being that it is then possible to define an appropriate generalisation of the holonomy, or rather of the structure together with some integrability conditions. This will imply that a supersymmetric background compactification should have vanishing generalised intrinsic torsion. Especially since gauge degrees of freedom are included in the geometry this holds true even when non-trivial fluxes are present. Below we will briefly introduce (exceptional) generalised geometry needed for discussing flux compactifications and generalised structures, for a complete introduction to this field we refer to the literature \cite{Hull:2007zu,Coimbra:2011nw,Coimbra:2011ky,Ntokos:2016vnm}.
+Including fluxes alters the Killing spinor equation and the holonomy group need no longer be reduced. This effectively weakens the constraints of the internal manifold which at the same time make things more complicated. In the spirit of extended geometries we will try to generalise the notion of geometry in order to accommodate flux degree of freedoms in terms of what is called (exceptional) \emph{generalised geometry}. The reason for doing this being that it is then possible to define an appropriate generalisation of the holonomy, or rather of the structure together with some integrability conditions. This will imply that a supersymmetric background compactification should have vanishing generalised intrinsic torsion. Especially since gauge degrees of freedom are included in the geometry this holds true even when non-trivial fluxes are present. Below we will briefly introduce (exceptional) generalised geometry needed for discussing flux compactifications and generalised structures, for a complete introduction to this field we refer to the literature \cite{Hull:2007zu,Coimbra:2011nw,Coimbra:2011ky,Ntokos:2016vnm}.
 
 In extended geometries we enlarged spacetime by introducing coordinates in some module of the underlying structure group $G$ and a section condition specifying a $GL(d)\hookrightarrow G$ embedding. Generalised geometry can be considered as an extended geometry with a global solution to the section condition and a structure group given by the ``geometric'' subgroup of $G$ as we will see.  
 
@@ -279,7 +278,7 @@ with $\lambda_{ij}$ a one-form. This means that the twisted vectors are patched 
     \tilde{X}_i-\tilde{X}_j = \iota_v\dd \lambda_{ij}. 
 \end{equation}
 Patching of twisted vectors are therefore done by elements in the geometric subgroup $GL(d)\ltimes \Lambda^2_{\text{cl}}(\mathcal{M})$, with $\Lambda^2_{\text{cl}}(\mathcal{M})$ being closed two-forms on $\mathcal{M}$. There are some further consistency conditions such that this specifies a ``gerbe structure'' \cite{Hitchin:1999fh}, but this is outside the scope of the thesis and will not be needed. 
-The infinitesimal action of a generalised diffeomorphism parameterised acting by $O(d,d)\times \mathbb{R}^+$ is parameterised by elements in $Y=w+\rho\in\Gamma(E)$ using the generalised Lie derivative on $X=x+\lambda\in\Gamma(E)$ as 
+The infinitesimal action of a generalised diffeomorphism acting by $O(d,d)\times \mathbb{R}^+$ is parameterised by elements in $Y=w+\rho\in\Gamma(E)$ using the generalised Lie derivative on $X=x+\lambda\in\Gamma(E)$ as 
 \begin{equation}
     \mathscr{L}_YX^M = V^N\pd_NX^M-(\pd\times_{\text{ad}} V)\tensor{}{^M_N} X^N.
 \end{equation}
@@ -317,15 +316,15 @@ The appearance of a two-form potential $B$ comes from the NS-NS field in ten dim
 \begin{equation}
    B_{(\alpha)}-B_{(\beta)} = \dd \Lambda_{(\alpha\beta)},
 \end{equation}
-where $\Lambda_{(\alpha\beta)}$ is a one-form defind on $U_\alpha\cap U_\beta$. For consistency such one-forms needs to satisfy the following on a triple overlap $U_\alpha\cap U_\beta\cap Y_\gamma\neq\emptyset$
+where $\Lambda_{(\alpha\beta)}$ is an one-form defind on $U_\alpha\cap U_\beta$. For consistency such one-forms needs to satisfy the following on a triple overlap $U_\alpha\cap U_\beta\cap Y_\gamma\neq\emptyset$
 \begin{equation}
     \Lambda_{(\alpha\beta)}+\Lambda_{(\beta\gamma)}+\Lambda_{(\gamma\alpha)} =\dd \Lambda_{\alpha\beta\gamma},
 \end{equation}
-with $\Lambda_{\alpha\beta\gamma}$ a function, or a $0$-form. This consistency condition follows from the reducibility of a closed $B$-shift transformation. 
+with $\Lambda_{\alpha\beta\gamma}$ a function. This consistency condition follows from the reducibility of a closed $B$-shift transformation. 
 \end{comment}
 
 \subsection{Exceptional generalised geometry}
-In the same spirit we discuss exceptional generalized geometry ($d\leq 7$) based on $E_{d(d)}\times \mathbb{R}^+$ and a generalised tangent bundle 
+In the same spirit we discuss exceptional generalised geometry ($d\leq 7$) based on $E_{d(d)}\times \mathbb{R}^+$ and a generalised tangent bundle 
 \begin{equation}
     E\cong T\mathcal{M}\oplus T^*\mathcal{M}\oplus\ldots,
 \end{equation}
@@ -333,7 +332,7 @@ where $\ldots$ denote extra terms coming from the decomposition of the coordinat
 \begin{equation}
     \mathbf{56}\to \mathbf{7}+\overbar{\mathbf{7}}+\mathbf{21}+\overbar{\mathbf{21}},
 \end{equation}
-corresponding to a vector, a one-form, a two-form and a five-form. The generalized tangent bundle $E$ is then given by 
+corresponding to a vector, a one-form, a two-form and a five-form. The generalised tangent bundle $E$ is then given by 
 \begin{equation}
     E \cong T\mathcal{M}\oplus\Lambda^2T^*\mathcal{M}\oplus\Lambda^5T^*\mathcal{M}\oplus\left(T^*\mathcal{M}\otimes \Lambda^7T^*\mathcal{M}\right).
 \end{equation}
@@ -355,7 +354,7 @@ with a section $W\in\Gamma(\text{ad}\,F)$ on a patch $U_i$ is given by
 \end{equation}
 with $l\in\mathbb{R}$, $r\in (T^*U_i\otimes TU_i)$, $a\in \Lambda^3 T^*U_i$, $\tilde{a}\in \Lambda^6 T^*U_i$, $\alpha\in\Lambda^3 TU_i$ and $\tilde{\alpha}\in\Lambda^6 TU_i$. Note especially the presence of a three-form and a six-form which corresponds to the three-form and the dualised six-form of M-theory. Moreover, a section of $\Gamma(E)$ contains a vector, a one-form, a two-form and a five-form which parameterise diffeomorphisms and gauge transformations of these form fields. 
 
-As in the introduction to $O(d,d)$ generalised geometry above sections of $E$ and $\text{ad}\,F$ are twisted by the form fields of the adjoint bundle which provides the isomorphism stated above. Explicitly a section $\tilde{X}\in \Gamma(E)$ of the generalised tangent bundle is twisted by the form-fields in the adjoint bundle as
+As in the introduction to $O(d,d)$ generalised geometry above sections of $E$ and $\text{ad}\,F$ are twisted by the form fields of the adjoint bundle which provides the isomorphism stated above. Explicitly a section $\tilde{X}\in \Gamma(E)$ of the generalised tangent bundle is twisted by the form fields in the adjoint bundle as
 \begin{equation}
     \tilde{X} = \ee^{a+\tilde{a}}X,
 \end{equation}
@@ -425,7 +424,7 @@ where $x,y$ are coordinates on $\mathbb{R}^{1,D-1}$ and $\mathcal{M}$ respective
 \end{equation}
 
 \begin{comment}
-Moreover, given $E$ we can construct the generalized frame bundle $F$ given by frames $\{E_A\}$, where $A=1,2,\ldots 56$. Explicitly, in a patch $U$ there exists a canonical basis given by 
+Moreover, given $E$ we can construct the generalised frame bundle $F$ given by frames $\{E_A\}$, where $A=1,2,\ldots 56$. Explicitly, in a patch $U$ there exists a canonical basis given by 
 \begin{equation}
     \{E_A\} = \{\pd/\pd y^m\}\cup \{\dd y^{m_1}\wedge\dd y^{m_2}\}\cup\{\dd y^{m_1}\wedge\ldots\wedge\dd y^{m_5}\}\cup \{\dd y^m\otimes\dd y^{m_1}\wedge\ldots\wedge\dd y^{m_7}\},
 \end{equation}
@@ -456,11 +455,11 @@ The two singlets in this decomposition $V$ and $\hat{V}$ defines the vector mult
 \end{equation}
 where $q$ is the quartic invariant of $E_7$. This ensures that the stabiliser group is precisely the real form $E_{6(2)}$ \cite{Ferrara:1997uz}. The structure $\hat{V}$ is further defined in terms of $V$ as 
 \begin{equation}
-    s(X,\hat{V}) = \frac{2}{\sqrt{q(V)}}q(X,V,V,V),
+    s(Y,\hat{V}) = \frac{2}{\sqrt{q(V)}}q(Y,V,V,V),
 \end{equation}
-with $s(\cdot,\cdot)$ being the symplectic invariant of $E_{7(7)}$ and for any section $X\in\Gamma(E)$. It also convenient to combine these into a complex object as $X:= V+\ii\hat{V}$. 
+with $s(\cdot,\cdot)$ being the symplectic invariant of $E_{7(7)}$ and for any section $Y\in\Gamma(E)$. It is also convenient to combine these into a complex object as $X:= V+\ii\hat{V}$. 
 
-Just as in ordinary Calabi-Yau there are certain consistency conditions between the invariant tensors that defines the structure. Specifically this further restricts the structure group to their overlap defining an $SU(6)=E_{6(2)}\cap Spin^*(12)$ structure \cite{Grana:2009im}. The compatibility condition between the hypermultiplet $J_\alpha$ and the vector multiplet $X=V+\ii \hat{V}$ is given by 
+Just as in ordinary Calabi-Yau there are certain consistency conditions between the invariant tensors that defines the structure. Specifically this further restricts the structure group to their overlap defining a $SU(6)=E_{6(2)}\cap Spin^*(12)$ structure \cite{Grana:2009im}. The compatibility condition between the hypermultiplet $J_\alpha$ and the vector multiplet $X=V+\ii \hat{V}$ is given by 
 \begin{equation}\label{eq:CompatibilityVectorHyperStructure}
     \begin{aligned}
         J_+ \cdot X = J_-\cdot X = 0\qquad&\Longleftrightarrow\qquad J_\alpha\cdot V = 0\\
@@ -479,40 +478,31 @@ with $\rho\in\text{det}\, T^*\mathcal{M}^\frac{1}{2}$ and $J_\pm = J_1\pm \ii J_
 
 \subsection{Integrability of structures}
 
-Integrability of the hypermultiplet structure and of the vector multiplet structure are in analogy to the fluxless case given by differential conditons the corresponding invariant tensors. In other words, these differential conditions are necessary for the Killing spinor satisfying the Killing spinor equation, which in turn is the condition for preserving a certain amount of supersymmetry. In the case of vanishing flux this was related to vanishing intrinsic torsion, i.e.\ given a $G$-structure the existence of an $G$-compatible torsion-free connection implied that the structure was integrable. Motivated by this analogy we will look at the conditions of vanishing intrinsic torsion.
+Integrability of the hypermultiplet structure and of the vector multiplet structure are in analogy to the fluxless case given by differential conditions on the corresponding invariant tensors. In other words, these differential conditions are necessary for the Killing spinor satisfying the Killing spinor equation, which in turn is the condition for preserving a certain amount of supersymmetry. In the case of vanishing flux this was related to vanishing intrinsic torsion, i.e.\ given a $G$-structure the existence of an $G$-compatible torsion-free connection implied that the structure was integrable. Motivated by this analogy we will look at the conditions of vanishing generalised intrinsic torsion.
 
 \subsubsection{Generalised intrinsic torsion}
-To define the generalised intrinsic torsion we define a covariant derivative $D$ which is defined in the following way 
+To define generalised intrinsic torsion we first have to define a covariant derivative $D$ which is defined in the following way 
 \begin{equation}
     D_M\cdot V^N = \pd_MV_N+\tensor{\Gamma}{_M_P^N}V^P,
 \end{equation}
-where $V\in\Gamma(E)$, $\tensor{\Gamma}{_{MP}^N}\in\Gamma(E^*\otimes \text{ad}\,F)$ and 
-\begin{equation}
-    \pd_M = \pd_m \qquad \text{for} \quad M=m\qquad 0\qquad \text{otherwise}.
-\end{equation}
-Imposing Leibniz rule 
+where $V\in\Gamma(E)$, $\tensor{\Gamma}{_{MP}^N}\in\Gamma(E^*\otimes \text{ad}\,F)$ and $\pd_M=(\pd_m,0,0,0)$. Imposing Leibniz rule 
 \begin{equation}
     D_M(fV) = (D_Mf)\otimes V+f(D_MV),
 \end{equation}
-the action of a covariant derivative is easily extended to sections of any associated vector bundle, i.e.\ to any other generalised tensor field. The torsion of such a connection is then defined by 
+the action of a covariant derivative is easily extended to sections of any associated vector bundle, i.e.\ to any other generalised tensor field, analagous to the covariant derivative in section \ref{sec:CovariantFormalism}. The torsion of such a connection is then defined by 
 \begin{equation}
     \mathscr{T}(V)\cdot X = L_V^D X-L_V X,
 \end{equation}
-where $X$ is an arbitrary generalised tensor field, $L_V^D$ is the generalised Lie derivative with the replacement $\pd\to D$ and $\cdot$ denotes the adjoint action. Note that this definition agrees with the one presented in extended geometries, i.e.\ torsion is the part of the connection that transforms homogeneously under generalised diffeomorphisms, at least when ancillary transformations are absent. Moreover, $\mathscr{T}$ can be seen as a map
+where $X$ is an arbitrary generalised tensor field, $L_V^D$ is the generalised Lie derivative with the replacement $\pd\to D$ and $\cdot$ denotes the adjoint action. Note that this definition agrees with the one presented in extended geometries, i.e.\ torsion is the part of the connection that transforms homogeneously under generalised diffeomorphisms, at least when ancillary transformations are absent. In the $E_{7(7)}$ case we already know from section \ref{sec:TorsionSubSec} that the torsion $\mathscr{T}$ of the $E_{7(7)}$ covariant derivative are given by
 \begin{equation}
-    \mathscr{T}: E\to \text{ad}\, F. 
+    \mathscr{T}\in \mathbf{56}\oplus\mathbf{912}.
 \end{equation}
-In the $E_{7(7)}$ case we already know from section \ref{sec:TorsionSubSec} that
-\begin{equation}
-    \mathscr{T}\in \mathbf{56}\oplus\mathbf{912}
-\end{equation}
-under $E_{7(7)}$. 
 
-Define a $G$-compatible connection as one that preserves $G$-invariant tensors defining the structure, e.g.\ a $E_{6(2)}$ structure were defined by an $E_{6(2)}$ invariant tensor $V\in\Gamma(E)$, if the connection $D$ is $E_{6(2)}$ compatible then $DK=0$. Assuming a connection $D$ is compatible with the $G$-structure any other compatible connection is given by $D\to D+\Sigma$ with 
+We define a $G$-compatible connection as one that preserves $G$-invariant tensors defining the structure. As an example an $E_{6(2)}$ structure were defined by an $E_{6(2)}$ invariant tensor $V\in\Gamma(E)$, the connection $D$ is then $E_{6(2)}$ compatible if $DV=0$. Assuming a connection $D$ is compatible with the $G$-structure any other compatible connection is given by $D\to D+\Sigma$ with 
 \begin{equation}
     \Sigma \in \Gamma(E^*\otimes \text{ad}\,P_G),
 \end{equation}
-where $\text{ad}\,P_G$ has a typical fibre $\text{Lie}\,G=\mathfrak{g}$. Given a compatible connection with torsion we define the intrinsic torsion as the part of torsion that can not be removed by adding a term $\Sigma$. With this definition it is clear that the presence of intrinsic torsion is an obstruction to finding a $G$-compatible torsion-free connection. This is analogous to the appearence of intrinsic torsion introduced for ordinary geometry. 
+where $\text{ad}\,P_G$ has a typical fibre $\text{Lie}\,G=\mathfrak{g}$. Given a $G$-compatible connection with torsion we define the intrinsic torsion as the part of torsion that can not be removed by adding a term $\Sigma$. With this definition it is clear that the presence of intrinsic torsion is an obstruction to finding a $G$-compatible torsion-free connection. This is analogous to the appearence of intrinsic torsion introduced for ordinary geometry. 
 
 Another way to put it is to define a map $\phi$ that projects $\Sigma$ onto its torsion part. The intrinsic torsion is then given by 
 \begin{equation}
@@ -520,13 +510,16 @@ Another way to put it is to define a map $\phi$ that projects $\Sigma$ onto its 
 \end{equation}
 with $W_{\text{int}}$ and $W$ being the space of intrinsic torsion and the space of torsion respectively. 
 
-Take our main example with $E_{7(7)}\times R^+$ and $G=Spin^*(12)\times SU(2)$. To see what parts are intrinsic torsion we decompose $\mathbf{56}\oplus\mathbf{912}$ under $G$ to find 
+To clarify this take our main example with $E_{7(7)}\times R^+$ and $G=Spin^*(12)\times SU(2)$. To see what parts are intrinsic torsion decompose the torsion $\mathbf{56}\oplus\mathbf{912}$ under $G$ to find 
 \begin{equation}
     \mathbf{56}\oplus\mathbf{912} \to 2\cdot (\mathbf{12},\mathbf{2})+(\mathbf{32},\mathbf{1})+(\mathbf{32},\mathbf{3})+(\mathbf{220},\mathbf{2})+(\mathbf{352},\mathbf{1}).
 \end{equation}
 Likewise we decompose $\Sigma$ under $G$ using $\mathbf{56}\to (\mathbf{12},\mathbf{2})+(\mathbf{32},\mathbf{1})$ 
 \begin{equation}
-    \left((\mathbf{12},\mathbf{2})+(\mathbf{32},\mathbf{1})\right)\times (\mathbf{66},\mathbf{1})=(\mathbf{220},\mathbf{2})+(\mathbf{12},\mathbf{2})+(\mathbf{560},\mathbf{2})+(\mathbf{22},\mathbf{1})+(\mathbf{1728},\mathbf{1})+(\mathbf{352},\mathbf{1}).
+    \begin{aligned}
+        \left((\mathbf{12},\mathbf{2})+(\mathbf{32},\mathbf{1})\right)\times (\mathbf{66},\mathbf{1})=&(\mathbf{220},\mathbf{2})+(\mathbf{12},\mathbf{2})+(\mathbf{560},\mathbf{2})+(\mathbf{22},\mathbf{1})\\
+        &+(\mathbf{1728},\mathbf{1})+(\mathbf{352},\mathbf{1}).
+    \end{aligned}
 \end{equation}
 The two big modules containing $\mathbf{1728}$ and $\mathbf{560}$ are not torsion and hence we find the intrinsic torsion 
 \begin{equation}
@@ -545,18 +538,20 @@ We thus find the intrinsic torsion in the $E_{6(2)}$ case to be
 \begin{equation}
     W_{\text{int}}^{E_{6(2)}} = \textbf{1}+\mathbf{27}+\text{c.c.}
 \end{equation}
-Consider the definition of a $E_{6(2)}$ compatible covariant derivative $DK=0$. From the definition of torsion it is easily found that 
+
+
+Consider the definition of an $E_{6(2)}$ compatible covariant derivative $DV=0$. From the definition of torsion it is easily found that 
 \begin{equation}
     \begin{aligned}
-    \mathscr{L}_KK^M &= \mathscr{L}^D_KK^M-T\cdot K^M\\
-                    &= \underbrace{K^ND_NK^M}_{=0}-\underbrace{D_NK^MK^N}_{=0}-T\cdot K^M.
+    \mathscr{L}_VV^M &= \mathscr{L}^D_VV^M-\mathscr{T}\cdot V^M\\
+                    &= \underbrace{V^ND_NV^M}_{=0}-\underbrace{D_NV^MV^N}_{=0}-\mathscr{T}\cdot V^M.
     \end{aligned}
 \end{equation}
-By definition of intrinsic torsion we can split $T=T_{\text{int}}+T_0$, with $T_{\text{int}}\in \mathbf{56}\otimes \mathfrak{e}_{7(7)}\times\mathbb{R}/\mathfrak{e}_{6(2)}$ and $T_0\in \mathbf{56}\otimes\mathfrak{e}_{6(2)}$, and since $K$ is invariant under $\mathfrak{e}_{6(2)}$ we find 
+By definition of intrinsic torsion we can split $T=T_{\text{int}}+T_0$, with $T_{\text{int}}\in \mathbf{56}\otimes (\mathfrak{e}_{7(7)}\times\mathbb{R}/\mathfrak{e}_{6(2)})$ and $T_0\in \mathbf{56}\otimes\mathfrak{e}_{6(2)}$, and since $V$ is invariant under $\mathfrak{e}_{6(2)}$ we find 
 \begin{equation}
-    \mathscr{L}_K K = -T_{\text{int}}\cdot K.
+    \mathscr{L}_V V = -\mathscr{T}_{\text{int}}\cdot V.
 \end{equation}
-Which by demanding that the intrinsic torsion gives the integrability on the vectormultiplet structure 
+Demanding that the intrinsic torsion vanish thus gives the integrability condition on the vectormultiplet structure 
 \begin{equation}\label{eq:IntegrabilityVectorMultiplet}
     \mathscr{L}_K K = 0.
 \end{equation}
@@ -566,7 +561,7 @@ It was further shown in \cite{Ashmore:2015joa} that the vanishing of intrinsic t
 \begin{equation}
     \mu_\alpha(Y):= -\frac{1}{2}\epsilon_{\alpha\beta\gamma}\int_\mathcal{M}\kappa(J_\beta,\mathscr{L}_YJ_\gamma),
 \end{equation}
-with $\kappa$ being the $\mathfrak{e}_{7(7)}$ killing form. The integrability is then the requirement that the triplet of momentum maps vanish for any element in the generalised tangent bundle
+with $\kappa$ being the $\mathfrak{e}_{7(7)}$ Killing form. The integrability is then the requirement that the triplet of momentum maps vanish for any element in the generalised tangent bundle
 \begin{equation}
     \mu_\alpha(Y) = 0\qquad \text{for any }\, Y\in\Gamma(E).
 \end{equation}
@@ -579,17 +574,17 @@ and an integrable vector-multiplet structure $V$ satisfies
     \mu(Y) = 0\qquad \text{for any }\, Y\in\Gamma(E).
 \end{equation}
 
-If the hyper-multiplet structure and the vector-multiplet structure separately satisfies the integrability condition the define a reduced structure. To define an $SU(6)$ structure they also need to satisfy the compatiblity condition given in \eqref{eq:CompatibilityVectorHyperStructure} as well as the condition 
+If the hyper-multiplet structure and the vector-multiplet structure separately satisfies the integrability condition they define a reduced structure. To define a $SU(6)$ structure they also need to satisfy the compatiblity condition given in \eqref{eq:CompatibilityVectorHyperStructure} as well as the condition 
 \begin{equation}
 \mathscr{L}_XJ_\alpha = 0,
 \end{equation}
-with $X=V+\ii \hat{V}$, in order for the intrinsic torsion with respect to the $SU(6)$ structure to vanish. 
+with $X=V+\ii \hat{V}$, in order for the intrinsic torsion with respect to the $SU(6)$ structure to vanish. \cite{Ashmore:2015joa}
 %Given the representations of intrinsic torsion we want to show that vanishing intrinsic torsion is equivalent to vanishing of so-called momentum maps which are differential conditions on the underlying structures. 
 
-In \cite{Coimbra:2014uxa,Ashmore:2015joa} it was shown the vanishing of intrinsic torsion and hence vanishing of the momentum maps with respect to an $Spin^*{12}\cap E_{6(2)}=SU(6)$ structure is equivalent to preserving $\mathcal{N}=2$ supersymmetry. The idea is that vanishing of the supersymmetry variation of fermionic fields are naturally expressed generalised covariantly constant. One then shows that this demands vanishing intrinsic torsion with respect to an $SU(6)$ structure. Moreover, since the gauge degrees of freedom are naturally included in the geometry these also appear naturally through the covariant derivative; which should be compared to ordinary formulation discussed above were they instead were obstructions to finding covariantly constant Killing spinors. Using exceptional generalised geometry we have thus seen how to use generalised geometrical tools to study supersymmetric flux compactifications similar to the way geometrical tools introduced in section \ref{sec:VanishingFluxCompactification} were used to study supersymmetric compactifications with vanishing flux. The appearance of $SU(6)$ can be understood by noting that the Killing spinor transforms in $\mathbf{8}$ under the maximal compact subgroup $SU(8)$ of $E_{7(7)}$. Demanding $\mathcal{N}=2$ preserved supersymmetry is then equivalent to the Killing spinor being stabilised by $SU(6)\subset SU(8)$. 
+In \cite{Coimbra:2014uxa,Ashmore:2015joa} it was shown the vanishing of intrinsic torsion and hence vanishing of the momentum maps with respect to a $Spin^*(12)\cap E_{6(2)}=SU(6)$ structure is equivalent to preserving $\mathcal{N}=2$ supersymmetry. The idea is that vanishing of the supersymmetry variation of fermionic fields are naturally expressed as Killing spinors being generalised covariantly constant. One then shows that this demands vanishing intrinsic torsion with respect to a $SU(6)$ structure. Moreover, since the gauge degrees of freedom are naturally included in the geometry these also appear naturally through the covariant derivative; which should be compared to ordinary formulation discussed above were they instead were obstructions to finding covariantly constant Killing spinors. Using exceptional generalised geometry we have thus seen how to use generalised geometrical tools to study supersymmetric flux compactifications similar to the way geometrical tools introduced in section \ref{sec:VanishingFluxCompactification} were used to study supersymmetric compactifications with vanishing flux. The appearance of $SU(6)$ can be further understood by noting that the Killing spinor transforms in $\mathbf{8}$ under (double cover) of the maximal compact subgroup $SU(8)$ of $E_{7(7)}$. Demanding $\mathcal{N}=2$ preserved supersymmetry is then equivalent to the Killing spinor being stabilised by $SU(6)\subset SU(8)$. 
 
 
-There are further interesting models to study using the tools introduced above. In \cite{Grana:2016dyl,Ashmore:2016qvs} compactifications with an external external AdS spacetime is studied. This is further applied to study the AdS/CFT correspondence in \cite{Ashmore:2016oug} in which they compare deformations of the CFT dual to deformations of the hyper multiplet and vector multiplet in generalised geometry. In \cite{Coimbra:2016ydd} it was further shown that any supersymmetric flux compactification is equivalent to some integrable $G$ structure. 
+There are further interesting models to study using the tools introduced above. In \cite{Grana:2016dyl,Ashmore:2016qvs} compactifications with an external external AdS spacetime are examined. This is further applied to study the AdS/CFT correspondence in \cite{Ashmore:2016oug} in which they compare deformations of the CFT dual to deformations of the hyper multiplet and vector multiplet in generalised geometry. In \cite{Coimbra:2016ydd} it was further shown that any supersymmetric flux compactification is equivalent to some integrable $G$ structure. 
 
 %In \cite{Ashmore:2015joa} they further encode the vanishing of intrinsic torsion by constructing momentum maps 
 
@@ -604,11 +599,11 @@ To clarify some of the concepts introduced above we consider a specific example 
         \iota_{\zeta^{\#}}\omega = \iota_{\zeta^{\#}}\Omega = 0,
     \end{cases}
 \end{equation}
-where we have defined an isomorphism $^{\#}$ on any form field as $(\rho^{\rho})^{i_1i_2\ldots i_p}=g^{i_1j_1}g^{i_2j_2}\ldots\rho_{j_1j_2\ldots j_p}$, especially $\zeta^{\#}=\pd_y$ with $y$ being the coordinate along $S^1$. Moreover the integrability conditions state that $\omega,\Omega$ and $\zeta$ are all closed. The volume form is given by 
+where we have defined an isomorphism $^{\#}$ on any form field as $(\rho^{\#})^{i_1i_2\ldots i_p}=g^{i_1j_1}g^{i_2j_2}\ldots\rho_{j_1j_2\ldots j_p}$, especially $\zeta^{\#}=\pd_y$ with $y$ being the coordinate along $S^1$. Moreover the integrability conditions state that $\omega,\Omega$ and $\zeta$ are all closed and the volume form is given by 
 \begin{equation}
-    \text{vol}_7 = \frac{\ii}{8}\Omega\wedge\overbar{\Omega}\wedge \zeta. 
+    \rho^2 := \text{vol}_7 = \frac{\ii}{8}\Omega\wedge\overbar{\Omega}\wedge \zeta. 
 \end{equation}
-Explicitly this tensors can be written in a basis $\{e^a\}_{a=1,2,\ldots 7}$, with $e_7=\zeta=\dd y$, as 
+These invariant tensors can be written explicitly in a basis $\{e^a\}_{a=1,2,\ldots 7}$, with $e_7=\zeta=\dd y$, as 
 \begin{equation}
     \begin{aligned}\label{eq:Frame}
         \omega &= e^{12}+e^{34}+e^{56},\\
@@ -619,18 +614,20 @@ from which the compatibility conditions follow immediately. Especially, in this 
 \begin{equation}
     \star e^{i_1i_2\ldots i_p} = \frac{1}{q!}\tensor{\epsilon}{^{i_1i_2\ldots i_p}_{j_1j_2\ldots j_q}}e^{j_1j_2\ldots j_q}e^{j_1j_2\ldots j_q},
 \end{equation}
-and $\tensor{\epsilon}{^{12\ldots d}}=\tensor{\epsilon}{^{12\ldots d}}=1$. Importantly the innner product of forms with the same degree $\lambda,\rho$ is then given by
+and $\tensor{\epsilon}{^{12\ldots d}}=\tensor{\epsilon}{^{12\ldots d}}=1$. Importantly the inner product of forms with the same degree $\lambda,\rho$ is then given by
 \begin{equation}
     \text{vol}_7(\rho^{\#}\lrcorner \rho) = \lambda\wedge\star\rho.
 \end{equation}
-
+Moreover, it is easily found that $\star\Omega = \ii\Omega\wedge\zeta$ which will be useful below. 
 %These together define a $SU(3)$ structure if they moreover satisfy the compatibility conditions 
 %\begin{equation}
 %    g^{mn}\zeta_m\omega_{np} = 0\qquad \zeta^{\#}\Omega_{npl} = 0,
 %\end{equation}
 %as well as the compatibility conditions for $\omega$ and $\Omega$ given in \eqref{eq:CompatibilityCalabiYau}. We also defined the operation $^{\#}$ which is an isomorphism between $p$-forms and anti-symmetric $p$-vectors by simply raising indices with the metric, e.g.\ $(\Omega^{\#})^{mnp}=g^{ms}g^{nk}g^{pl}\Omega_{skl}$
 
-We then want to show that there exists an integrable hyper-multiplet structure $J_\alpha$ and an integrable vector-multiplet structure $V$ given in terms of ${\omega,\Omega,\zeta}$ and their respective integrability and compatibility condition. The hyper-multiplet structure is given by
+We then want to show that there exists an integrable hyper-multiplet structure $J_\alpha$ and an integrable vector-multiplet structure $V$ given in terms of ${\omega,\Omega,\zeta}$ which satisfies the generalised compatibility and integrability conditions. Furthermore, we will assume that the forms$\omega,\Omega,\zeta)$ are given by the expressions above and satisfy the ordinary compatibility and integrability conditions. In \cite{Ashmore:2015joa} these conditions are on the other hand derived from the generalised conditions. 
+
+The hyper-multiplet structure is given by
 \begin{equation}\label{eq:HyperMultipletStructureCalabiYau}
     \begin{aligned}
         J_+ &= \underbrace{\frac{1}{2}\rho\Omega}_{a} \underbrace{-\frac{1}{2}\rho\Omega^{\#}}_{\alpha},\\
@@ -638,7 +635,7 @@ We then want to show that there exists an integrable hyper-multiplet structure $
         J_3 &= \underbrace{\frac{1}{2}\rho I}_{r}\underbrace{-\ii\frac{1}{16}\rho\Omega\wedge\overbar{\Omega}}_{\tilde{a}}\underbrace{-\frac{1}{16}\ii\rho\Omega^{\#}\wedge\overbar{\Omega}^{\#}}_{\tilde{\alpha}},
     \end{aligned}
 \end{equation}
-with $\tensor{I}{^m_n}=-\tensor{\omega}{^m_n}=\frac{1}{8}\ii (\overbar{\Omega}^{mpq}\omega_{npq}-\Omega^{mpq}\overbar{\Omega}_{npq})$ being the complex structure, $\rho^2=\text{vol}_7=\frac{1}{8}\ii\Omega\wedge\overbar{\Omega}\wedge\zeta$ and we have identified the elements with the general decomposition given in \eqref{eq:AdDecompE7}. The vector-multiplet structure on the other hand is given by 
+with $\tensor{I}{^m_n}=-\tensor{\omega}{^m_n}=\frac{1}{8}\ii (\overbar{\Omega}^{mpq}\omega_{npq}-\Omega^{mpq}\overbar{\Omega}_{npq})$ being the complex structure and we have for convenience identified the elements with the general decomposition given in \eqref{eq:AdDecompE7}. The vector-multiplet structure on the other hand is given by 
 \begin{equation}\label{eq:VectorMultipletStructureCalabiYau}
     X = \underbrace{\zeta^{\#}}_{v}+\underbrace{\ii\omega}_{\omega}\underbrace{-\frac{1}{2}\zeta\wedge\omega\wedge\omega}_{\sigma}\underbrace{-\ii\zeta\otimes\text{vol}_7}_{\tau}.
 \end{equation}
@@ -659,14 +656,15 @@ First we need to check that $J_\alpha$ indeed is a $\mathfrak{su}(2)$ triplet us
 It is then seen that indeed $W''=-4\ii\rho J_3$. Now instead let $W''=[J_+,J_3]$ and we find 
 \begin{equation}
     \begin{aligned}
-        l'' &= 0\\
-        r'' &= 0\\
-        a'' &= -\frac{1}{8}\rho^2 I\cdot \Omega+\frac{\ii}{32}\rho^2\Omega^{\#}\lrcorner (\Omega\wedge\overbar{\Omega})\\
-        \tilde{a}'' = 0\\
-        \alpha '' = \frac{1}{8}\rho^2 I\cdot \Omega^{\#}-\frac{\ii}{16}\rho^2(\Omega^{\#}\wedge\overbar{\Omega})\lrcorner\Omega,
+        l'' &= 0,\\
+        r'' &= 0,\\
+        a'' &= -\frac{1}{8}\rho^2 I\cdot \Omega+\frac{\ii}{32}\rho^2\Omega^{\#}\lrcorner (\Omega\wedge\overbar{\Omega}),\\
+        \tilde{a}'' = 0,\\
+        \alpha '' &= \frac{1}{8}\rho^2 I\cdot \Omega^{\#}-\frac{\ii}{16}\rho^2(\Omega^{\#}\wedge\overbar{\Omega})\lrcorner\Omega,\\
+        \tilde{\alpha}'' = 0,
     \end{aligned}
 \end{equation}
-which using $I\cdot \Omega=-3\ii\Omega$ and $I\cdot \Omega^{\#}=-3\ii\Omega^{\#}$ we find that $[J_+,J_3]=2\ii\rho J_+$. 
+which using $I\cdot \Omega=-3\ii\Omega$ and $I\cdot \Omega^{\#}=-3\ii\Omega^{\#}$ we find that $[J_+,J_3]=2\ii\rho J_+$ and indeed $\{J_\pm,J_3\}$ is a $\mathfrak{su}(3)$ triplet. 
 
 In order to check the compatibility condition $J_+\cdot X=J_-\cdot X=0$ we repeat the action of an element $W=r+a+\tilde{a}+\alpha+\tilde{\alpha}\in\text{ad}\,F$ on an element $Y=v+\omega+\sigma+\tau$
 \begin{equation}\label{eq:E7action}
@@ -682,16 +680,14 @@ Consider first $X'=J_+\cdot X=0$ then by the action \eqref{eq:E7action} we find
 \begin{equation}
     \begin{aligned}
         v' &= -\frac{\ii}{2}\rho\Omega^{\#}\lrcorner\omega,\\
-        \omega' &= \frac{1}{2}\rho\zeta^{\#}\lrcorner \Omega+\frac{1}{4}\rho\Omega^{\#}\lrcorner (\zeta\omega\wedge\omega),\\
-        \sigma' &= \frac{\ii}{2}\rho\Omega\wedge \omega+\frac{\ii}{2}\rho \Omega^{\#}\lrcorner (\zeta\otimes \text{vol}_7),
+        \omega' &= \frac{1}{2}\rho\zeta^{\#}\lrcorner \Omega+\frac{1}{4}\rho\Omega^{\#}\lrcorner (\zeta\wedge\omega\wedge\omega),\\
+        \sigma' &= \frac{\ii}{2}\rho\Omega\wedge \omega+\frac{\ii}{2}\rho \Omega^{\#}\lrcorner (\zeta\otimes \text{vol}_7),\\
+        \tau' &= -\frac{1}{4}\rho \Omega\wedge\zeta\wedge\omega\wedge\omega. 
     \end{aligned}
 \end{equation}
-Setting $v'=0$ gives $\Omega^{\#}\lrcorner \omega = 0$ and in turn sets $\omega'=0$ using that $\iota_{\zeta^{\#}}=0$. The second term in $\sigma'$ then also vanish, since $\text{vol}_7\propto \omega\wedge\omega\wedge\omega$, which sets $\Omega\wedge\omega=0$. Moreover, since $\Omega\wedge\omega\wedge\omega=0$ it follows that $\tau'$ vanish as well. 
-
-
-We also need to check the normalisation condition $\frac{1}{2}\ii s(X,\overbar{X})=\rho^2$ with the symplectic invariant given for any vector $V,V'\in\Gamma(E)$
+Using the explicit form of $\Omega$ and $\omega$ it is easily found that $v'=\Omega^{\#}\lrcorner \omega = 0$ which also sets $\omega'=0$ using that $\iota_{\zeta^{\#}}\Omega=\iota_{\zeta^{\#}}\omega=0$. The second term in $\sigma'$ also vanish since $\text{vol}_7\propto \omega\wedge\omega\wedge\omega$ and $\Omega\wedge\omega =0$. Moreover, since $\Omega\wedge\omega\wedge\omega=0$ it follows that $\tau'$ vanish as well. Likewise it is found that $J_-\cdot X = 0$. We also need to check the normalisation condition $\frac{1}{2}\ii s(X,\overbar{X})=\rho^2$ with the symplectic invariant given for any vector $Y,Y'\in\Gamma(E)$
 \begin{equation}
-    s(V,V') = -\frac{1}{4}(\iota_{v}\tau-\iota_{v'}\tau+\sigma\wedge\omega'-\sigma'\wedge\omega), 
+    s(Y,Y') = -\frac{1}{4}(\iota_{v}\tau-\iota_{v'}\tau+\sigma\wedge\omega'-\sigma'\wedge\omega), 
 \end{equation}
 from which we find 
 \begin{equation}
@@ -700,24 +696,25 @@ from which we find
     &= \rho^2,
     \end{aligned}
 \end{equation}
-where we used $\rho^2=\text{vol}_7=\frac{1}{8}\ii\Omega\wedge\overbar{\Omega}\wedge\zeta$ and the compatibility condition $\omega\wedge\omega\wedge\omega=\frac{3}{4}\ii\Omega\wedge\overbar{\Omega}$. We thus find that $J_\alpha$ and $X$ indeed satisfy a compatible $SU(6)$ structure. Moreover, this reproduce the known compatibility condition known from ordinary Calabi-Yau compactification introduced in section \ref{sec:CalabiYau}. Explicitly we can choose a basis $\{e^a\}_{a=1,2,\ldots 7}$ and $\omega,\Omega$ as in \eqref{eq:Frame} and $e^7=\zeta$. 
+where we used $\rho^2=\text{vol}_7=\frac{1}{8}\ii\Omega\wedge\overbar{\Omega}\wedge\zeta$ and the compatibility condition $\omega\wedge\omega\wedge\omega=\frac{3}{4}\ii\Omega\wedge\overbar{\Omega}$. We thus find that $J_\alpha$ and $X$ indeed satisfy a compatible $SU(6)$ structure. Moreover, this reproduce the known compatibility condition known from ordinary Calabi-Yau compactification introduced in section \ref{sec:CalabiYau}. 
 
-We also need to check if this structure is integrable corresponding satisfying the differential conditions on the underlying Killing spinor. As we will see this reproduce the known integrability condition on the Calabi-Yau structure. Consider the triplet of momentum maps $\mu_\alpha(V)=0$ determining integrability for the hyper multiplet structure. These can be rewritten in in $J_\pm$ basis as 
+
+We also need to check if this structure is integrable corresponding to satisfying the differential conditions on the underlying Killing spinor. As we will see this reproduce the known integrability condition on the Calabi-Yau structure. Consider the triplet of momentum maps $\mu_\alpha(V)=0$ determining integrability for the hyper multiplet structure. These can be rewritten in in $J_\pm$ basis as 
 \begin{equation}
     \begin{aligned}
-    \mu_3(Y)&= -\frac{\ii}{2}\int_\mathcal{M} \kappa(J_-,\mathscr{L}_YJ_+)\\
-            & -\frac{\ii}{2}\int_\mathcal{M}\kappa(J_-,L_vJ_+)+\frac{\ii}{2}\int_\mathcal{M}\kappa(J_-,(\dd\omega+\dd\sigma)\cdot J_+)\\
-            &= -\frac{\ii}{2}\int_\mathcal{M}\kappa(J_-,L_vJ_+)+2\ii  \int_\mathcal{M}\rho\kappa(\dd\omega+\dd\sigma,J_3),
+    \mu_3(Y)=& -\frac{\ii}{2}\int_\mathcal{M} \kappa(J_-,\mathscr{L}_YJ_+)\\
+             &-\frac{\ii}{2}\int_\mathcal{M}\kappa(J_-,L_vJ_+)+\frac{\ii}{2}\int_\mathcal{M}\kappa(J_-,(\dd\omega+\dd\sigma)\cdot J_+)\\
+            =& -\frac{\ii}{2}\int_\mathcal{M}\kappa(J_-,L_vJ_+)+2\ii  \int_\mathcal{M}\rho\kappa(\dd\omega+\dd\sigma,J_3),
     \end{aligned}
 \end{equation}
-where going to the second line we have used the observation in \eqref{eq:GengeometryLieDerivate} and going to the last line we used the invariance of the Killing form together with the fact that the hyper multiplet is an $\mathfrak{su}(2)$ triplet. Likewise we can define the plus component of the momentum map as 
+where going to the second line we have used the observation in \eqref{eq:GengeometryLieDerivate} and going to the last line we used the invariance of the Killing form together with the fact that the hyper multiplet is a $\mathfrak{su}(2)$ triplet. Likewise we can define the plus component of the momentum map as 
 \begin{equation}
     \begin{aligned}
     \mu_+(Y) &= -\ii\int_\mathcal{M}\kappa(J_3,\mathscr{L}_YJ_+)\\
           &= -\ii\int_\mathcal{M}\kappa(J_3,L_vJ_+)+2\int_\mathcal{M}\rho\kappa(\dd\omega+\dd\sigma,J_+),
     \end{aligned}
 \end{equation}
-with similar steps as above and it straightforward to define an analogous expression for $\mu_-$. These momentum maps $\mu_3,\mu_{\pm}$ should vanish for any generalised vector $Y=v+\tilde{\omega}+\sigma+\tau\in\Gamma(E)$ and since the momentum maps are linear consider each $GL(7)$ component separately, where we denoted the two-form $\tilde{\omega}$ to not cause confusion with the two-form $\omega$ in the structure. Note also that the component $\tau$ of $Y$ drops out of the momentum maps trivally. To continue we need the $\mathfrak{e}_{7(7)}$ Killing form given by 
+with similar steps as above and it straightforward to define an analogous expression for $\mu_-$. These momentum maps $\mu_3,\mu_{\pm}$ should vanish for any generalised vector $Y=v+\tilde{\omega}+\sigma+\tau\in\Gamma(E)$ and since the momentum maps are linear we can consider each $GL(7)$ component separately, where we denoted the two-form $\tilde{\omega}$ to not cause confusion with the two-form $\omega$ in the structure. Note also that the component $\tau$ of $Y$ drops out of the momentum maps trivally. To continue we need the $\mathfrak{e}_{7(7)}$ Killing form given by 
 \begin{equation}
     \kappa(W,W') = \frac{1}{2}\text{tr}(r)\text{tr}(r')+\text{tr}(rr')+\alpha \lrcorner a'+\alpha'\lrcorner a-\tilde{\alpha}\lrcorner \tilde{a}'-\tilde{\alpha}'\lrcorner \tilde{a}.
 \end{equation}
@@ -736,13 +733,13 @@ The only non-zero contribution from $\mu_+$ thus comes from the $\tilde{\omega}$
 \end{equation}
 Using that 
 \begin{equation}
-\int_\mathcal{M}\text{vol}_7 \Omega^{\#}\lrcorner \dd\tilde{\omega}\propto \int_\mathcal{M}\star\Omega\wedge\dd\tilde{\omega}\propto\int_\mathcal{M}\Omega\wedge\zeta\wedge\dd\tilde{\omega}
+\int_\mathcal{M}\text{vol}_7 \Omega^{\#}\lrcorner \dd\tilde{\omega} =  \int_\mathcal{M}\dd\tilde{\omega}\wedge \star\Omega=\ii\int_\mathcal{M}\dd\tilde{\omega}\wedge \Omega\wedge\zeta
 \end{equation}
 and integration by parts this reduce to 
 \begin{equation}
-    \mu_+(\tilde{w}) \propto \int_\mathcal{M}\dd(\Omega\wedge\zeta)\wedge\tilde{\omega} \overset{!}{=} 0,
+    \mu_+(\tilde{w}) \propto \int_\mathcal{M}\dd(\Omega\wedge\zeta)\wedge\tilde{\omega} = 0,
 \end{equation}
-which imply that $\dd(\Omega\wedge\zeta)=0$. Considering the $\mu_3$ momentum map we find 
+which indeed is fulfilled since $\Omega$ and $\zeta$ are closed. Considering the $\mu_3$ momentum map we find 
 \begin{equation}
     \mu_3(\tilde{\omega}) = 2\ii\int_\mathcal{M}\rho\kappa(\dd\tilde{\omega},J_3) = 0,
 \end{equation}
@@ -755,55 +752,41 @@ sisnce $J_3$ does not contain any anti-symmetric three-vector. For the action of
 \end{equation}
 Using the same procedure as above we find
 \begin{equation}
-    \int_\mathcal{M}\text{vol}_7 (\Omega^{\#}\wedge \overbar{\Omega}^{\#})\lrcorner \dd\sigma =\int_\mathcal{M} \star(\Omega\wedge\overbar{\Omega})\wedge\dd\sigma \propto \int_\mathcal{M} \dd \zeta\wedge \sigma\overset{!}{=} 0,
+    \int_\mathcal{M}\text{vol}_7 (\Omega^{\#}\wedge \overbar{\Omega}^{\#})\lrcorner \dd\sigma = \int_\mathcal{M} \dd\sigma\wedge \star(\Omega\wedge\overbar{\Omega}) \propto \int_\mathcal{M} \dd \zeta\wedge \sigma = 0,
 \end{equation}
-and we thus find that $\zeta$ is closed and we thus take $\zeta=\dd y$, with $y$ being the coordinate along $S^1$. It then follows from $\dd(\zeta\wedge\Omega)=0$ and $\iota_{\zeta^{\#}}\Omega=0$ that $\Omega$ is closed assuming $\Omega$ does not depend on the coordinate along $S^1$. The last condition from the triplet of momentum maps is the following 
+which indeed is fulfilled since $\zeta$ is closed. The last condition from the triplet of momentum maps is the following 
 \begin{equation}
     \begin{aligned}
     \mu_3(v) &= -\frac{\ii}{2}\int_\mathcal{M}\kappa(J_-,L_vJ_+)
              &= \frac{\ii}{8}\int_\mathcal{M}\rho \left(\overbar{\Omega}^{\#}\lrcorner L_v(\rho \Omega)+L_v(\rho\Omega^{\#})\lrcorner \overbar{\Omega}\right).
     \end{aligned}
 \end{equation}
-Since $\Omega$ is closed it is also covariantly constant and $\overbar{\Omega}^{\#}\lrcorner \Omega$ is constant we can use $\int_\mathcal{M}\overbar{\Omega}^{\#}\lrcorner \Omega L_v\kappa^2=0$ to move $\rho$ outside of the Lie derivative and use $\overbar{\Omega}^{\#}\lrcorner L_v \Omega=\star\overbar{\Omega}\wedge L_v \Omega$  
+Since $\Omega$ is closed it is also covariantly constant and $\overbar{\Omega}^{\#}\lrcorner \Omega$ is constant. We can then use $\int_\mathcal{M}\overbar{\Omega}^{\#}\lrcorner \Omega L_v\rho^2=0$, assuming the boundary term vanishes, to move $\rho$ outside of the Lie derivative and using $\rho^2\overbar{\Omega}^{\#}\lrcorner L_v \Omega=L_v \Omega\wedge \star\overbar{\Omega}$ 
 \begin{equation}
     \begin{aligned}
-    \mu_3(v) &\propto \int_\mathcal{M}\star\overbar{\Omega}\wedge L_v\Omega \\
-            &= \int_\mathcal{M}\star\overbar{\Omega}\wedge (\dd\iota_v\Omega+\iota_v\dd \Omega)\\
-            &= \int_{\mathcal{M}} \iota_v\zeta \wedge\overbar{\Omega}\wedge\dd\Omega =0,
+    \mu_3(v) &\propto \int_\mathcal{M}L_v\Omega\wedge\star\overbar{\Omega}\\
+             &=-\ii\int_\mathcal{M}(\dd\iota_v\Omega+\iota_v\dd\Omega)\wedge\overbar{\Omega}\wedge\zeta=0,
     \end{aligned}
 \end{equation}
-where going to the last line we have used $\dd\zeta=0$, $\zeta\wedge\dd\Omega=\zeta\wedge\dd\overbar{\Omega}=0$ and neglected boundary terms. 
-
-
+using integration by parts and that $\Omega$ and $\overbar{\Omega}$ are closed. 
+ 
+The integrability condition for the vector multiplet structure is given by $\mathscr{L}_X\overbar{X}=0$ and thus
 \begin{equation}
     \begin{aligned}
-    \mathscr{L}_X\overbar{X} &= L_{\zeta^{\#}}\overbar{X}-\ii\dd\omega\cdot \overbar{X}-(\zeta\wedge\omega\wedge\dd\omega)\cdot \overbar{X}
-    \end{aligned}.
-\end{equation}
-The only contribution to the vector component is of the form $L_{\zeta^{\#}}\zeta^{\#}$ which vanish trivially. From the two-form component we find 
-\begin{equation}
-    -2\ii\zeta^{\#}\lrcorner\dd\omega = 0,
-\end{equation}
-and for the five-form component 
-\begin{equation}
-    \omega\wedge\dd\omega = 0,
-\end{equation}
-and for the last component we find 
-\begin{equation}
-    \frac{\ii}{2}j\dd\omega(\wedge\zeta\wedge\omega\wedge\omega)+j(\zeta\wedge\omega\wedge\dd\omega)\wedge\omega+L_{\zeta^{\#}}(\ii\zeta^\otimes\text{vol}_7), 
-\end{equation}
-which vanish using the conditions above.
-
-In order to define an exceptional Calabi-Yau the structures must also satisfy $\mathscr{L}_XJ_+=\mathscr{L}_XJ_-=0$.
-\begin{equation}
-    \begin{aligned}
-    \mathscr{L}_X J_+ &= L_{\zeta^{\#}}J_+-\ii\dd\omega\cdot J_++\frac{1}{2}\dd(\zeta\wedge\omega\wedge\omega)\cdot J_+\\
-    &= L_{\zeta^{\#}}J_+-\ii\dd\omega\cdot J_+,
+    \mathscr{L}_X\overbar{X} &= L_{\zeta^{\#}}\overbar{X}-\ii\dd\omega\cdot \overbar{X}-(\zeta\wedge\omega\wedge\dd\omega)\cdot \overbar{X}.
     \end{aligned}
 \end{equation}
-where going to the second line we used $\dd\zeta=0$ and $\dd\omega\wedge\omega=0$. Since $\zeta^{\#}=\pd_y$ and $L_{\pd_y}J_+=0$ this is easily solved by setting $\dd\omega=0$. 
+This can be seen to vanish immediately by noting that $\zeta^{\#}$ is a Killing vector and using that $\dd\omega$ is a closed form. 
 
-We thus see that the hyper multiplet structure in \eqref{eq:HyperMultipletStructureCalabiYau} and the vector multiplet structure in \eqref{eq:VectorMultipletStructureCalabiYau} together with the compatibility conditions and integrability conditions reproduce the known conditions obtained via ordinary results. Although fluxes were not included in this example the formalism applies equally well when they are, for examples of this see \cite{Ashmore:2015joa,Ashmore:2016qvs}. The main difference when including fluxes is that one have to look at elements that are ``twisted'' by the adjoint action of flux fields, the twisting in the case above were trivial. 
+In order to define an exceptional Calabi-Yau the structures, i.e.\ to set to zero the intrinsic torsion of the $SU(6)$ structure, they must also satisfy $\mathscr{L}_XJ_+=\mathscr{L}_XJ_-=0$. This is given by 
+\begin{equation}
+    \begin{aligned}
+    \mathscr{L}_X J_+ &= L_{\zeta^{\#}}J_+-\ii\dd\omega\cdot J_++\frac{1}{2}\dd(\zeta\wedge\omega\wedge\omega)\cdot J_+,
+    \end{aligned}
+\end{equation}
+which again is easily seen to be fulfilled by the same reasoning as above. 
+
+We thus see that the hyper multiplet structure in \eqref{eq:HyperMultipletStructureCalabiYau} and the vector multiplet structure in \eqref{eq:VectorMultipletStructureCalabiYau} together with the compatibility conditions and integrability conditions reproduce the known conditions obtained via ordinary results. Although fluxes were not included in this example the formalism applies equally well when they are, for examples of this see \cite{Ashmore:2015joa,Ashmore:2016qvs}. The main difference when including fluxes is that one has to look at elements that are ``twisted'' by the adjoint action of flux fields, the twisting in the case above were trivial. 
 
 
 
@@ -922,7 +905,7 @@ where $\delta J_\alpha$ denotes the exterior derivative of on the space of secti
 \begin{equation}
     \Omega_\alpha(v,w) = \epsilon_{\alpha\beta}\int_\mathcal{M} \kappa(v,w),
 \end{equation}
-where $\kappa$ is the killing form on $\mathfrak{e}_{7(7)}$ and $v,w\in T_s S_H$ at some point $s\in S_H$. Note that $\kappa(v,w)\in \text{det}\, T^*\mathcal{M}$ and can thus be integrated over.
+where $\kappa$ is the Killing form on $\mathfrak{e}_{7(7)}$ and $v,w\in T_s S_H$ at some point $s\in S_H$. Note that $\kappa(v,w)\in \text{det}\, T^*\mathcal{M}$ and can thus be integrated over.
 
 In order to put some differential condition on the structures in a covariant manner we look at the deformation due to generalised diffeomorphisms. These are parameterised by an element $V\in \Gamma(E)$ and the action is given by the generalised Lie derivative 
 \begin{equation}

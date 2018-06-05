@@ -11,9 +11,9 @@ Bosonic string theory can be described by the Brink-Howe-Vecchia-Polyakov action
 \begin{equation}
     S = -\frac{T}{2}\int \dd^2\sigma \sqrt{\gamma}\gamma_{\alpha\beta}\pd_\alpha X^\mu\pd_\beta X^\nu G_{\mu\nu}(X),
 \end{equation}
-where $T$ is the string tension, $\Sigma$ the string worldsheet parameterized by $\sigma^{\alpha}\in\Sigma$ with $\alpha=0,1$ and $X^\mu: \sigma \to \mathcal{M}$  an embedding of the world-sheet into a manifold $\mathcal{M}$ with metric $G$. The string tension is related to the so-called Regge slope with dimensions of an area $\alpha'= 1/(2\pi T)$. For what follows we consider strings in flat space $G_{\mu\nu}=\eta_{\mu\nu}$. 
+where $T$ is the string tension, $\Sigma$ the string worldsheet parameterised by $\sigma^{\alpha}\in\Sigma$ with $\alpha=0,1$ and $X^\mu: \sigma \to \mathcal{M}$  an embedding of the world-sheet into a manifold $\mathcal{M}$ with metric $G$. The string tension is related to the so-called Regge slope with dimensions of an area $\alpha'= 1/(2\pi T)$. For what follows we consider strings in flat space $G_{\mu\nu}=\eta_{\mu\nu}$. 
 
-The Polyakov action in flat space has several important symmetries: 
+The Brink-Howe-Vecchia-Polyakov action in flat space has several important symmetries: 
 \begin{align}
     \text{Global Poincaré:}\qquad &\delta X^\mu = \Lambda^\mu_\nu X^\nu+\epsilon^\mu,\\
     &\delta \gamma_{\alpha\beta} = 0,
@@ -32,11 +32,11 @@ In the following consider a string in a flat Minkowski space with $G_{\mu\nu}=\e
 \begin{equation}
     \delta S = -\frac{T}{2}\int_\Sigma \dd^2\sigma \delta\gamma^{\alpha\beta}\sqrt{-\gamma}\left(\pd_\alpha X^\mu\pd_\beta X_\mu-\frac{1}{2}\gamma_{\alpha\beta}\gamma^{\rho\lambda}\pd_\rho X^\mu\pd_\lambda X_\mu\right).
 \end{equation}
-The world-sheet stress-energy tensor and the equations of motion is thus given by (in a suitable normalisation)
+The world-sheet stress-energy tensor and the corresponding equations of motion are thus given by (in a suitable normalisation)
 \begin{equation}
     T_{\alpha\beta}= \frac{4\pi}{\sqrt{-\gamma}}\frac{\delta S}{\delta\gamma^{\alpha\beta}} = -\frac{1}{\alpha'}\left(\pd_\alpha X^\mu\pd_\beta X_\mu-\frac{1}{2}\gamma_{\alpha\beta}\gamma^{\rho\lambda}\pd_\rho X^\mu\pd_\lambda X_\mu\right) = 0.
 \end{equation}
-It follows that inserting a Weyl-transformation we find $T^{\alpha}_\alpha=0$. Moreover, since a general $2d$- metric has $3$ d.o.f.\ Weyl invariance together with world-sheet diffemorphisms is sufficient to set $\gamma_{\alpha\beta}=\eta_{\alpha\beta}$ locally. Assuming a closed string we can throw away boundary terms to find the equations of motion for the string coordinates $X^\mu$
+It follows that inserting a Weyl-transformation we find $T^{\alpha}_\alpha=0$. Moreover, since a general $2d$-metric has $3$ d.o.f.\ Weyl invariance together with world-sheet diffemorphisms are sufficient to set $\gamma_{\alpha\beta}=\eta_{\alpha\beta}$ locally. Assuming a closed string we can throw away boundary terms to find the equations of motion for the string coordinates $X^\mu$
 \begin{equation}
     \pd_\alpha\left(\sqrt{-\gamma}\gamma^{\alpha\beta}\pd_\beta X^\mu\right) = 0,
 \end{equation}
@@ -51,7 +51,7 @@ This is easily solved by $X^\mu(\sigma,\tau)=X^\mu_R(\tau-\sigma)+X^\mu_L(\tau+\
         X^\mu_L(\sigma^+) &= \frac{1}{2}x^\mu+\frac{\alpha'}{2}p^\mu\sigma^++\ii\sqrt{\frac{\alpha'}{2}}\sum_{n\neq 0}\frac{1}{n}\tilde{\alpha}_n^\mu\ee^{-\ii n\sigma^+}. 
     \end{aligned}
 \end{equation}
-The first two terms describe constant motion of the center of mass of the string while the sum denotes oscillations along the string. In order for $X^\mu$ to be real we also have $\alpha_{n}^\mu=(\alpha_{-n}^\mu)^*$ and likewise for the left-moving oscillators. Inserting the oscillator expansion into the constraint $T_{\alpha\beta}=0$ which in light-cone coordinates are given by 
+The first two terms describe constant motion of the center of mass of the string while the sum denotes oscillations along the string. In order for $X^\mu$ to be real we also have $\alpha_{n}^\mu=(\alpha_{-n}^\mu)^*$ and likewise for the left-moving oscillators. Inserting the oscillator expansion into the constraints $T_{\alpha\beta}=0$ which in light-cone coordinates are given by 
 \begin{equation}
     \pd_+X^\mu\pd_+X_\mu =\pd_-X^\mu\pd_-X_\mu = 0,
 \end{equation}
@@ -75,7 +75,7 @@ Since $L_n$ now become operators there are possible order ambigiuities when quan
 \begin{equation}
     m^2 = \frac{4}{\alpha'}\left(\sum_{m>0}\alpha_{-m}\cdot \alpha_{m}-1\right).
 \end{equation}
-From the commutation relations $\alpha_{-m}\alpha_{m}$ is a number operator up to a factor of $m$ and one usuallly defines the total number operator as the sum $N=\sum_{m>0}\alpha_{-m}\cdot \alpha_{m}$. Since the exact same result can be found using left-moving oscillators we get the level-matching condition $N-\tilde{N}=0$.  Also we see that the mass of the ground state with no oscillators is $m^2|0\rangle=-|0\rangle$ which indicates the presence of the tachyon indicating the need for a supersymmetric string theory. 
+From the commutation relations $\alpha_{-m}\alpha_{m}$ is a number operator up to a factor of $m$ and one usuallly defines the total number operator as the sum $N=\sum_{m>0}\alpha_{-m}\cdot \alpha_{m}$. Since the exact same result can be found using left-moving oscillators we get the level-matching condition $N-\tilde{N}=0$.  Also we see that the mass of the ground state with no oscillators is negative since $m^2|0\rangle=-|0\rangle$ which indicates the presence of the tachyon and the need for a supersymmetric theory of strings. 
 
 Consider the closed bosonic string compactified on $X^{25}\sim X^{25}+2\pi R$, i.e.\ on $S^1$ with radius $R$ along its 25th dimension. It follows immediately that the momenta along this direction becomes quantized as $p^{25}=n/R$ for $n\in \mathbb{Z}$. Going once around the string we need longer come back but can be wound $m$ number of times around the circle as $X^{25}(\sigma+2\pi,\tau)=X^{25}(\sigma,\tau)+2\pi mR\sim X^{25}(\sigma,\tau)$. The expansion of $X_{25}^\mu$ is then given given by 
 \begin{equation}
@@ -95,10 +95,10 @@ First of all we see that the level matching condition is altered to $N-\tilde{N}
 \begin{equation}
     m^2 = \frac{n^2}{r^2}+\frac{m^2R^2}{\alpha'^2}+\frac{2}{\alpha'}(N+\tilde{N}-2).
 \end{equation}
-The first term is simple to understand as the mass contribution from the momenta on $S^1$ and remembering that the string tension was given by $T=1/(2\pi\alpha')$, the contribution from the second term is simply $(2\pi RmT)^2$, where $m$ is the number of times the string winds around $S^1$. Most importantly we find that the mass is invariant if we make the transformation $R\leftrightarrow\alpha'/R$ and $m\leftrightarrow n$, the string thus have the same spectra of states if we compactify on a circle with radius $R$, or a circle with radius $\alpha'/R$. This is a purely stringy phenomena and this is the so-called T-duality of string theory. Generalising to compactifications on a torus $T^d$ one finds an larger set of dualities given by the discrete group $O(d,d,\mathbb{Z})$. In the corresponding supergravity theory compactified on a torus the the corresponding continuous version $O(d,d,\mathbb{R})$ will be a symmetry. It is precisely the appearance of this continuous group that we want to make a manifest in double field theory introduced in chapter \ref{sec:DFT}.
+The first term is simple to understand as the mass contribution from the momenta on $S^1$ and remembering that the string tension was given by $T=1/(2\pi\alpha')$, the contribution from the second term is simply $(2\pi RmT)^2$, where $m$ is the number of times the string winds around $S^1$. Most importantly we find that the mass is invariant if we make the transformation $R\leftrightarrow\alpha'/R$ and $m\leftrightarrow n$, the string thus has the same spectra of states if we compactify on a circle with radius $R$, or a circle with radius $\alpha'/R$. This is a purely stringy phenomena and this is the so-called T-duality of string theory. Generalising to compactifications on a torus $T^d$ one finds a larger set of dualities given by the discrete group $O(d,d,\mathbb{Z})$. In the corresponding supergravity theory compactified on a torus the the corresponding continuous version $O(d,d,\mathbb{R})$ will be a symmetry. It is precisely the appearance of the continuous version of this group that we want to make manifest in double field theory introduced in chapter \ref{sec:DFT}.
 
 \section{Supergravity and Kaluza-Klein compactification\label{sec:Supergravity}}
-Supergravity describes the low-energy effective theory of string theory in $10$ dimensions and M-theory in 11 dimensions. In fact, 11 dimensions is the largest dimension in which supergravity is consistent with one graviton and no field with spin higher than $2$. The $\mathcal{N}=1$ $D=11$ supergravity theory describing the low-energy physics of M-theory contains the following field content 
+Supergravity describes the low-energy effective theory of string theory in $10$ dimensions and M-theory in 11 dimensions. In fact, eleven dimensions are the largest number dimensions in which supergravity is consistent assuming one graviton and no field with spin higher than $2$. The $\mathcal{N}=1$ $D=11$ supergravity theory describing the low-energy physics of M-theory contains the following field content 
 \begin{equation}
     \begin{cases}
         g_{MN} \qquad &44,\\
@@ -110,7 +110,7 @@ i.e.\ a graviton, a three-form field and a Majorana gravitino. Moreover, we have
 \begin{equation}
     S_{11} = \frac{1}{2\kappa_{11}^2}\int\dd^{11}\mathrm{x}\sqrt{-g}\left(R-\frac{1}{2}F\wedge *F\right)-\frac{1}{6}\int A \wedge F\wedge F+S_F, 
 \end{equation}
-where $F=dA$ is the field strength, $S_F$ the fermionic part of the action and $\kappa_{11}^2$ is Newtons gravitational constant in $11$ dimensions. Note that the three-form potential $A$ couples naturally to an object with a 3-dimensional worldvolume $\Sigma$, i.e.\ a 2-brane, as 
+where $F=dA$ is the field strength, $S_F$ the fermionic part of the action and $\kappa_{11}^2$ is Newtons gravitational constant in $11$ dimensions. Note that the three-form potential $A$ couples naturally to an object with a three-dimensional worldvolume $\Sigma$, i.e.\ a 2-brane, as 
 \begin{equation}
     Q_3 \propto \int_{\Sigma}A.
 \end{equation}
@@ -147,11 +147,11 @@ where $H_3=\dd B$ is the field strength, $\star$ the hodge dual and $\kappa_{10}
 
 In order to reduce these theories to lower dimensions we will look at Kaluza-Klein compactifications. The idea is to assume a separation between external and interal directions such that the underlying spacetime is given by $\mathcal{M}=\mathcal{M}_{D-n}\times\mathcal{M}_n$, where $\mathcal{M}_{D-n}$ is the external spacetime and $\mathcal{M}_n$ the internal space which typically is assumed to be ``small''. Note also that below we will mainly be concerned with the bosonic sector of the theory. The discussion below follows that of \cite{PopeKaluzaKlein}.
 
-We introduce this by the baby example of a massless scalar field $\phi$ compactified on a circle $\mathcal{M}=\mathcal{M}_{D-1}\times S^1$. Due to the periodicity of $S^1$ we can expand $\phi$ in a fourier expansion and the equations of motion is given by 
+We introduce this by the baby example of a massless scalar field $\phi$ compactified on a circle $\mathcal{M}=\mathcal{M}_{D-1}\times S^1$. Due to the periodicity of $S^1$ we can expand $\phi$ in a fourier expansion and the equation of motion is given by 
 \begin{equation}
     \left(\pd^2_{D-1}-\frac{n^2}{\left(2\pi R\right)^2}\right)\phi = 0,
 \end{equation}
-where $n\in\mathbb{Z}$ is the mode-number of $\phi$ expanded on a circle with radius $R$. We thus see that the compactification gives rise to an infinite tower of scalar fields with mass $|n|/(2\pi R)$. In the limit of small $R$ all these fields decouple except for the massless field with $m=0$ and there is no longer any dependence on the internal directions. This a \emph{consistent truncation} in the sense that a solution in the lower dimensional theory will also be solution in the full theory. However, consistency for compactifications on more general internal space $\mathcal{M}_n$ are usually quite hard to prove. In fact, one success of the extended theories, double field theory and exceptional field theory, is that they allow a natural uplift for certain lower-dimensional theories that can not be well described by supergravity in $D=10$ and $D=11$. 
+where $n\in\mathbb{Z}$ is the mode-number of $\phi$ expanded on a circle with radius $R$. We thus see that the compactification gives rise to an infinite tower of scalar fields with mass $|n|/(2\pi R)$. In the limit of small $R$ all these fields decouple except for the massless field with $m=0$ and there is no longer any dependence on the internal directions. This a \emph{consistent truncation} in the sense that a solution in the lower dimensional theory will also be solution in the full theory. However, consistency for compactifications on more general internal manifolds $\mathcal{M}_n$ is usually quite hard to prove. In fact, one success of the extended theories, double field theory and exceptional field theory, is that they allow a natural uplift for certain lower-dimensional theories that can not be well described by supergravity in $D=10$ and $D=11$. 
 
 In order to motivate the appearance of ``hidden'' symmetry groups that later on will be extended to manifest symmetries in extended geometries we consider pure gravity in $D$ dimensions compactified on a circle $\mathcal{M}_D = \mathcal{M}_{D-1}\times S^1$. Split the coordinates $x^M\to (x^\mu,y)$ and assume independence of the internal coordinate. The metric decompose into a lower-dimensional metric $g_{\mu\nu}$, a vector field $A_\mu$ and a scalar $\phi$ and can be parameterised as
 \begin{equation}\label{eq:KKparam}
@@ -163,7 +163,7 @@ where $\beta=-(D-2)\alpha$ and $\alpha$ constant. Pure gravity in $D$ dimensions
 \begin{equation}
     \delta_\xi g_{MN} = \mathcal{L}_\xi g_{MN} = \xi^P\pd_Pg_{mn}+\pd_{M}\xi^Pg_{PN}+\pd_{N}\xi^Pg_{MP},
 \end{equation}
-where $\mathcal{L}$ is the Lie derivative. In order to preserve the parametrization \eqref{eq:KKparam} one finds that diffemorphisms in $D$ dimensions reduce to transformations of the form
+where $\mathcal{L}$ is the Lie derivative. In order to preserve the parameterisation \eqref{eq:KKparam} one finds that diffemorphisms in $D$ dimensions reduce to transformations of the form
 \begin{equation}
     \xi^M = \left(\hat{\xi}^\mu(x^\nu),cy+\lambda(x^\nu)\right),
 \end{equation}
@@ -171,13 +171,13 @@ with some constant $c$. If $c=0$ one finds by explicit calculation that the lowe
 \begin{equation}
     \delta_\xi g_{\mu\nu} = \mathcal{L}_{\hat{\xi}^\rho}g_{\mu\nu},\qquad \delta_\xi A_\mu = \mathcal{L}_{\hat{\xi}^\rho}A_{\mu}+\pd_\mu\lambda(x^\nu), \qquad \delta_\xi \phi = \mathcal{L}_{\hat{\xi}^\rho}\phi.
 \end{equation}
-We thus see that the $D-1$ dimensional theory transforms as one would expect under $D-1$ dimensional diffeomorphisms and a local $U(1)$ gauge transformation of the vector field. However, if $c\neq 0$ one have to consider that the $D$ dimensional theory also has a scaling symmetry $\delta g_{MN}= 2ag_{MN}$ at the level of equations of motion which combine with the $cy$ term to the following transformation (discussed further in \cite{PopeKaluzaKlein})
+We thus see that the $D-1$ dimensional theory transforms as one would expect under $D-1$ dimensional diffeomorphisms and a local $U(1)$ gauge transformation of the vector field. However, if $c\neq 0$ one has to consider that the $D$ dimensional theory also possess a scaling symmetry $\delta g_{MN}= 2ag_{MN}$ at the level of equations of motion which combine with the $cy$ term to the following transformation (discussed further in \cite{PopeKaluzaKlein})
 \begin{equation}
     \beta \delta\phi = a+c,\qquad \delta A_\mu = -cA_\mu\qquad g_{\mu\nu} = 2ag_{\mu\nu}-2\alpha g_{\mu\nu}\Delta\phi.
 \end{equation}
 By choosing $\alpha = -\frac{c}{D-1}$ the lower-dimensional metric $\delta g_{\mu\nu}$ becomes invariant under the remaining global scaling symmetry. This remaining scaling symmetry is a common feature of supergravity theories typically referred to as a trombone symmetry. 
 
-Compactification on a torus $T^n=S^1\times S^1\times\ldots\times S^1$ continues in much the same way by recursively compactifying on circles. We omit the details but note that similarly to the case above one finds that the diffeomorphisms preserving the reduction ansatz, $x^M\to (x^\mu,y^i)$, where $i=1,2,\ldots n$, is given by 
+Compactification on a torus $T^n=S^1\times S^1\times\ldots\times S^1$ continues in much the same way by recursively compactifying on circles. We omit the details but note that similarly to the case above one finds that the diffeomorphisms preserving the reduction ansatz, $x^M\to (x^\mu,y^i)$, where $i=1,2,\ldots n$, are given by 
 \begin{equation}
     \xi^M = \left(\hat{\xi}^\mu(x^\nu),\tensor{M}{^i_j}y^j+\lambda^i(x^\nu)\right),
 \end{equation}
@@ -201,7 +201,7 @@ Consider now the bosonic sector of $D=11$ supergravity with the metric $g_{MN}$ 
         g_{MN}\to &\begin{cases}g_{\mu\nu},\\g_{\mu i},\\g_{ij},\end{cases}\\
         A_{MNP}\to &\begin{cases}A_{\mu\nu\rho},\\A_{\mu\nu i},\\A_{\mu ij},\\A_{ijk}.\end{cases}
 \end{align}
-As above, it is sufficient to consider the scalar sector of the theory. The number of scalars originating from the metric are $n(n+1)/2$ and the number of scalars from the $3$-form potential are ${n}\choose{3}$. We will also make the choice to dualise as much as possible in order to obtain a theory with as many scalar fields as possible. The number of scalars present when compactifying on $T^n$ and the ``hidden'' symmetry group $G$ is listed in \tabref{tab:Scalar}.
+As above, it is sufficient to consider the scalar sector of the theory. The number of scalars originating from the metric are $n(n+1)/2$ and the number of scalars from the $3$-form potential are ${n}\choose{3}$. We will also make the choice to dualise as much as possible in order to obtain a theory with as many scalar fields as possible. The number of scalars present when compactifying on $T^n$ and the ``hidden'' symmetry groups $G$ are listed in \tabref{tab:Scalar}.
 
 \begin{table}[]
     \centering
@@ -219,9 +219,9 @@ As above, it is sufficient to consider the scalar sector of the theory. The numb
 \end{table}
 
 \subsection{Non-linear sigma model\label{sec:NonLinearSigmaModels}}
-We have argued above that the compactification of $D=11$ supergravity on $T^n$ give rise a hidden global symmetry $G$. In order to write down a Lagrangian for the scalar sector that is manifestly invariant under this symmetry we will consider a non-linear sigma model. The idea is that the scalar fields can be considered as ``coordinates'' on a coset space $G/K$, where $K$ is the maximal compact subgroup of $G$. It is then easily checked that the dimension of the coset $\text{dim}\,(G/K)=\text{dim}\,(G)-\text{dim}\,(K)$ using the $\tabref{tab:Scalar}$ equals the number of scalars. 
+We have argued above that the compactification of $D=11$ supergravity on $T^n$ give rise a hidden global symmetry $G$. In order to write down a lagrangian for the scalar sector that is manifestly invariant under this symmetry we will consider a non-linear sigma model. The idea is that the scalar fields can be considered as ``coordinates'' on a coset space $G/K$, where $K$ is the maximal compact subgroup of $G$. It is then easily checked that the dimension of the coset $\text{dim}\,(G/K)=\text{dim}\,(G)-\text{dim}\,(K)$ using the $\tabref{tab:Scalar}$ equals the number of scalars. 
 
-To parameterize this Lagrangian it is convenient to look at the algebra $\mathfrak{g}$ and its maximal compact subalgebra $\mathfrak{k}$ that upon exponentiated give the related groups $G$ and $H$ respectively. As we saw in subsection \ref{sec:Realforms} the algebra $\mathfrak{g}$ can be decomposed as 
+To parameterise this Lagrangian it is convenient to look at the algebra $\mathfrak{g}$ and its maximal compact subalgebra $\mathfrak{k}$ that upon exponentiated give the related groups $G$ and $H$ respectively. As we saw in subsection \ref{sec:Realforms} the algebra $\mathfrak{g}$ can be decomposed as 
 \begin{equation}
     \mathfrak{g} = \mathfrak{k}\oplus \mathfrak{h}\oplus\mathfrak{n}_+,
 \end{equation}
@@ -233,11 +233,11 @@ An element $\mathcal{V}$ in $G/K$ describing the scalar fields $\{\phi^a,\chi^i\
 \begin{equation}\label{eq:vparam}
     \mathcal{V} = \ee^{\phi^a(x)h_a}\ee^{\chi^i(x)e_i},
 \end{equation}
-where $h_i$ is an element in the Cartan subalgebra, $e_i$ a positive root vector in $\mathfrak{g}$ and we sum over repeated indices. The element $\mathcal{V}$ transforms as 
+where $h_i$ are elements in the Cartan subalgebra, $e_i$ positive root vectors in $\mathfrak{g}$ and we sum over repeated indices. The element $\mathcal{V}$ transforms as 
 \begin{equation}
     \mathcal{V}(x) \to k(x)\mathcal{V}(x)g\sim \mathcal{V}g,
 \end{equation}
-where $k(x)\in K$ and $g\in G$. Note that the element $k(x)$ represents a local transformation, this is analogous the case of ordinary gravity where the metric is invariant under local Lorentz transformations. However, the transformation by $g$ potentially destroys the parametrization in \eqref{eq:vparam}. This can be remedied by a compensating $k(x)$ transformation which depends on both $g$ and $\mathcal{V}$, hence such a transformation is non-linear. 
+where $k(x)\in K$ and $g\in G$. Note that the element $k(x)$ represents a local transformation, this is analogous the case of ordinary gravity where the metric is invariant under local Lorentz transformations. However, the transformation by $g$ potentially destroys the parameterisation in \eqref{eq:vparam}. This can be remedied by a compensating $k(x)$ transformation which depends on both $g$ and $\mathcal{V}$, hence such a transformation is non-linear. 
 
 
 
@@ -253,7 +253,7 @@ In order to write down an object invariant under global $G$ and local $K$ in ter
 \begin{equation}
     \mathcal{L} \sim \kappa(\mathcal{P}_\mu,\mathcal{P}_\nu)g^{\mu\nu}\sqrt{-g},
 \end{equation}
-where $g^{\mu\nu}$ is the inverse metric of the external space. We have thus found a Lagrangian for the scalar sector of the theory that is manifestly invariant under $G/K$. 
+where $g^{\mu\nu}$ is the inverse metric of the external space. We have thus found a lagrangian for the scalar sector of the theory that is manifestly invariant under $G/K$. 
 
 
 \section{Dualities}\label{sec:Dualities}
@@ -271,14 +271,14 @@ Usually we are interested in interacting field theories where we have to employ 
 \begin{equation}\label{eq:pert}
     R(g) = \sum_{n=0}^{\infty}a_n g^n.
 \end{equation}
-These series typically do not converge but in many cases they are believed to be asymptotic series. Non-perturbative effects has a characteristic scaling $\sim \ee^{-1/g^n}$ which is not captured by the expansion \eqref{eq:pert} in which instanton effects in ordinary field theories scale typically scale with $n=2$. In interacting theories we thus get two two kinds of duality transformations: weak-weak duality and weak-strong duality. 
+These series typically do not converge but in many cases they are believed to be asymptotic series. Non-perturbative effects have a characteristic scaling $\sim \ee^{-1/g^n}$ which is not captured by the expansion \eqref{eq:pert}, especially instanton effects in ordinary field theories typically scale with $n=2$. In interacting theories we thus get two two kinds of duality transformations: weak-weak duality and weak-strong duality. 
 \begin{itemize}
     \item Weak-weak duality: $\left(\mathscr{T},g\right)\leftrightarrow\left(\mathscr{T}',g'\right)$ with $g,g'\ll 1$.
     \item Weak-strong duality: $\left(\mathscr{T},g\right)\leftrightarrow\left(\mathscr{T}'',g''\right)$ with $g\ll 1$ and $g''\gg 1$.
 \end{itemize}
-Weak-strong duality is of special interest since it allows us to probe the non-perturbative regime of a theory, using perturbative methods in the dual theory. Since little is usually known about the non-perturbative regime such a duality is however hard to prove. However, there are quantities that are protected against perturbative corrections and extrapolation to the non-perturbative regime is possible. These play an important rôle in confirming these weak-strong dualities. Perhaps the most prominent weak-strong duality is the AdS/CFT correspondence, first conjectured by Maldacena in \cite{Maldacena1999}. This is a rather special duality in the sense that it relates a string theory (which includes gravity) in a given dimension to an conformal field theory in one spacetime dimension lower, without gravity. Another important weak-strong duality that is more relevant for this thesis is the Montonen-Olive duality. This is an $SL(2,\mathbb{Z})$ duality of $\mathcal{N}=4$ SYM that typically exhange solitonic objects with fundamental excitiations and moreover map the coupling constant to its inverse. 
+Weak-strong dualities are of special interest since it allow us to probe the non-perturbative regime of a theory by using perturbative methods in the weakly coupled dual theory. Since little is usually known about the non-perturbative regime of the strongly coupled theory such a duality is however hard to prove. However, there are quantities that are protected against perturbative corrections and extrapolation to the non-perturbative regime is possible. These play an important rôle in confirming these weak-strong dualities. Perhaps the most prominent weak-strong duality is the AdS/CFT correspondence, first conjectured by Maldacena in \cite{Maldacena1999}. This is a rather special duality in the sense that it relates a string theory (which includes gravity) in a given dimension to a conformal field theory in one spacetime dimension lower, without gravity. Another important weak-strong duality that is more relevant for this thesis is the Montonen-Olive duality. This is a $SL(2,\mathbb{Z})$ duality of $\mathcal{N}=4$ SYM that typically exchange solitonic objects with fundamental excitiations and moreover map the coupling constant to its inverse. 
 
-Motivation for the presence of a weak-weak T-duality symmetry when compactifying type II string theories on a torus $T^d$ was introduced above, with the the T-duality group $O(d,d,\mathbb{Z})$. Moreover, type IIB has a weak-strong so-called S-duality symmetry with transformations given by $SL(2,\mathbb{Z})$. It is conjectured that these combine in to a larger set of dualities called U-duality \cite{Hull:1994ys}, and contains $SL(2,\mathbb{Z})$ and $O(d,d,\mathbb{Z})$ as subgroups. For the type II theories the U-duality groups upon compactification on a torus $T^{n}$ is given in \tabref{tab:UdualityString} which are just the discrete version of the continuous groups encountered in the supergravity, however, the agreement is between type IIB on $T^{d}$ and eleven dimensional supergravity on $T^{d+1}$, since in this case the external spacetime has the same dimension. 
+Motivation for the presence of a weak-weak T-duality symmetry when compactifying type II string theories on a torus $T^d$ was introduced above, with the the T-duality group $O(d,d,\mathbb{Z})$. Moreover, type IIB has a weak-strong so-called S-duality symmetry with transformations given by $SL(2,\mathbb{Z})$. It is conjectured that these combine in to a larger set of dualities called U-duality \cite{Hull:1994ys}, and contains $SL(2,\mathbb{Z})$ and $O(d,d,\mathbb{Z})$ as subgroups. For the type II theories the U-duality groups upon compactification on a torus $T^{n}$ are given in \tabref{tab:UdualityString} which are just the discrete versions of the continuous groups encountered in the supergravity, however, the agreement are between type IIB on $T^{d}$ and eleven dimensional supergravity on $T^{d+1}$, since in this case the external spacetime has the same dimension. 
 
 \begin{table}\centering
     \caption{U-duality group for type II string theories on $T^n$.}\label{tab:UdualityString}

@@ -204,26 +204,26 @@ Moreover, there is an anti-symmetric condition from \eqref{eq:AntiSymmetricCondi
     &= -|\lambda\rangle \otimes |p\rangle +|p\rangle\otimes |\lambda\rangle,
     \end{aligned}
 \end{equation}
-using similar arguments as above to find that the only non-vanishing contribution from the sum comes from $\alpha=\alpha_i+\beta$. It is immediate that $e_{-\alpha_i-\beta_j}|\lambda\rangle+e_{-\alpha_i-\beta_k}|\lambda\rangle$ for any $j,k$ also satisfy the section constraint. The reason for this is that the only contribution of the Casimir invariant from elements not in the $\mathfrak{sl}$ subalgebra will come from the part involving $(h,h)-(\lambda,\lambda)$ which is stabilised by the action of the $\mathfrak{sl}$ subalgebra by construction.
+using similar arguments as above to find that the only non-vanishing contribution from the sum comes from $\alpha=\alpha_i+\beta$. It is immediate that $e_{-\alpha_i-\beta_j}|\lambda\rangle+e_{-\alpha_i-\beta_k}|\lambda\rangle$ for any $j,k$ also satisfy the section constraint. The reason for this is that the only contribution of the Casimir invariant from elements not in the $\mathfrak{sl}$ subalgebra will come from the part involving $(h,h)-(\lambda,\lambda)$ which is stabilised by the action of the $\mathfrak{sl}$ subalgebra by construction. 
 
 Any two vectors $|p\rangle$ and $|q\rangle$ in a section thus satisfy 
 \begin{equation}
     \left(\eta_{\alpha\beta}T^\alpha\otimes T^\beta-(\lambda,\lambda)+(1-\sigma)\right)|p\rangle\otimes|q\rangle = 0,
 \end{equation}
-with the last term only contributing only to the anti-symmetric part. Comparing with the invariant $Y$ tensor introduced in \eqref{eq:Y} we find for any vector $|p\rangle$ and $|q\rangle$ in a section 
+with the last term only contributing to the anti-symmetric part. Comparing with the invariant $Y$ tensor introduced in \eqref{eq:Y} we find for any vector $|p\rangle$ and $|q\rangle$ in a section 
 \begin{equation}
     Y|p\rangle\otimes|q\rangle = 0,
 \end{equation}
 with $k=1$ and $\beta=(\lambda,\lambda)-1$. 
 
-A section can then be constructed as follows 
+A section can thus be constructed as follows 
 \begin{enumerate}
     \item Pick a highest weight state $|\lambda\rangle$.
     \item Enlarge the section by adding the state $e_{-\alpha_i}|\lambda\rangle$ with $\lambda_i=1$.
     \item Add another state $e_{-\alpha_{i+1}}e_{-\alpha_{i}}|\lambda\rangle$ if $\lambda_i=0$. 
     \item Continue and add more states $e_{-\alpha_{i+l}}e_{-\alpha_{i+l-1}}\ldots e_{-\alpha_{i}}|\lambda\rangle$ as long as $\lambda_{i+l}\neq 0$ only for $l=0$.
 \end{enumerate}
-If one reaches a branching in the diagram one choose one direction and should stop when reaching a node with multiple connections. By construction these states span a $d$-dimensional representation under the ``gravity-line'' corresponding to an embedding of $GL(d)$ in $G$. As an example of this consider an extended geometry based on $E_{7(7)}$ and the coordinate module $R(\lambda)=R(\Lambda_1)$. Two possible sections are then shown in \figref{fig:E7WithSection} where the black nodes denote the set of simple roots defining the $\mathfrak{sl}$ subalgebra. 
+If one reaches a branching in the diagram one choose one direction and should stop when reaching a node with multiple connections. By construction these states span a $d$-dimensional representation under the ``gravity-line'' corresponding to an embedding of $GL(d)$ in $G$. As an example of this consider an extended geometry based on $E_{7(7)}$ and the coordinate module $R(\lambda)=R(\Lambda_1)$. Two possible sections are then shown in \figref{fig:E7WithSection} where the black nodes denote the set of simple roots defining the $\mathfrak{sl}$ subalgebra\footnote{This should not be confused with the notation for short/long roots.}. 
 
 \begin{figure}
     \ESevenDynkinWithSections{1}

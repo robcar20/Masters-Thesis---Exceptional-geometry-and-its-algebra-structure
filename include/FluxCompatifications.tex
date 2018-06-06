@@ -81,7 +81,7 @@ A section of a bundle $P\overset{\pi}{\longrightarrow}\mathcal{M}$ is defined as
 with $T_x\mathcal{M}$ being the tangent space at point $x\in\mathcal{M}$. A section then associates a vector in the fibre $T_x\mathcal{M}$ to each point $x\in\mathcal{M}$
 \begin{equation}
     \begin{aligned}
-        \sigma: &\mathcal{M}\to \mathcal{M}\times T_x\mathcal{M}\\
+        \sigma:\quad &\mathcal{M}\to \mathcal{M}\times T_x\mathcal{M}\\
                 x&\mapsto (x,X)\qquad X\in T_x\mathcal{M},
     \end{aligned}
 \end{equation}
@@ -101,11 +101,13 @@ which is free. An important example of a principle fibre bundle is the frame bun
 \begin{equation}
     e_\alpha = \tensor{e}{_\alpha^\mu}\pd_\mu,
 \end{equation}
-with $\alpha=1,2,\ldots d$. The elements $\tensor{e}{_\alpha^\mu}$ can be seen as $d\times d$-dimensional matrices and thus the fibre is isomorphic to $GL(d)$. The right action is then given by 
-\begin{equation}
-    e_\alpha \mapsto e_\beta \tensor{\Lambda}{^\beta_a},
-\end{equation}
-for some $\Lambda\in GL(d)$. 
+with $\alpha=1,2,\ldots d$. The elements $\tensor{e}{_\alpha^\mu}$ can be seen as $d\times d$-dimensional matrices and thus the fibre is isomorphic to $GL(d)$. 
+
+%The right action is then given by 
+%\begin{equation}
+%    e_\alpha \mapsto e_\beta \tensor{\Lambda}{^\beta_a},
+%\end{equation}
+%for some $\Lambda\in GL(d)$. 
 
 Importantly we also want to consider tensor fields on a manifold $\mathcal{M}$ which is formally introduced by looking at associated vector bundles to a principle fibre bundle. Suppose that $(P,\pi,\mathcal{M},G)$ is a principle fibre bundle and $(\rho,\mathbb{V})$ a $G$-representation. Then an associated vector bundle $P_{\mathbb{V}}$ is given by 
 \begin{equation}
@@ -117,7 +119,7 @@ with $\sim_G$ defined by the natural action of $G$ on both $P$ and $\mathbb{V}$.
 \end{equation}
 which from invariance of $v$ we find that $\tensor{\rho(\Lambda)}{^\alpha_\beta}= \tensor{(\Lambda)}{^{-1}}\tensor{}{^{\alpha}_\beta}$. 
 
-What we mainly are interested in is the possibility of finding so-called $H$-structures for some some closed subgroup $H\subset G$. A principal bundle $(P,\pi,\mathcal{M},G)$ has a $H$-structure if it is possible to choose frames in $P$ such that the structure group reduces to $H$. A typical example of this is an $O(d)\subset GL(d)$ structure on Riemannian manifolds. Due to the presence of a metric we can consider orthonormal frames $\tilde{e}_a$ such that 
+What we mainly will be interested in is the possibility of finding so-called reduced structures or $H$-structures for some some closed subgroup $H\subset G$. A principal bundle $(P,\pi,\mathcal{M},G)$ has a $H$-structure if it is possible to choose frames in $P$ such that the structure group reduces to $H$. A typical example of this is an $O(d)\subset GL(d)$ structure on Riemannian manifolds. Due to the presence of a metric we can consider orthonormal frames $\tilde{e}_a$ such that 
 \begin{equation}
     g(\tilde{e}_a,\tilde{e}_b) = \delta_{ab},
 \end{equation}
@@ -545,13 +547,13 @@ Consider the definition of an $E_{6(2)}$ compatible covariant derivative $DV=0$.
                     &= \underbrace{V^ND_NV^M}_{=0}-\underbrace{D_NV^MV^N}_{=0}-\mathscr{T}\cdot V^M.
     \end{aligned}
 \end{equation}
-By definition of intrinsic torsion we can split $T=T_{\text{int}}+T_0$, with $T_{\text{int}}\in \mathbf{56}\otimes (\mathfrak{e}_{7(7)}\times\mathbb{R}/\mathfrak{e}_{6(2)})$ and $T_0\in \mathbf{56}\otimes\mathfrak{e}_{6(2)}$, and since $V$ is invariant under $\mathfrak{e}_{6(2)}$ we find 
+By definition of intrinsic torsion we can split $\mathscr{T}=\mathscr{T}_{\text{int}}+\mathscr{T}_0$, with $\mathscr{T}_{\text{int}}\in \mathbf{56}\otimes (\mathfrak{e}_{7(7)}\times\mathbb{R}/\mathfrak{e}_{6(2)})$ and $\mathscr{T}_0\in \mathbf{56}\otimes\mathfrak{e}_{6(2)}$, and since $V$ is invariant under $\mathfrak{e}_{6(2)}$ we find 
 \begin{equation}
     \mathscr{L}_V V = -\mathscr{T}_{\text{int}}\cdot V.
 \end{equation}
 Demanding that the intrinsic torsion vanish thus gives the integrability condition on the vectormultiplet structure 
 \begin{equation}\label{eq:IntegrabilityVectorMultiplet}
-    \mathscr{L}_K K = 0.
+    \mathscr{L}_V V = 0.
 \end{equation}
 This is further equivalent to $\mathscr{L}_X\overbar{X}=0$. 
 
@@ -623,7 +625,7 @@ Moreover, it is easily found that $\star\Omega = \ii\Omega\wedge\zeta$ which wil
 %\end{equation}
 %as well as the compatibility conditions for $\omega$ and $\Omega$ given in \eqref{eq:CompatibilityCalabiYau}. We also defined the operation $^{\#}$ which is an isomorphism between $p$-forms and anti-symmetric $p$-vectors by simply raising indices with the metric, e.g.\ $(\Omega^{\#})^{mnp}=g^{ms}g^{nk}g^{pl}\Omega_{skl}$
 
-We then want to show that there exists an integrable hyper-multiplet structure $J_\alpha$ and an integrable vector-multiplet structure $V$ given in terms of ${\omega,\Omega,\zeta}$ which satisfies the generalised compatibility and integrability conditions. Furthermore, we will assume that the forms$\omega,\Omega,\zeta)$ are given by the expressions above and satisfy the ordinary compatibility and integrability conditions. In \cite{Ashmore:2015joa} these conditions are on the other hand derived from the generalised conditions. 
+We then want to show that there exists an integrable hyper-multiplet structure $J_\alpha$ and an integrable vector-multiplet structure $V$ given in terms of ${\omega,\Omega,\zeta}$ which satisfies the generalised compatibility and integrability conditions. Furthermore, we will assume that the forms $\omega,\Omega,\zeta$ are given by the expressions above and satisfy the ordinary compatibility and integrability conditions. In \cite{Ashmore:2015joa} these conditions are on the other hand derived from the generalised conditions. 
 
 The hyper-multiplet structure is given by
 \begin{equation}\label{eq:HyperMultipletStructureCalabiYau}
@@ -657,9 +659,9 @@ It is then seen that indeed $W''=-4\ii\rho J_3$. Now instead let $W''=[J_+,J_3]$
         l'' &= 0,\\
         r'' &= 0,\\
         a'' &= -\frac{1}{8}\rho^2 I\cdot \Omega+\frac{\ii}{32}\rho^2\Omega^{\#}\lrcorner (\Omega\wedge\overbar{\Omega}),\\
-        \tilde{a}'' = 0,\\
+        \tilde{a}'' &= 0,\\
         \alpha '' &= \frac{1}{8}\rho^2 I\cdot \Omega^{\#}-\frac{\ii}{16}\rho^2(\Omega^{\#}\wedge\overbar{\Omega})\lrcorner\Omega,\\
-        \tilde{\alpha}'' = 0,
+        \tilde{\alpha}'' &= 0,
     \end{aligned}
 \end{equation}
 which using $I\cdot \Omega=-3\ii\Omega$ and $I\cdot \Omega^{\#}=-3\ii\Omega^{\#}$ we find that $[J_+,J_3]=2\ii\rho J_+$ and indeed $\{J_\pm,J_3\}$ is a $\mathfrak{su}(3)$ triplet. 
@@ -759,14 +761,14 @@ which indeed is fulfilled since $\zeta$ is closed. The last condition from the t
              &= \frac{\ii}{8}\int_\mathcal{M}\rho \left(\overbar{\Omega}^{\#}\lrcorner L_v(\rho \Omega)+L_v(\rho\Omega^{\#})\lrcorner \overbar{\Omega}\right).
     \end{aligned}
 \end{equation}
-Since $\Omega$ is closed it is also covariantly constant and $\overbar{\Omega}^{\#}\lrcorner \Omega$ is constant. We can then use $\int_\mathcal{M}\overbar{\Omega}^{\#}\lrcorner \Omega L_v\rho^2=0$, assuming the boundary term vanishes, to move $\rho$ outside of the Lie derivative and using $\rho^2\overbar{\Omega}^{\#}\lrcorner L_v \Omega=L_v \Omega\wedge \star\overbar{\Omega}$ 
+Since $\Omega$ is closed it is also covariantly constant and $\overbar{\Omega}^{\#}\lrcorner \Omega$ is constant. We can then use $\int_\mathcal{M}\overbar{\Omega}^{\#}\lrcorner \Omega L_v\rho^2=0$, assuming the boundary term vanishes, to move $\rho$ outside of the Lie derivative and using $\rho^2\overbar{\Omega}^{\#}\lrcorner L_v \Omega=L_v \Omega\wedge \star\overbar{\Omega}$ we find
 \begin{equation}
     \begin{aligned}
     \mu_3(v) &\propto \int_\mathcal{M}L_v\Omega\wedge\star\overbar{\Omega}\\
              &=-\ii\int_\mathcal{M}(\dd\iota_v\Omega+\iota_v\dd\Omega)\wedge\overbar{\Omega}\wedge\zeta=0,
     \end{aligned}
 \end{equation}
-using integration by parts and that $\Omega$ and $\overbar{\Omega}$ are closed. 
+which follows from integration by parts and that $\Omega$ and $\overbar{\Omega}$ are closed. 
  
 The integrability condition for the vector multiplet structure is given by $\mathscr{L}_X\overbar{X}=0$ and thus
 \begin{equation}
